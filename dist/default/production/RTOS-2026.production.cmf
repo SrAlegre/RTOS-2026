@@ -11,9 +11,6 @@
 # All addresses and the length are given in unqualified hexadecimal
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
-$C:\Users\Yuri\AppData\Local\Temp\xcAs3s8.0\driver_tmp_9.o
-init CODE 0 71A 71A 4 1 2
-reset_vec CODE 0 0 0 4 1 2
 $dist/default/production\RTOS-2026.production.o
 cinit CODE 0 2022 2022 5A 1 2
 text0 CODE 0 1F2C 1F2C 88 1 2
@@ -50,6 +47,9 @@ smallconst SMALLCONST 0 1000 1000 2 1 2
 dataCOMRAM COMRAM 1 30 30 7 1 1
 bssBIGRAM BIGRAM 1 276 276 3D8 1 1
 bssCOMRAM COMRAM 1 21 21 F 1 1
+$C:\Users\Yuri\AppData\Local\Temp\xcAseeo.0\driver_tmp_9.o
+init CODE 0 71A 71A 4 1 2
+reset_vec CODE 0 0 0 4 1 2
 # %UNUSED Section
 # This section enumerates the unused ranges of each CLASS. Each entry
 # is described on a single line as follows:
@@ -103,7 +103,7 @@ MEDIUMCONST 2279-FFFF 1
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production\RTOS-2026.production.o
-8 intcode CODE >8854:C:\Users\Yuri\AppData\Local\Temp\xcAs3s8.0\driver_tmp_1.s
+8 intcode CODE >8854:C:\Users\Yuri\AppData\Local\Temp\xcAseeo.0\driver_tmp_1.s
 8 intcode CODE >23:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\hw.c
 22 intcode CODE >25:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\hw.c
 30 intcode CODE >26:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\hw.c
@@ -361,51 +361,51 @@ D8 intcode CODE >36:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\hw.c
 1FA8 text0 CODE >29:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\main.c
 1FAC text0 CODE >31:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\main.c
 1FAC text0 CODE >33:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\main.c
-2022 cinit CODE >3824:C:\Users\Yuri\AppData\Local\Temp\xcAs3s8.0\driver_tmp_1.s
-2022 cinit CODE >3826:C:\Users\Yuri\AppData\Local\Temp\xcAs3s8.0\driver_tmp_1.s
-2022 cinit CODE >3829:C:\Users\Yuri\AppData\Local\Temp\xcAs3s8.0\driver_tmp_1.s
-2022 cinit CODE >3873:C:\Users\Yuri\AppData\Local\Temp\xcAs3s8.0\driver_tmp_1.s
-2024 cinit CODE >3874:C:\Users\Yuri\AppData\Local\Temp\xcAs3s8.0\driver_tmp_1.s
-2026 cinit CODE >3875:C:\Users\Yuri\AppData\Local\Temp\xcAs3s8.0\driver_tmp_1.s
-2028 cinit CODE >3876:C:\Users\Yuri\AppData\Local\Temp\xcAs3s8.0\driver_tmp_1.s
-202A cinit CODE >3877:C:\Users\Yuri\AppData\Local\Temp\xcAs3s8.0\driver_tmp_1.s
-202C cinit CODE >3878:C:\Users\Yuri\AppData\Local\Temp\xcAs3s8.0\driver_tmp_1.s
-202E cinit CODE >3879:C:\Users\Yuri\AppData\Local\Temp\xcAs3s8.0\driver_tmp_1.s
-2032 cinit CODE >3880:C:\Users\Yuri\AppData\Local\Temp\xcAs3s8.0\driver_tmp_1.s
-2036 cinit CODE >3881:C:\Users\Yuri\AppData\Local\Temp\xcAs3s8.0\driver_tmp_1.s
-2036 cinit CODE >3882:C:\Users\Yuri\AppData\Local\Temp\xcAs3s8.0\driver_tmp_1.s
-2038 cinit CODE >3883:C:\Users\Yuri\AppData\Local\Temp\xcAs3s8.0\driver_tmp_1.s
-203C cinit CODE >3884:C:\Users\Yuri\AppData\Local\Temp\xcAs3s8.0\driver_tmp_1.s
-203E cinit CODE >3885:C:\Users\Yuri\AppData\Local\Temp\xcAs3s8.0\driver_tmp_1.s
-2040 cinit CODE >3886:C:\Users\Yuri\AppData\Local\Temp\xcAs3s8.0\driver_tmp_1.s
-2042 cinit CODE >3890:C:\Users\Yuri\AppData\Local\Temp\xcAs3s8.0\driver_tmp_1.s
-2046 cinit CODE >3891:C:\Users\Yuri\AppData\Local\Temp\xcAs3s8.0\driver_tmp_1.s
-204A cinit CODE >3892:C:\Users\Yuri\AppData\Local\Temp\xcAs3s8.0\driver_tmp_1.s
-204A cinit CODE >3893:C:\Users\Yuri\AppData\Local\Temp\xcAs3s8.0\driver_tmp_1.s
-204C cinit CODE >3894:C:\Users\Yuri\AppData\Local\Temp\xcAs3s8.0\driver_tmp_1.s
-204E cinit CODE >3895:C:\Users\Yuri\AppData\Local\Temp\xcAs3s8.0\driver_tmp_1.s
-2050 cinit CODE >3896:C:\Users\Yuri\AppData\Local\Temp\xcAs3s8.0\driver_tmp_1.s
-2052 cinit CODE >3897:C:\Users\Yuri\AppData\Local\Temp\xcAs3s8.0\driver_tmp_1.s
-2054 cinit CODE >3898:C:\Users\Yuri\AppData\Local\Temp\xcAs3s8.0\driver_tmp_1.s
-2056 cinit CODE >3901:C:\Users\Yuri\AppData\Local\Temp\xcAs3s8.0\driver_tmp_1.s
-205A cinit CODE >3902:C:\Users\Yuri\AppData\Local\Temp\xcAs3s8.0\driver_tmp_1.s
-205C cinit CODE >3903:C:\Users\Yuri\AppData\Local\Temp\xcAs3s8.0\driver_tmp_1.s
-205C cinit CODE >3904:C:\Users\Yuri\AppData\Local\Temp\xcAs3s8.0\driver_tmp_1.s
-205E cinit CODE >3905:C:\Users\Yuri\AppData\Local\Temp\xcAs3s8.0\driver_tmp_1.s
-2060 cinit CODE >3906:C:\Users\Yuri\AppData\Local\Temp\xcAs3s8.0\driver_tmp_1.s
-2062 cinit CODE >3909:C:\Users\Yuri\AppData\Local\Temp\xcAs3s8.0\driver_tmp_1.s
-2066 cinit CODE >3910:C:\Users\Yuri\AppData\Local\Temp\xcAs3s8.0\driver_tmp_1.s
-2068 cinit CODE >3911:C:\Users\Yuri\AppData\Local\Temp\xcAs3s8.0\driver_tmp_1.s
-2068 cinit CODE >3912:C:\Users\Yuri\AppData\Local\Temp\xcAs3s8.0\driver_tmp_1.s
-206A cinit CODE >3913:C:\Users\Yuri\AppData\Local\Temp\xcAs3s8.0\driver_tmp_1.s
-206C cinit CODE >3914:C:\Users\Yuri\AppData\Local\Temp\xcAs3s8.0\driver_tmp_1.s
-206E cinit CODE >3920:C:\Users\Yuri\AppData\Local\Temp\xcAs3s8.0\driver_tmp_1.s
-206E cinit CODE >3922:C:\Users\Yuri\AppData\Local\Temp\xcAs3s8.0\driver_tmp_1.s
-2070 cinit CODE >3923:C:\Users\Yuri\AppData\Local\Temp\xcAs3s8.0\driver_tmp_1.s
-2072 cinit CODE >3925:C:\Users\Yuri\AppData\Local\Temp\xcAs3s8.0\driver_tmp_1.s
-2074 cinit CODE >3926:C:\Users\Yuri\AppData\Local\Temp\xcAs3s8.0\driver_tmp_1.s
-2076 cinit CODE >3927:C:\Users\Yuri\AppData\Local\Temp\xcAs3s8.0\driver_tmp_1.s
-2078 cinit CODE >3928:C:\Users\Yuri\AppData\Local\Temp\xcAs3s8.0\driver_tmp_1.s
+2022 cinit CODE >3824:C:\Users\Yuri\AppData\Local\Temp\xcAseeo.0\driver_tmp_1.s
+2022 cinit CODE >3826:C:\Users\Yuri\AppData\Local\Temp\xcAseeo.0\driver_tmp_1.s
+2022 cinit CODE >3829:C:\Users\Yuri\AppData\Local\Temp\xcAseeo.0\driver_tmp_1.s
+2022 cinit CODE >3873:C:\Users\Yuri\AppData\Local\Temp\xcAseeo.0\driver_tmp_1.s
+2024 cinit CODE >3874:C:\Users\Yuri\AppData\Local\Temp\xcAseeo.0\driver_tmp_1.s
+2026 cinit CODE >3875:C:\Users\Yuri\AppData\Local\Temp\xcAseeo.0\driver_tmp_1.s
+2028 cinit CODE >3876:C:\Users\Yuri\AppData\Local\Temp\xcAseeo.0\driver_tmp_1.s
+202A cinit CODE >3877:C:\Users\Yuri\AppData\Local\Temp\xcAseeo.0\driver_tmp_1.s
+202C cinit CODE >3878:C:\Users\Yuri\AppData\Local\Temp\xcAseeo.0\driver_tmp_1.s
+202E cinit CODE >3879:C:\Users\Yuri\AppData\Local\Temp\xcAseeo.0\driver_tmp_1.s
+2032 cinit CODE >3880:C:\Users\Yuri\AppData\Local\Temp\xcAseeo.0\driver_tmp_1.s
+2036 cinit CODE >3881:C:\Users\Yuri\AppData\Local\Temp\xcAseeo.0\driver_tmp_1.s
+2036 cinit CODE >3882:C:\Users\Yuri\AppData\Local\Temp\xcAseeo.0\driver_tmp_1.s
+2038 cinit CODE >3883:C:\Users\Yuri\AppData\Local\Temp\xcAseeo.0\driver_tmp_1.s
+203C cinit CODE >3884:C:\Users\Yuri\AppData\Local\Temp\xcAseeo.0\driver_tmp_1.s
+203E cinit CODE >3885:C:\Users\Yuri\AppData\Local\Temp\xcAseeo.0\driver_tmp_1.s
+2040 cinit CODE >3886:C:\Users\Yuri\AppData\Local\Temp\xcAseeo.0\driver_tmp_1.s
+2042 cinit CODE >3890:C:\Users\Yuri\AppData\Local\Temp\xcAseeo.0\driver_tmp_1.s
+2046 cinit CODE >3891:C:\Users\Yuri\AppData\Local\Temp\xcAseeo.0\driver_tmp_1.s
+204A cinit CODE >3892:C:\Users\Yuri\AppData\Local\Temp\xcAseeo.0\driver_tmp_1.s
+204A cinit CODE >3893:C:\Users\Yuri\AppData\Local\Temp\xcAseeo.0\driver_tmp_1.s
+204C cinit CODE >3894:C:\Users\Yuri\AppData\Local\Temp\xcAseeo.0\driver_tmp_1.s
+204E cinit CODE >3895:C:\Users\Yuri\AppData\Local\Temp\xcAseeo.0\driver_tmp_1.s
+2050 cinit CODE >3896:C:\Users\Yuri\AppData\Local\Temp\xcAseeo.0\driver_tmp_1.s
+2052 cinit CODE >3897:C:\Users\Yuri\AppData\Local\Temp\xcAseeo.0\driver_tmp_1.s
+2054 cinit CODE >3898:C:\Users\Yuri\AppData\Local\Temp\xcAseeo.0\driver_tmp_1.s
+2056 cinit CODE >3901:C:\Users\Yuri\AppData\Local\Temp\xcAseeo.0\driver_tmp_1.s
+205A cinit CODE >3902:C:\Users\Yuri\AppData\Local\Temp\xcAseeo.0\driver_tmp_1.s
+205C cinit CODE >3903:C:\Users\Yuri\AppData\Local\Temp\xcAseeo.0\driver_tmp_1.s
+205C cinit CODE >3904:C:\Users\Yuri\AppData\Local\Temp\xcAseeo.0\driver_tmp_1.s
+205E cinit CODE >3905:C:\Users\Yuri\AppData\Local\Temp\xcAseeo.0\driver_tmp_1.s
+2060 cinit CODE >3906:C:\Users\Yuri\AppData\Local\Temp\xcAseeo.0\driver_tmp_1.s
+2062 cinit CODE >3909:C:\Users\Yuri\AppData\Local\Temp\xcAseeo.0\driver_tmp_1.s
+2066 cinit CODE >3910:C:\Users\Yuri\AppData\Local\Temp\xcAseeo.0\driver_tmp_1.s
+2068 cinit CODE >3911:C:\Users\Yuri\AppData\Local\Temp\xcAseeo.0\driver_tmp_1.s
+2068 cinit CODE >3912:C:\Users\Yuri\AppData\Local\Temp\xcAseeo.0\driver_tmp_1.s
+206A cinit CODE >3913:C:\Users\Yuri\AppData\Local\Temp\xcAseeo.0\driver_tmp_1.s
+206C cinit CODE >3914:C:\Users\Yuri\AppData\Local\Temp\xcAseeo.0\driver_tmp_1.s
+206E cinit CODE >3920:C:\Users\Yuri\AppData\Local\Temp\xcAseeo.0\driver_tmp_1.s
+206E cinit CODE >3922:C:\Users\Yuri\AppData\Local\Temp\xcAseeo.0\driver_tmp_1.s
+2070 cinit CODE >3923:C:\Users\Yuri\AppData\Local\Temp\xcAseeo.0\driver_tmp_1.s
+2072 cinit CODE >3925:C:\Users\Yuri\AppData\Local\Temp\xcAseeo.0\driver_tmp_1.s
+2074 cinit CODE >3926:C:\Users\Yuri\AppData\Local\Temp\xcAseeo.0\driver_tmp_1.s
+2076 cinit CODE >3927:C:\Users\Yuri\AppData\Local\Temp\xcAseeo.0\driver_tmp_1.s
+2078 cinit CODE >3928:C:\Users\Yuri\AppData\Local\Temp\xcAseeo.0\driver_tmp_1.s
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -443,14 +443,14 @@ _TOSH FFE 0 ABS 0 - dist/default/production\RTOS-2026.production.o
 _TOSL FFD 0 ABS 0 - dist/default/production\RTOS-2026.production.o
 _TOSU FFF 0 ABS 0 - dist/default/production\RTOS-2026.production.o
 _WREG FE8 0 ABS 0 - dist/default/production\RTOS-2026.production.o
-___sp 0 0 STACK 2 stack C:\Users\Yuri\AppData\Local\Temp\xcAs3s8.0\driver_tmp_9.o
+___sp 0 0 STACK 2 stack C:\Users\Yuri\AppData\Local\Temp\xcAseeo.0\driver_tmp_9.o
 _idle 21DA 0 CODE 0 text12 dist/default/production\RTOS-2026.production.o
 _main 1F2C 0 CODE 0 text0 dist/default/production\RTOS-2026.production.o
 btemp 1 0 ABS 0 - dist/default/production\RTOS-2026.production.o
-___stack_hi 0 0 STACK 2 stack C:\Users\Yuri\AppData\Local\Temp\xcAs3s8.0\driver_tmp_9.o
-___stack_lo 0 0 STACK 2 stack C:\Users\Yuri\AppData\Local\Temp\xcAs3s8.0\driver_tmp_9.o
+___stack_hi 0 0 STACK 2 stack C:\Users\Yuri\AppData\Local\Temp\xcAseeo.0\driver_tmp_9.o
+___stack_lo 0 0 STACK 2 stack C:\Users\Yuri\AppData\Local\Temp\xcAseeo.0\driver_tmp_9.o
 __HbssBIGRAM 0 0 ABS 0 bssBIGRAM dist/default/production\RTOS-2026.production.o
-start 71A 0 CODE 0 init C:\Users\Yuri\AppData\Local\Temp\xcAs3s8.0\driver_tmp_9.o
+start 71A 0 CODE 0 init C:\Users\Yuri\AppData\Local\Temp\xcAseeo.0\driver_tmp_9.o
 __HbssCOMRAM 0 0 ABS 0 bssCOMRAM dist/default/production\RTOS-2026.production.o
 _os_delay 1002 0 CODE 0 text14 dist/default/production\RTOS-2026.production.o
 _os_start 1616 0 CODE 0 text1 dist/default/production\RTOS-2026.production.o
@@ -461,11 +461,11 @@ _T0CONbits FD5 0 ABS 0 - dist/default/production\RTOS-2026.production.o
 __end_of_os_start 1970 0 CODE 0 text1 dist/default/production\RTOS-2026.production.o
 __HdataCOMRAM 0 0 ABS 0 dataCOMRAM dist/default/production\RTOS-2026.production.o
 __LbssBIGRAM 0 0 ABS 0 bssBIGRAM dist/default/production\RTOS-2026.production.o
-__accesstop 60 0 ABS 0 - C:\Users\Yuri\AppData\Local\Temp\xcAs3s8.0\driver_tmp_9.o
-intlevel0 0 0 CODE 0 text C:\Users\Yuri\AppData\Local\Temp\xcAs3s8.0\driver_tmp_9.o
-intlevel1 0 0 CODE 0 text C:\Users\Yuri\AppData\Local\Temp\xcAs3s8.0\driver_tmp_9.o
-intlevel2 0 0 CODE 0 text C:\Users\Yuri\AppData\Local\Temp\xcAs3s8.0\driver_tmp_9.o
-intlevel3 0 0 CODE 0 text C:\Users\Yuri\AppData\Local\Temp\xcAs3s8.0\driver_tmp_9.o
+__accesstop 60 0 ABS 0 - C:\Users\Yuri\AppData\Local\Temp\xcAseeo.0\driver_tmp_9.o
+intlevel0 0 0 CODE 0 text C:\Users\Yuri\AppData\Local\Temp\xcAseeo.0\driver_tmp_9.o
+intlevel1 0 0 CODE 0 text C:\Users\Yuri\AppData\Local\Temp\xcAseeo.0\driver_tmp_9.o
+intlevel2 0 0 CODE 0 text C:\Users\Yuri\AppData\Local\Temp\xcAseeo.0\driver_tmp_9.o
+intlevel3 0 0 CODE 0 text C:\Users\Yuri\AppData\Local\Temp\xcAseeo.0\driver_tmp_9.o
 __LbssCOMRAM 0 0 ABS 0 bssCOMRAM dist/default/production\RTOS-2026.production.o
 __end_of_pipe_init 20F2 0 CODE 0 text9 dist/default/production\RTOS-2026.production.o
 __LnvFARRAM 0 0 FARRAM 0 nvFARRAM dist/default/production\RTOS-2026.production.o
@@ -475,9 +475,9 @@ __Hclrtext 0 0 ABS 0 clrtext dist/default/production\RTOS-2026.production.o
 __pidataCOMRAM 2272 0 CODE 0 idataCOMRAM dist/default/production\RTOS-2026.production.o
 _pipe_init 20B8 0 CODE 0 text9 dist/default/production\RTOS-2026.production.o
 i1priority_rr_scheduler@found 97 0 BANK0 1 cstackBANK0 dist/default/production\RTOS-2026.production.o
-___inthi_sp 0 0 STACK 2 stack C:\Users\Yuri\AppData\Local\Temp\xcAs3s8.0\driver_tmp_9.o
+___inthi_sp 0 0 STACK 2 stack C:\Users\Yuri\AppData\Local\Temp\xcAseeo.0\driver_tmp_9.o
 i2priority_rr_scheduler@idx D 0 COMRAM 1 cstackCOMRAM dist/default/production\RTOS-2026.production.o
-___intlo_sp 0 0 STACK 2 stack C:\Users\Yuri\AppData\Local\Temp\xcAs3s8.0\driver_tmp_9.o
+___intlo_sp 0 0 STACK 2 stack C:\Users\Yuri\AppData\Local\Temp\xcAseeo.0\driver_tmp_9.o
 __LdataCOMRAM 0 0 ABS 0 dataCOMRAM dist/default/production\RTOS-2026.production.o
 __Hintcode_body 0 0 ABS 0 intcode_body dist/default/production\RTOS-2026.production.o
 mutex_init@m 154 0 BANK1 1 cstackBANK1 dist/default/production\RTOS-2026.production.o
@@ -510,7 +510,7 @@ _STKPTR FFC 0 ABS 0 - dist/default/production\RTOS-2026.production.o
 i1_scheduler 21B0 0 CODE 0 text15 dist/default/production\RTOS-2026.production.o
 _TABLAT FF5 0 ABS 0 - dist/default/production\RTOS-2026.production.o
 _os_create_task 1FB4 0 CODE 0 text7 dist/default/production\RTOS-2026.production.o
-isa$xinst 0 0 ABS 0 - C:\Users\Yuri\AppData\Local\Temp\xcAs3s8.0\driver_tmp_9.o
+isa$xinst 0 0 ABS 0 - C:\Users\Yuri\AppData\Local\Temp\xcAseeo.0\driver_tmp_9.o
 os_create_task@func 154 0 BANK1 1 cstackBANK1 dist/default/production\RTOS-2026.production.o
 __end_of_priority_rr_scheduler 1BDC 0 CODE 0 text4 dist/default/production\RTOS-2026.production.o
 __Hbank0 0 0 ABS 0 bank0 dist/default/production\RTOS-2026.production.o
@@ -690,12 +690,12 @@ __Lsivt_hi 0 0 CODE 0 sivt_hi dist/default/production\RTOS-2026.production.o
 __Lsivt_lo 18 0 CODE 0 sivt_lo dist/default/production\RTOS-2026.production.o
 pipe_init@p 158 0 BANK1 1 cstackBANK1 dist/default/production\RTOS-2026.production.o
 __Lfarbss 0 0 FARRAM 0 farbss dist/default/production\RTOS-2026.production.o
-___inthi_stack_hi 0 0 STACK 2 stack C:\Users\Yuri\AppData\Local\Temp\xcAs3s8.0\driver_tmp_9.o
-___inthi_stack_lo 0 0 STACK 2 stack C:\Users\Yuri\AppData\Local\Temp\xcAs3s8.0\driver_tmp_9.o
+___inthi_stack_hi 0 0 STACK 2 stack C:\Users\Yuri\AppData\Local\Temp\xcAseeo.0\driver_tmp_9.o
+___inthi_stack_lo 0 0 STACK 2 stack C:\Users\Yuri\AppData\Local\Temp\xcAseeo.0\driver_tmp_9.o
 __Lfardata 0 0 FARRAM 0 fardata dist/default/production\RTOS-2026.production.o
-isa$std 1 0 ABS 0 - C:\Users\Yuri\AppData\Local\Temp\xcAs3s8.0\driver_tmp_9.o
-stackhi 0 0 ABS 0 - C:\Users\Yuri\AppData\Local\Temp\xcAs3s8.0\driver_tmp_9.o
-stacklo 0 0 ABS 0 - C:\Users\Yuri\AppData\Local\Temp\xcAs3s8.0\driver_tmp_9.o
+isa$std 1 0 ABS 0 - C:\Users\Yuri\AppData\Local\Temp\xcAseeo.0\driver_tmp_9.o
+stackhi 0 0 ABS 0 - C:\Users\Yuri\AppData\Local\Temp\xcAseeo.0\driver_tmp_9.o
+stacklo 0 0 ABS 0 - C:\Users\Yuri\AppData\Local\Temp\xcAseeo.0\driver_tmp_9.o
 __Lintcode 8 0 CODE 0 intcode dist/default/production\RTOS-2026.production.o
 i1_priority_rr_scheduler 1970 0 CODE 0 text16 dist/default/production\RTOS-2026.production.o
 __Lintret 0 0 ABS 0 intret dist/default/production\RTOS-2026.production.o
@@ -756,7 +756,7 @@ __Ltext19 0 0 ABS 0 text19 dist/default/production\RTOS-2026.production.o
 __Ltext21 0 0 ABS 0 text21 dist/default/production\RTOS-2026.production.o
 __Ltext22 0 0 ABS 0 text22 dist/default/production\RTOS-2026.production.o
 __Ltext23 0 0 ABS 0 text23 dist/default/production\RTOS-2026.production.o
-__ramtop 1000 0 RAM 0 ramtop C:\Users\Yuri\AppData\Local\Temp\xcAs3s8.0\driver_tmp_9.o
+__ramtop 1000 0 RAM 0 ramtop C:\Users\Yuri\AppData\Local\Temp\xcAseeo.0\driver_tmp_9.o
 __end_of_os_config 2124 0 CODE 0 text6 dist/default/production\RTOS-2026.production.o
 priority_rr_scheduler@current 15B 0 BANK1 1 cstackBANK1 dist/default/production\RTOS-2026.production.o
 __Lpowerup 0 0 CODE 0 powerup dist/default/production\RTOS-2026.production.o
@@ -773,11 +773,11 @@ _LED_3_prio 2262 0 CODE 0 text19 dist/default/production\RTOS-2026.production.o
 ?i1___awmod 146 0 BANK1 1 cstackBANK1 dist/default/production\RTOS-2026.production.o
 _rr_quantum 36 0 COMRAM 1 dataCOMRAM dist/default/production\RTOS-2026.production.o
 i2___awmod@sign 7 0 COMRAM 1 cstackCOMRAM dist/default/production\RTOS-2026.production.o
-___heap_hi 0 0 ABS 0 - C:\Users\Yuri\AppData\Local\Temp\xcAs3s8.0\driver_tmp_9.o
-___heap_lo 0 0 ABS 0 - C:\Users\Yuri\AppData\Local\Temp\xcAs3s8.0\driver_tmp_9.o
+___heap_hi 0 0 ABS 0 - C:\Users\Yuri\AppData\Local\Temp\xcAseeo.0\driver_tmp_9.o
+___heap_lo 0 0 ABS 0 - C:\Users\Yuri\AppData\Local\Temp\xcAseeo.0\driver_tmp_9.o
 ___param_bank 0 0 ABS 0 - dist/default/production\RTOS-2026.production.o
-___intlo_stack_hi 0 0 STACK 2 stack C:\Users\Yuri\AppData\Local\Temp\xcAs3s8.0\driver_tmp_9.o
-___intlo_stack_lo 0 0 STACK 2 stack C:\Users\Yuri\AppData\Local\Temp\xcAs3s8.0\driver_tmp_9.o
+___intlo_stack_hi 0 0 STACK 2 stack C:\Users\Yuri\AppData\Local\Temp\xcAseeo.0\driver_tmp_9.o
+___intlo_stack_lo 0 0 STACK 2 stack C:\Users\Yuri\AppData\Local\Temp\xcAseeo.0\driver_tmp_9.o
 __Hbigdata 0 0 BIGRAM 1 bigdata dist/default/production\RTOS-2026.production.o
 __end_of__initialization 206E 0 CODE 0 cinit dist/default/production\RTOS-2026.production.o
 ___awmod@divisor 156 0 BANK1 1 cstackBANK1 dist/default/production\RTOS-2026.production.o
