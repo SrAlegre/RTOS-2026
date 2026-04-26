@@ -949,9 +949,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 "17
 [; ;user.c: 17:     ANSELCbits.ANSC7 = 0;
 [e = . . _ANSELCbits 0 6 -> -> 0 `i `uc ]
-"23
-[; ;user.c: 23:     __asm("global _LED_1_prio,_LED_2_prio,_LED_3_prio");
-[; <" global _LED_1_prio,_LED_2_prio,_LED_3_prio ;# ">
+"22
+[; ;user.c: 22:     __asm("global _LED_1_mutex, _LED_2_mutex");
+[; <" global _LED_1_mutex, _LED_2_mutex ;# ">
 "27
 [; ;user.c: 27:     sem_init(&s, 0);
 [e ( _sem_init (2 , &U _s -> -> 0 `i `uc ]

@@ -10014,8 +10014,8 @@ void config_user() {
 
 
 
+    __asm("global _LED_1_mutex, _LED_2_mutex");
 
-    __asm("global _LED_1_prio,_LED_2_prio,_LED_3_prio");
 
 
 
