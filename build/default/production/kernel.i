@@ -9952,6 +9952,8 @@ TASK LED_2_mutex(void);
 TASK LED_1_prio();
 TASK LED_2_prio();
 TASK LED_3_prio();
+
+TASK tarefaLeituraADC_UART(void);
 # 4 "kernel.c" 2
 # 1 "./hw.h" 1
 

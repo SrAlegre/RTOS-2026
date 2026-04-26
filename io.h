@@ -6,7 +6,7 @@
 
 void adc_config(void);
 void adc_on(void);
-uint16_t adc_read(void);
+uint16_t adc_read(uint8_t channel);
 
 
 
