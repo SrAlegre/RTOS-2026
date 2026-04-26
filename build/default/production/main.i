@@ -9938,16 +9938,35 @@ TASK apagaLed(void);
 TASK LED_1(void);
 TASK LED_2(void);
 TASK LED_3(void);
+
 TASK LED_1_mutex(void);
 TASK LED_2_mutex(void);
+
+TASK LED_1_prio();
+TASK LED_2_prio();
+TASK LED_3_prio();
 # 7 "main.c" 2
 
 int main() {
     os_config();
-# 19 "main.c"
-    os_create_task(1, LED_1_mutex, 5);
-    os_create_task(2, LED_2_mutex, 5);
 
+
+
+
+
+    os_create_task(2, LED_1, 5);
+    os_create_task(3, LED_2, 5);
+    os_create_task(4, LED_3, 5);
+
+
+
+
+
+
+
+        os_create_task(2, LED_1_prio, 3);
+        os_create_task(3, LED_2_prio, 3);
+        os_create_task(4, LED_3_prio, 3);
 
     os_start();
 

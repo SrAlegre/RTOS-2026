@@ -194,8 +194,13 @@ TASK apagaLed(void);
 TASK LED_1(void);
 TASK LED_2(void);
 TASK LED_3(void);
+
 TASK LED_1_mutex(void);
 TASK LED_2_mutex(void);
+
+TASK LED_1_prio();
+TASK LED_2_prio();
+TASK LED_3_prio();
 # 2 "user.c" 2
 # 1 "C:\\Program Files\\Microchip\\xc8\\v3.10\\pic\\include/xc.h" 1 3
 # 18 "C:\\Program Files\\Microchip\\xc8\\v3.10\\pic\\include/xc.h" 3
@@ -9998,8 +10003,7 @@ sem_t s;
 pipe_t p;
 mutex_t m_led;
 
-void config_user()
-{
+void config_user() {
     TRISCbits.RC6 = 0;
     TRISCbits.RC7 = 0;
     TRISDbits.RD0 = 0;
@@ -10007,36 +10011,38 @@ void config_user()
     ANSELCbits.ANSC6 = 0;
     ANSELCbits.ANSC7 = 0;
 
-    __asm("global _LED_1, _LED_2, _LED_3,_LED_1_mutex, _LED_2_mutex");
+
+
+
+
+    __asm("global _LED_1_prio,_LED_2_prio,_LED_3_prio");
+
+
 
     sem_init(&s, 0);
     pipe_init(&p);
     mutex_init(&m_led);
 }
 
-TASK acionaMotor()
-{
+TASK acionaMotor() {
     while (1) {
 
     }
 }
 
-TASK ligaLed()
-{
+TASK ligaLed() {
     while (1) {
 
     }
 }
 
-TASK apagaLed()
-{
+TASK apagaLed() {
     while (1) {
 
     }
 }
 
-TASK LED_1()
-{
+TASK LED_1() {
 
     char acionamento[] = {'L', 'L', 'D', 'L', 'D', 'D'};
     uint8_t pos = 0;
@@ -10048,8 +10054,7 @@ TASK LED_1()
     }
 }
 
-TASK LED_2()
-{
+TASK LED_2() {
     while (1) {
 
 
@@ -10059,8 +10064,7 @@ TASK LED_2()
     }
 }
 
-TASK LED_3()
-{
+TASK LED_3() {
     char dado;
     while (1) {
         pipe_read(&p, &dado);
@@ -10075,10 +10079,9 @@ TASK LED_3()
 
 
 
-TASK LED_1_mutex()
-{
-    while (1)
-    {
+
+TASK LED_1_mutex() {
+    while (1) {
         mutex_lock(&m_led);
 
         PORTCbits.RC6 = 1;
@@ -10088,10 +10091,9 @@ TASK LED_1_mutex()
         mutex_unlock(&m_led);
     }
 }
-TASK LED_2_mutex()
-{
-    while (1)
-    {
+
+TASK LED_2_mutex() {
+    while (1) {
         mutex_lock(&m_led);
 
         PORTCbits.RC7 = 1;
@@ -10099,5 +10101,31 @@ TASK LED_2_mutex()
         PORTCbits.RC7 = 0;
 
         mutex_unlock(&m_led);
+    }
+}
+
+
+
+TASK LED_1_prio() {
+    while (1) {
+        PORTCbits.RC6 = 1;
+        os_delay(5);
+        PORTCbits.RC6 = 0;
+    }
+}
+
+TASK LED_2_prio() {
+    while (1) {
+        PORTCbits.RC7 = 1;
+        os_delay(5);
+        PORTCbits.RC7 = 0;
+    }
+}
+
+TASK LED_3_prio() {
+    while (1) {
+        PORTDbits.RD0 = 1;
+        os_delay(5);
+        PORTDbits.RD0 = 0;
     }
 }
