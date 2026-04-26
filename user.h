@@ -21,6 +21,7 @@ TASK LED_1_prio();
 TASK LED_2_prio();
 TASK LED_3_prio();
 
+TASK tarefaLeituraADC_UART(void);
 
 #endif	/* USER_H */
 

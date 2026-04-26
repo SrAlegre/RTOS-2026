@@ -9945,29 +9945,14 @@ TASK LED_2_mutex(void);
 TASK LED_1_prio();
 TASK LED_2_prio();
 TASK LED_3_prio();
+
+TASK tarefaLeituraADC_UART(void);
 # 7 "main.c" 2
 
 int main() {
     os_config();
-
-
-
-
-
-    os_create_task(2, LED_1, 5);
-    os_create_task(3, LED_2, 5);
-    os_create_task(4, LED_3, 5);
-
-
-
-
-
-
-
-        os_create_task(2, LED_1_prio, 3);
-        os_create_task(3, LED_2_prio, 3);
-        os_create_task(4, LED_3_prio, 3);
-
+# 29 "main.c"
+    os_create_task(2, tarefaLeituraADC_UART, 5);
     os_start();
 
     while (1) {

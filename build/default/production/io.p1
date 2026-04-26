@@ -98,9 +98,12 @@ Version 4.0 HI-TECH Software Intermediate Code
 "65
 [; ;D:/Microchip/MPLABX/v6.30/packs/Microchip/PIC18F-K_DFP/1.15.303/xc8\pic\include\proc/pic18f46k22.h: 65: extern volatile ANSELAbits_t ANSELAbits __attribute__((address(0xF38)));
 [v _ANSELAbits `VS6 ~T0 @X0 0 e@3896 ]
-"13734
-[; ;D:/Microchip/MPLABX/v6.30/packs/Microchip/PIC18F-K_DFP/1.15.303/xc8\pic\include\proc/pic18f46k22.h: 13734: extern volatile unsigned short ADRES __attribute__((address(0xFC3)));
-[v _ADRES `Vus ~T0 @X0 0 e@4035 ]
+"13761
+[; ;D:/Microchip/MPLABX/v6.30/packs/Microchip/PIC18F-K_DFP/1.15.303/xc8\pic\include\proc/pic18f46k22.h: 13761: extern volatile unsigned char ADRESH __attribute__((address(0xFC4)));
+[v _ADRESH `Vuc ~T0 @X0 0 e@4036 ]
+"13741
+[; ;D:/Microchip/MPLABX/v6.30/packs/Microchip/PIC18F-K_DFP/1.15.303/xc8\pic\include\proc/pic18f46k22.h: 13741: extern volatile unsigned char ADRESL __attribute__((address(0xFC3)));
+[v _ADRESL `Vuc ~T0 @X0 0 e@4035 ]
 "52 D:/Microchip/MPLABX/v6.30/packs/Microchip/PIC18F-K_DFP/1.15.303/xc8\pic\include\proc/pic18f46k22.h
 [; ;D:/Microchip/MPLABX/v6.30/packs/Microchip/PIC18F-K_DFP/1.15.303/xc8\pic\include\proc/pic18f46k22.h: 52: __asm("ANSELA equ 0F38h");
 [; <" ANSELA equ 0F38h ;# ">
@@ -861,85 +864,77 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;D:/Microchip/MPLABX/v6.30/packs/Microchip/PIC18F-K_DFP/1.15.303/xc8\pic\include\proc/pic18f46k22.h: 17404: __asm("TOSU equ 0FFFh");
 [; <" TOSU equ 0FFFh ;# ">
 "4 io.c
-[; ;io.c: 4: void adc_config(void)
+[; ;io.c: 4: void adc_config(void) {
 [v _adc_config `(v ~T0 @X0 1 ef ]
-"5
-[; ;io.c: 5: {
 {
 [e :U _adc_config ]
 [f ]
-"6
-[; ;io.c: 6:     ADCON0bits.CHS = 0b00000;
+"5
+[; ;io.c: 5:     ADCON0bits.CHS = 0b00000;
 [e = . . _ADCON0bits 1 2 -> -> 0 `i `uc ]
-"7
-[; ;io.c: 7:     ADCON1bits.PVCFG = 0b00;
+"6
+[; ;io.c: 6:     ADCON1bits.PVCFG = 0b00;
 [e = . . _ADCON1bits 0 1 -> -> 0 `i `uc ]
-"8
-[; ;io.c: 8:     ADCON1bits.NVCFG = 0b00;
+"7
+[; ;io.c: 7:     ADCON1bits.NVCFG = 0b00;
 [e = . . _ADCON1bits 0 0 -> -> 0 `i `uc ]
-"9
-[; ;io.c: 9:     ADCON2bits.ADFM = 1;
+"8
+[; ;io.c: 8:     ADCON2bits.ADFM = 1;
 [e = . . _ADCON2bits 0 3 -> -> 1 `i `uc ]
-"10
-[; ;io.c: 10:     ADCON2bits.ACQT = 0b110;
+"9
+[; ;io.c: 9:     ADCON2bits.ACQT = 0b110;
 [e = . . _ADCON2bits 0 1 -> -> 6 `i `uc ]
-"11
-[; ;io.c: 11:     ADCON2bits.ADCS = 0b100;
+"10
+[; ;io.c: 10:     ADCON2bits.ADCS = 0b100;
 [e = . . _ADCON2bits 0 0 -> -> 4 `i `uc ]
-"12
-[; ;io.c: 12:     TRISAbits.RA0 = 1;
+"11
+[; ;io.c: 11:     TRISAbits.RA0 = 1;
 [e = . . _TRISAbits 1 0 -> -> 1 `i `uc ]
-"13
-[; ;io.c: 13:     ANSELAbits.ANSA0 = 1;
+"12
+[; ;io.c: 12:     ANSELAbits.ANSA0 = 1;
 [e = . . _ANSELAbits 0 0 -> -> 1 `i `uc ]
-"14
-[; ;io.c: 14: }
+"13
+[; ;io.c: 13: }
 [e :UE 876 ]
 }
-"16
-[; ;io.c: 16: void adc_on(void)
+"15
+[; ;io.c: 15: void adc_on(void) {
 [v _adc_on `(v ~T0 @X0 1 ef ]
-"17
-[; ;io.c: 17: {
 {
 [e :U _adc_on ]
 [f ]
-"18
-[; ;io.c: 18:     ADCON0bits.ADON = 1;
+"16
+[; ;io.c: 16:     ADCON0bits.ADON = 1;
 [e = . . _ADCON0bits 1 0 -> -> 1 `i `uc ]
-"19
-[; ;io.c: 19: }
+"17
+[; ;io.c: 17: }
 [e :UE 877 ]
 }
-"21
-[; ;io.c: 21: uint16_t adc_read(void)
-[v _adc_read `(us ~T0 @X0 1 ef ]
-"22
-[; ;io.c: 22: {
+"19
+[; ;io.c: 19: uint16_t adc_read(uint8_t channel) {
+[v _adc_read `(us ~T0 @X0 1 ef1`uc ]
 {
 [e :U _adc_read ]
+[v _channel `uc ~T0 @X0 1 r1 ]
 [f ]
-"23
-[; ;io.c: 23:     uint16_t dados_adc;
-[v _dados_adc `us ~T0 @X0 1 a ]
-"25
-[; ;io.c: 25:     ADCON0bits.GO = 1;
+"20
+[; ;io.c: 20:     ADCON0bits.CHS = channel;
+[e = . . _ADCON0bits 1 2 _channel ]
+"21
+[; ;io.c: 21:     ADCON0bits.GO = 1;
 [e = . . _ADCON0bits 2 1 -> -> 1 `i `uc ]
-"27
-[; ;io.c: 27:     while (ADCON0bits.GODONE);
+"22
+[; ;io.c: 22:     while (ADCON0bits.GO);
 [e $U 879  ]
 [e :U 880 ]
 [e :U 879 ]
-[e $ != -> . . _ADCON0bits 7 1 `i -> 0 `i 880  ]
+[e $ != -> . . _ADCON0bits 2 1 `i -> 0 `i 880  ]
 [e :U 881 ]
-"29
-[; ;io.c: 29:     dados_adc = ADRES;
-[e = _dados_adc _ADRES ]
-"31
-[; ;io.c: 31:     return dados_adc;
-[e ) _dados_adc ]
+"23
+[; ;io.c: 23:     return ((uint16_t) ADRESH << 8) | ADRESL;
+[e ) -> | << -> -> _ADRESH `us `ui -> 8 `i -> _ADRESL `ui `us ]
 [e $UE 878  ]
-"32
-[; ;io.c: 32: }
+"24
+[; ;io.c: 24: }
 [e :UE 878 ]
 }

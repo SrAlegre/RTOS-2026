@@ -201,6 +201,8 @@ TASK LED_2_mutex(void);
 TASK LED_1_prio();
 TASK LED_2_prio();
 TASK LED_3_prio();
+
+TASK tarefaLeituraADC_UART(void);
 # 2 "user.c" 2
 # 1 "C:\\Program Files\\Microchip\\xc8\\v3.10\\pic\\include/xc.h" 1 3
 # 18 "C:\\Program Files\\Microchip\\xc8\\v3.10\\pic\\include/xc.h" 3
@@ -9998,6 +10000,17 @@ void pipe_init(pipe_t *p);
 void pipe_read(pipe_t *p, char *dado);
 void pipe_write(pipe_t *p, char dado);
 # 6 "user.c" 2
+# 1 "./io.h" 1
+
+
+
+
+
+
+void adc_config(void);
+void adc_on(void);
+uint16_t adc_read(uint8_t channel);
+# 7 "user.c" 2
 
 sem_t s;
 pipe_t p;
@@ -10010,18 +10023,16 @@ void config_user() {
     ANSELDbits.ANSD0 = 0;
     ANSELCbits.ANSC6 = 0;
     ANSELCbits.ANSC7 = 0;
-
-
-
-
-    __asm("global _LED_1_mutex, _LED_2_mutex");
-
+# 27 "user.c"
+    __asm("global _tarefaLeituraADC_UART");
 
 
 
     sem_init(&s, 0);
     pipe_init(&p);
     mutex_init(&m_led);
+    adc_config();
+    adc_on();
 }
 
 TASK acionaMotor() {
@@ -10127,5 +10138,21 @@ TASK LED_3_prio() {
         PORTDbits.RD0 = 1;
         os_delay(5);
         PORTDbits.RD0 = 0;
+    }
+}
+
+TASK tarefaLeituraADC_UART(void) {
+    uint16_t valor;
+
+    while (1) {
+        valor = adc_read(0);
+        if (valor > 100) {
+            PORTDbits.RD0 = 1;
+
+        } else {
+            PORTDbits.RD0 = 0;
+
+        }
+        os_delay(10);
     }
 }

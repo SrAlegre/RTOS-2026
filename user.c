@@ -3,6 +3,7 @@
 #include "kernel.h"
 #include "sync.h"
 #include "com.h"
+#include "io.h"
 
 sem_t s;
 pipe_t p;
@@ -16,17 +17,22 @@ void config_user() {
     ANSELCbits.ANSC6 = 0;
     ANSELCbits.ANSC7 = 0;
 
-//    asm("global _LED_1, _LED_2, _LED_3,_LED_1_mutex, _LED_2_mutex,_LED_1_prio,_LED_2_prio,_LED_3_prio");
-    
-//    asm("global _LED_1, _LED_2, _LED_3");
-    asm("global _LED_1_mutex, _LED_2_mutex");
-//    asm("global _LED_1_prio,_LED_2_prio,_LED_3_prio");
+
+    //    asm("global _LED_1, _LED_2, _LED_3,_LED_1_mutex, _LED_2_mutex,_LED_1_prio,_LED_2_prio,_LED_3_prio");
+
+    //    asm("global _LED_1, _LED_2, _LED_3");
+    //    asm("global _LED_1_mutex, _LED_2_mutex");
+    //    asm("global _LED_1_prio,_LED_2_prio,_LED_3_prio");
+
+    asm("global _tarefaLeituraADC_UART");
 
 
 
     sem_init(&s, 0);
     pipe_init(&p);
     mutex_init(&m_led);
+    adc_config();
+    adc_on();
 }
 
 TASK acionaMotor() {
@@ -135,3 +141,18 @@ TASK LED_3_prio() {
     }
 }
 
+TASK tarefaLeituraADC_UART(void) {
+    uint16_t valor;
+
+    while (1) {
+        valor = adc_read(0);
+        if (valor > 100) {
+            PORTDbits.RD0 = 1;
+
+        } else {
+            PORTDbits.RD0 = 0;
+
+        }
+        os_delay(10);
+    }
+}

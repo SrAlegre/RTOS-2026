@@ -7,27 +7,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 "16
 [; ;./kernel.h: 16: void os_create_task(uint8_t id, f_ptr func, uint8_t prior);
 [v _os_create_task `(v ~T0 @X0 0 ef3`uc`*F6195`uc ]
-"13 ./user.h
-[; ;./user.h: 13: TASK LED_1(void);
-[v _LED_1 `(v ~T0 @X0 0 ef ]
-"14
-[; ;./user.h: 14: TASK LED_2(void);
-[v _LED_2 `(v ~T0 @X0 0 ef ]
-"15
-[; ;./user.h: 15: TASK LED_3(void);
-[v _LED_3 `(v ~T0 @X0 0 ef ]
-"20
-[; ;./user.h: 20: TASK LED_1_prio();
-[v _LED_1_prio `(v ~T0 @X0 0 e? ]
-[v F6223 `(v ~T0 @X0 0 tf ]
-"21
-[; ;./user.h: 21: TASK LED_2_prio();
-[v _LED_2_prio `(v ~T0 @X0 0 e? ]
-[v F6225 `(v ~T0 @X0 0 tf ]
-"22
-[; ;./user.h: 22: TASK LED_3_prio();
-[v _LED_3_prio `(v ~T0 @X0 0 e? ]
-[v F6227 `(v ~T0 @X0 0 tf ]
+"24 ./user.h
+[; ;./user.h: 24: TASK tarefaLeituraADC_UART(void);
+[v _tarefaLeituraADC_UART `(v ~T0 @X0 0 ef ]
 "19 ./kernel.h
 [; ;./kernel.h: 19: void os_start(void);
 [v _os_start `(v ~T0 @X0 0 ef ]
@@ -800,42 +782,27 @@ Version 4.0 HI-TECH Software Intermediate Code
 "9
 [; ;main.c: 9:     os_config();
 [e ( _os_config ..  ]
-"15
-[; ;main.c: 15:     os_create_task(2, LED_1, 5);
-[e ( _os_create_task (3 , , -> -> 2 `i `uc &U _LED_1 -> -> 5 `i `uc ]
-"16
-[; ;main.c: 16:     os_create_task(3, LED_2, 5);
-[e ( _os_create_task (3 , , -> -> 3 `i `uc &U _LED_2 -> -> 5 `i `uc ]
-"17
-[; ;main.c: 17:     os_create_task(4, LED_3, 5);
-[e ( _os_create_task (3 , , -> -> 4 `i `uc &U _LED_3 -> -> 5 `i `uc ]
-"25
-[; ;main.c: 25:         os_create_task(2, LED_1_prio, 3);
-[e ( _os_create_task (3 , , -> -> 2 `i `uc -> &U _LED_1_prio `*F6223 -> -> 3 `i `uc ]
-"26
-[; ;main.c: 26:         os_create_task(3, LED_2_prio, 3);
-[e ( _os_create_task (3 , , -> -> 3 `i `uc -> &U _LED_2_prio `*F6225 -> -> 3 `i `uc ]
-"27
-[; ;main.c: 27:         os_create_task(4, LED_3_prio, 3);
-[e ( _os_create_task (3 , , -> -> 4 `i `uc -> &U _LED_3_prio `*F6227 -> -> 3 `i `uc ]
 "29
-[; ;main.c: 29:     os_start();
+[; ;main.c: 29:     os_create_task(2, tarefaLeituraADC_UART, 5);
+[e ( _os_create_task (3 , , -> -> 2 `i `uc &U _tarefaLeituraADC_UART -> -> 5 `i `uc ]
+"30
+[; ;main.c: 30:     os_start();
 [e ( _os_start ..  ]
-"31
-[; ;main.c: 31:     while (1) {
+"32
+[; ;main.c: 32:     while (1) {
 [e :U 882 ]
 {
-"33
-[; ;main.c: 33:     }
+"34
+[; ;main.c: 34:     }
 }
 [e :U 881 ]
 [e $U 882  ]
 [e :U 883 ]
-"35
-[; ;main.c: 35:     return 0;
+"36
+[; ;main.c: 36:     return 0;
 [e ) -> 0 `i ]
 [e $UE 880  ]
-"36
-[; ;main.c: 36: }
+"37
+[; ;main.c: 37: }
 [e :UE 880 ]
 }

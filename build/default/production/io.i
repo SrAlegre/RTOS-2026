@@ -9830,11 +9830,10 @@ unsigned char __t3rd16on(void);
 
 void adc_config(void);
 void adc_on(void);
-uint16_t adc_read(void);
+uint16_t adc_read(uint8_t channel);
 # 3 "io.c" 2
 
-void adc_config(void)
-{
+void adc_config(void) {
     ADCON0bits.CHS = 0b00000;
     ADCON1bits.PVCFG = 0b00;
     ADCON1bits.NVCFG = 0b00;
@@ -9845,20 +9844,13 @@ void adc_config(void)
     ANSELAbits.ANSA0 = 1;
 }
 
-void adc_on(void)
-{
+void adc_on(void) {
     ADCON0bits.ADON = 1;
 }
 
-uint16_t adc_read(void)
-{
-    uint16_t dados_adc;
-
+uint16_t adc_read(uint8_t channel) {
+    ADCON0bits.CHS = channel;
     ADCON0bits.GO = 1;
-
-    while (ADCON0bits.GODONE);
-
-    dados_adc = ADRES;
-
-    return dados_adc;
+    while (ADCON0bits.GO);
+    return ((uint16_t) ADRESH << 8) | ADRESL;
 }
