@@ -18,28 +18,9 @@ typedef union _SALLOC
   unsigned alloc:1;
  }bits;
 }SALLOC;
-
-
-
-
-
-
-
-
-#pragma udata _SRAM_ALLOC_HEAP
+# 136 "./mem.h"
 unsigned char _uDynamicHeap[0x200];
-
-
-
-
-
-#pragma udata _SRAM_ALLOC
-
-
-
-
-
-
+# 149 "./mem.h"
      unsigned char _SRAMmerge(SALLOC * pSegA);
 unsigned char * SRAMalloc( unsigned char nBytes);
 void SRAMfree(unsigned char * pSRAM);

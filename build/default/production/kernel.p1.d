@@ -5,4 +5,5 @@ types.h  \
 os_config.h  \
 scheduler.h  \
 user.h  \
-hw.h 
+hw.h  \
+mem.h 
