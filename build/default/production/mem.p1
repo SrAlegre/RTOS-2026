@@ -8,8 +8,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 [u S1 `uc 1 `S2 1 ]
 [n S1 _SALLOC byte bits ]
 "149
+[; ;./mem.h: 149:      unsigned char _SRAMmerge(SALLOC * pSegA);
 [v __SRAMmerge `(uc ~T0 @X0 0 ef1`*S1 ]
 "136 ./mem.h
+[; ;./mem.h: 136: unsigned char _uDynamicHeap[0x200];
 [v __uDynamicHeap `uc ~T0 @X0 -> 512 `i e ]
 "29 mem.c
 [; ;mem.c: 29: unsigned char * SRAMalloc( unsigned char nBytes)

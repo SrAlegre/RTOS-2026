@@ -2,6 +2,7 @@
 #include "scheduler.h"
 #include "user.h"
 #include "hw.h"
+#include "mem.h"
 
 // Fila de aptos
 ready_queue_t r_queue;
@@ -69,11 +70,44 @@ void os_config()
     r_queue.task_running        = &r_queue.TASKS[0];
     r_queue.pos_task_running    = 0;
     
+    // 1. Inicializa o Heap para alocação dinâmica
+    SRAMInitHeap();
+    
     // Criar a tarefa idle
     os_create_task(1, idle, 0);
     asm("global _idle");
     
     config_user();   
+}
+
+// Alocação de memória thread-safe
+void* os_malloc(uint8_t size) 
+{
+    void* ptr;
+    
+    // Desabilita interrupções para evitar troca de contexto
+    DISABLE_ALL_INTERRUPTS(); 
+    
+    ptr = SRAMalloc(size);
+    
+    // Restaura as interrupções
+    ENABLE_ALL_INTERRUPTS();  
+    
+    return ptr;
+}
+
+// Liberação de memória thread-safe
+void os_free(void* ptr) 
+{
+    if (ptr == NULL) return;
+
+    // Desabilita interrupções para evitar troca de contexto
+    DISABLE_ALL_INTERRUPTS();
+    
+    SRAMfree((unsigned char*)ptr);
+    
+    // Restaura as interrupções
+    ENABLE_ALL_INTERRUPTS();
 }
 
 void os_start()

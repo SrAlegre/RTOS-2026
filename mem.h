@@ -132,14 +132,14 @@ typedef union _SALLOC
 /*********************************************************************
  * Reserve the memory heap
  ********************************************************************/
-#pragma 	udata	_SRAM_ALLOC_HEAP
+//#pragma 	udata	_SRAM_ALLOC_HEAP
 unsigned char _uDynamicHeap[MAX_HEAP_SIZE];
 
 
 /*********************************************************************
  * Set the memory type
  ********************************************************************/
-#pragma		udata _SRAM_ALLOC
+//#pragma		udata _SRAM_ALLOC
 
 
 

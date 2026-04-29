@@ -54,14 +54,30 @@ TASK apagaLed() {
 }
 
 TASK LED_1() {
-    //char *acionamento = SRAMAlloc(6);
-    char acionamento[] = {'L', 'L', 'D', 'L', 'D', 'D'};
-    uint8_t pos = 0;
-    while (1) {
-        PORTCbits.RC6 = ~PORTCbits.RC6;
-        pipe_write(&p, acionamento[pos]);
-        pos = (pos + 1) % 6;
-        //os_delay(5);
+    char *acionamento = (char*) os_malloc(6);
+    //char acionamento[] = {'L', 'L', 'D', 'L', 'D', 'D'};
+    
+    if (acionamento != NULL) {
+        acionamento[0] = 'L';
+        acionamento[1] = 'L';
+        acionamento[2] = 'D';
+        acionamento[3] = 'L';
+        acionamento[4] = 'D';
+        acionamento[5] = 'D';
+        
+        uint8_t pos = 0;
+        while (1) {
+            PORTCbits.RC6 = ~PORTCbits.RC6;
+            pipe_write(&p, acionamento[pos]);
+            pos = (pos + 1) % 6;
+            os_delay(5);
+        }
+    }
+    else {
+        // Se falhar (heap cheio), trava a tarefa
+        while(1) {
+            os_yield(); // ou os_delay
+        }
     }
 }
 
