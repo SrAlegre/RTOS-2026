@@ -5,7 +5,7 @@
 #include "com.h"
 #include "io.h"
 
-sem_t s;
+sem_t sem_botao; // Semáforo para o botão (Interrupção Externa)
 pipe_t p;
 mutex_t m_led;
 
@@ -28,7 +28,15 @@ void config_user() {
 
 
 
-    sem_init(&s, 0);
+    sem_init(&sem_botao, 0);
+    
+    // Inicializa a API
+    adc_init_api();
+    pwm_init(PWM_CHANNEL_1);
+    
+    // Configura a interrupção externa vinculada ao semáforo
+    ext_int0_init(FALLING_EDGE, &sem_botao);
+    
     pipe_init(&p);
     mutex_init(&m_led);
     adc_config();
@@ -154,5 +162,36 @@ TASK tarefaLeituraADC_UART(void) {
 
         }
         os_delay(10);
+    }
+}
+
+// Tarefa 1: Lê o ADC de forma segura e ajusta o brilho do LED (PWM)
+TASK tarefaControlePWM() {
+    uint16_t valor_adc;
+    uint8_t percentual_pwm;
+    
+    while(1) {
+        valor_adc = adc_read_safe(0); // Lê canal AN0 (protegido por Mutex)
+        
+        // Converte o ADC (0-1023) para porcentagem (0-100)
+        percentual_pwm = (valor_adc * 100) / 1023; 
+        
+        pwm_set_duty(PWM_CHANNEL_1, percentual_pwm);
+        os_delay(10);
+    }
+}
+
+// Tarefa 2: Acordada APENAS quando o botão é pressionado (via Interrupção Externa)
+TASK tarefaBotaoInt() {
+    while(1) {
+        // A tarefa fica dormindo (não consome CPU) até a ISR dar o sem_post
+        sem_wait(&sem_botao); 
+        
+        // Quando a interrupção acontece, o código continua aqui:
+        // Exemplo: inverte o estado de um LED ou envia mensagem UART
+        PORTDbits.RD0 = ~PORTDbits.RD0; 
+        
+        // Pequeno delay para debouncing antes de esperar o botão novamente
+        os_delay(20); 
     }
 }
