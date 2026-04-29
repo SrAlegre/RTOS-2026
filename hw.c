@@ -2,6 +2,7 @@
 #include "kernel.h"
 #include "scheduler.h"
 #include "os_config.h"
+#include "sync.h"
 
 // Quantum do algoritmo Round-Robin
 uint8_t rr_quantum = QUANTUM;
@@ -20,6 +21,9 @@ void setup_hardware(void)
     TMR0                = 0;
 }
 
+// Precisa importar o ponteiro do semáforo do io.c
+extern sem_t* ext_int0_sem;
+
 void __interrupt() ISR(void)
 {
     if (INTCONbits.TMR0IF) {
@@ -32,6 +36,16 @@ void __interrupt() ISR(void)
                 if (r_queue.TASKS[i].task_delay == 0) {
                     r_queue.TASKS[i].task_state = READY;
                 }                
+            }
+        }
+        
+        // NOVA LÓGICA: Tratamento da Interrupção Externa 0
+        if (INTCONbits.INT0IE && INTCONbits.INT0IF) {
+            INTCONbits.INT0IF = 0; // Limpa a flag imediatamente
+        
+            // Se houver um semáforo vinculado, libera ele
+            if (ext_int0_sem != NULL) {
+                sem_post(ext_int0_sem);
             }
         }
         
