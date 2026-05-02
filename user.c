@@ -32,7 +32,6 @@ void config_user() {
     pipe_init(&p);
     mutex_init(&m_led);
     adc_config();
-    adc_on();
 }
 
 TASK acionaMotor() {
