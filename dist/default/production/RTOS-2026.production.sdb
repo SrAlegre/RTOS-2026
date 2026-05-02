@@ -3,113 +3,115 @@
 [d edition pro ]
 [d chip 18F46K22 ]
 [d frameptr 4065 ]
-"7 D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\kernel.c
+"7 /home/yuri/Área de trabalho/Faculdade/SistemaOperacinaisEmbarcado/RTOS-2026/kernel.c
 [e E37 . `uc
 READY 0
 WAITING 1
 RUNNING 2
 WAITING_SEM 3
 ]
-"19 D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\sync.c
+"19 /home/yuri/Área de trabalho/Faculdade/SistemaOperacinaisEmbarcado/RTOS-2026/sync.c
 [e E64 . `uc
 READY 0
 WAITING 1
 RUNNING 2
 WAITING_SEM 3
 ]
-"15 D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\scheduler.c
+"15 /home/yuri/Área de trabalho/Faculdade/SistemaOperacinaisEmbarcado/RTOS-2026/scheduler.c
 [e E41 . `uc
 READY 0
 WAITING 1
 RUNNING 2
 WAITING_SEM 3
 ]
-"30 D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\hw.c
+"30 /home/yuri/Área de trabalho/Faculdade/SistemaOperacinaisEmbarcado/RTOS-2026/hw.c
 [e E6143 . `uc
 READY 0
 WAITING 1
 RUNNING 2
 WAITING_SEM 3
 ]
-"7 C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\__lldiv.c
+"7 /opt/microchip/xc8/v3.10/pic/sources/c99/common/__lldiv.c
 [v ___lldiv __lldiv `(ul  1 e 4 0 ]
-"7 C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\aldiv.c
+"7 /opt/microchip/xc8/v3.10/pic/sources/c99/common/aldiv.c
 [v ___aldiv __aldiv `(l  1 e 4 0 ]
-"7 C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\almod.c
+"7 /opt/microchip/xc8/v3.10/pic/sources/c99/common/almod.c
 [v ___almod __almod `(l  1 e 4 0 ]
-"9 C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\aodiv.c
+"9 /opt/microchip/xc8/v3.10/pic/sources/c99/common/aodiv.c
 [v ___aodiv __aodiv `(o  1 e 8 0 ]
-"9 C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\aomod.c
+"9 /opt/microchip/xc8/v3.10/pic/sources/c99/common/aomod.c
 [v ___aomod __aomod `(o  1 e 8 0 ]
-"7 C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\atdiv.c
+"7 /opt/microchip/xc8/v3.10/pic/sources/c99/common/atdiv.c
 [v ___atdiv __atdiv `(m  1 e 3 0 ]
-"7 C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\atmod.c
+"7 /opt/microchip/xc8/v3.10/pic/sources/c99/common/atmod.c
 [v ___atmod __atmod `(m  1 e 3 0 ]
-"7 C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awdiv.c
+"7 /opt/microchip/xc8/v3.10/pic/sources/c99/common/awdiv.c
 [v ___awdiv __awdiv `(i  1 e 2 0 ]
-"7 C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
+"7 /opt/microchip/xc8/v3.10/pic/sources/c99/common/awmod.c
 [v ___awmod __awmod `(i  1 e 2 0 ]
 [v i1___awmod __awmod `(i  1 e 2 0 ]
 [v i2___awmod __awmod `(i  1 e 2 0 ]
-"4 C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\fleq.c
+"4 /opt/microchip/xc8/v3.10/pic/sources/c99/common/fleq.c
 [v ___fleq __fleq `(b  1 e 0 0 ]
-"62 C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\float.c
+"62 /opt/microchip/xc8/v3.10/pic/sources/c99/common/float.c
 [v ___ftpack __ftpack `(f  1 e 4 0 ]
-"86 C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\ftadd.c
+"86 /opt/microchip/xc8/v3.10/pic/sources/c99/common/ftadd.c
 [v ___ftadd __ftadd `(f  1 e 4 0 ]
-"54 C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\ftdiv.c
+"54 /opt/microchip/xc8/v3.10/pic/sources/c99/common/ftdiv.c
 [v ___ftdiv __ftdiv `(f  1 e 4 0 ]
-"62 C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\ftmul.c
+"62 /opt/microchip/xc8/v3.10/pic/sources/c99/common/ftmul.c
 [v ___ftmul __ftmul `(f  1 e 4 0 ]
-"19 C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\ftsub.c
+"19 /opt/microchip/xc8/v3.10/pic/sources/c99/common/ftsub.c
 [v ___ftsub __ftsub `(f  1 e 4 0 ]
-"7 C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\llmod.c
+"7 /opt/microchip/xc8/v3.10/pic/sources/c99/common/llmod.c
 [v ___llmod __llmod `(ul  1 e 4 0 ]
-"9 C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\lodiv.c
+"9 /opt/microchip/xc8/v3.10/pic/sources/c99/common/lodiv.c
 [v ___lodiv __lodiv `(uo  1 e 8 0 ]
-"9 C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\lomod.c
+"9 /opt/microchip/xc8/v3.10/pic/sources/c99/common/lomod.c
 [v ___lomod __lomod `(uo  1 e 8 0 ]
-"7 C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\ltdiv.c
+"7 /opt/microchip/xc8/v3.10/pic/sources/c99/common/ltdiv.c
 [v ___ltdiv __ltdiv `(um  1 e 3 0 ]
-"7 C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\ltmod.c
+"7 /opt/microchip/xc8/v3.10/pic/sources/c99/common/ltmod.c
 [v ___ltmod __ltmod `(um  1 e 3 0 ]
-"7 C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\lwdiv.c
+"7 /opt/microchip/xc8/v3.10/pic/sources/c99/common/lwdiv.c
 [v ___lwdiv __lwdiv `(ui  1 e 2 0 ]
-"7 C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\lwmod.c
+"7 /opt/microchip/xc8/v3.10/pic/sources/c99/common/lwmod.c
 [v ___lwmod __lwmod `(ui  1 e 2 0 ]
-"10 C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\sprcadd.c
+"10 /opt/microchip/xc8/v3.10/pic/sources/c99/common/sprcadd.c
 [v ___fladd __fladd `(d  1 e 4 0 ]
 "245
 [v ___flsub __flsub `(d  1 e 4 0 ]
-"11 C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\sprcdiv.c
+"11 /opt/microchip/xc8/v3.10/pic/sources/c99/common/sprcdiv.c
 [v ___fldiv __fldiv `(d  1 e 4 0 ]
-"8 C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\sprcmul.c
+"8 /opt/microchip/xc8/v3.10/pic/sources/c99/common/sprcmul.c
 [v ___flmul __flmul `(d  1 e 4 0 ]
-"15 C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\Umul16.c
+"15 /opt/microchip/xc8/v3.10/pic/sources/c99/common/Umul16.c
 [v ___wmul __wmul `(ui  1 e 2 0 ]
-"15 C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\Umul24.c
+"15 /opt/microchip/xc8/v3.10/pic/sources/c99/common/Umul24.c
 [v ___tmul __tmul `(um  1 e 3 0 ]
-"15 C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\Umul32.c
+"15 /opt/microchip/xc8/v3.10/pic/sources/c99/common/Umul32.c
 [v ___lmul __lmul `(ul  1 e 4 0 ]
-"91 C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\Umul64.c
+"91 /opt/microchip/xc8/v3.10/pic/sources/c99/common/Umul64.c
 [v ___omul __omul `(uo  1 e 8 0 ]
-"3 D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\com.c
+"3 /home/yuri/Área de trabalho/Faculdade/SistemaOperacinaisEmbarcado/RTOS-2026/com.c
 [v _pipe_init pipe_init `(v  1 e 1 0 ]
 "11
 [v _pipe_write pipe_write `(v  1 e 1 0 ]
 "19
 [v _pipe_read pipe_read `(v  1 e 1 0 ]
-"10 D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\hw.c
+"10 /home/yuri/Área de trabalho/Faculdade/SistemaOperacinaisEmbarcado/RTOS-2026/hw.c
 [v _setup_hardware setup_hardware `(v  1 e 1 0 ]
 "23
 [v _ISR ISR `IIH(v  1 e 1 0 ]
-"4 D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\io.c
+"4 /home/yuri/Área de trabalho/Faculdade/SistemaOperacinaisEmbarcado/RTOS-2026/io.c
 [v _adc_config adc_config `(v  1 e 1 0 ]
-"15
-[v _adc_on adc_on `(v  1 e 1 0 ]
-"19
+"16
 [v _adc_read adc_read `(us  1 e 2 0 ]
-"10 D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\kernel.c
+"24
+[v _pwm_init pwm_init `(v  1 e 1 0 ]
+"32
+[v _pwm_set_duty pwm_set_duty `(v  1 e 1 0 ]
+"10 /home/yuri/Área de trabalho/Faculdade/SistemaOperacinaisEmbarcado/RTOS-2026/kernel.c
 [v _os_delay os_delay `(v  1 e 1 0 ]
 "22
 [v _os_create_task os_create_task `(v  1 e 1 0 ]
@@ -119,11 +121,11 @@ WAITING_SEM 3
 [v _os_start os_start `(v  1 e 1 0 ]
 "104
 [v _idle idle `(v  1 e 1 0 ]
-"8 D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\main.c
+"8 /home/yuri/Área de trabalho/Faculdade/SistemaOperacinaisEmbarcado/RTOS-2026/main.c
 [v _main main `(i  1 e 2 0 ]
-"195 D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\mem.c
+"195 /home/yuri/Área de trabalho/Faculdade/SistemaOperacinaisEmbarcado/RTOS-2026/mem.c
 [v __SRAMmerge _SRAMmerge `(uc  1 e 1 0 ]
-"9 D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\scheduler.c
+"9 /home/yuri/Área de trabalho/Faculdade/SistemaOperacinaisEmbarcado/RTOS-2026/scheduler.c
 [v _scheduler scheduler `(v  1 e 1 0 ]
 [v i1_scheduler scheduler `(v  1 e 1 0 ]
 [v i2_scheduler scheduler `(v  1 e 1 0 ]
@@ -131,7 +133,7 @@ WAITING_SEM 3
 [v _priority_rr_scheduler priority_rr_scheduler `(uc  1 e 1 0 ]
 [v i1_priority_rr_scheduler priority_rr_scheduler `(uc  1 e 1 0 ]
 [v i2_priority_rr_scheduler priority_rr_scheduler `(uc  1 e 1 0 ]
-"8 D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\sync.c
+"8 /home/yuri/Área de trabalho/Faculdade/SistemaOperacinaisEmbarcado/RTOS-2026/sync.c
 [v _sem_init sem_init `(v  1 e 1 0 ]
 "14
 [v _sem_wait sem_wait `(v  1 e 1 0 ]
@@ -143,11 +145,13 @@ WAITING_SEM 3
 [v _mutex_lock mutex_lock `(v  1 e 1 0 ]
 "69
 [v _mutex_unlock mutex_unlock `(v  1 e 1 0 ]
-"12 D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\user.c
+"12 /home/yuri/Área de trabalho/Faculdade/SistemaOperacinaisEmbarcado/RTOS-2026/user.c
 [v _config_user config_user `(v  1 e 1 0 ]
-"144
+"145
 [v _tarefaLeituraADC_UART tarefaLeituraADC_UART `(v  1 e 1 0 ]
-"136 D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026/mem.h
+"161
+[v _tarefaPWN tarefaPWN `(v  1 e 1 0 ]
+"136 /home/yuri/Área de trabalho/Faculdade/SistemaOperacinaisEmbarcado/RTOS-2026/mem.h
 [v __uDynamicHeap _uDynamicHeap `[512]uc  1 e 512 0 ]
 [s S885 . 1 `uc 1 ANSA0 1 0 :1:0 
 `uc 1 ANSA1 1 0 :1:1 
@@ -156,10 +160,10 @@ WAITING_SEM 3
 `uc 1 . 1 0 :1:4 
 `uc 1 ANSA5 1 0 :1:5 
 ]
-"65 D:/Microchip/MPLABX/v6.30/packs/Microchip/PIC18F-K_DFP/1.15.303/xc8\pic\include\proc/pic18f46k22.h
+"65 /opt/microchip/mplabx/v6.30/packs/Microchip/PIC18F-K_DFP/1.15.303/xc8/pic/include/proc/pic18f46k22.h
 [u S892 . 1 `S885 1 . 1 0 ]
 [v _ANSELAbits ANSELAbits `VES892  1 e 1 @3896 ]
-[s S1041 . 1 `uc 1 . 1 0 :2:0 
+[s S1102 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 ANSC2 1 0 :1:2 
 `uc 1 ANSC3 1 0 :1:3 
 `uc 1 ANSC4 1 0 :1:4 
@@ -168,9 +172,9 @@ WAITING_SEM 3
 `uc 1 ANSC7 1 0 :1:7 
 ]
 "161
-[u S1049 . 1 `S1041 1 . 1 0 ]
-[v _ANSELCbits ANSELCbits `VES1049  1 e 1 @3898 ]
-[s S1020 . 1 `uc 1 ANSD0 1 0 :1:0 
+[u S1110 . 1 `S1102 1 . 1 0 ]
+[v _ANSELCbits ANSELCbits `VES1110  1 e 1 @3898 ]
+[s S1081 . 1 `uc 1 ANSD0 1 0 :1:0 
 `uc 1 ANSD1 1 0 :1:1 
 `uc 1 ANSD2 1 0 :1:2 
 `uc 1 ANSD3 1 0 :1:3 
@@ -180,8 +184,8 @@ WAITING_SEM 3
 `uc 1 ANSD7 1 0 :1:7 
 ]
 "213
-[u S1029 . 1 `S1020 1 . 1 0 ]
-[v _ANSELDbits ANSELDbits `VES1029  1 e 1 @3899 ]
+[u S1090 . 1 `S1081 1 . 1 0 ]
+[v _ANSELDbits ANSELDbits `VES1090  1 e 1 @3899 ]
 [s S190 . 1 `uc 1 RC0 1 0 :1:0 
 `uc 1 RC1 1 0 :1:1 
 `uc 1 RC2 1 0 :1:2 
@@ -243,7 +247,7 @@ WAITING_SEM 3
 ]
 [u S279 . 1 `S190 1 . 1 0 `S230 1 . 1 0 `S239 1 . 1 0 `S248 1 . 1 0 `S257 1 . 1 0 `S266 1 . 1 0 `S275 1 . 1 0 ]
 [v _PORTCbits PORTCbits `VES279  1 e 1 @3970 ]
-[s S989 . 1 `uc 1 RD0 1 0 :1:0 
+[s S1050 . 1 `uc 1 RD0 1 0 :1:0 
 `uc 1 RD1 1 0 :1:1 
 `uc 1 RD2 1 0 :1:2 
 `uc 1 RD3 1 0 :1:3 
@@ -253,7 +257,7 @@ WAITING_SEM 3
 `uc 1 RD7 1 0 :1:7 
 ]
 "7203
-[s S1143 . 1 `uc 1 . 1 0 :2:0 
+[s S1204 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 P2B 1 0 :1:2 
 `uc 1 P2C 1 0 :1:3 
 `uc 1 P2D 1 0 :1:4 
@@ -261,16 +265,16 @@ WAITING_SEM 3
 `uc 1 P1C 1 0 :1:6 
 `uc 1 P1D 1 0 :1:7 
 ]
-[s S1151 . 1 `uc 1 . 1 0 :1:0 
+[s S1212 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 CCP4 1 0 :1:1 
 `uc 1 . 1 0 :4:2 
 `uc 1 TX2 1 0 :1:6 
 `uc 1 RX2 1 0 :1:7 
 ]
-[s S1157 . 1 `uc 1 . 1 0 :3:0 
+[s S1218 . 1 `uc 1 . 1 0 :3:0 
 `uc 1 NOT_SS2 1 0 :1:3 
 ]
-[s S1160 . 1 `uc 1 SCK2 1 0 :1:0 
+[s S1221 . 1 `uc 1 SCK2 1 0 :1:0 
 `uc 1 SDI2 1 0 :1:1 
 `uc 1 . 1 0 :1:2 
 `uc 1 nSS2 1 0 :1:3 
@@ -279,12 +283,12 @@ WAITING_SEM 3
 `uc 1 CK2 1 0 :1:6 
 `uc 1 DT2 1 0 :1:7 
 ]
-[s S1169 . 1 `uc 1 SCL2 1 0 :1:0 
+[s S1230 . 1 `uc 1 SCL2 1 0 :1:0 
 `uc 1 SDA2 1 0 :1:1 
 `uc 1 . 1 0 :1:2 
 `uc 1 SS2 1 0 :1:3 
 ]
-[s S1174 . 1 `uc 1 AN20 1 0 :1:0 
+[s S1235 . 1 `uc 1 AN20 1 0 :1:0 
 `uc 1 AN21 1 0 :1:1 
 `uc 1 AN22 1 0 :1:2 
 `uc 1 AN23 1 0 :1:3 
@@ -293,8 +297,8 @@ WAITING_SEM 3
 `uc 1 AN26 1 0 :1:6 
 `uc 1 AN27 1 0 :1:7 
 ]
-[u S1183 . 1 `S989 1 . 1 0 `S1143 1 . 1 0 `S1151 1 . 1 0 `S1157 1 . 1 0 `S1160 1 . 1 0 `S1169 1 . 1 0 `S1174 1 . 1 0 ]
-[v _PORTDbits PORTDbits `VES1183  1 e 1 @3971 ]
+[u S1244 . 1 `S1050 1 . 1 0 `S1204 1 . 1 0 `S1212 1 . 1 0 `S1218 1 . 1 0 `S1221 1 . 1 0 `S1230 1 . 1 0 `S1235 1 . 1 0 ]
+[v _PORTDbits PORTDbits `VES1244  1 e 1 @3971 ]
 [s S845 . 1 `uc 1 TRISA0 1 0 :1:0 
 `uc 1 TRISA1 1 0 :1:1 
 `uc 1 TRISA2 1 0 :1:2 
@@ -328,7 +332,7 @@ WAITING_SEM 3
 "8534
 [u S199 . 1 `S181 1 . 1 0 `S190 1 . 1 0 ]
 [v _TRISCbits TRISCbits `VES199  1 e 1 @3988 ]
-[s S980 . 1 `uc 1 TRISD0 1 0 :1:0 
+[s S1041 . 1 `uc 1 TRISD0 1 0 :1:0 
 `uc 1 TRISD1 1 0 :1:1 
 `uc 1 TRISD2 1 0 :1:2 
 `uc 1 TRISD3 1 0 :1:3 
@@ -338,8 +342,32 @@ WAITING_SEM 3
 `uc 1 TRISD7 1 0 :1:7 
 ]
 "8756
-[u S998 . 1 `S980 1 . 1 0 `S989 1 . 1 0 ]
-[v _TRISDbits TRISDbits `VES998  1 e 1 @3989 ]
+[u S1059 . 1 `S1041 1 . 1 0 `S1050 1 . 1 0 ]
+[v _TRISDbits TRISDbits `VES1059  1 e 1 @3989 ]
+"13230
+[v _T2CON T2CON `VEuc  1 e 1 @4026 ]
+"13301
+[v _PR2 PR2 `VEuc  1 e 1 @4027 ]
+"13341
+[v _CCP1CON CCP1CON `VEuc  1 e 1 @4029 ]
+[s S930 . 1 `uc 1 CCP1M 1 0 :4:0 
+`uc 1 DC1B 1 0 :2:4 
+`uc 1 P1M 1 0 :2:6 
+]
+"13363
+[s S934 . 1 `uc 1 CCP1M0 1 0 :1:0 
+`uc 1 CCP1M1 1 0 :1:1 
+`uc 1 CCP1M2 1 0 :1:2 
+`uc 1 CCP1M3 1 0 :1:3 
+`uc 1 DC1B0 1 0 :1:4 
+`uc 1 DC1B1 1 0 :1:5 
+`uc 1 P1M0 1 0 :1:6 
+`uc 1 P1M1 1 0 :1:7 
+]
+[u S943 . 1 `S930 1 . 1 0 `S934 1 . 1 0 ]
+[v _CCP1CONbits CCP1CONbits `VES943  1 e 1 @4029 ]
+"13430
+[v _CCPR1L CCPR1L `VEuc  1 e 1 @4030 ]
 [s S817 . 1 `uc 1 ADCS 1 0 :3:0 
 `uc 1 ACQT 1 0 :3:3 
 `uc 1 . 1 0 :1:6 
@@ -408,7 +436,7 @@ WAITING_SEM 3
 [v _ADRESL ADRESL `VEuc  1 e 1 @4035 ]
 "13761
 [v _ADRESH ADRESH `VEuc  1 e 1 @4036 ]
-[s S1489 . 1 `uc 1 T0PS 1 0 :3:0 
+[s S1555 . 1 `uc 1 T0PS 1 0 :3:0 
 `uc 1 PSA 1 0 :1:3 
 `uc 1 T0SE 1 0 :1:4 
 `uc 1 T0CS 1 0 :1:5 
@@ -416,12 +444,12 @@ WAITING_SEM 3
 `uc 1 TMR0ON 1 0 :1:7 
 ]
 "16147
-[s S1496 . 1 `uc 1 T0PS0 1 0 :1:0 
+[s S1562 . 1 `uc 1 T0PS0 1 0 :1:0 
 `uc 1 T0PS1 1 0 :1:1 
 `uc 1 T0PS2 1 0 :1:2 
 ]
-[u S1500 . 1 `S1489 1 . 1 0 `S1496 1 . 1 0 ]
-[v _T0CONbits T0CONbits `VES1500  1 e 1 @4053 ]
+[u S1566 . 1 `S1555 1 . 1 0 `S1562 1 . 1 0 ]
+[v _T0CONbits T0CONbits `VES1566  1 e 1 @4053 ]
 "16197
 [v _TMR0 TMR0 `VEus  1 e 2 @4054 ]
 "16244
@@ -491,16 +519,16 @@ WAITING_SEM 3
 [v _TOSH TOSH `VEuc  1 e 1 @4094 ]
 "17402
 [v _TOSU TOSU `VEuc  1 e 1 @4095 ]
-"7 D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\hw.c
+"7 /home/yuri/Área de trabalho/Faculdade/SistemaOperacinaisEmbarcado/RTOS-2026/hw.c
 [v _rr_quantum rr_quantum `uc  1 e 1 0 ]
 [s S55 hw_stack 3 `uc 1 TOSL_REG 1 0 `uc 1 TOSH_REG 1 1 `uc 1 TOSU_REG 1 2 ]
-"7 D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\kernel.c
+"7 /home/yuri/Área de trabalho/Faculdade/SistemaOperacinaisEmbarcado/RTOS-2026/kernel.c
 [s S59 sw_stack 94 `[31]S55 1 stack 93 0 `uc 1 stack_size 1 93 ]
 [s S62 tcb 117 `uc 1 task_id 1 0 `E37 1 task_state 1 1 `*.37(v 1 task_ptr 2 2 `uc 1 task_delay 1 4 `uc 1 task_priority 1 5 `uc 1 W_REG 1 6 `uc 1 STATUS_REG 1 7 `uc 1 BSR_REG 1 8 `uc 1 PRODL_REG 1 9 `uc 1 PRODH_REG 1 10 `uc 1 FSR0L_REG 1 11 `uc 1 FSR0H_REG 1 12 `uc 1 FSR1L_REG 1 13 `uc 1 FSR1H_REG 1 14 `uc 1 FSR2L_REG 1 15 `uc 1 FSR2H_REG 1 16 `uc 1 TABLAT_REG 1 17 `uc 1 TBLPTRL_REG 1 18 `uc 1 TBLPTRH_REG 1 19 `uc 1 TBLPTRU_REG 1 20 `uc 1 PCLATH_REG 1 21 `uc 1 PCLATU_REG 1 22 `S59 1 task_stack 94 23 ]
 [s S86 ready_queue 472 `[4]S62 1 TASKS 468 0 `uc 1 size 1 468 `*.39S62 1 task_running 2 469 `uc 1 pos_task_running 1 471 ]
 [v _r_queue r_queue `S86  1 e 472 0 ]
 [s S503 sem 7 `i 1 contador 2 0 `[3]uc 1 fila 3 2 `uc 1 pos_input 1 5 `uc 1 pos_output 1 6 ]
-"8 D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\user.c
+"8 /home/yuri/Área de trabalho/Faculdade/SistemaOperacinaisEmbarcado/RTOS-2026/user.c
 [v _s s `S503  1 e 7 0 ]
 "9
 [s S657 pipe 20 `[4]uc 1 fila_dados 4 0 `uc 1 pos_input 1 4 `uc 1 pos_output 1 5 `S503 1 s_input 7 6 `S503 1 s_output 7 13 ]
@@ -508,22 +536,22 @@ WAITING_SEM 3
 [s S601 mutex 8 `uc 1 locked 1 0 `uc 1 owner_id 1 1 `[3]uc 1 fila 3 2 `uc 1 pos_input 1 5 `uc 1 pos_output 1 6 `uc 1 waiting_count 1 7 ]
 "10
 [v _m_led m_led `S601  1 e 8 0 ]
-"8 D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\main.c
+"8 /home/yuri/Área de trabalho/Faculdade/SistemaOperacinaisEmbarcado/RTOS-2026/main.c
 [v _main main `(i  1 e 2 0 ]
 {
 "37
 } 0
-"79 D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\kernel.c
+"79 /home/yuri/Área de trabalho/Faculdade/SistemaOperacinaisEmbarcado/RTOS-2026/kernel.c
 [v _os_start os_start `(v  1 e 1 0 ]
 {
 "85
 } 0
-"10 D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\hw.c
+"10 /home/yuri/Área de trabalho/Faculdade/SistemaOperacinaisEmbarcado/RTOS-2026/hw.c
 [v _setup_hardware setup_hardware `(v  1 e 1 0 ]
 {
 "21
 } 0
-"9 D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\scheduler.c
+"9 /home/yuri/Área de trabalho/Faculdade/SistemaOperacinaisEmbarcado/RTOS-2026/scheduler.c
 [v _scheduler scheduler `(v  1 e 1 0 ]
 {
 "18
@@ -532,31 +560,31 @@ WAITING_SEM 3
 [v _priority_rr_scheduler priority_rr_scheduler `(uc  1 e 1 0 ]
 {
 "69
-[v priority_rr_scheduler@idx idx `uc  1 a 1 16 ]
+[v priority_rr_scheduler@idx idx `uc  1 a 1 19 ]
 "68
-[v priority_rr_scheduler@i_1460 i `uc  1 a 1 15 ]
+[v priority_rr_scheduler@i_1526 i `uc  1 a 1 18 ]
 "57
-[v priority_rr_scheduler@i i `uc  1 a 1 17 ]
+[v priority_rr_scheduler@i i `uc  1 a 1 20 ]
 "54
-[v priority_rr_scheduler@found found `uc  1 a 1 14 ]
+[v priority_rr_scheduler@found found `uc  1 a 1 17 ]
 "53
-[v priority_rr_scheduler@max_prio max_prio `uc  1 a 1 13 ]
+[v priority_rr_scheduler@max_prio max_prio `uc  1 a 1 16 ]
 "66
-[v priority_rr_scheduler@current current `uc  1 a 1 12 ]
+[v priority_rr_scheduler@current current `uc  1 a 1 15 ]
 "76
 } 0
-"7 C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
+"7 /opt/microchip/xc8/v3.10/pic/sources/c99/common/awmod.c
 [v ___awmod __awmod `(i  1 e 2 0 ]
 {
 "10
-[v ___awmod@sign sign `uc  1 a 1 20 ]
-[v ___awmod@counter counter `uc  1 a 1 19 ]
+[v ___awmod@sign sign `uc  1 a 1 13 ]
+[v ___awmod@counter counter `uc  1 a 1 12 ]
 "7
-[v ___awmod@dividend dividend `i  1 p 2 7 ]
-[v ___awmod@divisor divisor `i  1 p 2 9 ]
+[v ___awmod@dividend dividend `i  1 p 2 8 ]
+[v ___awmod@divisor divisor `i  1 p 2 10 ]
 "34
 } 0
-"66 D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\kernel.c
+"66 /home/yuri/Área de trabalho/Faculdade/SistemaOperacinaisEmbarcado/RTOS-2026/kernel.c
 [v _os_config os_config `(v  1 e 1 0 ]
 {
 "77
@@ -569,66 +597,74 @@ WAITING_SEM 3
 "24
 [s S59 sw_stack 94 `[31]S55 1 stack 93 0 `uc 1 stack_size 1 93 ]
 [s S62 tcb 117 `uc 1 task_id 1 0 `E37 1 task_state 1 1 `*.37(v 1 task_ptr 2 2 `uc 1 task_delay 1 4 `uc 1 task_priority 1 5 `uc 1 W_REG 1 6 `uc 1 STATUS_REG 1 7 `uc 1 BSR_REG 1 8 `uc 1 PRODL_REG 1 9 `uc 1 PRODH_REG 1 10 `uc 1 FSR0L_REG 1 11 `uc 1 FSR0H_REG 1 12 `uc 1 FSR1L_REG 1 13 `uc 1 FSR1H_REG 1 14 `uc 1 FSR2L_REG 1 15 `uc 1 FSR2H_REG 1 16 `uc 1 TABLAT_REG 1 17 `uc 1 TBLPTRL_REG 1 18 `uc 1 TBLPTRH_REG 1 19 `uc 1 TBLPTRU_REG 1 20 `uc 1 PCLATH_REG 1 21 `uc 1 PCLATU_REG 1 22 `S59 1 task_stack 94 23 ]
-[v os_create_task@new_task new_task `S62  1 a 117 11 ]
+[v os_create_task@new_task new_task `S62  1 a 117 13 ]
 "22
 [v os_create_task@id id `uc  1 p 1 wreg ]
-[v os_create_task@func func `*.37(v  1 p 2 7 ]
-[v os_create_task@prior prior `uc  1 p 1 9 ]
+[v os_create_task@func func `*.37(v  1 p 2 8 ]
+[v os_create_task@prior prior `uc  1 p 1 10 ]
 "26
-[v os_create_task@id id `uc  1 p 1 10 ]
+[v os_create_task@id id `uc  1 p 1 12 ]
 "53
 } 1
-"12 D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\user.c
+"12 /home/yuri/Área de trabalho/Faculdade/SistemaOperacinaisEmbarcado/RTOS-2026/user.c
 [v _config_user config_user `(v  1 e 1 0 ]
 {
-"36
+"37
 } 0
-"3 D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\com.c
+"24 /home/yuri/Área de trabalho/Faculdade/SistemaOperacinaisEmbarcado/RTOS-2026/io.c
+[v _pwm_init pwm_init `(v  1 e 1 0 ]
+{
+"30
+} 0
+"3 /home/yuri/Área de trabalho/Faculdade/SistemaOperacinaisEmbarcado/RTOS-2026/com.c
 [v _pipe_init pipe_init `(v  1 e 1 0 ]
 {
 [s S503 sem 7 `i 1 contador 2 0 `[3]uc 1 fila 3 2 `uc 1 pos_input 1 5 `uc 1 pos_output 1 6 ]
 [s S657 pipe 20 `[4]uc 1 fila_dados 4 0 `uc 1 pos_input 1 4 `uc 1 pos_output 1 5 `S503 1 s_input 7 6 `S503 1 s_output 7 13 ]
-[v pipe_init@p p `*.30S657  1 p 1 9 ]
+[v pipe_init@p p `*.30S657  1 p 1 12 ]
 "9
 } 0
-"8 D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\sync.c
+"8 /home/yuri/Área de trabalho/Faculdade/SistemaOperacinaisEmbarcado/RTOS-2026/sync.c
 [v _sem_init sem_init `(v  1 e 1 0 ]
 {
 [s S503 sem 7 `i 1 contador 2 0 `[3]uc 1 fila 3 2 `uc 1 pos_input 1 5 `uc 1 pos_output 1 6 ]
-[v sem_init@sem sem `*.30S503  1 p 1 19 ]
-[v sem_init@valor valor `uc  1 p 1 20 ]
+[v sem_init@sem sem `*.30S503  1 p 1 8 ]
+[v sem_init@valor valor `uc  1 p 1 9 ]
 "12
 } 0
 "43
 [v _mutex_init mutex_init `(v  1 e 1 0 ]
 {
 [s S601 mutex 8 `uc 1 locked 1 0 `uc 1 owner_id 1 1 `[3]uc 1 fila 3 2 `uc 1 pos_input 1 5 `uc 1 pos_output 1 6 `uc 1 waiting_count 1 7 ]
-[v mutex_init@m m `*.30S601  1 p 1 19 ]
+[v mutex_init@m m `*.30S601  1 p 1 8 ]
 "49
 } 0
-"15 D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\io.c
-[v _adc_on adc_on `(v  1 e 1 0 ]
-{
-"17
-} 0
-"4
+"4 /home/yuri/Área de trabalho/Faculdade/SistemaOperacinaisEmbarcado/RTOS-2026/io.c
 [v _adc_config adc_config `(v  1 e 1 0 ]
 {
-"13
+"14
 } 0
-"104 D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\kernel.c
+"104 /home/yuri/Área de trabalho/Faculdade/SistemaOperacinaisEmbarcado/RTOS-2026/kernel.c
 [v _idle idle `(v  1 e 1 0 ]
 {
 "111
 } 0
-"144 D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\user.c
-[v _tarefaLeituraADC_UART tarefaLeituraADC_UART `(v  1 e 1 0 ]
+"161 /home/yuri/Área de trabalho/Faculdade/SistemaOperacinaisEmbarcado/RTOS-2026/user.c
+[v _tarefaPWN tarefaPWN `(v  1 e 1 0 ]
 {
-"145
-[v tarefaLeituraADC_UART@valor valor `us  1 a 2 17 ]
-"158
+"162
+[v tarefaPWN@brilho brilho `us  1 a 2 18 ]
+"163
+[v tarefaPWN@direcao direcao `c  1 a 1 17 ]
+"178
 } 0
-"10 D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\kernel.c
+"32 /home/yuri/Área de trabalho/Faculdade/SistemaOperacinaisEmbarcado/RTOS-2026/io.c
+[v _pwm_set_duty pwm_set_duty `(v  1 e 1 0 ]
+{
+[v pwm_set_duty@duty duty `us  1 p 2 0 ]
+"36
+} 0
+"10 /home/yuri/Área de trabalho/Faculdade/SistemaOperacinaisEmbarcado/RTOS-2026/kernel.c
 [v _os_delay os_delay `(v  1 e 1 0 ]
 {
 [v os_delay@time time `uc  1 p 1 wreg ]
@@ -637,7 +673,7 @@ WAITING_SEM 3
 [v os_delay@time time `uc  1 p 1 16 ]
 "20
 } 1
-"9 D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\scheduler.c
+"9 /home/yuri/Área de trabalho/Faculdade/SistemaOperacinaisEmbarcado/RTOS-2026/scheduler.c
 [v i1_scheduler scheduler `(v  1 e 1 0 ]
 {
 "18
@@ -650,7 +686,7 @@ WAITING_SEM 3
 "69
 [v i1priority_rr_scheduler@idx idx `uc  1 a 1 11 ]
 "68
-[v i1priority_rr_scheduler@i_1460 i `uc  1 a 1 10 ]
+[v i1priority_rr_scheduler@i_1526 i `uc  1 a 1 10 ]
 "54
 [v i1priority_rr_scheduler@found found `uc  1 a 1 9 ]
 "53
@@ -659,7 +695,7 @@ WAITING_SEM 3
 [v i1priority_rr_scheduler@current current `uc  1 a 1 7 ]
 "76
 } 0
-"7 C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
+"7 /opt/microchip/xc8/v3.10/pic/sources/c99/common/awmod.c
 [v i1___awmod __awmod `(i  1 e 2 0 ]
 {
 "10
@@ -670,22 +706,14 @@ WAITING_SEM 3
 [v i1___awmod@divisor divisor `i  1 p 2 2 ]
 "34
 } 0
-"19 D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\io.c
-[v _adc_read adc_read `(us  1 e 2 0 ]
-{
-[v adc_read@channel channel `uc  1 p 1 wreg ]
-[v adc_read@channel channel `uc  1 p 1 wreg ]
-[v adc_read@channel channel `uc  1 p 1 4 ]
-"24
-} 1
-"23 D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\hw.c
+"23 /home/yuri/Área de trabalho/Faculdade/SistemaOperacinaisEmbarcado/RTOS-2026/hw.c
 [v _ISR ISR `IIH(v  1 e 1 0 ]
 {
 "29
 [v ISR@i i `i  1 a 2 29 ]
 "48
 } 0
-"9 D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\scheduler.c
+"9 /home/yuri/Área de trabalho/Faculdade/SistemaOperacinaisEmbarcado/RTOS-2026/scheduler.c
 [v i2_scheduler scheduler `(v  1 e 1 0 ]
 {
 "18
@@ -698,7 +726,7 @@ WAITING_SEM 3
 "69
 [v i2priority_rr_scheduler@idx idx `uc  1 a 1 11 ]
 "68
-[v i2priority_rr_scheduler@i_1460 i `uc  1 a 1 10 ]
+[v i2priority_rr_scheduler@i_1526 i `uc  1 a 1 10 ]
 "54
 [v i2priority_rr_scheduler@found found `uc  1 a 1 9 ]
 "53
@@ -707,7 +735,7 @@ WAITING_SEM 3
 [v i2priority_rr_scheduler@current current `uc  1 a 1 7 ]
 "76
 } 0
-"7 C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
+"7 /opt/microchip/xc8/v3.10/pic/sources/c99/common/awmod.c
 [v i2___awmod __awmod `(i  1 e 2 0 ]
 {
 "10
