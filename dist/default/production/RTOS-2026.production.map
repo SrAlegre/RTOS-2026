@@ -5,9 +5,9 @@ Linker command line:
 -W-3 --edf=/opt/microchip/xc8/v3.10/pic/dat/20250813170317_en.msgs -cn \
   -h+dist/default/production/RTOS-2026.production.sym \
   --cmf=dist/default/production/RTOS-2026.production.cmf -z -Q18F46K22 \
-  -o/tmp/xcXgkIlNK/driver_tmp_3.o --defsym=__MPLAB_BUILD=1 \
+  -o/tmp/xcXhILbpP/driver_tmp_3.o --defsym=__MPLAB_BUILD=1 \
   --fixupoverflow=error -Mdist/default/production/RTOS-2026.production.map \
-  --md=/tmp/xcXgkIlNK/driver_tmp_0.dat -E1 -ver=XC8 Compiler \
+  --md=/tmp/xcXhILbpP/driver_tmp_0.dat -E1 -ver=XC8 Compiler \
   -ACODE=00h-0FFFFh -ACONST=00h-0FFFFh -ASMALLCONST=01000h-010FFhx240 \
   -AMEDIUMCONST=01000h-0FFFFh -ACOMRAM=01h-05Fh -AABS1=00h-0F37h \
   -ABIGRAM=01h-0F37h -ARAM=060h-0FFh,0100h-01FFhx14,0F00h-0F37h \
@@ -26,7 +26,7 @@ Linker command line:
   -pfarbss=FARRAM,fardata=FARRAM,nvFARRAM=FARRAM \
   -pintsave_regs=BIGRAM,bigbss=BIGRAM,bigdata=BIGRAM -pbss=RAM \
   -pidata=CODE,irdata=CODE,ibigdata=CODE,ifardata=CODE -prparam=COMRAM \
-  /tmp/xcXgkIlNK/driver_tmp_9.o \
+  /tmp/xcXhILbpP/driver_tmp_9.o \
   dist/default/production/RTOS-2026.production.o 
 
 Object code version is 3.11
@@ -36,73 +36,75 @@ Machine type is 18F46K22
 
 
                 Name                               Link     Load   Length Selector   Space Scale
-/tmp/xcXgkIlNK/driver_tmp_9.o
+/tmp/xcXhILbpP/driver_tmp_9.o
                 init                                71A      71A        4        4       0
                 reset_vec                             0        0        4        0       0
 dist/default/production/RTOS-2026.production.o
                 intcode                               8        8      712        4       0
                 smallconst                         1000     1000        2      800       0
-                text23                             1E5A     1E5A       AE      801       0
-                text22                             1BCE     1BCE      12E      801       0
-                text21                             21D8     21D8       28      801       0
-                text19                             20D2     20D2       32      801       0
-                text18                             1DAC     1DAC       AE      801       0
-                text17                             1AA0     1AA0      12E      801       0
-                text16                             21B0     21B0       28      801       0
-                text15                             1002     1002      612      801       0
-                text14                             2036     2036       38      801       0
-                text13                             215E     215E       2A      801       0
-                text12                             2188     2188       28      801       0
-                text11                             1FFC     1FFC       3A      801       0
-                text10                             2104     2104       30      801       0
-                text9                              1FC2     1FC2       3A      801       0
-                text8                              20A0     20A0       32      801       0
-                text7                              1F08     1F08       6C      801       0
-                text6                              206E     206E       32      801       0
+                text24                             1E5A     1E5A       AE      801       0
+                text23                             1BCE     1BCE      12E      801       0
+                text22                             221E     221E       28      801       0
+                text20                             1DAC     1DAC       AE      801       0
+                text19                             1AA0     1AA0      12E      801       0
+                text18                             21F6     21F6       28      801       0
+                text17                             1002     1002      612      801       0
+                text16                             214C     214C       2E      801       0
+                text15                             1F08     1F08       78      801       0
+                text14                             21A4     21A4       2A      801       0
+                text13                             21CE     21CE       28      801       0
+                text12                             203A     203A       3C      801       0
+                text11                             211C     211C       30      801       0
+                text10                             20B0     20B0       3A      801       0
+                text9                              2282     2282        E      801       0
+                text8                              2076     2076       3A      801       0
+                text7                              1F80     1F80       6C      801       0
+                text6                              20EA     20EA       32      801       0
                 text5                              1CFC     1CFC       B0      801       0
                 text4                              196E     196E      132      801       0
-                text3                              2134     2134       2A      801       0
-                text2                              2224     2224       18      801       0
+                text3                              217A     217A       2A      801       0
+                text2                              226A     226A       18      801       0
                 text1                              1614     1614      35A      801       0
-                text0                              2200     2200       24      801       0
+                text0                              2246     2246       24      801       0
                 cstackCOMRAM                         25       25       1F        2       1
-                cstackBANK0                          60       60       80       60       1
-                bssBIGRAM                            E0       E0      3D8       E0       1
+                cstackBANK0                          60       60       82       60       1
+                bssBIGRAM                            E2       E2      3D8       E2       1
                 dataCOMRAM                           44       44        7        2       1
                 bssCOMRAM                             2        2       23        2       1
-                cinit                              1F74     1F74       4E      801       0
-                idataCOMRAM                        223C     223C        7      801       0
+                cinit                              1FEC     1FEC       4E      801       0
+                idataCOMRAM                        2290     2290        7      801       0
 
 TOTAL           Name                               Link     Load   Length     Space
         CLASS   CODE           
                 intcode                               8        8      712         0
                 init                                71A      71A        4         0
                 reset_vec                             0        0        4         0
-                text23                             1E5A     1E5A       AE         0
-                text22                             1BCE     1BCE      12E         0
-                text21                             21D8     21D8       28         0
-                text19                             20D2     20D2       32         0
-                text18                             1DAC     1DAC       AE         0
-                text17                             1AA0     1AA0      12E         0
-                text16                             21B0     21B0       28         0
-                text15                             1002     1002      612         0
-                text14                             2036     2036       38         0
-                text13                             215E     215E       2A         0
-                text12                             2188     2188       28         0
-                text11                             1FFC     1FFC       3A         0
-                text10                             2104     2104       30         0
-                text9                              1FC2     1FC2       3A         0
-                text8                              20A0     20A0       32         0
-                text7                              1F08     1F08       6C         0
-                text6                              206E     206E       32         0
+                text24                             1E5A     1E5A       AE         0
+                text23                             1BCE     1BCE      12E         0
+                text22                             221E     221E       28         0
+                text20                             1DAC     1DAC       AE         0
+                text19                             1AA0     1AA0      12E         0
+                text18                             21F6     21F6       28         0
+                text17                             1002     1002      612         0
+                text16                             214C     214C       2E         0
+                text15                             1F08     1F08       78         0
+                text14                             21A4     21A4       2A         0
+                text13                             21CE     21CE       28         0
+                text12                             203A     203A       3C         0
+                text11                             211C     211C       30         0
+                text10                             20B0     20B0       3A         0
+                text9                              2282     2282        E         0
+                text8                              2076     2076       3A         0
+                text7                              1F80     1F80       6C         0
+                text6                              20EA     20EA       32         0
                 text5                              1CFC     1CFC       B0         0
                 text4                              196E     196E      132         0
-                text3                              2134     2134       2A         0
-                text2                              2224     2224       18         0
+                text3                              217A     217A       2A         0
+                text2                              226A     226A       18         0
                 text1                              1614     1614      35A         0
-                text0                              2200     2200       24         0
-                cinit                              1F74     1F74       4E         0
-                idataCOMRAM                        223C     223C        7         0
+                text0                              2246     2246       24         0
+                cinit                              1FEC     1FEC       4E         0
+                idataCOMRAM                        2290     2290        7         0
 
         CLASS   CONST          
 
@@ -120,12 +122,12 @@ TOTAL           Name                               Link     Load   Length     Sp
                 abs_s1                                1        1        1         1
 
         CLASS   BIGRAM         
-                bssBIGRAM                            E0       E0      3D8         1
+                bssBIGRAM                            E2       E2      3D8         1
 
         CLASS   RAM            
 
         CLASS   BANK0          
-                cstackBANK0                          60       60       80         1
+                cstackBANK0                          60       60       82         1
 
         CLASS   BANK1          
 
@@ -178,9 +180,9 @@ TOTAL           Name                               Link     Load   Length     Sp
 SEGMENTS        Name                           Load    Length   Top    Selector   Space  Class
 
                 reset_vec                      000000  000004  000004         0       0  CODE    
-                cstackBANK0                    000060  000080  0000E0        60       1  BANK0   
-                bssBIGRAM                      0000E0  0003D8  0004B8        E0       1  BIGRAM  
-                text15                         001002  001241  002243       801       0  CODE    
+                cstackBANK0                    000060  000082  0000E2        60       1  BANK0   
+                bssBIGRAM                      0000E2  0003D8  0004BA        E2       1  BIGRAM  
+                text17                         001002  001295  002297       801       0  CODE    
                 bssCOMRAM                      000002  000049  00004B         2       1  COMRAM  
                 intcode                        000008  000716  00071E         4       0  CODE    
                 smallconst                     001000  000002  001002       800       0  SMALLCON
@@ -195,38 +197,37 @@ UNUSED ADDRESS RANGES
         BANK13           0D00-0DFF            100
         BANK14           0E00-0EFF            100
         BANK15           0F00-0F37             38
-        BANK4            04B8-04FF             48
+        BANK4            04BA-04FF             46
         BANK5            0500-05FF            100
         BANK6            0600-06FF            100
         BANK7            0700-07FF            100
         BANK8            0800-08FF            100
         BANK9            0900-09FF            100
         BIGRAM           004B-005F             15
-                         04B8-0F37            A80
+                         04BA-0F37            A7E
         BIGSFR           0F38-0FFF             C8
         CODE             0004-0007              4
                          071E-0FFF            8E2
-                         2243-FFFF           DDBD
+                         2297-FFFF           DD69
         COMRAM           004B-005F             15
         CONFIG           300000-30000D              E
         CONST            0004-0007              4
                          071E-0FFF            8E2
-                         2243-FFFF           DDBD
+                         2297-FFFF           DD69
         EEDATA           F00000-F003FF            400
         IDLOC            200000-200007              8
-        MEDIUMCONST      2243-FFFF           DDBD
-        RAM              04B8-0F37            100
+        MEDIUMCONST      2297-FFFF           DD69
+        RAM              04BA-0F37            100
         SFR              0F38-0FFF             28
-        SMALLCONST       2243-FFFF            100
+        SMALLCONST       2297-FFFF            100
 
                                   Symbol Table
 
-?___awmod                        cstackBANK0  0067
-?_adc_read                       cstackCOMRAM 0025
+?___awmod                        cstackBANK0  0068
 ?i1___awmod                      cstackCOMRAM 0025
 ?i2___awmod                      cstackCOMRAM 0025
 ISR@i                            cstackCOMRAM 0042
-LED_1@F6276                      dataCOMRAM   0044
+LED_1@F6277                      dataCOMRAM   0044
 _ADCON0bits                      (abs)        0FC2
 _ADCON1bits                      (abs)        0FC1
 _ADCON2bits                      (abs)        0FC0
@@ -339,8 +340,8 @@ __Hsfr                           sfr          0000
 __Hsivt_hi                       sivt_hi      0000
 __Hsivt_lo                       sivt_lo      0018
 __Hsmallconst                    smallconst   1002
-__Hspace_0                       (abs)        2243
-__Hspace_1                       (abs)        04B8
+__Hspace_0                       (abs)        2297
+__Hspace_1                       (abs)        04BA
 __Hspace_2                       (abs)        0000
 __Hspace_4                       (abs)        0000
 __Hstack                         stack        0000
@@ -360,9 +361,10 @@ __Htext17                        text17       0000
 __Htext18                        text18       0000
 __Htext19                        text19       0000
 __Htext2                         text2        0000
-__Htext21                        text21       0000
+__Htext20                        text20       0000
 __Htext22                        text22       0000
 __Htext23                        text23       0000
+__Htext24                        text24       0000
 __Htext3                         text3        0000
 __Htext4                         text4        0000
 __Htext5                         text5        0000
@@ -460,9 +462,10 @@ __Ltext17                        text17       0000
 __Ltext18                        text18       0000
 __Ltext19                        text19       0000
 __Ltext2                         text2        0000
-__Ltext21                        text21       0000
+__Ltext20                        text20       0000
 __Ltext22                        text22       0000
 __Ltext23                        text23       0000
+__Ltext24                        text24       0000
 __Ltext3                         text3        0000
 __Ltext4                         text4        0000
 __Ltext5                         text5        0000
@@ -470,15 +473,15 @@ __Ltext6                         text6        0000
 __Ltext7                         text7        0000
 __Ltext8                         text8        0000
 __Ltext9                         text9        0000
-__S0                             (abs)        2243
-__S1                             (abs)        04B8
+__S0                             (abs)        2297
+__S1                             (abs)        04BA
 __S4                             (abs)        0000
 __S5                             (abs)        0000
 ___awmod                         text5        1CFC
-___awmod@counter                 cstackCOMRAM 0038
-___awmod@dividend                cstackBANK0  0067
-___awmod@divisor                 cstackBANK0  0069
-___awmod@sign                    cstackCOMRAM 0039
+___awmod@counter                 cstackBANK0  006C
+___awmod@dividend                cstackBANK0  0068
+___awmod@divisor                 cstackBANK0  006A
+___awmod@sign                    cstackBANK0  006D
 ___heap_hi                       (abs)        0000
 ___heap_lo                       (abs)        0000
 ___inthi_sp                      stack        0000
@@ -496,116 +499,119 @@ __accesstop                      (abs)        0060
 __activetblptr                   (abs)        0002
 __end_of_ISR                     intcode      071A
 __end_of___awmod                 text5        1DAC
-__end_of__initialization         cinit        1FB4
-__end_of_adc_config              text12       21B0
-__end_of_adc_read                text19       2104
-__end_of_config_user             text8        20D2
-__end_of_idle                    text13       2188
-__end_of_main                    text0        2224
-__end_of_mutex_init              text11       2036
-__end_of_os_config               text6        20A0
-__end_of_os_create_task          text7        1F74
-__end_of_os_delay                text15       1614
+__end_of__initialization         cinit        202C
+__end_of_adc_config              text13       21F6
+__end_of_config_user             text8        20B0
+__end_of_idle                    text14       21CE
+__end_of_main                    text0        226A
+__end_of_mutex_init              text12       2076
+__end_of_os_config               text6        211C
+__end_of_os_create_task          text7        1FEC
+__end_of_os_delay                text17       1614
 __end_of_os_start                text1        196E
-__end_of_pipe_init               text9        1FFC
+__end_of_pipe_init               text10       20EA
 __end_of_priority_rr_scheduler   text4        1AA0
-__end_of_scheduler               text3        215E
-__end_of_sem_init                text10       2134
-__end_of_setup_hardware          text2        223C
-__end_of_tarefaLeituraADC_UART   text14       206E
-__end_ofi1___awmod               text18       1E5A
-__end_ofi1_priority_rr_scheduler text17       1BCE
-__end_ofi1_scheduler             text16       21D8
-__end_ofi2___awmod               text23       1F08
-__end_ofi2_priority_rr_scheduler text22       1CFC
-__end_ofi2_scheduler             text21       2200
-__initialization                 cinit        1F74
+__end_of_pwm_init                text9        2290
+__end_of_pwm_set_duty            text16       217A
+__end_of_scheduler               text3        21A4
+__end_of_sem_init                text11       214C
+__end_of_setup_hardware          text2        2282
+__end_of_tarefaPWN               text15       1F80
+__end_ofi1___awmod               text20       1E5A
+__end_ofi1_priority_rr_scheduler text19       1BCE
+__end_ofi1_scheduler             text18       221E
+__end_ofi2___awmod               text24       1F08
+__end_ofi2_priority_rr_scheduler text23       1CFC
+__end_ofi2_scheduler             text22       2246
+__initialization                 cinit        1FEC
 __mediumconst                    smallconst   1000
-__pbssBIGRAM                     bssBIGRAM    00E0
+__pbssBIGRAM                     bssBIGRAM    00E2
 __pbssCOMRAM                     bssCOMRAM    0002
-__pcinit                         cinit        1F74
+__pcinit                         cinit        1FEC
 __pcstackBANK0                   cstackBANK0  0060
 __pcstackCOMRAM                  cstackCOMRAM 0025
 __pdataCOMRAM                    dataCOMRAM   0044
-__pidataCOMRAM                   idataCOMRAM  223C
+__pidataCOMRAM                   idataCOMRAM  2290
 __pintcode                       intcode      0008
 __psmallconst                    smallconst   1000
-__ptext0                         text0        2200
+__ptext0                         text0        2246
 __ptext1                         text1        1614
-__ptext10                        text10       2104
-__ptext11                        text11       1FFC
-__ptext12                        text12       2188
-__ptext13                        text13       215E
-__ptext14                        text14       2036
-__ptext15                        text15       1002
-__ptext16                        text16       21B0
-__ptext17                        text17       1AA0
-__ptext18                        text18       1DAC
-__ptext19                        text19       20D2
-__ptext2                         text2        2224
-__ptext21                        text21       21D8
-__ptext22                        text22       1BCE
-__ptext23                        text23       1E5A
-__ptext3                         text3        2134
+__ptext10                        text10       20B0
+__ptext11                        text11       211C
+__ptext12                        text12       203A
+__ptext13                        text13       21CE
+__ptext14                        text14       21A4
+__ptext15                        text15       1F08
+__ptext16                        text16       214C
+__ptext17                        text17       1002
+__ptext18                        text18       21F6
+__ptext19                        text19       1AA0
+__ptext2                         text2        226A
+__ptext20                        text20       1DAC
+__ptext22                        text22       221E
+__ptext23                        text23       1BCE
+__ptext24                        text24       1E5A
+__ptext3                         text3        217A
 __ptext4                         text4        196E
 __ptext5                         text5        1CFC
-__ptext6                         text6        206E
-__ptext7                         text7        1F08
-__ptext8                         text8        20A0
-__ptext9                         text9        1FC2
+__ptext6                         text6        20EA
+__ptext7                         text7        1F80
+__ptext8                         text8        2076
+__ptext9                         text9        2282
 __ramtop                         ramtop       1000
 __smallconst                     smallconst   1000
-__uDynamicHeap                   bssBIGRAM    00E0
-_adc_config                      text12       2188
-_adc_read                        text19       20D2
-_config_user                     text8        20A0
-_idle                            text13       215E
+__uDynamicHeap                   bssBIGRAM    00E2
+_adc_config                      text13       21CE
+_config_user                     text8        2076
+_idle                            text14       21A4
 _m_led                           bssCOMRAM    0016
-_main                            text0        2200
-_mutex_init                      text11       1FFC
-_os_config                       text6        206E
-_os_create_task                  text7        1F08
-_os_delay                        text15       1002
+_main                            text0        2246
+_mutex_init                      text12       203A
+_os_config                       text6        20EA
+_os_create_task                  text7        1F80
+_os_delay                        text17       1002
 _os_start                        text1        1614
 _p                               bssCOMRAM    0002
-_pipe_init                       text9        1FC2
+_pipe_init                       text10       20B0
 _priority_rr_scheduler           text4        196E
-_r_queue                         bssBIGRAM    02E0
+_pwm_init                        text9        2282
+_pwm_set_duty                    text16       214C
+_r_queue                         bssBIGRAM    02E2
 _rr_quantum                      dataCOMRAM   004A
 _s                               bssCOMRAM    001E
-_scheduler                       text3        2134
-_sem_init                        text10       2104
-_setup_hardware                  text2        2224
-_tarefaLeituraADC_UART           text14       2036
-adc_read@channel                 cstackCOMRAM 0029
+_scheduler                       text3        217A
+_sem_init                        text11       211C
+_setup_hardware                  text2        226A
+_tarefaLeituraADC_UART           (abs)        0000
+_tarefaPWN                       text15       1F08
 btemp                            (abs)        0001
 btemp0                           (abs)        0001
 btemp1                           (abs)        0002
-end_of_initialization            cinit        1FB4
-i1___awmod                       text18       1DAC
+end_of_initialization            cinit        202C
+i1___awmod                       text20       1DAC
 i1___awmod@counter               cstackCOMRAM 0029
 i1___awmod@dividend              cstackCOMRAM 0025
 i1___awmod@divisor               cstackCOMRAM 0027
 i1___awmod@sign                  cstackCOMRAM 002A
-i1_priority_rr_scheduler         text17       1AA0
-i1_scheduler                     text16       21B0
+i1_priority_rr_scheduler         text19       1AA0
+i1_scheduler                     text18       21F6
 i1priority_rr_scheduler@current  cstackCOMRAM 002C
 i1priority_rr_scheduler@found    cstackCOMRAM 002E
 i1priority_rr_scheduler@i        cstackCOMRAM 0031
-i1priority_rr_scheduler@i_1519   cstackCOMRAM 002F
+i1priority_rr_scheduler@i_1526   cstackCOMRAM 002F
 i1priority_rr_scheduler@idx      cstackCOMRAM 0030
 i1priority_rr_scheduler@max_prio cstackCOMRAM 002D
-i2___awmod                       text23       1E5A
+i2___awmod                       text24       1E5A
 i2___awmod@counter               cstackCOMRAM 0029
 i2___awmod@dividend              cstackCOMRAM 0025
 i2___awmod@divisor               cstackCOMRAM 0027
 i2___awmod@sign                  cstackCOMRAM 002A
-i2_priority_rr_scheduler         text22       1BCE
-i2_scheduler                     text21       21D8
+i2_priority_rr_scheduler         text23       1BCE
+i2_scheduler                     text22       221E
 i2priority_rr_scheduler@current  cstackCOMRAM 002C
 i2priority_rr_scheduler@found    cstackCOMRAM 002E
 i2priority_rr_scheduler@i        cstackCOMRAM 0031
-i2priority_rr_scheduler@i_1519   cstackCOMRAM 002F
+i2priority_rr_scheduler@i_1526   cstackCOMRAM 002F
 i2priority_rr_scheduler@idx      cstackCOMRAM 0030
 i2priority_rr_scheduler@max_prio cstackCOMRAM 002D
 int$flags                        (abs)        0001
@@ -615,36 +621,39 @@ intlevel2                        text         0000
 intlevel3                        text         0000
 isa$std                          (abs)        0001
 isa$xinst                        (abs)        0000
-mutex_init@m                     cstackCOMRAM 0038
-os_create_task@func              cstackBANK0  0067
-os_create_task@id                cstackBANK0  006A
-os_create_task@new_task          cstackBANK0  006B
-os_create_task@prior             cstackBANK0  0069
+mutex_init@m                     cstackBANK0  0068
+os_create_task@func              cstackBANK0  0068
+os_create_task@id                cstackBANK0  006C
+os_create_task@new_task          cstackBANK0  006D
+os_create_task@prior             cstackBANK0  006A
 os_delay@time                    cstackCOMRAM 0035
-pipe_init@p                      cstackBANK0  0069
-priority_rr_scheduler@current    cstackBANK0  006C
-priority_rr_scheduler@found      cstackBANK0  006E
-priority_rr_scheduler@i          cstackBANK0  0071
-priority_rr_scheduler@i_1519     cstackBANK0  006F
-priority_rr_scheduler@idx        cstackBANK0  0070
-priority_rr_scheduler@max_prio   cstackBANK0  006D
-sem_init@sem                     cstackCOMRAM 0038
-sem_init@valor                   cstackCOMRAM 0039
+pipe_init@p                      cstackBANK0  006C
+priority_rr_scheduler@current    cstackBANK0  006F
+priority_rr_scheduler@found      cstackBANK0  0071
+priority_rr_scheduler@i          cstackBANK0  0074
+priority_rr_scheduler@i_1526     cstackBANK0  0072
+priority_rr_scheduler@idx        cstackBANK0  0073
+priority_rr_scheduler@max_prio   cstackBANK0  0070
+pwm_set_duty@duty                cstackCOMRAM 0025
+sem_init@sem                     cstackBANK0  0068
+sem_init@valor                   cstackBANK0  0069
 stackhi                          (abs)        0000
 stacklo                          (abs)        0000
 start                            init         071A
-start_initialization             cinit        1F74
-tarefaLeituraADC_UART@valor      cstackCOMRAM 0036
+start_initialization             cinit        1FEC
+tarefaPWN@brilho                 cstackCOMRAM 0037
+tarefaPWN@direcao                cstackCOMRAM 0036
 
 
 MODULE INFORMATION
 
 Module		Function		Class		Link	Load	Size
 io.c
-		_adc_config    		CODE           	2188	0000	40
-		_adc_read      		CODE           	20D2	0000	50
+		_pwm_set_duty  		CODE           	214C	0000	46
+		_adc_config    		CODE           	21CE	0000	40
+		_pwm_init      		CODE           	2282	0000	14
 
-io.c estimated size: 90
+io.c estimated size: 100
 
 /opt/microchip/xc8/v3.10/pic/sources/c99/common/awmod.c
 		___awmod       		CODE           	1CFC	0000	176
@@ -653,55 +662,55 @@ io.c estimated size: 90
 
 hw.c
 		_ISR           		CODE           	0008	0000	1810
-		_setup_hardware		CODE           	2224	0000	24
+		_setup_hardware		CODE           	226A	0000	24
 
 hw.c estimated size: 1834
 
 com.c
-		_pipe_init     		CODE           	1FC2	0000	58
+		_pipe_init     		CODE           	20B0	0000	58
 
 com.c estimated size: 58
 
 kernel.c
-		_os_config     		CODE           	206E	0000	50
+		_os_config     		CODE           	20EA	0000	50
 		_os_start      		CODE           	1614	0000	858
-		_idle          		CODE           	215E	0000	42
+		_idle          		CODE           	21A4	0000	42
 		_os_delay      		CODE           	1002	0000	1554
-		_os_create_task		CODE           	1F08	0000	108
+		_os_create_task		CODE           	1F80	0000	108
 
 kernel.c estimated size: 2612
 
 shared
-		__initialization		CODE           	1F74	0000	64
+		__initialization		CODE           	1FEC	0000	64
 		i1_priority_rr_scheduler		CODE           	1AA0	0000	302
 		i2_priority_rr_scheduler		CODE           	1BCE	0000	302
 		i1___awmod     		CODE           	1DAC	0000	174
 		i2___awmod     		CODE           	1E5A	0000	174
-		i1_scheduler   		CODE           	21B0	0000	40
-		i2_scheduler   		CODE           	21D8	0000	40
+		i1_scheduler   		CODE           	21F6	0000	40
+		i2_scheduler   		CODE           	221E	0000	40
 
 shared estimated size: 1096
 
 user.c
-		_tarefaLeituraADC_UART		CODE           	2036	0000	56
-		_config_user   		CODE           	20A0	0000	50
+		_config_user   		CODE           	2076	0000	58
+		_tarefaPWN     		CODE           	1F08	0000	120
 
-user.c estimated size: 106
+user.c estimated size: 178
 
 scheduler.c
-		_scheduler     		CODE           	2134	0000	42
+		_scheduler     		CODE           	217A	0000	42
 		_priority_rr_scheduler		CODE           	196E	0000	306
 
 scheduler.c estimated size: 348
 
 sync.c
-		_sem_init      		CODE           	2104	0000	48
-		_mutex_init    		CODE           	1FFC	0000	58
+		_sem_init      		CODE           	211C	0000	48
+		_mutex_init    		CODE           	203A	0000	60
 
-sync.c estimated size: 106
+sync.c estimated size: 108
 
 main.c
-		_main          		CODE           	2200	0000	36
+		_main          		CODE           	2246	0000	36
 
 main.c estimated size: 36
 

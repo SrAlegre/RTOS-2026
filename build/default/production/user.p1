@@ -75,6 +75,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 "7 ./io.h
 [; ;./io.h: 7: void adc_config(void);
 [v _adc_config `(v ~T0 @X0 0 ef ]
+"10
+[; ;./io.h: 10: void pwm_init(void);
+[v _pwm_init `(v ~T0 @X0 0 ef ]
 "6839 /opt/microchip/mplabx/v6.30/packs/Microchip/PIC18F-K_DFP/1.15.303/xc8/pic/include/proc/pic18f46k22.h
 [; ;/opt/microchip/mplabx/v6.30/packs/Microchip/PIC18F-K_DFP/1.15.303/xc8/pic/include/proc/pic18f46k22.h: 6839:     struct {
 [s S359 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
@@ -163,6 +166,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 "8 ./io.h
 [; ;./io.h: 8: uint16_t adc_read(uint8_t channel);
 [v _adc_read `(us ~T0 @X0 0 ef1`uc ]
+"11
+[; ;./io.h: 11: void pwm_set_duty(uint16_t duty);
+[v _pwm_set_duty `(v ~T0 @X0 0 ef1`us ]
 "52 /opt/microchip/mplabx/v6.30/packs/Microchip/PIC18F-K_DFP/1.15.303/xc8/pic/include/proc/pic18f46k22.h
 [; ;/opt/microchip/mplabx/v6.30/packs/Microchip/PIC18F-K_DFP/1.15.303/xc8/pic/include/proc/pic18f46k22.h: 52: __asm("ANSELA equ 0F38h");
 [; <" ANSELA equ 0F38h ;# ">
@@ -955,9 +961,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 "18
 [; ;user.c: 18:     ANSELCbits.ANSC7 = 0;
 [e = . . _ANSELCbits 0 6 -> -> 0 `i `uc ]
-"27
-[; ;user.c: 27:     __asm("global _tarefaLeituraADC_UART");
-[; <" global _tarefaLeituraADC_UART ;# ">
+"28
+[; ;user.c: 28:     __asm("global _tarefaPWN");
+[; <" global _tarefaPWN ;# ">
 "31
 [; ;user.c: 31:     sem_init(&s, 0);
 [e ( _sem_init (2 , &U _s -> -> 0 `i `uc ]
@@ -971,80 +977,83 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;user.c: 34:     adc_config();
 [e ( _adc_config ..  ]
 "35
-[; ;user.c: 35: }
+[; ;user.c: 35:     pwm_init();
+[e ( _pwm_init ..  ]
+"37
+[; ;user.c: 37: }
 [e :UE 883 ]
 }
-"37
-[; ;user.c: 37: TASK acionaMotor() {
+"39
+[; ;user.c: 39: TASK acionaMotor() {
 [v _acionaMotor `(v ~T0 @X0 1 ef ]
 {
 [e :U _acionaMotor ]
 [f ]
-"38
-[; ;user.c: 38:     while (1) {
+"40
+[; ;user.c: 40:     while (1) {
 [e :U 886 ]
 {
-"40
-[; ;user.c: 40:     }
+"42
+[; ;user.c: 42:     }
 }
 [e :U 885 ]
 [e $U 886  ]
 [e :U 887 ]
-"41
-[; ;user.c: 41: }
+"43
+[; ;user.c: 43: }
 [e :UE 884 ]
 }
-"43
-[; ;user.c: 43: TASK ligaLed() {
+"45
+[; ;user.c: 45: TASK ligaLed() {
 [v _ligaLed `(v ~T0 @X0 1 ef ]
 {
 [e :U _ligaLed ]
 [f ]
-"44
-[; ;user.c: 44:     while (1) {
+"46
+[; ;user.c: 46:     while (1) {
 [e :U 890 ]
 {
-"46
-[; ;user.c: 46:     }
+"48
+[; ;user.c: 48:     }
 }
 [e :U 889 ]
 [e $U 890  ]
 [e :U 891 ]
-"47
-[; ;user.c: 47: }
+"49
+[; ;user.c: 49: }
 [e :UE 888 ]
 }
-"49
-[; ;user.c: 49: TASK apagaLed() {
+"51
+[; ;user.c: 51: TASK apagaLed() {
 [v _apagaLed `(v ~T0 @X0 1 ef ]
 {
 [e :U _apagaLed ]
 [f ]
-"50
-[; ;user.c: 50:     while (1) {
+"52
+[; ;user.c: 52:     while (1) {
 [e :U 894 ]
 {
-"52
-[; ;user.c: 52:     }
+"54
+[; ;user.c: 54:     }
 }
 [e :U 893 ]
 [e $U 894  ]
 [e :U 895 ]
-"53
-[; ;user.c: 53: }
+"55
+[; ;user.c: 55: }
 [e :UE 892 ]
 }
-"55
-[; ;user.c: 55: TASK LED_1() {
+"57
+[; ;user.c: 57: TASK LED_1() {
 [v _LED_1 `(v ~T0 @X0 1 ef ]
 {
 [e :U _LED_1 ]
 [f ]
-[v F6276 `uc ~T0 @X0 -> 6 `i s ]
-[i F6276
+[v F6277 `uc ~T0 @X0 -> 6 `i s ]
+[i F6277
 :U ..
-"57
-[; ;user.c: 57:     char acionamento[] = {'L', 'L', 'D', 'L', 'D', 'D'};
+"59
+[; ;user.c: 59:     char acionamento[] = {'L', 'L', 'D', 'L', 'D', 'D'};
 -> -> 76 `ui `uc
 -> -> 76 `ui `uc
 -> -> 68 `ui `uc
@@ -1054,302 +1063,366 @@ Version 4.0 HI-TECH Software Intermediate Code
 ..
 ]
 [v _acionamento `uc ~T0 @X0 -> 6 `i a ]
-[e = _acionamento F6276 ]
-"58
-[; ;user.c: 58:     uint8_t pos = 0;
+[e = _acionamento F6277 ]
+"60
+[; ;user.c: 60:     uint8_t pos = 0;
 [v _pos `uc ~T0 @X0 1 a ]
 [e = _pos -> -> 0 `i `uc ]
-"59
-[; ;user.c: 59:     while (1) {
+"61
+[; ;user.c: 61:     while (1) {
 [e :U 898 ]
 {
-"60
-[; ;user.c: 60:         PORTCbits.RC6 = ~PORTCbits.RC6;
-[e = . . _PORTCbits 0 6 -> ~ -> . . _PORTCbits 0 6 `i `uc ]
-"61
-[; ;user.c: 61:         pipe_write(&p, acionamento[pos]);
-[e ( _pipe_write (2 , &U _p *U + &U _acionamento * -> _pos `ux -> -> # *U &U _acionamento `ui `ux ]
 "62
-[; ;user.c: 62:         pos = (pos + 1) % 6;
-[e = _pos -> % + -> _pos `i -> 1 `i -> 6 `i `uc ]
+[; ;user.c: 62:         PORTCbits.RC6 = ~PORTCbits.RC6;
+[e = . . _PORTCbits 0 6 -> ~ -> . . _PORTCbits 0 6 `i `uc ]
+"63
+[; ;user.c: 63:         pipe_write(&p, acionamento[pos]);
+[e ( _pipe_write (2 , &U _p *U + &U _acionamento * -> _pos `ux -> -> # *U &U _acionamento `ui `ux ]
 "64
-[; ;user.c: 64:     }
+[; ;user.c: 64:         pos = (pos + 1) % 6;
+[e = _pos -> % + -> _pos `i -> 1 `i -> 6 `i `uc ]
+"66
+[; ;user.c: 66:     }
 }
 [e :U 897 ]
 [e $U 898  ]
 [e :U 899 ]
-"65
-[; ;user.c: 65: }
+"67
+[; ;user.c: 67: }
 [e :UE 896 ]
 }
-"67
-[; ;user.c: 67: TASK LED_2() {
+"69
+[; ;user.c: 69: TASK LED_2() {
 [v _LED_2 `(v ~T0 @X0 1 ef ]
 {
 [e :U _LED_2 ]
 [f ]
-"68
-[; ;user.c: 68:     while (1) {
+"70
+[; ;user.c: 70:     while (1) {
 [e :U 902 ]
 {
-"71
-[; ;user.c: 71:         PORTCbits.RC7 = ~PORTCbits.RC7;
+"73
+[; ;user.c: 73:         PORTCbits.RC7 = ~PORTCbits.RC7;
 [e = . . _PORTCbits 0 7 -> ~ -> . . _PORTCbits 0 7 `i `uc ]
-"74
-[; ;user.c: 74:     }
+"76
+[; ;user.c: 76:     }
 }
 [e :U 901 ]
 [e $U 902  ]
 [e :U 903 ]
-"75
-[; ;user.c: 75: }
+"77
+[; ;user.c: 77: }
 [e :UE 900 ]
 }
-"77
-[; ;user.c: 77: TASK LED_3() {
+"79
+[; ;user.c: 79: TASK LED_3() {
 [v _LED_3 `(v ~T0 @X0 1 ef ]
 {
 [e :U _LED_3 ]
 [f ]
-"78
-[; ;user.c: 78:     char dado;
+"80
+[; ;user.c: 80:     char dado;
 [v _dado `uc ~T0 @X0 1 a ]
-"79
-[; ;user.c: 79:     while (1) {
+"81
+[; ;user.c: 81:     while (1) {
 [e :U 906 ]
 {
-"80
-[; ;user.c: 80:         pipe_read(&p, &dado);
-[e ( _pipe_read (2 , &U _p &U _dado ]
-"81
-[; ;user.c: 81:         if (dado == 'L')
-[e $ ! == -> _dado `ui -> 76 `ui 908  ]
 "82
-[; ;user.c: 82:             PORTDbits.RD0 = 1;
+[; ;user.c: 82:         pipe_read(&p, &dado);
+[e ( _pipe_read (2 , &U _p &U _dado ]
+"83
+[; ;user.c: 83:         if (dado == 'L')
+[e $ ! == -> _dado `ui -> 76 `ui 908  ]
+"84
+[; ;user.c: 84:             PORTDbits.RD0 = 1;
 [e = . . _PORTDbits 0 0 -> -> 1 `i `uc ]
 [e $U 909  ]
-"83
-[; ;user.c: 83:         else if (dado == 'D')
+"85
+[; ;user.c: 85:         else if (dado == 'D')
 [e :U 908 ]
 [e $ ! == -> _dado `ui -> 68 `ui 910  ]
-"84
-[; ;user.c: 84:             PORTDbits.RD0 = 0;
+"86
+[; ;user.c: 86:             PORTDbits.RD0 = 0;
 [e = . . _PORTDbits 0 0 -> -> 0 `i `uc ]
 [e :U 910 ]
 [e :U 909 ]
-"87
-[; ;user.c: 87:     }
+"89
+[; ;user.c: 89:     }
 }
 [e :U 905 ]
 [e $U 906  ]
 [e :U 907 ]
-"88
-[; ;user.c: 88: }
+"90
+[; ;user.c: 90: }
 [e :UE 904 ]
 }
-"93
-[; ;user.c: 93: TASK LED_1_mutex() {
+"95
+[; ;user.c: 95: TASK LED_1_mutex() {
 [v _LED_1_mutex `(v ~T0 @X0 1 ef ]
 {
 [e :U _LED_1_mutex ]
 [f ]
-"94
-[; ;user.c: 94:     while (1) {
+"96
+[; ;user.c: 96:     while (1) {
 [e :U 913 ]
 {
-"95
-[; ;user.c: 95:         mutex_lock(&m_led);
-[e ( _mutex_lock (1 &U _m_led ]
 "97
-[; ;user.c: 97:         PORTCbits.RC6 = 1;
-[e = . . _PORTCbits 0 6 -> -> 1 `i `uc ]
-"98
-[; ;user.c: 98:         os_delay(5);
-[e ( _os_delay (1 -> -> 5 `i `uc ]
+[; ;user.c: 97:         mutex_lock(&m_led);
+[e ( _mutex_lock (1 &U _m_led ]
 "99
-[; ;user.c: 99:         PORTCbits.RC6 = 0;
-[e = . . _PORTCbits 0 6 -> -> 0 `i `uc ]
+[; ;user.c: 99:         PORTCbits.RC6 = 1;
+[e = . . _PORTCbits 0 6 -> -> 1 `i `uc ]
+"100
+[; ;user.c: 100:         os_delay(5);
+[e ( _os_delay (1 -> -> 5 `i `uc ]
 "101
-[; ;user.c: 101:         mutex_unlock(&m_led);
+[; ;user.c: 101:         PORTCbits.RC6 = 0;
+[e = . . _PORTCbits 0 6 -> -> 0 `i `uc ]
+"103
+[; ;user.c: 103:         mutex_unlock(&m_led);
 [e ( _mutex_unlock (1 &U _m_led ]
-"102
-[; ;user.c: 102:     }
+"104
+[; ;user.c: 104:     }
 }
 [e :U 912 ]
 [e $U 913  ]
 [e :U 914 ]
-"103
-[; ;user.c: 103: }
+"105
+[; ;user.c: 105: }
 [e :UE 911 ]
 }
-"105
-[; ;user.c: 105: TASK LED_2_mutex() {
+"107
+[; ;user.c: 107: TASK LED_2_mutex() {
 [v _LED_2_mutex `(v ~T0 @X0 1 ef ]
 {
 [e :U _LED_2_mutex ]
 [f ]
-"106
-[; ;user.c: 106:     while (1) {
+"108
+[; ;user.c: 108:     while (1) {
 [e :U 917 ]
 {
-"107
-[; ;user.c: 107:         mutex_lock(&m_led);
-[e ( _mutex_lock (1 &U _m_led ]
 "109
-[; ;user.c: 109:         PORTCbits.RC7 = 1;
-[e = . . _PORTCbits 0 7 -> -> 1 `i `uc ]
-"110
-[; ;user.c: 110:         os_delay(5);
-[e ( _os_delay (1 -> -> 5 `i `uc ]
+[; ;user.c: 109:         mutex_lock(&m_led);
+[e ( _mutex_lock (1 &U _m_led ]
 "111
-[; ;user.c: 111:         PORTCbits.RC7 = 0;
-[e = . . _PORTCbits 0 7 -> -> 0 `i `uc ]
+[; ;user.c: 111:         PORTCbits.RC7 = 1;
+[e = . . _PORTCbits 0 7 -> -> 1 `i `uc ]
+"112
+[; ;user.c: 112:         os_delay(5);
+[e ( _os_delay (1 -> -> 5 `i `uc ]
 "113
-[; ;user.c: 113:         mutex_unlock(&m_led);
+[; ;user.c: 113:         PORTCbits.RC7 = 0;
+[e = . . _PORTCbits 0 7 -> -> 0 `i `uc ]
+"115
+[; ;user.c: 115:         mutex_unlock(&m_led);
 [e ( _mutex_unlock (1 &U _m_led ]
-"114
-[; ;user.c: 114:     }
+"116
+[; ;user.c: 116:     }
 }
 [e :U 916 ]
 [e $U 917  ]
 [e :U 918 ]
-"115
-[; ;user.c: 115: }
+"117
+[; ;user.c: 117: }
 [e :UE 915 ]
 }
-"119
-[; ;user.c: 119: TASK LED_1_prio() {
+"121
+[; ;user.c: 121: TASK LED_1_prio() {
 [v _LED_1_prio `(v ~T0 @X0 1 ef ]
 {
 [e :U _LED_1_prio ]
 [f ]
-"120
-[; ;user.c: 120:     while (1) {
+"122
+[; ;user.c: 122:     while (1) {
 [e :U 921 ]
 {
-"121
-[; ;user.c: 121:         PORTCbits.RC6 = 1;
-[e = . . _PORTCbits 0 6 -> -> 1 `i `uc ]
-"122
-[; ;user.c: 122:         os_delay(5);
-[e ( _os_delay (1 -> -> 5 `i `uc ]
 "123
-[; ;user.c: 123:         PORTCbits.RC6 = 0;
-[e = . . _PORTCbits 0 6 -> -> 0 `i `uc ]
+[; ;user.c: 123:         PORTCbits.RC6 = 1;
+[e = . . _PORTCbits 0 6 -> -> 1 `i `uc ]
 "124
-[; ;user.c: 124:     }
+[; ;user.c: 124:         os_delay(5);
+[e ( _os_delay (1 -> -> 5 `i `uc ]
+"125
+[; ;user.c: 125:         PORTCbits.RC6 = 0;
+[e = . . _PORTCbits 0 6 -> -> 0 `i `uc ]
+"126
+[; ;user.c: 126:     }
 }
 [e :U 920 ]
 [e $U 921  ]
 [e :U 922 ]
-"125
-[; ;user.c: 125: }
+"127
+[; ;user.c: 127: }
 [e :UE 919 ]
 }
-"127
-[; ;user.c: 127: TASK LED_2_prio() {
+"129
+[; ;user.c: 129: TASK LED_2_prio() {
 [v _LED_2_prio `(v ~T0 @X0 1 ef ]
 {
 [e :U _LED_2_prio ]
 [f ]
-"128
-[; ;user.c: 128:     while (1) {
+"130
+[; ;user.c: 130:     while (1) {
 [e :U 925 ]
 {
-"129
-[; ;user.c: 129:         PORTCbits.RC7 = 1;
-[e = . . _PORTCbits 0 7 -> -> 1 `i `uc ]
-"130
-[; ;user.c: 130:         os_delay(5);
-[e ( _os_delay (1 -> -> 5 `i `uc ]
 "131
-[; ;user.c: 131:         PORTCbits.RC7 = 0;
-[e = . . _PORTCbits 0 7 -> -> 0 `i `uc ]
+[; ;user.c: 131:         PORTCbits.RC7 = 1;
+[e = . . _PORTCbits 0 7 -> -> 1 `i `uc ]
 "132
-[; ;user.c: 132:     }
+[; ;user.c: 132:         os_delay(5);
+[e ( _os_delay (1 -> -> 5 `i `uc ]
+"133
+[; ;user.c: 133:         PORTCbits.RC7 = 0;
+[e = . . _PORTCbits 0 7 -> -> 0 `i `uc ]
+"134
+[; ;user.c: 134:     }
 }
 [e :U 924 ]
 [e $U 925  ]
 [e :U 926 ]
-"133
-[; ;user.c: 133: }
+"135
+[; ;user.c: 135: }
 [e :UE 923 ]
 }
-"135
-[; ;user.c: 135: TASK LED_3_prio() {
+"137
+[; ;user.c: 137: TASK LED_3_prio() {
 [v _LED_3_prio `(v ~T0 @X0 1 ef ]
 {
 [e :U _LED_3_prio ]
 [f ]
-"136
-[; ;user.c: 136:     while (1) {
+"138
+[; ;user.c: 138:     while (1) {
 [e :U 929 ]
 {
-"137
-[; ;user.c: 137:         PORTDbits.RD0 = 1;
-[e = . . _PORTDbits 0 0 -> -> 1 `i `uc ]
-"138
-[; ;user.c: 138:         os_delay(5);
-[e ( _os_delay (1 -> -> 5 `i `uc ]
 "139
-[; ;user.c: 139:         PORTDbits.RD0 = 0;
-[e = . . _PORTDbits 0 0 -> -> 0 `i `uc ]
+[; ;user.c: 139:         PORTDbits.RD0 = 1;
+[e = . . _PORTDbits 0 0 -> -> 1 `i `uc ]
 "140
-[; ;user.c: 140:     }
+[; ;user.c: 140:         os_delay(5);
+[e ( _os_delay (1 -> -> 5 `i `uc ]
+"141
+[; ;user.c: 141:         PORTDbits.RD0 = 0;
+[e = . . _PORTDbits 0 0 -> -> 0 `i `uc ]
+"142
+[; ;user.c: 142:     }
 }
 [e :U 928 ]
 [e $U 929  ]
 [e :U 930 ]
-"141
-[; ;user.c: 141: }
+"143
+[; ;user.c: 143: }
 [e :UE 927 ]
 }
-"143
-[; ;user.c: 143: TASK tarefaLeituraADC_UART(void) {
+"145
+[; ;user.c: 145: TASK tarefaLeituraADC_UART(void) {
 [v _tarefaLeituraADC_UART `(v ~T0 @X0 1 ef ]
 {
 [e :U _tarefaLeituraADC_UART ]
 [f ]
-"144
-[; ;user.c: 144:     uint16_t valor;
-[v _valor `us ~T0 @X0 1 a ]
 "146
-[; ;user.c: 146:     while (1) {
+[; ;user.c: 146:     uint16_t valor;
+[v _valor `us ~T0 @X0 1 a ]
+"148
+[; ;user.c: 148:     while (1) {
 [e :U 933 ]
 {
-"147
-[; ;user.c: 147:         valor = adc_read(0);
+"149
+[; ;user.c: 149:         valor = adc_read(0);
 [e = _valor ( _adc_read (1 -> -> 0 `i `uc ]
-"148
-[; ;user.c: 148:         if (valor > 100) {
+"150
+[; ;user.c: 150:         if (valor > 100) {
 [e $ ! > -> _valor `ui -> -> 100 `i `ui 935  ]
 {
-"149
-[; ;user.c: 149:             PORTDbits.RD0 = 1;
-[e = . . _PORTDbits 0 0 -> -> 1 `i `uc ]
 "151
-[; ;user.c: 151:         } else {
+[; ;user.c: 151:             PORTDbits.RD0 = 1;
+[e = . . _PORTDbits 0 0 -> -> 1 `i `uc ]
+"153
+[; ;user.c: 153:         } else {
 }
 [e $U 936  ]
 [e :U 935 ]
 {
-"152
-[; ;user.c: 152:             PORTDbits.RD0 = 0;
-[e = . . _PORTDbits 0 0 -> -> 0 `i `uc ]
 "154
-[; ;user.c: 154:         }
+[; ;user.c: 154:             PORTDbits.RD0 = 0;
+[e = . . _PORTDbits 0 0 -> -> 0 `i `uc ]
+"156
+[; ;user.c: 156:         }
 }
 [e :U 936 ]
-"155
-[; ;user.c: 155:         os_delay(10);
+"157
+[; ;user.c: 157:         os_delay(10);
 [e ( _os_delay (1 -> -> 10 `i `uc ]
-"156
-[; ;user.c: 156:     }
+"158
+[; ;user.c: 158:     }
 }
 [e :U 932 ]
 [e $U 933  ]
 [e :U 934 ]
-"157
-[; ;user.c: 157: }
+"159
+[; ;user.c: 159: }
 [e :UE 931 ]
+}
+"161
+[; ;user.c: 161: TASK tarefaPWN(void) {
+[v _tarefaPWN `(v ~T0 @X0 1 ef ]
+{
+[e :U _tarefaPWN ]
+[f ]
+"162
+[; ;user.c: 162:     uint16_t brilho = 0;
+[v _brilho `us ~T0 @X0 1 a ]
+[e = _brilho -> -> 0 `i `us ]
+"163
+[; ;user.c: 163:     int8_t direcao = 1;
+[v _direcao `c ~T0 @X0 1 a ]
+[e = _direcao -> -> 1 `i `c ]
+"165
+[; ;user.c: 165:     while(1) {
+[e :U 939 ]
+{
+"166
+[; ;user.c: 166:         pwm_set_duty(brilho);
+[e ( _pwm_set_duty (1 _brilho ]
+"168
+[; ;user.c: 168:         if (direcao == 1) {
+[e $ ! == -> _direcao `i -> 1 `i 941  ]
+{
+"169
+[; ;user.c: 169:             brilho += 10;
+[e =+ _brilho -> -> 10 `i `us ]
+"170
+[; ;user.c: 170:             if (brilho >= 1000) direcao = -1;
+[e $ ! >= -> _brilho `ui -> -> 1000 `i `ui 942  ]
+[e = _direcao -> -U -> 1 `i `c ]
+[e :U 942 ]
+"171
+[; ;user.c: 171:         } else {
+}
+[e $U 943  ]
+[e :U 941 ]
+{
+"172
+[; ;user.c: 172:             brilho -= 10;
+[e =- _brilho -> -> 10 `i `us ]
+"173
+[; ;user.c: 173:             if (brilho <= 10) direcao = 1;
+[e $ ! <= -> _brilho `ui -> -> 10 `i `ui 944  ]
+[e = _direcao -> -> 1 `i `c ]
+[e :U 944 ]
+"174
+[; ;user.c: 174:         }
+}
+[e :U 943 ]
+"176
+[; ;user.c: 176:         os_delay(5);
+[e ( _os_delay (1 -> -> 5 `i `uc ]
+"177
+[; ;user.c: 177:     }
+}
+[e :U 938 ]
+[e $U 939  ]
+[e :U 940 ]
+"178
+[; ;user.c: 178: }
+[e :UE 937 ]
 }

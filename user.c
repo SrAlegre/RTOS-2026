@@ -24,14 +24,16 @@ void config_user() {
     //    asm("global _LED_1_mutex, _LED_2_mutex");
     //    asm("global _LED_1_prio,_LED_2_prio,_LED_3_prio");
 
-    asm("global _tarefaLeituraADC_UART");
-
+    //asm("global _tarefaLeituraADC");
+    asm("global _tarefaPWN");
 
 
     sem_init(&s, 0);
     pipe_init(&p);
     mutex_init(&m_led);
     adc_config();
+    pwm_init();
+
 }
 
 TASK acionaMotor() {
@@ -153,5 +155,24 @@ TASK tarefaLeituraADC_UART(void) {
 
         }
         os_delay(10);
+    }
+}
+
+TASK tarefaPWN(void) {
+    uint16_t brilho = 0;
+    int8_t direcao = 1;
+
+    while(1) {
+        pwm_set_duty(brilho);
+        
+        if (direcao == 1) {
+            brilho += 10;
+            if (brilho >= 1000) direcao = -1;
+        } else {
+            brilho -= 10;
+            if (brilho <= 10) direcao = 1;
+        }
+
+        os_delay(5); 
     }
 }

@@ -203,6 +203,7 @@ TASK LED_2_prio();
 TASK LED_3_prio();
 
 TASK tarefaLeituraADC_UART(void);
+TASK tarefaPWN(void);
 # 2 "user.c" 2
 # 1 "/opt/microchip/xc8/v3.10/pic/include/xc.h" 1 3
 # 18 "/opt/microchip/xc8/v3.10/pic/include/xc.h" 3
@@ -10025,15 +10026,16 @@ void config_user() {
     ANSELDbits.ANSD0 = 0;
     ANSELCbits.ANSC6 = 0;
     ANSELCbits.ANSC7 = 0;
-# 27 "user.c"
-    __asm("global _tarefaLeituraADC_UART");
-
+# 28 "user.c"
+    __asm("global _tarefaPWN");
 
 
     sem_init(&s, 0);
     pipe_init(&p);
     mutex_init(&m_led);
     adc_config();
+    pwm_init();
+
 }
 
 TASK acionaMotor() {
@@ -10155,5 +10157,24 @@ TASK tarefaLeituraADC_UART(void) {
 
         }
         os_delay(10);
+    }
+}
+
+TASK tarefaPWN(void) {
+    uint16_t brilho = 0;
+    int8_t direcao = 1;
+
+    while(1) {
+        pwm_set_duty(brilho);
+
+        if (direcao == 1) {
+            brilho += 10;
+            if (brilho >= 1000) direcao = -1;
+        } else {
+            brilho -= 10;
+            if (brilho <= 10) direcao = 1;
+        }
+
+        os_delay(5);
     }
 }

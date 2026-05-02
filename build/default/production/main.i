@@ -9947,6 +9947,7 @@ TASK LED_2_prio();
 TASK LED_3_prio();
 
 TASK tarefaLeituraADC_UART(void);
+TASK tarefaPWN(void);
 # 7 "main.c" 2
 
 int main() {

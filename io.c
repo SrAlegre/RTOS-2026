@@ -4,7 +4,7 @@
 void adc_config(void) {
     ADCON0bits.CHS = 0b00000; // Canal zero (AN0)
     ADCON1bits.PVCFG = 0b00; // VDD
-    ADCON1bits.NVCFG = 0b00; // VSS
+    ADCON1bits.NVCFG = 0b00; // VSSe
     ADCON2bits.ADFM = 1; // Justifica??o do dado (direita)
     ADCON2bits.ACQT = 0b110; // Tempo de aquisi??o do sinal
     ADCON2bits.ADCS = 0b100; // Fosc/4
