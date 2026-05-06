@@ -7,7 +7,7 @@
 
 #define DEFAULT_SCHEDULER   RR_PRIOR_SCHEDULER
 
-#define MAX_STACK_SIZE      16
+#define MAX_STACK_SIZE      12
 #define MAX_USER_TASKS      6
 #define QUANTUM             20
 #define PIPE_MAX_SIZE       4

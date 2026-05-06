@@ -792,14 +792,14 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 9:     os_config();
 [e ( _os_config ..  ]
 "11
-[; ;main.c: 11:     os_create_task(2, tarefaLeituraADC, 1);
-[e ( _os_create_task (3 , , -> -> 2 `i `uc &U _tarefaLeituraADC -> -> 1 `i `uc ]
+[; ;main.c: 11:     os_create_task(2, tarefaLeituraADC, 3);
+[e ( _os_create_task (3 , , -> -> 2 `i `uc &U _tarefaLeituraADC -> -> 3 `i `uc ]
 "12
 [; ;main.c: 12:     os_create_task(3, tarefaProcessamento, 2);
 [e ( _os_create_task (3 , , -> -> 3 `i `uc &U _tarefaProcessamento -> -> 2 `i `uc ]
 "13
-[; ;main.c: 13:     os_create_task(4, tarefaControlePWM, 3);
-[e ( _os_create_task (3 , , -> -> 4 `i `uc &U _tarefaControlePWM -> -> 3 `i `uc ]
+[; ;main.c: 13:     os_create_task(4, tarefaControlePWM, 2);
+[e ( _os_create_task (3 , , -> -> 4 `i `uc &U _tarefaControlePWM -> -> 2 `i `uc ]
 "14
 [; ;main.c: 14:     os_create_task(5, tarefaFeedbackLED, 4);
 [e ( _os_create_task (3 , , -> -> 5 `i `uc &U _tarefaFeedbackLED -> -> 4 `i `uc ]

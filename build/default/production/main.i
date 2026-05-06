@@ -145,7 +145,7 @@ typedef struct hw_stack {
 } hw_stack_t;
 
 typedef struct sw_stack {
-    hw_stack_t stack[16];
+    hw_stack_t stack[12];
     uint8_t stack_size;
 } sw_stack_t;
 
@@ -9941,9 +9941,9 @@ TASK tarefaOneShot(void);
 int main() {
     os_config();
 
-    os_create_task(2, tarefaLeituraADC, 1);
+    os_create_task(2, tarefaLeituraADC, 3);
     os_create_task(3, tarefaProcessamento, 2);
-    os_create_task(4, tarefaControlePWM, 3);
+    os_create_task(4, tarefaControlePWM, 2);
     os_create_task(5, tarefaFeedbackLED, 4);
 
     os_start();

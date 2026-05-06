@@ -65,7 +65,7 @@ TASK tarefaProcessamento(void) {
         dado_processado = dado;
         LATD = dado; 
         sem_post(&sem_processamento); // Avisa que dado esta pronto para o PWM
-        //os_delay(1); error: (1360) no space for auto/param os_create_task@new_task
+        //os_delay(1); //error: (1360) no space for auto/param os_create_task@new_task
     }
 }
 

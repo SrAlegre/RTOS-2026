@@ -8,9 +8,9 @@
 int main() {
     os_config();
     
-    os_create_task(2, tarefaLeituraADC, 1);
+    os_create_task(2, tarefaLeituraADC, 3);
     os_create_task(3, tarefaProcessamento, 2);
-    os_create_task(4, tarefaControlePWM, 3);
+    os_create_task(4, tarefaControlePWM, 2);
     os_create_task(5, tarefaFeedbackLED, 4);
     
     os_start();

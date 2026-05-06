@@ -12,58 +12,59 @@
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
 $dist/default/production\RTOS-2026.production.o
-cinit CODE 0 3018 3018 44 1 2
-text0 CODE 0 2E7E 2E7E 60 1 2
-text1 CODE 0 22D6 22D6 35C 1 2
-text2 CODE 0 330C 330C 1C 1 2
-text3 CODE 0 31CE 31CE 2A 1 2
-text4 CODE 0 2632 2632 13C 1 2
-text5 CODE 0 2AE8 2AE8 B0 1 2
-text6 CODE 0 310A 310A 32 1 2
-text7 CODE 0 2D82 2D82 80 1 2
-text8 CODE 0 2F8A 2F8A 48 1 2
-text9 CODE 0 3338 3338 E 1 2
-text10 CODE 0 3098 3098 3A 1 2
-text11 CODE 0 32C6 32C6 26 1 2
-text12 CODE 0 305C 305C 3C 1 2
-text13 CODE 0 3276 3276 28 1 2
-text14 CODE 0 31F8 31F8 2A 1 2
-text15 CODE 0 316E 316E 30 1 2
-text16 CODE 0 2F38 2F38 52 1 2
-text17 CODE 0 3328 3328 10 1 2
-text18 CODE 0 2CF6 2CF6 8C 1 2
-text19 CODE 0 1CC0 1CC0 616 1 2
-text20 CODE 0 3222 3222 2A 1 2
-text21 CODE 0 276E 276E 13C 1 2
-text22 CODE 0 2B98 2B98 B0 1 2
-text23 CODE 0 30D2 30D2 38 1 2
-text24 CODE 0 324C 324C 2A 1 2
-text25 CODE 0 2EDE 2EDE 5A 1 2
-text26 CODE 0 2FD2 2FD2 46 1 2
-text27 CODE 0 319E 319E 30 1 2
-text28 CODE 0 29E2 29E2 106 1 2
-text29 CODE 0 1002 1002 69A 1 2
-text30 CODE 0 313C 313C 32 1 2
-text31 CODE 0 32EC 32EC 20 1 2
-text32 CODE 0 169C 169C 624 1 2
-text34 CODE 0 329E 329E 28 1 2
-text35 CODE 0 28AA 28AA 138 1 2
-text36 CODE 0 2C48 2C48 AE 1 2
-text37 CODE 0 2E02 2E02 7C 1 2
-cstackCOMRAM COMRAM 1 2 2 5C 1 1
-cstackBANK0 BANK0 1 96 96 1 1 1
+cinit CODE 0 2FE8 2FE8 58 1 2
+text0 CODE 0 2F88 2F88 60 1 2
+text1 CODE 0 22EC 22EC 35A 1 2
+text2 CODE 0 33B6 33B6 1C 1 2
+text3 CODE 0 32C8 32C8 2A 1 2
+text4 CODE 0 2646 2646 132 1 2
+text5 CODE 0 2AFE 2AFE B0 1 2
+text6 CODE 0 31AA 31AA 32 1 2
+text7 CODE 0 2DAE 2DAE 80 1 2
+text8 CODE 0 3092 3092 50 1 2
+text9 CODE 0 33E2 33E2 E 1 2
+text10 CODE 0 30E2 30E2 4A 1 2
+text11 CODE 0 329C 329C 2C 1 2
+text12 CODE 0 312C 312C 46 1 2
+text13 CODE 0 3346 3346 28 1 2
+text14 CODE 0 32F2 32F2 2A 1 2
+text15 CODE 0 320E 320E 30 1 2
+text16 CODE 0 2F22 2F22 66 1 2
+text17 CODE 0 33D2 33D2 10 1 2
+text18 CODE 0 2D0C 2D0C A2 1 2
+text19 CODE 0 1CD8 1CD8 614 1 2
+text20 CODE 0 331C 331C 2A 1 2
+text21 CODE 0 2778 2778 132 1 2
+text22 CODE 0 2BAE 2BAE B0 1 2
+text23 CODE 0 3172 3172 38 1 2
+text24 CODE 0 326E 326E 2E 1 2
+text25 CODE 0 2EAA 2EAA 78 1 2
+text26 CODE 0 3040 3040 52 1 2
+text27 CODE 0 323E 323E 30 1 2
+text28 CODE 0 29D8 29D8 126 1 2
+text29 CODE 0 1002 1002 6B4 1 2
+text30 CODE 0 31DC 31DC 32 1 2
+text31 CODE 0 3396 3396 20 1 2
+text32 CODE 0 16B6 16B6 622 1 2
+text34 CODE 0 336E 336E 28 1 2
+text35 CODE 0 28AA 28AA 12E 1 2
+text36 CODE 0 2C5E 2C5E AE 1 2
+text37 CODE 0 2E2E 2E2E 7C 1 2
+idataCOMRAM CODE 0 33F0 33F0 1 1 1
+cstackCOMRAM COMRAM 1 2 2 50 1 1
+cstackBANK0 BANK0 1 78 78 F 1 1
 cstackBANK1 BANK1 1 100 100 32 1 1
-cstackBANK2 BANK2 1 200 200 86 1 1
-cstackBANK3 BANK3 1 300 300 4D 1 1
-bssBANK0 BANK0 1 60 60 35 1 1
-intcode CODE 0 8 8 738 1 2
+cstackBANK2 BANK2 1 200 200 8A 1 1
+cstackBANK3 BANK3 1 300 300 41 1 1
+bssBANK0 BANK0 1 60 60 18 1 1
+bssBANK1 BANK1 1 132 132 15 1 1
+intcode CODE 0 8 8 734 1 2
 smallconst SMALLCONST 0 1000 1000 2 1 2
-idataBANK0 CODE 0 3346 3346 1 1 1
-dataBANK0 BANK0 1 95 95 1 1 1
-bssBIGRAM BIGRAM 1 34D 34D 3FC 1 1
-bssCOMRAM COMRAM 1 5E 5E 2 1 1
-$C:\Users\RICHAR~1.STO\AppData\Local\Temp\xcAsgrk.0\driver_tmp_9.o
-init CODE 0 740 740 4 1 2
+dataCOMRAM COMRAM 1 5C 5C 1 1 1
+bssBIGRAM BIGRAM 1 341 341 3A8 1 1
+bssCOMRAM COMRAM 1 52 52 A 1 1
+$C:\Users\RICHAR~1.STO\AppData\Local\Temp\xcAscwg.0\driver_tmp_9.o
+init CODE 0 73C 73C 4 1 2
 reset_vec CODE 0 0 0 4 1 2
 # %UNUSED Section
 # This section enumerates the unused ranges of each CLASS. Each entry
@@ -71,39 +72,42 @@ reset_vec CODE 0 0 0 4 1 2
 #    <class name> <range> <delta>
 # Addresses given in the range are in hexadecimal and units of delta.
 %UNUSED
-RAM 97-FF 1
-RAM 132-1FF 1
-RAM 286-2FF 1
-RAM 749-F37 1
+RAM 87-FF 1
+RAM 147-1FF 1
+RAM 28A-2FF 1
+RAM 6E9-F37 1
 SFR F38-FFF 1
-BANK0 97-FF 1
-BANK1 132-1FF 1
-BANK2 286-2FF 1
-BANK7 749-7FF 1
+BANK0 87-FF 1
+BANK1 147-1FF 1
+BANK2 28A-2FF 1
+BANK6 6E9-6FF 1
+BANK7 700-7FF 1
 BANK8 800-8FF 1
 BANK9 900-9FF 1
 CONST 4-7 1
-CONST 744-FFF 1
-CONST 3347-FFFF 1
+CONST 740-FFF 1
+CONST 33F1-FFFF 1
 IDLOC 200000-200007 1
-SMALLCONST 3347-FFFF 1
+SMALLCONST 33F1-FFFF 1
 CODE 4-7 1
-CODE 744-FFF 1
-CODE 3347-FFFF 1
+CODE 740-FFF 1
+CODE 33F1-FFFF 1
 BANK10 A00-AFF 1
 BANK11 B00-BFF 1
 BANK12 C00-CFF 1
 BANK13 D00-DFF 1
 BANK14 E00-EFF 1
 BANK15 F00-F37 1
-BIGRAM 97-FF 1
-BIGRAM 132-1FF 1
-BIGRAM 286-2FF 1
-BIGRAM 749-F37 1
+BIGRAM 5D-5F 1
+BIGRAM 87-FF 1
+BIGRAM 147-1FF 1
+BIGRAM 28A-2FF 1
+BIGRAM 6E9-F37 1
 BIGSFR F38-FFF 1
+COMRAM 5D-5F 1
 CONFIG 300000-30000D 1
 EEDATA F00000-F003FF 1
-MEDIUMCONST 3347-FFFF 1
+MEDIUMCONST 33F1-FFFF 1
 # %LINETAB Section
 # This section enumerates the file/line to address mappings.
 # The beginning of the section is indicated by %LINETAB.
@@ -118,7 +122,7 @@ MEDIUMCONST 3347-FFFF 1
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production\RTOS-2026.production.o
-8 intcode CODE >12339:C:\Users\RICHAR~1.STO\AppData\Local\Temp\xcAsgrk.0\driver_tmp_1.s
+8 intcode CODE >12342:C:\Users\RICHAR~1.STO\AppData\Local\Temp\xcAscwg.0\driver_tmp_1.s
 8 intcode CODE >26:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\hw.c
 22 intcode CODE >28:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\hw.c
 30 intcode CODE >29:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\hw.c
@@ -129,428 +133,438 @@ $dist/default/production\RTOS-2026.production.o
 B8 intcode CODE >36:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\hw.c
 D8 intcode CODE >39:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\hw.c
 104 intcode CODE >43:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\hw.c
-108 intcode CODE >44:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\hw.c
-118 intcode CODE >45:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\hw.c
-11C intcode CODE >46:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\hw.c
-3B6 intcode CODE >47:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\hw.c
-3BA intcode CODE >48:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\hw.c
-702 intcode CODE >53:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\hw.c
-710 intcode CODE >54:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\hw.c
-712 intcode CODE >57:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\hw.c
-724 intcode CODE >62:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\hw.c
-2E02 text37 CODE >25:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\kernel.c
-2E04 text37 CODE >29:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\kernel.c
-2E08 text37 CODE >30:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\kernel.c
-2E0A text37 CODE >31:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\kernel.c
-2E0E text37 CODE >32:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\kernel.c
-2E16 text37 CODE >33:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\kernel.c
-2E18 text37 CODE >35:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\kernel.c
-2E1A text37 CODE >36:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\kernel.c
-2E1C text37 CODE >37:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\kernel.c
-2E1E text37 CODE >38:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\kernel.c
-2E20 text37 CODE >39:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\kernel.c
-2E22 text37 CODE >40:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\kernel.c
-2E24 text37 CODE >41:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\kernel.c
-2E26 text37 CODE >42:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\kernel.c
-2E28 text37 CODE >43:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\kernel.c
-2E2A text37 CODE >44:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\kernel.c
-2E2C text37 CODE >45:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\kernel.c
-2E2E text37 CODE >46:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\kernel.c
-2E30 text37 CODE >47:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\kernel.c
-2E32 text37 CODE >48:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\kernel.c
-2E34 text37 CODE >49:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\kernel.c
-2E36 text37 CODE >50:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\kernel.c
-2E38 text37 CODE >51:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\kernel.c
-2E3A text37 CODE >52:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\kernel.c
-2E3C text37 CODE >56:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\kernel.c
-2E50 text37 CODE >57:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\kernel.c
-2E7C text37 CODE >60:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\kernel.c
-2C48 text36 CODE >7:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
-2C48 text36 CODE >12:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
-2C4A text36 CODE >13:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
-2C58 text36 CODE >14:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
-2C60 text36 CODE >15:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
-2C64 text36 CODE >17:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
-2C72 text36 CODE >18:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
-2C7A text36 CODE >19:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
-2C8C text36 CODE >20:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
-2C90 text36 CODE >21:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
-2C94 text36 CODE >22:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
-2C9A text36 CODE >23:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
-2C9C text36 CODE >21:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
-2CAA text36 CODE >26:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
-2CC0 text36 CODE >27:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
-2CC8 text36 CODE >28:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
-2CCE text36 CODE >29:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
-2CD4 text36 CODE >31:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
-2CE4 text36 CODE >32:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
-2CEC text36 CODE >33:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
-2CF4 text36 CODE >34:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
+106 intcode CODE >44:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\hw.c
+116 intcode CODE >45:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\hw.c
+11A intcode CODE >46:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\hw.c
+3B4 intcode CODE >47:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\hw.c
+3B8 intcode CODE >48:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\hw.c
+6FE intcode CODE >53:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\hw.c
+70C intcode CODE >54:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\hw.c
+70E intcode CODE >57:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\hw.c
+720 intcode CODE >62:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\hw.c
+2E2E text37 CODE >25:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\kernel.c
+2E30 text37 CODE >29:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\kernel.c
+2E34 text37 CODE >30:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\kernel.c
+2E36 text37 CODE >31:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\kernel.c
+2E3A text37 CODE >32:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\kernel.c
+2E42 text37 CODE >33:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\kernel.c
+2E44 text37 CODE >35:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\kernel.c
+2E46 text37 CODE >36:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\kernel.c
+2E48 text37 CODE >37:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\kernel.c
+2E4A text37 CODE >38:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\kernel.c
+2E4C text37 CODE >39:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\kernel.c
+2E4E text37 CODE >40:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\kernel.c
+2E50 text37 CODE >41:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\kernel.c
+2E52 text37 CODE >42:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\kernel.c
+2E54 text37 CODE >43:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\kernel.c
+2E56 text37 CODE >44:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\kernel.c
+2E58 text37 CODE >45:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\kernel.c
+2E5A text37 CODE >46:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\kernel.c
+2E5C text37 CODE >47:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\kernel.c
+2E5E text37 CODE >48:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\kernel.c
+2E60 text37 CODE >49:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\kernel.c
+2E62 text37 CODE >50:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\kernel.c
+2E64 text37 CODE >51:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\kernel.c
+2E66 text37 CODE >52:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\kernel.c
+2E68 text37 CODE >56:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\kernel.c
+2E7C text37 CODE >57:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\kernel.c
+2EA8 text37 CODE >60:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\kernel.c
+2C5E text36 CODE >7:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
+2C5E text36 CODE >12:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
+2C60 text36 CODE >13:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
+2C6E text36 CODE >14:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
+2C76 text36 CODE >15:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
+2C7A text36 CODE >17:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
+2C88 text36 CODE >18:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
+2C90 text36 CODE >19:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
+2CA2 text36 CODE >20:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
+2CA6 text36 CODE >21:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
+2CAA text36 CODE >22:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
+2CB0 text36 CODE >23:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
+2CB2 text36 CODE >21:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
+2CC0 text36 CODE >26:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
+2CD6 text36 CODE >27:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
+2CDE text36 CODE >28:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
+2CE4 text36 CODE >29:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
+2CEA text36 CODE >31:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
+2CFA text36 CODE >32:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
+2D02 text36 CODE >33:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
+2D0A text36 CODE >34:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
 28AA text35 CODE >60:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\scheduler.c
 28AA text35 CODE >67:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\scheduler.c
-28AE text35 CODE >68:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\scheduler.c
-28B0 text35 CODE >71:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\scheduler.c
-28B6 text35 CODE >72:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\scheduler.c
-28D6 text35 CODE >73:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\scheduler.c
-290A text35 CODE >74:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\scheduler.c
-291E text35 CODE >75:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\scheduler.c
-2922 text35 CODE >78:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\scheduler.c
-293A text35 CODE >79:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\scheduler.c
-2952 text35 CODE >80:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\scheduler.c
-2956 text35 CODE >82:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\scheduler.c
-295C text35 CODE >83:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\scheduler.c
-297A text35 CODE >84:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\scheduler.c
-29BE text35 CODE >86:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\scheduler.c
-29C4 text35 CODE >88:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\scheduler.c
-29E0 text35 CODE >90:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\scheduler.c
-329E text34 CODE >9:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\scheduler.c
-329E text34 CODE >15:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\scheduler.c
-32A8 text34 CODE >17:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\scheduler.c
-32C4 text34 CODE >18:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\scheduler.c
-169C text32 CODE >97:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\kernel.c
-16A0 text32 CODE >99:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\kernel.c
-16A2 text32 CODE >101:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\kernel.c
-16B6 text32 CODE >102:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\kernel.c
-1954 text32 CODE >103:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\kernel.c
-1958 text32 CODE >104:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\kernel.c
-1CAC text32 CODE >107:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\kernel.c
-1CBC text32 CODE >110:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\kernel.c
-1CBE text32 CODE >111:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\kernel.c
-32EC text31 CODE >92:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\user.c
-32EC text31 CODE >94:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\user.c
-32EE text31 CODE >95:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\user.c
-32F4 text31 CODE >96:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\user.c
-32F6 text31 CODE >101:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\user.c
-32F6 text31 CODE >102:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\user.c
-313C text30 CODE >84:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\user.c
-313C text30 CODE >85:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\user.c
-313C text30 CODE >86:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\user.c
-3162 text30 CODE >87:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\user.c
+28AC text35 CODE >68:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\scheduler.c
+28AE text35 CODE >71:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\scheduler.c
+28B4 text35 CODE >72:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\scheduler.c
+28D4 text35 CODE >73:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\scheduler.c
+2906 text35 CODE >74:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\scheduler.c
+291A text35 CODE >75:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\scheduler.c
+291E text35 CODE >78:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\scheduler.c
+2936 text35 CODE >79:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\scheduler.c
+294C text35 CODE >80:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\scheduler.c
+2950 text35 CODE >82:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\scheduler.c
+2956 text35 CODE >83:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\scheduler.c
+2972 text35 CODE >84:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\scheduler.c
+29B4 text35 CODE >86:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\scheduler.c
+29BA text35 CODE >88:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\scheduler.c
+29D6 text35 CODE >90:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\scheduler.c
+336E text34 CODE >9:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\scheduler.c
+336E text34 CODE >15:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\scheduler.c
+3378 text34 CODE >17:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\scheduler.c
+3394 text34 CODE >18:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\scheduler.c
+16B6 text32 CODE >97:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\kernel.c
+16BA text32 CODE >99:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\kernel.c
+16BC text32 CODE >101:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\kernel.c
+16D0 text32 CODE >102:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\kernel.c
+196E text32 CODE >103:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\kernel.c
+1972 text32 CODE >104:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\kernel.c
+1CC4 text32 CODE >107:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\kernel.c
+1CD4 text32 CODE >110:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\kernel.c
+1CD6 text32 CODE >111:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\kernel.c
+3396 text31 CODE >93:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\user.c
+3396 text31 CODE >95:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\user.c
+3398 text31 CODE >96:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\user.c
+339E text31 CODE >97:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\user.c
+33A0 text31 CODE >102:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\user.c
+33A0 text31 CODE >103:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\user.c
+31DC text30 CODE >85:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\user.c
+31DC text30 CODE >86:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\user.c
+31DC text30 CODE >87:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\user.c
+3202 text30 CODE >88:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\user.c
 1002 text29 CODE >51:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\sync.c
 1002 text29 CODE >52:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\sync.c
 1004 text29 CODE >54:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\sync.c
 101C text29 CODE >55:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\sync.c
-103E text29 CODE >56:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\sync.c
-1074 text29 CODE >57:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\sync.c
-1082 text29 CODE >59:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\sync.c
-1320 text29 CODE >60:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\sync.c
-1324 text29 CODE >61:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\sync.c
-1678 text29 CODE >63:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\sync.c
-1682 text29 CODE >64:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\sync.c
-1698 text29 CODE >66:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\sync.c
-169A text29 CODE >67:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\sync.c
-29E2 text28 CODE >69:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\sync.c
-29E2 text28 CODE >70:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\sync.c
-29E4 text28 CODE >71:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\sync.c
-2A20 text28 CODE >73:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\sync.c
-2A3A text28 CODE >74:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\sync.c
-2A58 text28 CODE >75:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\sync.c
-2A6A text28 CODE >76:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\sync.c
-2AA0 text28 CODE >77:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\sync.c
-2AAE text28 CODE >78:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\sync.c
-2ACC text28 CODE >79:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\sync.c
-2AD0 text28 CODE >81:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\sync.c
-2AD8 text28 CODE >82:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\sync.c
-2AE4 text28 CODE >85:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\sync.c
-2AE6 text28 CODE >86:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\sync.c
-319E text27 CODE >32:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\io.c
-319E text27 CODE >34:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\io.c
-31B8 text27 CODE >35:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\io.c
-31CC text27 CODE >36:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\io.c
-2FD2 text26 CODE >72:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\user.c
-2FD2 text26 CODE >73:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\user.c
-2FD2 text26 CODE >74:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\user.c
-2FDC text26 CODE >76:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\user.c
-2FE6 text26 CODE >77:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\user.c
-3008 text26 CODE >78:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\user.c
-2EDE text25 CODE >19:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\com.c
-2EDE text25 CODE >21:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\com.c
-2EEA text25 CODE >22:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\com.c
-2F0E text25 CODE >23:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\com.c
-2F2C text25 CODE >24:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\com.c
-2F36 text25 CODE >25:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\com.c
-324C text24 CODE >59:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\user.c
-324C text24 CODE >61:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\user.c
-324C text24 CODE >62:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\user.c
-325E text24 CODE >65:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\user.c
-3262 text24 CODE >66:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\user.c
-3266 text24 CODE >67:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\user.c
-30D2 text23 CODE >16:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\io.c
-30D6 text23 CODE >17:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\io.c
-30EA text23 CODE >18:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\io.c
-30EC text23 CODE >19:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\io.c
-30FA text23 CODE >20:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\io.c
-3108 text23 CODE >21:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\io.c
-2B98 text22 CODE >7:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
-2B98 text22 CODE >12:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
-2B9C text22 CODE >13:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
-2BAA text22 CODE >14:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
-2BB2 text22 CODE >15:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
-2BB6 text22 CODE >17:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
-2BC4 text22 CODE >18:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
-2BCC text22 CODE >19:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
-2BDE text22 CODE >20:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
-2BE2 text22 CODE >21:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
-2BE6 text22 CODE >22:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
-2BEC text22 CODE >23:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
-2BEE text22 CODE >21:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
-2BFC text22 CODE >26:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
-2C12 text22 CODE >27:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
-2C1A text22 CODE >28:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
-2C20 text22 CODE >29:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
-2C26 text22 CODE >31:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
-2C36 text22 CODE >32:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
-2C3E text22 CODE >33:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
-2C46 text22 CODE >34:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
-276E text21 CODE >60:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\scheduler.c
-276E text21 CODE >67:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\scheduler.c
-2772 text21 CODE >68:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\scheduler.c
-2774 text21 CODE >71:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\scheduler.c
-277A text21 CODE >72:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\scheduler.c
-279A text21 CODE >73:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\scheduler.c
-27CE text21 CODE >74:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\scheduler.c
-27E2 text21 CODE >75:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\scheduler.c
-27E6 text21 CODE >78:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\scheduler.c
-27FE text21 CODE >79:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\scheduler.c
-2816 text21 CODE >80:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\scheduler.c
-281A text21 CODE >82:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\scheduler.c
-2820 text21 CODE >83:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\scheduler.c
-2842 text21 CODE >84:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\scheduler.c
+104E text29 CODE >56:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\sync.c
+1088 text29 CODE >57:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\sync.c
+1098 text29 CODE >59:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\sync.c
+1336 text29 CODE >60:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\sync.c
+133A text29 CODE >61:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\sync.c
+168C text29 CODE >63:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\sync.c
+1698 text29 CODE >64:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\sync.c
+16B2 text29 CODE >66:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\sync.c
+16B4 text29 CODE >67:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\sync.c
+29D8 text28 CODE >69:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\sync.c
+29D8 text28 CODE >70:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\sync.c
+29DA text28 CODE >71:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\sync.c
+2A1A text28 CODE >73:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\sync.c
+2A36 text28 CODE >74:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\sync.c
+2A62 text28 CODE >75:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\sync.c
+2A74 text28 CODE >76:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\sync.c
+2AAE text28 CODE >77:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\sync.c
+2ABE text28 CODE >78:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\sync.c
+2ADE text28 CODE >79:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\sync.c
+2AE2 text28 CODE >81:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\sync.c
+2AEC text28 CODE >82:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\sync.c
+2AFA text28 CODE >85:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\sync.c
+2AFC text28 CODE >86:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\sync.c
+323E text27 CODE >32:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\io.c
+323E text27 CODE >34:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\io.c
+3258 text27 CODE >35:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\io.c
+326C text27 CODE >36:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\io.c
+3040 text26 CODE >73:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\user.c
+3040 text26 CODE >74:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\user.c
+3040 text26 CODE >75:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\user.c
+304E text26 CODE >77:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\user.c
+305C text26 CODE >78:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\user.c
+307E text26 CODE >79:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\user.c
+2EAA text25 CODE >19:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\com.c
+2EAA text25 CODE >21:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\com.c
+2EC0 text25 CODE >22:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\com.c
+2EEA text25 CODE >23:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\com.c
+2F0C text25 CODE >24:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\com.c
+2F20 text25 CODE >25:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\com.c
+326E text24 CODE >59:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\user.c
+326E text24 CODE >61:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\user.c
+326E text24 CODE >62:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\user.c
+3280 text24 CODE >65:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\user.c
+3284 text24 CODE >66:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\user.c
+3288 text24 CODE >67:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\user.c
+3172 text23 CODE >16:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\io.c
+3176 text23 CODE >17:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\io.c
+318A text23 CODE >18:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\io.c
+318C text23 CODE >19:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\io.c
+319A text23 CODE >20:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\io.c
+31A8 text23 CODE >21:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\io.c
+2BAE text22 CODE >7:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
+2BAE text22 CODE >12:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
+2BB2 text22 CODE >13:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
+2BC0 text22 CODE >14:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
+2BC8 text22 CODE >15:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
+2BCC text22 CODE >17:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
+2BDA text22 CODE >18:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
+2BE2 text22 CODE >19:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
+2BF4 text22 CODE >20:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
+2BF8 text22 CODE >21:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
+2BFC text22 CODE >22:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
+2C02 text22 CODE >23:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
+2C04 text22 CODE >21:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
+2C12 text22 CODE >26:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
+2C28 text22 CODE >27:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
+2C30 text22 CODE >28:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
+2C36 text22 CODE >29:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
+2C3C text22 CODE >31:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
+2C4C text22 CODE >32:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
+2C54 text22 CODE >33:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
+2C5C text22 CODE >34:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
+2778 text21 CODE >60:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\scheduler.c
+2778 text21 CODE >67:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\scheduler.c
+277A text21 CODE >68:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\scheduler.c
+277C text21 CODE >71:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\scheduler.c
+2782 text21 CODE >72:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\scheduler.c
+27A2 text21 CODE >73:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\scheduler.c
+27D4 text21 CODE >74:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\scheduler.c
+27E8 text21 CODE >75:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\scheduler.c
+27EC text21 CODE >78:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\scheduler.c
+2804 text21 CODE >79:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\scheduler.c
+281A text21 CODE >80:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\scheduler.c
+281E text21 CODE >82:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\scheduler.c
+2824 text21 CODE >83:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\scheduler.c
+2844 text21 CODE >84:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\scheduler.c
 2886 text21 CODE >86:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\scheduler.c
 288C text21 CODE >88:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\scheduler.c
 28A8 text21 CODE >90:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\scheduler.c
-3222 text20 CODE >9:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\scheduler.c
-3222 text20 CODE >15:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\scheduler.c
-322E text20 CODE >17:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\scheduler.c
-324A text20 CODE >18:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\scheduler.c
-1CC0 text19 CODE >12:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\kernel.c
-1CC4 text19 CODE >14:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\kernel.c
-1CC6 text19 CODE >16:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\kernel.c
-1F64 text19 CODE >17:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\kernel.c
-1F7E text19 CODE >18:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\kernel.c
-1F82 text19 CODE >19:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\kernel.c
-22D2 text19 CODE >21:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\kernel.c
-22D4 text19 CODE >22:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\kernel.c
-2CF6 text18 CODE >30:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\sync.c
-2CF6 text18 CODE >31:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\sync.c
-2CF8 text18 CODE >33:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\sync.c
-2D02 text18 CODE >34:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\sync.c
-2D18 text18 CODE >36:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\sync.c
-2D48 text18 CODE >37:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\sync.c
-2D7E text18 CODE >40:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\sync.c
-2D80 text18 CODE >41:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\sync.c
-3328 text17 CODE >14:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\sync.c
-3328 text17 CODE >15:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\sync.c
-332A text17 CODE >17:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\sync.c
-3334 text17 CODE >27:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\sync.c
-3336 text17 CODE >28:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\sync.c
-2F38 text16 CODE >11:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\com.c
-2F38 text16 CODE >13:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\com.c
-2F44 text16 CODE >14:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\com.c
-2F60 text16 CODE >15:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\com.c
-2F7E text16 CODE >16:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\com.c
-2F88 text16 CODE >17:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\com.c
-316E text15 CODE >50:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\user.c
-316E text15 CODE >51:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\user.c
-316E text15 CODE >52:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\user.c
-3186 text15 CODE >53:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\user.c
-3192 text15 CODE >54:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\user.c
-31F8 text14 CODE >114:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\kernel.c
-31F8 text14 CODE >116:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\kernel.c
-31FA text14 CODE >119:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\kernel.c
-3276 text13 CODE >4:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\io.c
-3276 text13 CODE >5:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\io.c
-327A text13 CODE >6:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\io.c
-327E text13 CODE >7:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\io.c
-3282 text13 CODE >8:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\io.c
-3284 text13 CODE >9:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\io.c
-328C text13 CODE >10:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\io.c
-3294 text13 CODE >11:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\io.c
-3296 text13 CODE >12:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\io.c
-329A text13 CODE >13:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\io.c
-329C text13 CODE >14:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\io.c
-305C text12 CODE >43:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\sync.c
-305C text12 CODE >44:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\sync.c
-3066 text12 CODE >45:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\sync.c
-3072 text12 CODE >46:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\sync.c
-307E text12 CODE >47:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\sync.c
-308A text12 CODE >48:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\sync.c
-3096 text12 CODE >49:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\sync.c
-32C6 text11 CODE >8:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\sync.c
-32C6 text11 CODE >9:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\sync.c
-32D2 text11 CODE >10:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\sync.c
-32DE text11 CODE >11:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\sync.c
-32EA text11 CODE >12:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\sync.c
-3098 text10 CODE >3:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\com.c
-3098 text10 CODE >5:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\com.c
-30A6 text10 CODE >6:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\com.c
-30B2 text10 CODE >7:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\com.c
-30C0 text10 CODE >8:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\com.c
-30D0 text10 CODE >9:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\com.c
-3338 text9 CODE >24:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\io.c
-3338 text9 CODE >26:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\io.c
-333A text9 CODE >27:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\io.c
-333E text9 CODE >28:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\io.c
-3342 text9 CODE >29:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\io.c
-3344 text9 CODE >30:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\io.c
-2F8A text8 CODE >15:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\user.c
-2F8A text8 CODE >18:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\user.c
-2F8C text8 CODE >19:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\user.c
-2F90 text8 CODE >20:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\user.c
-2F92 text8 CODE >21:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\user.c
-2F94 text8 CODE >22:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\user.c
-2F96 text8 CODE >23:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\user.c
-2F98 text8 CODE >24:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\user.c
-2F9A text8 CODE >25:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\user.c
-2F9C text8 CODE >26:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\user.c
-2F9E text8 CODE >27:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\user.c
-2FA0 text8 CODE >28:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\user.c
-2FA2 text8 CODE >29:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\user.c
-2FA4 text8 CODE >30:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\user.c
-2FA6 text8 CODE >33:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\user.c
-2FAA text8 CODE >34:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\user.c
-2FAE text8 CODE >37:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\user.c
-2FB8 text8 CODE >38:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\user.c
-2FC2 text8 CODE >39:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\user.c
-2FD0 text8 CODE >47:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\user.c
-2D82 text7 CODE >25:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\kernel.c
-2D86 text7 CODE >29:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\kernel.c
-2D8A text7 CODE >30:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\kernel.c
-2D8E text7 CODE >31:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\kernel.c
-2D92 text7 CODE >32:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\kernel.c
-2D9A text7 CODE >33:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\kernel.c
-2D9C text7 CODE >35:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\kernel.c
-2D9E text7 CODE >36:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\kernel.c
-2DA0 text7 CODE >37:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\kernel.c
-2DA2 text7 CODE >38:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\kernel.c
-2DA4 text7 CODE >39:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\kernel.c
-2DA6 text7 CODE >40:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\kernel.c
-2DA8 text7 CODE >41:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\kernel.c
-2DAA text7 CODE >42:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\kernel.c
-2DAC text7 CODE >43:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\kernel.c
-2DAE text7 CODE >44:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\kernel.c
-2DB0 text7 CODE >45:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\kernel.c
-2DB2 text7 CODE >46:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\kernel.c
-2DB4 text7 CODE >47:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\kernel.c
-2DB6 text7 CODE >48:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\kernel.c
-2DB8 text7 CODE >49:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\kernel.c
-2DBA text7 CODE >50:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\kernel.c
-2DBC text7 CODE >51:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\kernel.c
-2DBE text7 CODE >52:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\kernel.c
-2DC0 text7 CODE >56:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\kernel.c
-2DD4 text7 CODE >57:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\kernel.c
-2E00 text7 CODE >60:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\kernel.c
-310A text6 CODE >73:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\kernel.c
-310A text6 CODE >75:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\kernel.c
-3110 text6 CODE >76:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\kernel.c
-311C text6 CODE >77:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\kernel.c
-3122 text6 CODE >83:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\kernel.c
-3136 text6 CODE >86:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\kernel.c
-313A text6 CODE >87:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\kernel.c
-2AE8 text5 CODE >7:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
-2AE8 text5 CODE >12:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
-2AEC text5 CODE >13:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
-2AFA text5 CODE >14:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
-2B02 text5 CODE >15:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
-2B06 text5 CODE >17:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
-2B14 text5 CODE >18:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
-2B1C text5 CODE >19:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
-2B2E text5 CODE >20:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
-2B32 text5 CODE >21:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
-2B36 text5 CODE >22:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
-2B3C text5 CODE >23:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
-2B3E text5 CODE >21:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
-2B4C text5 CODE >26:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
-2B62 text5 CODE >27:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
-2B6A text5 CODE >28:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
-2B70 text5 CODE >29:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
-2B76 text5 CODE >31:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
-2B86 text5 CODE >32:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
-2B8E text5 CODE >33:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
-2B96 text5 CODE >34:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
-2632 text4 CODE >60:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\scheduler.c
-2632 text4 CODE >67:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\scheduler.c
-2636 text4 CODE >68:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\scheduler.c
-2638 text4 CODE >71:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\scheduler.c
-263E text4 CODE >72:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\scheduler.c
-265E text4 CODE >73:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\scheduler.c
-2692 text4 CODE >74:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\scheduler.c
-26A6 text4 CODE >75:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\scheduler.c
-26AA text4 CODE >78:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\scheduler.c
-26C2 text4 CODE >79:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\scheduler.c
-26DA text4 CODE >80:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\scheduler.c
-26DE text4 CODE >82:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\scheduler.c
-26E4 text4 CODE >83:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\scheduler.c
-2706 text4 CODE >84:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\scheduler.c
-274A text4 CODE >86:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\scheduler.c
-2750 text4 CODE >88:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\scheduler.c
-276C text4 CODE >90:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\scheduler.c
-31CE text3 CODE >9:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\scheduler.c
-31CE text3 CODE >15:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\scheduler.c
-31DA text3 CODE >17:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\scheduler.c
-31F6 text3 CODE >18:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\scheduler.c
-330C text2 CODE >11:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\hw.c
-330C text2 CODE >14:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\hw.c
-330E text2 CODE >15:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\hw.c
-3310 text2 CODE >16:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\hw.c
-3312 text2 CODE >17:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\hw.c
-3314 text2 CODE >18:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\hw.c
-3316 text2 CODE >19:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\hw.c
-331A text2 CODE >20:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\hw.c
-331C text2 CODE >21:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\hw.c
-3322 text2 CODE >22:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\hw.c
-3324 text2 CODE >23:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\hw.c
-3326 text2 CODE >24:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\hw.c
-22D6 text1 CODE >89:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\kernel.c
-22D6 text1 CODE >91:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\kernel.c
-22DA text1 CODE >92:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\kernel.c
-22DC text1 CODE >93:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\kernel.c
-22E0 text1 CODE >94:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\kernel.c
-2630 text1 CODE >95:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\kernel.c
-2E7E text0 CODE >8:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\main.c
-2E7E text0 CODE >9:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\main.c
-2E82 text0 CODE >11:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\main.c
-2E96 text0 CODE >12:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\main.c
-2EAA text0 CODE >13:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\main.c
-2EBE text0 CODE >14:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\main.c
-2ED2 text0 CODE >16:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\main.c
-2ED6 text0 CODE >18:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\main.c
-2ED6 text0 CODE >20:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\main.c
-3018 cinit CODE >3897:C:\Users\RICHAR~1.STO\AppData\Local\Temp\xcAsgrk.0\driver_tmp_1.s
-3018 cinit CODE >3899:C:\Users\RICHAR~1.STO\AppData\Local\Temp\xcAsgrk.0\driver_tmp_1.s
-3018 cinit CODE >3902:C:\Users\RICHAR~1.STO\AppData\Local\Temp\xcAsgrk.0\driver_tmp_1.s
-3018 cinit CODE >3964:C:\Users\RICHAR~1.STO\AppData\Local\Temp\xcAsgrk.0\driver_tmp_1.s
-301A cinit CODE >3965:C:\Users\RICHAR~1.STO\AppData\Local\Temp\xcAsgrk.0\driver_tmp_1.s
-301C cinit CODE >3966:C:\Users\RICHAR~1.STO\AppData\Local\Temp\xcAsgrk.0\driver_tmp_1.s
-301E cinit CODE >3967:C:\Users\RICHAR~1.STO\AppData\Local\Temp\xcAsgrk.0\driver_tmp_1.s
-3020 cinit CODE >3968:C:\Users\RICHAR~1.STO\AppData\Local\Temp\xcAsgrk.0\driver_tmp_1.s
-3022 cinit CODE >3969:C:\Users\RICHAR~1.STO\AppData\Local\Temp\xcAsgrk.0\driver_tmp_1.s
-3024 cinit CODE >3970:C:\Users\RICHAR~1.STO\AppData\Local\Temp\xcAsgrk.0\driver_tmp_1.s
-3026 cinit CODE >3971:C:\Users\RICHAR~1.STO\AppData\Local\Temp\xcAsgrk.0\driver_tmp_1.s
-302A cinit CODE >3975:C:\Users\RICHAR~1.STO\AppData\Local\Temp\xcAsgrk.0\driver_tmp_1.s
-302E cinit CODE >3976:C:\Users\RICHAR~1.STO\AppData\Local\Temp\xcAsgrk.0\driver_tmp_1.s
-3032 cinit CODE >3977:C:\Users\RICHAR~1.STO\AppData\Local\Temp\xcAsgrk.0\driver_tmp_1.s
-3032 cinit CODE >3978:C:\Users\RICHAR~1.STO\AppData\Local\Temp\xcAsgrk.0\driver_tmp_1.s
-3034 cinit CODE >3979:C:\Users\RICHAR~1.STO\AppData\Local\Temp\xcAsgrk.0\driver_tmp_1.s
-3036 cinit CODE >3980:C:\Users\RICHAR~1.STO\AppData\Local\Temp\xcAsgrk.0\driver_tmp_1.s
-3038 cinit CODE >3981:C:\Users\RICHAR~1.STO\AppData\Local\Temp\xcAsgrk.0\driver_tmp_1.s
-303A cinit CODE >3982:C:\Users\RICHAR~1.STO\AppData\Local\Temp\xcAsgrk.0\driver_tmp_1.s
-303C cinit CODE >3983:C:\Users\RICHAR~1.STO\AppData\Local\Temp\xcAsgrk.0\driver_tmp_1.s
-303E cinit CODE >3986:C:\Users\RICHAR~1.STO\AppData\Local\Temp\xcAsgrk.0\driver_tmp_1.s
-3042 cinit CODE >3987:C:\Users\RICHAR~1.STO\AppData\Local\Temp\xcAsgrk.0\driver_tmp_1.s
-3044 cinit CODE >3988:C:\Users\RICHAR~1.STO\AppData\Local\Temp\xcAsgrk.0\driver_tmp_1.s
-3044 cinit CODE >3989:C:\Users\RICHAR~1.STO\AppData\Local\Temp\xcAsgrk.0\driver_tmp_1.s
-3046 cinit CODE >3990:C:\Users\RICHAR~1.STO\AppData\Local\Temp\xcAsgrk.0\driver_tmp_1.s
-3048 cinit CODE >3991:C:\Users\RICHAR~1.STO\AppData\Local\Temp\xcAsgrk.0\driver_tmp_1.s
-304A cinit CODE >3994:C:\Users\RICHAR~1.STO\AppData\Local\Temp\xcAsgrk.0\driver_tmp_1.s
-304C cinit CODE >3995:C:\Users\RICHAR~1.STO\AppData\Local\Temp\xcAsgrk.0\driver_tmp_1.s
-304E cinit CODE >4001:C:\Users\RICHAR~1.STO\AppData\Local\Temp\xcAsgrk.0\driver_tmp_1.s
-304E cinit CODE >4003:C:\Users\RICHAR~1.STO\AppData\Local\Temp\xcAsgrk.0\driver_tmp_1.s
-3050 cinit CODE >4004:C:\Users\RICHAR~1.STO\AppData\Local\Temp\xcAsgrk.0\driver_tmp_1.s
-3052 cinit CODE >4006:C:\Users\RICHAR~1.STO\AppData\Local\Temp\xcAsgrk.0\driver_tmp_1.s
-3054 cinit CODE >4007:C:\Users\RICHAR~1.STO\AppData\Local\Temp\xcAsgrk.0\driver_tmp_1.s
-3056 cinit CODE >4008:C:\Users\RICHAR~1.STO\AppData\Local\Temp\xcAsgrk.0\driver_tmp_1.s
-3058 cinit CODE >4009:C:\Users\RICHAR~1.STO\AppData\Local\Temp\xcAsgrk.0\driver_tmp_1.s
+331C text20 CODE >9:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\scheduler.c
+331C text20 CODE >15:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\scheduler.c
+3328 text20 CODE >17:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\scheduler.c
+3344 text20 CODE >18:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\scheduler.c
+1CD8 text19 CODE >12:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\kernel.c
+1CDC text19 CODE >14:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\kernel.c
+1CDE text19 CODE >16:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\kernel.c
+1F7C text19 CODE >17:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\kernel.c
+1F96 text19 CODE >18:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\kernel.c
+1F9A text19 CODE >19:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\kernel.c
+22E8 text19 CODE >21:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\kernel.c
+22EA text19 CODE >22:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\kernel.c
+2D0C text18 CODE >30:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\sync.c
+2D0C text18 CODE >31:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\sync.c
+2D0E text18 CODE >33:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\sync.c
+2D18 text18 CODE >34:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\sync.c
+2D30 text18 CODE >36:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\sync.c
+2D70 text18 CODE >37:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\sync.c
+2DAA text18 CODE >40:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\sync.c
+2DAC text18 CODE >41:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\sync.c
+33D2 text17 CODE >14:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\sync.c
+33D2 text17 CODE >15:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\sync.c
+33D4 text17 CODE >17:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\sync.c
+33DE text17 CODE >27:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\sync.c
+33E0 text17 CODE >28:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\sync.c
+2F22 text16 CODE >11:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\com.c
+2F22 text16 CODE >13:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\com.c
+2F38 text16 CODE >14:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\com.c
+2F54 text16 CODE >15:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\com.c
+2F72 text16 CODE >16:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\com.c
+2F86 text16 CODE >17:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\com.c
+320E text15 CODE >50:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\user.c
+320E text15 CODE >51:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\user.c
+320E text15 CODE >52:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\user.c
+3226 text15 CODE >53:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\user.c
+3232 text15 CODE >54:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\user.c
+32F2 text14 CODE >114:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\kernel.c
+32F2 text14 CODE >116:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\kernel.c
+32F4 text14 CODE >119:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\kernel.c
+3346 text13 CODE >4:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\io.c
+3346 text13 CODE >5:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\io.c
+334A text13 CODE >6:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\io.c
+334E text13 CODE >7:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\io.c
+3352 text13 CODE >8:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\io.c
+3354 text13 CODE >9:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\io.c
+335C text13 CODE >10:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\io.c
+3364 text13 CODE >11:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\io.c
+3366 text13 CODE >12:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\io.c
+336A text13 CODE >13:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\io.c
+336C text13 CODE >14:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\io.c
+312C text12 CODE >43:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\sync.c
+312C text12 CODE >44:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\sync.c
+3136 text12 CODE >45:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\sync.c
+3146 text12 CODE >46:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\sync.c
+3154 text12 CODE >47:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\sync.c
+3162 text12 CODE >48:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\sync.c
+3170 text12 CODE >49:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\sync.c
+329C text11 CODE >8:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\sync.c
+329C text11 CODE >9:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\sync.c
+32A8 text11 CODE >10:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\sync.c
+32B8 text11 CODE >11:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\sync.c
+32C6 text11 CODE >12:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\sync.c
+30E2 text10 CODE >3:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\com.c
+30E2 text10 CODE >5:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\com.c
+30F0 text10 CODE >6:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\com.c
+30FC text10 CODE >7:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\com.c
+3112 text10 CODE >8:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\com.c
+312A text10 CODE >9:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\com.c
+33E2 text9 CODE >24:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\io.c
+33E2 text9 CODE >26:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\io.c
+33E4 text9 CODE >27:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\io.c
+33E8 text9 CODE >28:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\io.c
+33EC text9 CODE >29:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\io.c
+33EE text9 CODE >30:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\io.c
+3092 text8 CODE >15:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\user.c
+3092 text8 CODE >18:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\user.c
+3094 text8 CODE >19:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\user.c
+3098 text8 CODE >20:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\user.c
+309A text8 CODE >21:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\user.c
+309C text8 CODE >22:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\user.c
+309E text8 CODE >23:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\user.c
+30A0 text8 CODE >24:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\user.c
+30A2 text8 CODE >25:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\user.c
+30A4 text8 CODE >26:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\user.c
+30A6 text8 CODE >27:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\user.c
+30A8 text8 CODE >28:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\user.c
+30AA text8 CODE >29:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\user.c
+30AC text8 CODE >30:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\user.c
+30AE text8 CODE >33:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\user.c
+30B2 text8 CODE >34:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\user.c
+30B6 text8 CODE >37:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\user.c
+30C0 text8 CODE >38:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\user.c
+30CE text8 CODE >39:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\user.c
+30E0 text8 CODE >47:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\user.c
+2DAE text7 CODE >25:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\kernel.c
+2DB2 text7 CODE >29:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\kernel.c
+2DB6 text7 CODE >30:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\kernel.c
+2DBA text7 CODE >31:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\kernel.c
+2DBE text7 CODE >32:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\kernel.c
+2DC6 text7 CODE >33:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\kernel.c
+2DC8 text7 CODE >35:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\kernel.c
+2DCA text7 CODE >36:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\kernel.c
+2DCC text7 CODE >37:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\kernel.c
+2DCE text7 CODE >38:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\kernel.c
+2DD0 text7 CODE >39:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\kernel.c
+2DD2 text7 CODE >40:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\kernel.c
+2DD4 text7 CODE >41:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\kernel.c
+2DD6 text7 CODE >42:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\kernel.c
+2DD8 text7 CODE >43:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\kernel.c
+2DDA text7 CODE >44:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\kernel.c
+2DDC text7 CODE >45:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\kernel.c
+2DDE text7 CODE >46:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\kernel.c
+2DE0 text7 CODE >47:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\kernel.c
+2DE2 text7 CODE >48:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\kernel.c
+2DE4 text7 CODE >49:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\kernel.c
+2DE6 text7 CODE >50:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\kernel.c
+2DE8 text7 CODE >51:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\kernel.c
+2DEA text7 CODE >52:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\kernel.c
+2DEC text7 CODE >56:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\kernel.c
+2E00 text7 CODE >57:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\kernel.c
+2E2C text7 CODE >60:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\kernel.c
+31AA text6 CODE >73:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\kernel.c
+31AA text6 CODE >75:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\kernel.c
+31B0 text6 CODE >76:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\kernel.c
+31BC text6 CODE >77:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\kernel.c
+31C2 text6 CODE >83:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\kernel.c
+31D6 text6 CODE >86:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\kernel.c
+31DA text6 CODE >87:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\kernel.c
+2AFE text5 CODE >7:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
+2AFE text5 CODE >12:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
+2B02 text5 CODE >13:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
+2B10 text5 CODE >14:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
+2B18 text5 CODE >15:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
+2B1C text5 CODE >17:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
+2B2A text5 CODE >18:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
+2B32 text5 CODE >19:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
+2B44 text5 CODE >20:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
+2B48 text5 CODE >21:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
+2B4C text5 CODE >22:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
+2B52 text5 CODE >23:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
+2B54 text5 CODE >21:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
+2B62 text5 CODE >26:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
+2B78 text5 CODE >27:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
+2B80 text5 CODE >28:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
+2B86 text5 CODE >29:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
+2B8C text5 CODE >31:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
+2B9C text5 CODE >32:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
+2BA4 text5 CODE >33:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
+2BAC text5 CODE >34:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
+2646 text4 CODE >60:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\scheduler.c
+2646 text4 CODE >67:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\scheduler.c
+2648 text4 CODE >68:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\scheduler.c
+264A text4 CODE >71:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\scheduler.c
+2650 text4 CODE >72:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\scheduler.c
+2670 text4 CODE >73:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\scheduler.c
+26A2 text4 CODE >74:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\scheduler.c
+26B6 text4 CODE >75:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\scheduler.c
+26BA text4 CODE >78:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\scheduler.c
+26D2 text4 CODE >79:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\scheduler.c
+26E8 text4 CODE >80:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\scheduler.c
+26EC text4 CODE >82:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\scheduler.c
+26F2 text4 CODE >83:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\scheduler.c
+2712 text4 CODE >84:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\scheduler.c
+2754 text4 CODE >86:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\scheduler.c
+275A text4 CODE >88:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\scheduler.c
+2776 text4 CODE >90:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\scheduler.c
+32C8 text3 CODE >9:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\scheduler.c
+32C8 text3 CODE >15:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\scheduler.c
+32D4 text3 CODE >17:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\scheduler.c
+32F0 text3 CODE >18:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\scheduler.c
+33B6 text2 CODE >11:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\hw.c
+33B6 text2 CODE >14:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\hw.c
+33B8 text2 CODE >15:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\hw.c
+33BA text2 CODE >16:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\hw.c
+33BC text2 CODE >17:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\hw.c
+33BE text2 CODE >18:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\hw.c
+33C0 text2 CODE >19:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\hw.c
+33C4 text2 CODE >20:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\hw.c
+33C6 text2 CODE >21:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\hw.c
+33CC text2 CODE >22:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\hw.c
+33CE text2 CODE >23:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\hw.c
+33D0 text2 CODE >24:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\hw.c
+22EC text1 CODE >89:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\kernel.c
+22EC text1 CODE >91:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\kernel.c
+22F0 text1 CODE >92:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\kernel.c
+22F2 text1 CODE >93:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\kernel.c
+22F6 text1 CODE >94:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\kernel.c
+2644 text1 CODE >95:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\kernel.c
+2F88 text0 CODE >8:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\main.c
+2F88 text0 CODE >9:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\main.c
+2F8C text0 CODE >11:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\main.c
+2FA0 text0 CODE >12:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\main.c
+2FB4 text0 CODE >13:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\main.c
+2FC8 text0 CODE >14:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\main.c
+2FDC text0 CODE >16:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\main.c
+2FE0 text0 CODE >18:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\main.c
+2FE0 text0 CODE >20:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\main.c
+2FE8 cinit CODE >3897:C:\Users\RICHAR~1.STO\AppData\Local\Temp\xcAscwg.0\driver_tmp_1.s
+2FE8 cinit CODE >3899:C:\Users\RICHAR~1.STO\AppData\Local\Temp\xcAscwg.0\driver_tmp_1.s
+2FE8 cinit CODE >3902:C:\Users\RICHAR~1.STO\AppData\Local\Temp\xcAscwg.0\driver_tmp_1.s
+2FE8 cinit CODE >3967:C:\Users\RICHAR~1.STO\AppData\Local\Temp\xcAscwg.0\driver_tmp_1.s
+2FEA cinit CODE >3968:C:\Users\RICHAR~1.STO\AppData\Local\Temp\xcAscwg.0\driver_tmp_1.s
+2FEC cinit CODE >3969:C:\Users\RICHAR~1.STO\AppData\Local\Temp\xcAscwg.0\driver_tmp_1.s
+2FEE cinit CODE >3970:C:\Users\RICHAR~1.STO\AppData\Local\Temp\xcAscwg.0\driver_tmp_1.s
+2FF0 cinit CODE >3971:C:\Users\RICHAR~1.STO\AppData\Local\Temp\xcAscwg.0\driver_tmp_1.s
+2FF2 cinit CODE >3972:C:\Users\RICHAR~1.STO\AppData\Local\Temp\xcAscwg.0\driver_tmp_1.s
+2FF4 cinit CODE >3973:C:\Users\RICHAR~1.STO\AppData\Local\Temp\xcAscwg.0\driver_tmp_1.s
+2FF6 cinit CODE >3974:C:\Users\RICHAR~1.STO\AppData\Local\Temp\xcAscwg.0\driver_tmp_1.s
+2FFA cinit CODE >3978:C:\Users\RICHAR~1.STO\AppData\Local\Temp\xcAscwg.0\driver_tmp_1.s
+2FFE cinit CODE >3979:C:\Users\RICHAR~1.STO\AppData\Local\Temp\xcAscwg.0\driver_tmp_1.s
+3002 cinit CODE >3980:C:\Users\RICHAR~1.STO\AppData\Local\Temp\xcAscwg.0\driver_tmp_1.s
+3002 cinit CODE >3981:C:\Users\RICHAR~1.STO\AppData\Local\Temp\xcAscwg.0\driver_tmp_1.s
+3004 cinit CODE >3982:C:\Users\RICHAR~1.STO\AppData\Local\Temp\xcAscwg.0\driver_tmp_1.s
+3006 cinit CODE >3983:C:\Users\RICHAR~1.STO\AppData\Local\Temp\xcAscwg.0\driver_tmp_1.s
+3008 cinit CODE >3984:C:\Users\RICHAR~1.STO\AppData\Local\Temp\xcAscwg.0\driver_tmp_1.s
+300A cinit CODE >3985:C:\Users\RICHAR~1.STO\AppData\Local\Temp\xcAscwg.0\driver_tmp_1.s
+300C cinit CODE >3986:C:\Users\RICHAR~1.STO\AppData\Local\Temp\xcAscwg.0\driver_tmp_1.s
+300E cinit CODE >3989:C:\Users\RICHAR~1.STO\AppData\Local\Temp\xcAscwg.0\driver_tmp_1.s
+3012 cinit CODE >3990:C:\Users\RICHAR~1.STO\AppData\Local\Temp\xcAscwg.0\driver_tmp_1.s
+3014 cinit CODE >3991:C:\Users\RICHAR~1.STO\AppData\Local\Temp\xcAscwg.0\driver_tmp_1.s
+3014 cinit CODE >3992:C:\Users\RICHAR~1.STO\AppData\Local\Temp\xcAscwg.0\driver_tmp_1.s
+3016 cinit CODE >3993:C:\Users\RICHAR~1.STO\AppData\Local\Temp\xcAscwg.0\driver_tmp_1.s
+3018 cinit CODE >3994:C:\Users\RICHAR~1.STO\AppData\Local\Temp\xcAscwg.0\driver_tmp_1.s
+301A cinit CODE >3997:C:\Users\RICHAR~1.STO\AppData\Local\Temp\xcAscwg.0\driver_tmp_1.s
+301E cinit CODE >3998:C:\Users\RICHAR~1.STO\AppData\Local\Temp\xcAscwg.0\driver_tmp_1.s
+3020 cinit CODE >3999:C:\Users\RICHAR~1.STO\AppData\Local\Temp\xcAscwg.0\driver_tmp_1.s
+3020 cinit CODE >4000:C:\Users\RICHAR~1.STO\AppData\Local\Temp\xcAscwg.0\driver_tmp_1.s
+3022 cinit CODE >4001:C:\Users\RICHAR~1.STO\AppData\Local\Temp\xcAscwg.0\driver_tmp_1.s
+3024 cinit CODE >4002:C:\Users\RICHAR~1.STO\AppData\Local\Temp\xcAscwg.0\driver_tmp_1.s
+3026 cinit CODE >4005:C:\Users\RICHAR~1.STO\AppData\Local\Temp\xcAscwg.0\driver_tmp_1.s
+302A cinit CODE >4006:C:\Users\RICHAR~1.STO\AppData\Local\Temp\xcAscwg.0\driver_tmp_1.s
+302C cinit CODE >4007:C:\Users\RICHAR~1.STO\AppData\Local\Temp\xcAscwg.0\driver_tmp_1.s
+302C cinit CODE >4008:C:\Users\RICHAR~1.STO\AppData\Local\Temp\xcAscwg.0\driver_tmp_1.s
+302E cinit CODE >4009:C:\Users\RICHAR~1.STO\AppData\Local\Temp\xcAscwg.0\driver_tmp_1.s
+3030 cinit CODE >4010:C:\Users\RICHAR~1.STO\AppData\Local\Temp\xcAscwg.0\driver_tmp_1.s
+3032 cinit CODE >4016:C:\Users\RICHAR~1.STO\AppData\Local\Temp\xcAscwg.0\driver_tmp_1.s
+3032 cinit CODE >4018:C:\Users\RICHAR~1.STO\AppData\Local\Temp\xcAscwg.0\driver_tmp_1.s
+3034 cinit CODE >4019:C:\Users\RICHAR~1.STO\AppData\Local\Temp\xcAscwg.0\driver_tmp_1.s
+3036 cinit CODE >4021:C:\Users\RICHAR~1.STO\AppData\Local\Temp\xcAscwg.0\driver_tmp_1.s
+3038 cinit CODE >4022:C:\Users\RICHAR~1.STO\AppData\Local\Temp\xcAscwg.0\driver_tmp_1.s
+303A cinit CODE >4023:C:\Users\RICHAR~1.STO\AppData\Local\Temp\xcAscwg.0\driver_tmp_1.s
+303C cinit CODE >4024:C:\Users\RICHAR~1.STO\AppData\Local\Temp\xcAscwg.0\driver_tmp_1.s
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -563,29 +577,27 @@ D8 intcode CODE >39:C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\hw.c
 # was defined in a psect then <psect> will be "-". File-name
 # is the name of the object file in which the symbol was defined.
 %SYMTAB
-__LdataBANK0 0 0 ABS 0 dataBANK0 dist/default/production\RTOS-2026.production.o
 __Lmediumconst 0 0 MEDIUMCONST 0 mediumconst dist/default/production\RTOS-2026.production.o
-__Hspace_0 3347 0 ABS 0 - dist/default/production\RTOS-2026.production.o
-__Hspace_1 749 0 ABS 0 - dist/default/production\RTOS-2026.production.o
+__Hspace_0 33F1 0 ABS 0 - dist/default/production\RTOS-2026.production.o
+__Hspace_1 6E9 0 ABS 0 - dist/default/production\RTOS-2026.production.o
 __Hspace_2 0 0 ABS 0 - dist/default/production\RTOS-2026.production.o
 __Hspace_4 0 0 ABS 0 - dist/default/production\RTOS-2026.production.o
-__HidataBANK0 0 0 ABS 0 idataBANK0 dist/default/production\RTOS-2026.production.o
-_dado_processado 68 0 BANK0 1 bssBANK0 dist/default/production\RTOS-2026.production.o
+_dado_processado 132 0 BANK1 1 bssBANK1 dist/default/production\RTOS-2026.production.o
 __Hibigdata 0 0 CODE 0 ibigdata dist/default/production\RTOS-2026.production.o
 __mediumconst 1000 0 SMALLCONST 0 smallconst dist/default/production\RTOS-2026.production.o
-__end_of_mutex_unlock 2AE8 0 CODE 0 text28 dist/default/production\RTOS-2026.production.o
+__end_of_mutex_unlock 2AFE 0 CODE 0 text28 dist/default/production\RTOS-2026.production.o
 __Heeprom_data 0 0 EEDATA 0 eeprom_data dist/default/production\RTOS-2026.production.o
 _TBLPTRH FF7 0 ABS 0 - dist/default/production\RTOS-2026.production.o
 _TBLPTRL FF6 0 ABS 0 - dist/default/production\RTOS-2026.production.o
 _TBLPTRU FF8 0 ABS 0 - dist/default/production\RTOS-2026.production.o
-__end_ofi2_os_create_task 2E7E 0 CODE 0 text37 dist/default/production\RTOS-2026.production.o
+__end_ofi2_os_create_task 2EAA 0 CODE 0 text37 dist/default/production\RTOS-2026.production.o
 os_create_task@new_task 305 0 BANK3 1 cstackBANK3 dist/default/production\RTOS-2026.production.o
 __L__absolute__ 0 0 ABS 0 __absolute__ dist/default/production\RTOS-2026.production.o
-__end_of_mutex_init 3098 0 CODE 0 text12 dist/default/production\RTOS-2026.production.o
-__end_of_mutex_lock 169C 0 CODE 0 text29 dist/default/production\RTOS-2026.production.o
-_tarefaProcessamento 324C 0 CODE 0 text24 dist/default/production\RTOS-2026.production.o
-__end_of_tarefaControlePWM 3018 0 CODE 0 text26 dist/default/production\RTOS-2026.production.o
-ISR@i 5C 0 COMRAM 1 cstackCOMRAM dist/default/production\RTOS-2026.production.o
+__end_of_mutex_init 3172 0 CODE 0 text12 dist/default/production\RTOS-2026.production.o
+__end_of_mutex_lock 16B6 0 CODE 0 text29 dist/default/production\RTOS-2026.production.o
+_tarefaProcessamento 326E 0 CODE 0 text24 dist/default/production\RTOS-2026.production.o
+__end_of_tarefaControlePWM 3092 0 CODE 0 text26 dist/default/production\RTOS-2026.production.o
+ISR@i 50 0 COMRAM 1 cstackCOMRAM dist/default/production\RTOS-2026.production.o
 __Lsmallconst 1000 0 SMALLCONST 0 smallconst dist/default/production\RTOS-2026.production.o
 _LATD F8C 0 ABS 0 - dist/default/production\RTOS-2026.production.o
 _TMR0 FD6 0 ABS 0 - dist/default/production\RTOS-2026.production.o
@@ -593,98 +605,101 @@ _TOSH FFE 0 ABS 0 - dist/default/production\RTOS-2026.production.o
 _TOSL FFD 0 ABS 0 - dist/default/production\RTOS-2026.production.o
 _TOSU FFF 0 ABS 0 - dist/default/production\RTOS-2026.production.o
 _WREG FE8 0 ABS 0 - dist/default/production\RTOS-2026.production.o
-___sp 0 0 STACK 2 stack C:\Users\RICHAR~1.STO\AppData\Local\Temp\xcAsgrk.0\driver_tmp_9.o
-_idle 31F8 0 CODE 0 text14 dist/default/production\RTOS-2026.production.o
-_main 2E7E 0 CODE 0 text0 dist/default/production\RTOS-2026.production.o
+___sp 0 0 STACK 2 stack C:\Users\RICHAR~1.STO\AppData\Local\Temp\xcAscwg.0\driver_tmp_9.o
+_idle 32F2 0 CODE 0 text14 dist/default/production\RTOS-2026.production.o
+_main 2F88 0 CODE 0 text0 dist/default/production\RTOS-2026.production.o
 btemp 1 0 ABS 0 - dist/default/production\RTOS-2026.production.o
-___stack_hi 0 0 STACK 2 stack C:\Users\RICHAR~1.STO\AppData\Local\Temp\xcAsgrk.0\driver_tmp_9.o
-___stack_lo 0 0 STACK 2 stack C:\Users\RICHAR~1.STO\AppData\Local\Temp\xcAsgrk.0\driver_tmp_9.o
+___stack_hi 0 0 STACK 2 stack C:\Users\RICHAR~1.STO\AppData\Local\Temp\xcAscwg.0\driver_tmp_9.o
+___stack_lo 0 0 STACK 2 stack C:\Users\RICHAR~1.STO\AppData\Local\Temp\xcAscwg.0\driver_tmp_9.o
 __HbssBIGRAM 0 0 ABS 0 bssBIGRAM dist/default/production\RTOS-2026.production.o
-start 740 0 CODE 0 init C:\Users\RICHAR~1.STO\AppData\Local\Temp\xcAsgrk.0\driver_tmp_9.o
-os_task_change_state@new_state 285 0 BANK2 1 cstackBANK2 dist/default/production\RTOS-2026.production.o
+start 73C 0 CODE 0 init C:\Users\RICHAR~1.STO\AppData\Local\Temp\xcAscwg.0\driver_tmp_9.o
+os_task_change_state@new_state 289 0 BANK2 1 cstackBANK2 dist/default/production\RTOS-2026.production.o
 __HbssCOMRAM 0 0 ABS 0 bssCOMRAM dist/default/production\RTOS-2026.production.o
-_os_delay 1CC0 0 CODE 0 text19 dist/default/production\RTOS-2026.production.o
-_os_start 22D6 0 CODE 0 text1 dist/default/production\RTOS-2026.production.o
-__end_of_os_task_change_state 1CC0 0 CODE 0 text32 dist/default/production\RTOS-2026.production.o
-mutex_unlock@task_idx 12B 0 BANK1 1 cstackBANK1 dist/default/production\RTOS-2026.production.o
-__LidataBANK0 0 0 ABS 0 idataBANK0 dist/default/production\RTOS-2026.production.o
+_os_delay 1CD8 0 CODE 0 text19 dist/default/production\RTOS-2026.production.o
+_os_start 22EC 0 CODE 0 text1 dist/default/production\RTOS-2026.production.o
+__end_of_os_task_change_state 1CD8 0 CODE 0 text32 dist/default/production\RTOS-2026.production.o
+mutex_unlock@task_idx 12E 0 BANK1 1 cstackBANK1 dist/default/production\RTOS-2026.production.o
 __Hpowerup 0 0 CODE 0 powerup dist/default/production\RTOS-2026.production.o
 ___awmod@sign 305 0 BANK3 1 cstackBANK3 dist/default/production\RTOS-2026.production.o
-__end_of_os_delay 22D6 0 CODE 0 text19 dist/default/production\RTOS-2026.production.o
+__end_of_os_delay 22EC 0 CODE 0 text19 dist/default/production\RTOS-2026.production.o
 _T0CONbits FD5 0 ABS 0 - dist/default/production\RTOS-2026.production.o
-__end_of_os_start 2632 0 CODE 0 text1 dist/default/production\RTOS-2026.production.o
+__end_of_os_start 2646 0 CODE 0 text1 dist/default/production\RTOS-2026.production.o
+__HdataCOMRAM 0 0 ABS 0 dataCOMRAM dist/default/production\RTOS-2026.production.o
 __LbssBIGRAM 0 0 ABS 0 bssBIGRAM dist/default/production\RTOS-2026.production.o
-__accesstop 60 0 ABS 0 - C:\Users\RICHAR~1.STO\AppData\Local\Temp\xcAsgrk.0\driver_tmp_9.o
-intlevel0 0 0 CODE 0 text C:\Users\RICHAR~1.STO\AppData\Local\Temp\xcAsgrk.0\driver_tmp_9.o
-intlevel1 0 0 CODE 0 text C:\Users\RICHAR~1.STO\AppData\Local\Temp\xcAsgrk.0\driver_tmp_9.o
-intlevel2 0 0 CODE 0 text C:\Users\RICHAR~1.STO\AppData\Local\Temp\xcAsgrk.0\driver_tmp_9.o
-intlevel3 0 0 CODE 0 text C:\Users\RICHAR~1.STO\AppData\Local\Temp\xcAsgrk.0\driver_tmp_9.o
-_tarefaLeituraADC 316E 0 CODE 0 text15 dist/default/production\RTOS-2026.production.o
+__accesstop 60 0 ABS 0 - C:\Users\RICHAR~1.STO\AppData\Local\Temp\xcAscwg.0\driver_tmp_9.o
+intlevel0 0 0 CODE 0 text C:\Users\RICHAR~1.STO\AppData\Local\Temp\xcAscwg.0\driver_tmp_9.o
+intlevel1 0 0 CODE 0 text C:\Users\RICHAR~1.STO\AppData\Local\Temp\xcAscwg.0\driver_tmp_9.o
+intlevel2 0 0 CODE 0 text C:\Users\RICHAR~1.STO\AppData\Local\Temp\xcAscwg.0\driver_tmp_9.o
+intlevel3 0 0 CODE 0 text C:\Users\RICHAR~1.STO\AppData\Local\Temp\xcAscwg.0\driver_tmp_9.o
+_tarefaLeituraADC 320E 0 CODE 0 text15 dist/default/production\RTOS-2026.production.o
 __LbssCOMRAM 0 0 ABS 0 bssCOMRAM dist/default/production\RTOS-2026.production.o
-__end_of_pipe_init 30D2 0 CODE 0 text10 dist/default/production\RTOS-2026.production.o
-__end_of_pipe_read 2F38 0 CODE 0 text25 dist/default/production\RTOS-2026.production.o
+__end_of_pipe_init 312C 0 CODE 0 text10 dist/default/production\RTOS-2026.production.o
+__end_of_pipe_read 2F22 0 CODE 0 text25 dist/default/production\RTOS-2026.production.o
 __LnvFARRAM 0 0 FARRAM 0 nvFARRAM dist/default/production\RTOS-2026.production.o
-priority_rr_scheduler@found 61 0 BANK0 1 bssBANK0 dist/default/production\RTOS-2026.production.o
-priority_scheduler@i 65 0 BANK0 1 bssBANK0 dist/default/production\RTOS-2026.production.o
-_pipe_adc 69 0 BANK0 1 bssBANK0 dist/default/production\RTOS-2026.production.o
+priority_rr_scheduler@found 55 0 COMRAM 1 bssCOMRAM dist/default/production\RTOS-2026.production.o
+priority_scheduler@i 59 0 COMRAM 1 bssCOMRAM dist/default/production\RTOS-2026.production.o
+_pipe_adc 60 0 BANK0 1 bssBANK0 dist/default/production\RTOS-2026.production.o
 __Hifardata 0 0 CODE 0 ifardata dist/default/production\RTOS-2026.production.o
 __Hclrtext 0 0 ABS 0 clrtext dist/default/production\RTOS-2026.production.o
+__pidataCOMRAM 33F0 0 CODE 0 idataCOMRAM dist/default/production\RTOS-2026.production.o
 _ADRESH FC4 0 ABS 0 - dist/default/production\RTOS-2026.production.o
 _ADRESL FC3 0 ABS 0 - dist/default/production\RTOS-2026.production.o
-_pipe_init 3098 0 CODE 0 text10 dist/default/production\RTOS-2026.production.o
-_pipe_read 2EDE 0 CODE 0 text25 dist/default/production\RTOS-2026.production.o
-___inthi_sp 0 0 STACK 2 stack C:\Users\RICHAR~1.STO\AppData\Local\Temp\xcAsgrk.0\driver_tmp_9.o
-___intlo_sp 0 0 STACK 2 stack C:\Users\RICHAR~1.STO\AppData\Local\Temp\xcAsgrk.0\driver_tmp_9.o
+_pipe_init 30E2 0 CODE 0 text10 dist/default/production\RTOS-2026.production.o
+_pipe_read 2EAA 0 CODE 0 text25 dist/default/production\RTOS-2026.production.o
+___inthi_sp 0 0 STACK 2 stack C:\Users\RICHAR~1.STO\AppData\Local\Temp\xcAscwg.0\driver_tmp_9.o
+___intlo_sp 0 0 STACK 2 stack C:\Users\RICHAR~1.STO\AppData\Local\Temp\xcAscwg.0\driver_tmp_9.o
+__LdataCOMRAM 0 0 ABS 0 dataCOMRAM dist/default/production\RTOS-2026.production.o
 _CCPR1L FBE 0 ABS 0 - dist/default/production\RTOS-2026.production.o
 __Hintcode_body 0 0 ABS 0 intcode_body dist/default/production\RTOS-2026.production.o
 mutex_init@m 300 0 BANK3 1 cstackBANK3 dist/default/production\RTOS-2026.production.o
 __Lintsave_regs 0 0 BIGRAM 1 intsave_regs dist/default/production\RTOS-2026.production.o
-i1___awmod@divisor 274 0 BANK2 1 cstackBANK2 dist/default/production\RTOS-2026.production.o
-_tarefaControlePWM 2FD2 0 CODE 0 text26 dist/default/production\RTOS-2026.production.o
-pipe_read@dado 124 0 BANK1 1 cstackBANK1 dist/default/production\RTOS-2026.production.o
-__end_ofi1___awmod 2C48 0 CODE 0 text22 dist/default/production\RTOS-2026.production.o
+i1___awmod@divisor 278 0 BANK2 1 cstackBANK2 dist/default/production\RTOS-2026.production.o
+_tarefaControlePWM 3040 0 CODE 0 text26 dist/default/production\RTOS-2026.production.o
+pipe_read@dado 126 0 BANK1 1 cstackBANK1 dist/default/production\RTOS-2026.production.o
+__end_ofi1___awmod 2C5E 0 CODE 0 text22 dist/default/production\RTOS-2026.production.o
 __Hmediumconst 0 0 MEDIUMCONST 0 mediumconst dist/default/production\RTOS-2026.production.o
 i2os_create_task@prior 4 0 COMRAM 1 cstackCOMRAM dist/default/production\RTOS-2026.production.o
 __Hintcodelo 18 0 CODE 0 intcodelo dist/default/production\RTOS-2026.production.o
-__end_of_tarefaProcessamento 3276 0 CODE 0 text24 dist/default/production\RTOS-2026.production.o
-_tarefaOneShot 32EC 0 CODE 0 text31 dist/default/production\RTOS-2026.production.o
-__end_of___awmod 2B98 0 CODE 0 text5 dist/default/production\RTOS-2026.production.o
-mutex_lock@m 128 0 BANK1 1 cstackBANK1 dist/default/production\RTOS-2026.production.o
-tarefaProcessamento@dado 127 0 BANK1 1 cstackBANK1 dist/default/production\RTOS-2026.production.o
-pwm_set_duty@duty 128 0 BANK1 1 cstackBANK1 dist/default/production\RTOS-2026.production.o
+__end_of_tarefaProcessamento 329C 0 CODE 0 text24 dist/default/production\RTOS-2026.production.o
+_tarefaOneShot 3396 0 CODE 0 text31 dist/default/production\RTOS-2026.production.o
+__end_of___awmod 2BAE 0 CODE 0 text5 dist/default/production\RTOS-2026.production.o
+mutex_lock@m 129 0 BANK1 1 cstackBANK1 dist/default/production\RTOS-2026.production.o
+tarefaProcessamento@dado 128 0 BANK1 1 cstackBANK1 dist/default/production\RTOS-2026.production.o
+pwm_set_duty@duty 129 0 BANK1 1 cstackBANK1 dist/default/production\RTOS-2026.production.o
 ?i2___awmod 2 0 COMRAM 1 cstackCOMRAM dist/default/production\RTOS-2026.production.o
-__end_ofi2_scheduler 32C6 0 CODE 0 text34 dist/default/production\RTOS-2026.production.o
-i1___awmod 2B98 0 CODE 0 text22 dist/default/production\RTOS-2026.production.o
+__end_ofi2_scheduler 3396 0 CODE 0 text34 dist/default/production\RTOS-2026.production.o
+__LidataCOMRAM 0 0 ABS 0 idataCOMRAM dist/default/production\RTOS-2026.production.o
+i1___awmod 2BAE 0 CODE 0 text22 dist/default/production\RTOS-2026.production.o
 _INTCON2bits FF1 0 ABS 0 - dist/default/production\RTOS-2026.production.o
-_adc_config 3276 0 CODE 0 text13 dist/default/production\RTOS-2026.production.o
+_adc_config 3346 0 CODE 0 text13 dist/default/production\RTOS-2026.production.o
 __Lintcodelo 18 0 CODE 0 intcodelo dist/default/production\RTOS-2026.production.o
-__end_of_tarefaLeituraADC 319E 0 CODE 0 text15 dist/default/production\RTOS-2026.production.o
-start_initialization 3018 0 CODE 0 cinit dist/default/production\RTOS-2026.production.o
+__end_of_tarefaLeituraADC 323E 0 CODE 0 text15 dist/default/production\RTOS-2026.production.o
+start_initialization 2FE8 0 CODE 0 cinit dist/default/production\RTOS-2026.production.o
 __HnvFARRAM 0 0 FARRAM 0 nvFARRAM dist/default/production\RTOS-2026.production.o
 _PCLATH FFA 0 ABS 0 - dist/default/production\RTOS-2026.production.o
 _PCLATU FFB 0 ABS 0 - dist/default/production\RTOS-2026.production.o
 _TRISAbits F92 0 ABS 0 - dist/default/production\RTOS-2026.production.o
 _TRISBbits F93 0 ABS 0 - dist/default/production\RTOS-2026.production.o
-_r_queue 54D 0 BIGRAM 1 bssBIGRAM dist/default/production\RTOS-2026.production.o
+_r_queue 541 0 BIGRAM 1 bssBIGRAM dist/default/production\RTOS-2026.production.o
 _TRISCbits F94 0 ABS 0 - dist/default/production\RTOS-2026.production.o
 _TRISDbits F95 0 ABS 0 - dist/default/production\RTOS-2026.production.o
-pipe_write@dado 11D 0 BANK1 1 cstackBANK1 dist/default/production\RTOS-2026.production.o
-_pwm_init 3338 0 CODE 0 text9 dist/default/production\RTOS-2026.production.o
+pipe_write@dado 81 0 BANK0 1 cstackBANK0 dist/default/production\RTOS-2026.production.o
+_pwm_init 33E2 0 CODE 0 text9 dist/default/production\RTOS-2026.production.o
 ___rparam_used 1 0 ABS 0 - dist/default/production\RTOS-2026.production.o
 i2os_create_task@id 6 0 COMRAM 1 cstackCOMRAM dist/default/production\RTOS-2026.production.o
-__pcstackBANK0 96 0 BANK0 1 cstackBANK0 dist/default/production\RTOS-2026.production.o
+__pcstackBANK0 78 0 BANK0 1 cstackBANK0 dist/default/production\RTOS-2026.production.o
 __pcstackBANK1 100 0 BANK1 1 cstackBANK1 dist/default/production\RTOS-2026.production.o
 __pcstackBANK2 200 0 BANK2 1 cstackBANK2 dist/default/production\RTOS-2026.production.o
 __pcstackBANK3 300 0 BANK3 1 cstackBANK3 dist/default/production\RTOS-2026.production.o
 _STATUS FD8 0 ABS 0 - dist/default/production\RTOS-2026.production.o
 _STKPTR FFC 0 ABS 0 - dist/default/production\RTOS-2026.production.o
-i1_scheduler 3222 0 CODE 0 text20 dist/default/production\RTOS-2026.production.o
+i1_scheduler 331C 0 CODE 0 text20 dist/default/production\RTOS-2026.production.o
 _TABLAT FF5 0 ABS 0 - dist/default/production\RTOS-2026.production.o
-__end_of_pwm_init 3346 0 CODE 0 text9 dist/default/production\RTOS-2026.production.o
-_os_create_task 2D82 0 CODE 0 text7 dist/default/production\RTOS-2026.production.o
-isa$xinst 0 0 ABS 0 - C:\Users\RICHAR~1.STO\AppData\Local\Temp\xcAsgrk.0\driver_tmp_9.o
+__end_of_pwm_init 33F0 0 CODE 0 text9 dist/default/production\RTOS-2026.production.o
+_os_create_task 2DAE 0 CODE 0 text7 dist/default/production\RTOS-2026.production.o
+isa$xinst 0 0 ABS 0 - C:\Users\RICHAR~1.STO\AppData\Local\Temp\xcAscwg.0\driver_tmp_9.o
 os_create_task@func 300 0 BANK3 1 cstackBANK3 dist/default/production\RTOS-2026.production.o
-__end_of_priority_rr_scheduler 276E 0 CODE 0 text4 dist/default/production\RTOS-2026.production.o
+__end_of_priority_rr_scheduler 2778 0 CODE 0 text4 dist/default/production\RTOS-2026.production.o
 __Hbank0 0 0 ABS 0 bank0 dist/default/production\RTOS-2026.production.o
 __Hbank1 0 0 ABS 0 bank1 dist/default/production\RTOS-2026.production.o
 __Hbank2 0 0 ABS 0 bank2 dist/default/production\RTOS-2026.production.o
@@ -723,11 +738,11 @@ __Hbigbss 0 0 BIGRAM 1 bigbss dist/default/production\RTOS-2026.production.o
 __Hbigram 0 0 ABS 0 bigram dist/default/production\RTOS-2026.production.o
 __Hbigsfr 0 0 ABS 0 bigsfr dist/default/production\RTOS-2026.production.o
 __smallconst 1000 0 SMALLCONST 0 smallconst dist/default/production\RTOS-2026.production.o
-sem_init@valor 301 0 BANK3 1 cstackBANK3 dist/default/production\RTOS-2026.production.o
-priority_rr_scheduler@idx 5E 0 COMRAM 1 bssCOMRAM dist/default/production\RTOS-2026.production.o
+sem_init@valor 302 0 BANK3 1 cstackBANK3 dist/default/production\RTOS-2026.production.o
+priority_rr_scheduler@idx 52 0 COMRAM 1 bssCOMRAM dist/default/production\RTOS-2026.production.o
 __Hcomram 0 0 ABS 0 comram dist/default/production\RTOS-2026.production.o
 __Hconfig 0 0 ABS 0 config dist/default/production\RTOS-2026.production.o
-__end_of_adc_config 329E 0 CODE 0 text13 dist/default/production\RTOS-2026.production.o
+__end_of_adc_config 336E 0 CODE 0 text13 dist/default/production\RTOS-2026.production.o
 __Lbank0 0 0 ABS 0 bank0 dist/default/production\RTOS-2026.production.o
 __Lbank1 0 0 ABS 0 bank1 dist/default/production\RTOS-2026.production.o
 __Lbank2 0 0 ABS 0 bank2 dist/default/production\RTOS-2026.production.o
@@ -756,18 +771,18 @@ __Ltext6 0 0 ABS 0 text6 dist/default/production\RTOS-2026.production.o
 __Ltext7 0 0 ABS 0 text7 dist/default/production\RTOS-2026.production.o
 __Ltext8 0 0 ABS 0 text8 dist/default/production\RTOS-2026.production.o
 __Ltext9 0 0 ABS 0 text9 dist/default/production\RTOS-2026.production.o
-_priority_rr_scheduler 2632 0 CODE 0 text4 dist/default/production\RTOS-2026.production.o
+_priority_rr_scheduler 2646 0 CODE 0 text4 dist/default/production\RTOS-2026.production.o
 __Hfarbss 0 0 FARRAM 0 farbss dist/default/production\RTOS-2026.production.o
 __Lintcode_body 0 0 ABS 0 intcode_body dist/default/production\RTOS-2026.production.o
 _PORTCbits F82 0 ABS 0 - dist/default/production\RTOS-2026.production.o
 _PORTDbits F83 0 ABS 0 - dist/default/production\RTOS-2026.production.o
-_setup_hardware 330C 0 CODE 0 text2 dist/default/production\RTOS-2026.production.o
+_setup_hardware 33B6 0 CODE 0 text2 dist/default/production\RTOS-2026.production.o
 _INTCONbits FF2 0 ABS 0 - dist/default/production\RTOS-2026.production.o
-priority_rr_scheduler@max_prio 62 0 BANK0 1 bssBANK0 dist/default/production\RTOS-2026.production.o
+priority_rr_scheduler@max_prio 56 0 COMRAM 1 bssCOMRAM dist/default/production\RTOS-2026.production.o
 __Habs1 0 0 ABS 0 abs1 dist/default/production\RTOS-2026.production.o
 __Hdata 0 0 ABS 0 data dist/default/production\RTOS-2026.production.o
 __Hheap 0 0 HEAP 7 heap dist/default/production\RTOS-2026.production.o
-__Hinit 744 0 CODE 0 init dist/default/production\RTOS-2026.production.o
+__Hinit 740 0 CODE 0 init dist/default/production\RTOS-2026.production.o
 __Hrbit 0 0 COMRAM 1 rbit dist/default/production\RTOS-2026.production.o
 __Hrbss 0 0 COMRAM 1 rbss dist/default/production\RTOS-2026.production.o
 __Htemp 0 0 COMRAM 1 temp dist/default/production\RTOS-2026.production.o
@@ -775,7 +790,7 @@ __Htext 0 0 ABS 0 text dist/default/production\RTOS-2026.production.o
 __Labs1 0 0 ABS 0 abs1 dist/default/production\RTOS-2026.production.o
 __Ldata 0 0 ABS 0 data dist/default/production\RTOS-2026.production.o
 __Lheap 0 0 HEAP 7 heap dist/default/production\RTOS-2026.production.o
-__Linit 740 0 CODE 0 init dist/default/production\RTOS-2026.production.o
+__Linit 73C 0 CODE 0 init dist/default/production\RTOS-2026.production.o
 __Lrbit 0 0 COMRAM 1 rbit dist/default/production\RTOS-2026.production.o
 __Lrbss 0 0 COMRAM 1 rbss dist/default/production\RTOS-2026.production.o
 __Ltemp 0 0 COMRAM 1 temp dist/default/production\RTOS-2026.production.o
@@ -787,38 +802,39 @@ __LcstackBANK2 0 0 ABS 0 cstackBANK2 dist/default/production\RTOS-2026.productio
 __LcstackBANK3 0 0 ABS 0 cstackBANK3 dist/default/production\RTOS-2026.production.o
 int$flags 1 0 ABS 0 - dist/default/production\RTOS-2026.production.o
 __HcstackCOMRAM 0 0 ABS 0 cstackCOMRAM dist/default/production\RTOS-2026.production.o
-__end_ofi2_priority_rr_scheduler 29E2 0 CODE 0 text35 dist/default/production\RTOS-2026.production.o
+__end_ofi2_priority_rr_scheduler 29D8 0 CODE 0 text35 dist/default/production\RTOS-2026.production.o
 __Hintret 0 0 ABS 0 intret dist/default/production\RTOS-2026.production.o
 __Hirdata 0 0 CODE 0 irdata dist/default/production\RTOS-2026.production.o
 _BSR FE0 0 ABS 0 - dist/default/production\RTOS-2026.production.o
 _ISR 8 0 CODE 0 intcode dist/default/production\RTOS-2026.production.o
 _PR2 FBB 0 ABS 0 - dist/default/production\RTOS-2026.production.o
-__S0 3347 0 ABS 0 - dist/default/production\RTOS-2026.production.o
-__S1 749 0 ABS 0 - dist/default/production\RTOS-2026.production.o
+__S0 33F1 0 ABS 0 - dist/default/production\RTOS-2026.production.o
+__S1 6E9 0 ABS 0 - dist/default/production\RTOS-2026.production.o
 __S4 0 0 ABS 0 - dist/default/production\RTOS-2026.production.o
 __S5 0 0 ABS 0 - dist/default/production\RTOS-2026.production.o
-__end_of_os_create_task 2E02 0 CODE 0 text7 dist/default/production\RTOS-2026.production.o
-_sem_processamento 8C 0 BANK0 1 bssBANK0 dist/default/production\RTOS-2026.production.o
-_os_task_change_state 169C 0 CODE 0 text32 dist/default/production\RTOS-2026.production.o
-__end_of_tarefaOneShot 330C 0 CODE 0 text31 dist/default/production\RTOS-2026.production.o
-__uDynamicHeap 34D 0 BIGRAM 1 bssBIGRAM dist/default/production\RTOS-2026.production.o
+__end_of_os_create_task 2E2E 0 CODE 0 text7 dist/default/production\RTOS-2026.production.o
+_sem_processamento 13E 0 BANK1 1 bssBANK1 dist/default/production\RTOS-2026.production.o
+_os_task_change_state 16B6 0 CODE 0 text32 dist/default/production\RTOS-2026.production.o
+__end_of_tarefaOneShot 33B6 0 CODE 0 text31 dist/default/production\RTOS-2026.production.o
+__HidataCOMRAM 0 0 ABS 0 idataCOMRAM dist/default/production\RTOS-2026.production.o
+__uDynamicHeap 341 0 BIGRAM 1 bssBIGRAM dist/default/production\RTOS-2026.production.o
 __Lbigdata 0 0 BIGRAM 1 bigdata dist/default/production\RTOS-2026.production.o
 __Hnvrram 0 0 COMRAM 1 nvrram dist/default/production\RTOS-2026.production.o
 i2___awmod@dividend 2 0 COMRAM 1 cstackCOMRAM dist/default/production\RTOS-2026.production.o
-mutex_unlock@m 128 0 BANK1 1 cstackBANK1 dist/default/production\RTOS-2026.production.o
-__end_of_ISR 740 0 CODE 0 intcode dist/default/production\RTOS-2026.production.o
+mutex_unlock@m 129 0 BANK1 1 cstackBANK1 dist/default/production\RTOS-2026.production.o
+__end_of_ISR 73C 0 CODE 0 intcode dist/default/production\RTOS-2026.production.o
 __Lintentry 0 0 ABS 0 intentry dist/default/production\RTOS-2026.production.o
 i2___awmod@counter 6 0 COMRAM 1 cstackCOMRAM dist/default/production\RTOS-2026.production.o
-_config_user 2F8A 0 CODE 0 text8 dist/default/production\RTOS-2026.production.o
+_config_user 3092 0 CODE 0 text8 dist/default/production\RTOS-2026.production.o
 __Hramtop 1000 0 RAM 0 ramtop dist/default/production\RTOS-2026.production.o
-__end_of_scheduler 31F8 0 CODE 0 text3 dist/default/production\RTOS-2026.production.o
+__end_of_scheduler 32F2 0 CODE 0 text3 dist/default/production\RTOS-2026.production.o
 __Hrparam 0 0 COMRAM 1 rparam dist/default/production\RTOS-2026.production.o
-__pdataBANK0 95 0 BANK0 1 dataBANK0 dist/default/production\RTOS-2026.production.o
 __activetblptr 2 0 ABS 0 - dist/default/production\RTOS-2026.production.o
 os_create_task@id 304 0 BANK3 1 cstackBANK3 dist/default/production\RTOS-2026.production.o
 __Hstruct 0 0 COMRAM 1 struct dist/default/production\RTOS-2026.production.o
 __LbssBANK0 0 0 ABS 0 bssBANK0 dist/default/production\RTOS-2026.production.o
-__end_of_setup_hardware 3328 0 CODE 0 text2 dist/default/production\RTOS-2026.production.o
+__LbssBANK1 0 0 ABS 0 bssBANK1 dist/default/production\RTOS-2026.production.o
+__end_of_setup_hardware 33D2 0 CODE 0 text2 dist/default/production\RTOS-2026.production.o
 __Htext10 0 0 ABS 0 text10 dist/default/production\RTOS-2026.production.o
 __Htext11 0 0 ABS 0 text11 dist/default/production\RTOS-2026.production.o
 __Htext12 0 0 ABS 0 text12 dist/default/production\RTOS-2026.production.o
@@ -846,39 +862,39 @@ __Htext34 0 0 ABS 0 text34 dist/default/production\RTOS-2026.production.o
 __Htext35 0 0 ABS 0 text35 dist/default/production\RTOS-2026.production.o
 __Htext36 0 0 ABS 0 text36 dist/default/production\RTOS-2026.production.o
 __Htext37 0 0 ABS 0 text37 dist/default/production\RTOS-2026.production.o
-_pipe_write 2F38 0 CODE 0 text16 dist/default/production\RTOS-2026.production.o
+_pipe_write 2F22 0 CODE 0 text16 dist/default/production\RTOS-2026.production.o
 ___awmod@counter 304 0 BANK3 1 cstackBANK3 dist/default/production\RTOS-2026.production.o
-i1___awmod@sign 277 0 BANK2 1 cstackBANK2 dist/default/production\RTOS-2026.production.o
-i1___awmod@dividend 272 0 BANK2 1 cstackBANK2 dist/default/production\RTOS-2026.production.o
-__ptext10 3098 0 CODE 0 text10 dist/default/production\RTOS-2026.production.o
-__ptext11 32C6 0 CODE 0 text11 dist/default/production\RTOS-2026.production.o
-__ptext12 305C 0 CODE 0 text12 dist/default/production\RTOS-2026.production.o
-__ptext13 3276 0 CODE 0 text13 dist/default/production\RTOS-2026.production.o
-__ptext14 31F8 0 CODE 0 text14 dist/default/production\RTOS-2026.production.o
-__ptext15 316E 0 CODE 0 text15 dist/default/production\RTOS-2026.production.o
-__ptext16 2F38 0 CODE 0 text16 dist/default/production\RTOS-2026.production.o
-__ptext17 3328 0 CODE 0 text17 dist/default/production\RTOS-2026.production.o
-__ptext18 2CF6 0 CODE 0 text18 dist/default/production\RTOS-2026.production.o
-__ptext19 1CC0 0 CODE 0 text19 dist/default/production\RTOS-2026.production.o
-__ptext20 3222 0 CODE 0 text20 dist/default/production\RTOS-2026.production.o
-__ptext21 276E 0 CODE 0 text21 dist/default/production\RTOS-2026.production.o
-__ptext22 2B98 0 CODE 0 text22 dist/default/production\RTOS-2026.production.o
-__ptext23 30D2 0 CODE 0 text23 dist/default/production\RTOS-2026.production.o
-__ptext24 324C 0 CODE 0 text24 dist/default/production\RTOS-2026.production.o
-__ptext25 2EDE 0 CODE 0 text25 dist/default/production\RTOS-2026.production.o
-__ptext26 2FD2 0 CODE 0 text26 dist/default/production\RTOS-2026.production.o
-__ptext27 319E 0 CODE 0 text27 dist/default/production\RTOS-2026.production.o
-__ptext28 29E2 0 CODE 0 text28 dist/default/production\RTOS-2026.production.o
+i1___awmod@sign 27B 0 BANK2 1 cstackBANK2 dist/default/production\RTOS-2026.production.o
+i1___awmod@dividend 276 0 BANK2 1 cstackBANK2 dist/default/production\RTOS-2026.production.o
+__ptext10 30E2 0 CODE 0 text10 dist/default/production\RTOS-2026.production.o
+__ptext11 329C 0 CODE 0 text11 dist/default/production\RTOS-2026.production.o
+__ptext12 312C 0 CODE 0 text12 dist/default/production\RTOS-2026.production.o
+__ptext13 3346 0 CODE 0 text13 dist/default/production\RTOS-2026.production.o
+__ptext14 32F2 0 CODE 0 text14 dist/default/production\RTOS-2026.production.o
+__ptext15 320E 0 CODE 0 text15 dist/default/production\RTOS-2026.production.o
+__ptext16 2F22 0 CODE 0 text16 dist/default/production\RTOS-2026.production.o
+__ptext17 33D2 0 CODE 0 text17 dist/default/production\RTOS-2026.production.o
+__ptext18 2D0C 0 CODE 0 text18 dist/default/production\RTOS-2026.production.o
+__ptext19 1CD8 0 CODE 0 text19 dist/default/production\RTOS-2026.production.o
+__ptext20 331C 0 CODE 0 text20 dist/default/production\RTOS-2026.production.o
+__ptext21 2778 0 CODE 0 text21 dist/default/production\RTOS-2026.production.o
+__ptext22 2BAE 0 CODE 0 text22 dist/default/production\RTOS-2026.production.o
+__ptext23 3172 0 CODE 0 text23 dist/default/production\RTOS-2026.production.o
+__ptext24 326E 0 CODE 0 text24 dist/default/production\RTOS-2026.production.o
+__ptext25 2EAA 0 CODE 0 text25 dist/default/production\RTOS-2026.production.o
+__ptext26 3040 0 CODE 0 text26 dist/default/production\RTOS-2026.production.o
+__ptext27 323E 0 CODE 0 text27 dist/default/production\RTOS-2026.production.o
+__ptext28 29D8 0 CODE 0 text28 dist/default/production\RTOS-2026.production.o
 __ptext29 1002 0 CODE 0 text29 dist/default/production\RTOS-2026.production.o
-__ptext30 313C 0 CODE 0 text30 dist/default/production\RTOS-2026.production.o
-__ptext31 32EC 0 CODE 0 text31 dist/default/production\RTOS-2026.production.o
-__ptext32 169C 0 CODE 0 text32 dist/default/production\RTOS-2026.production.o
-__ptext34 329E 0 CODE 0 text34 dist/default/production\RTOS-2026.production.o
+__ptext30 31DC 0 CODE 0 text30 dist/default/production\RTOS-2026.production.o
+__ptext31 3396 0 CODE 0 text31 dist/default/production\RTOS-2026.production.o
+__ptext32 16B6 0 CODE 0 text32 dist/default/production\RTOS-2026.production.o
+__ptext34 336E 0 CODE 0 text34 dist/default/production\RTOS-2026.production.o
 __ptext35 28AA 0 CODE 0 text35 dist/default/production\RTOS-2026.production.o
-__ptext36 2C48 0 CODE 0 text36 dist/default/production\RTOS-2026.production.o
-__ptext37 2E02 0 CODE 0 text37 dist/default/production\RTOS-2026.production.o
+__ptext36 2C5E 0 CODE 0 text36 dist/default/production\RTOS-2026.production.o
+__ptext37 2E2E 0 CODE 0 text37 dist/default/production\RTOS-2026.production.o
 i2os_create_task@new_task 7 0 COMRAM 1 cstackCOMRAM dist/default/production\RTOS-2026.production.o
-___awmod 2AE8 0 CODE 0 text5 dist/default/production\RTOS-2026.production.o
+___awmod 2AFE 0 CODE 0 text5 dist/default/production\RTOS-2026.production.o
 __Lbank10 0 0 ABS 0 bank10 dist/default/production\RTOS-2026.production.o
 __Lbank11 0 0 ABS 0 bank11 dist/default/production\RTOS-2026.production.o
 __Lbank12 0 0 ABS 0 bank12 dist/default/production\RTOS-2026.production.o
@@ -888,82 +904,83 @@ __Lbank15 0 0 ABS 0 bank15 dist/default/production\RTOS-2026.production.o
 __Lbigbss 0 0 BIGRAM 1 bigbss dist/default/production\RTOS-2026.production.o
 __Lbigram 0 0 ABS 0 bigram dist/default/production\RTOS-2026.production.o
 __Lbigsfr 0 0 ABS 0 bigsfr dist/default/production\RTOS-2026.production.o
-_scheduler 31CE 0 CODE 0 text3 dist/default/production\RTOS-2026.production.o
+_scheduler 32C8 0 CODE 0 text3 dist/default/production\RTOS-2026.production.o
 __Lcomram 0 0 ABS 0 comram dist/default/production\RTOS-2026.production.o
 __Lconfig 0 0 ABS 0 config dist/default/production\RTOS-2026.production.o
 _LATDbits F8C 0 ABS 0 - dist/default/production\RTOS-2026.production.o
 __Lsivt_hi 0 0 CODE 0 sivt_hi dist/default/production\RTOS-2026.production.o
 __Lsivt_lo 18 0 CODE 0 sivt_lo dist/default/production\RTOS-2026.production.o
-__end_of_tarefaFeedbackLED 316E 0 CODE 0 text30 dist/default/production\RTOS-2026.production.o
-pipe_init@p 302 0 BANK3 1 cstackBANK3 dist/default/production\RTOS-2026.production.o
-priority_scheduler@prox 64 0 BANK0 1 bssBANK0 dist/default/production\RTOS-2026.production.o
+__end_of_tarefaFeedbackLED 320E 0 CODE 0 text30 dist/default/production\RTOS-2026.production.o
+pipe_init@p 303 0 BANK3 1 cstackBANK3 dist/default/production\RTOS-2026.production.o
+priority_scheduler@prox 58 0 COMRAM 1 bssCOMRAM dist/default/production\RTOS-2026.production.o
 __Lfarbss 0 0 FARRAM 0 farbss dist/default/production\RTOS-2026.production.o
-___inthi_stack_hi 0 0 STACK 2 stack C:\Users\RICHAR~1.STO\AppData\Local\Temp\xcAsgrk.0\driver_tmp_9.o
-___inthi_stack_lo 0 0 STACK 2 stack C:\Users\RICHAR~1.STO\AppData\Local\Temp\xcAsgrk.0\driver_tmp_9.o
+___inthi_stack_hi 0 0 STACK 2 stack C:\Users\RICHAR~1.STO\AppData\Local\Temp\xcAscwg.0\driver_tmp_9.o
+___inthi_stack_lo 0 0 STACK 2 stack C:\Users\RICHAR~1.STO\AppData\Local\Temp\xcAscwg.0\driver_tmp_9.o
 __Lfardata 0 0 FARRAM 0 fardata dist/default/production\RTOS-2026.production.o
-isa$std 1 0 ABS 0 - C:\Users\RICHAR~1.STO\AppData\Local\Temp\xcAsgrk.0\driver_tmp_9.o
+isa$std 1 0 ABS 0 - C:\Users\RICHAR~1.STO\AppData\Local\Temp\xcAscwg.0\driver_tmp_9.o
 i2os_create_task@func 2 0 COMRAM 1 cstackCOMRAM dist/default/production\RTOS-2026.production.o
-priority_scheduler@current_task 63 0 BANK0 1 bssBANK0 dist/default/production\RTOS-2026.production.o
-stackhi 0 0 ABS 0 - C:\Users\RICHAR~1.STO\AppData\Local\Temp\xcAsgrk.0\driver_tmp_9.o
-stacklo 0 0 ABS 0 - C:\Users\RICHAR~1.STO\AppData\Local\Temp\xcAsgrk.0\driver_tmp_9.o
+priority_scheduler@current_task 57 0 COMRAM 1 bssCOMRAM dist/default/production\RTOS-2026.production.o
+stackhi 0 0 ABS 0 - C:\Users\RICHAR~1.STO\AppData\Local\Temp\xcAscwg.0\driver_tmp_9.o
+stacklo 0 0 ABS 0 - C:\Users\RICHAR~1.STO\AppData\Local\Temp\xcAscwg.0\driver_tmp_9.o
 __Lintcode 8 0 CODE 0 intcode dist/default/production\RTOS-2026.production.o
-i1_priority_rr_scheduler 276E 0 CODE 0 text21 dist/default/production\RTOS-2026.production.o
+i1_priority_rr_scheduler 2778 0 CODE 0 text21 dist/default/production\RTOS-2026.production.o
 __Lintret 0 0 ABS 0 intret dist/default/production\RTOS-2026.production.o
 __Lirdata 0 0 CODE 0 irdata dist/default/production\RTOS-2026.production.o
 _ADCON0bits FC2 0 ABS 0 - dist/default/production\RTOS-2026.production.o
 _ADCON1bits FC1 0 ABS 0 - dist/default/production\RTOS-2026.production.o
 _ADCON2bits FC0 0 ABS 0 - dist/default/production\RTOS-2026.production.o
-_adc_read 30D2 0 CODE 0 text23 dist/default/production\RTOS-2026.production.o
-_sem_init 32C6 0 CODE 0 text11 dist/default/production\RTOS-2026.production.o
-_sem_post 2CF6 0 CODE 0 text18 dist/default/production\RTOS-2026.production.o
-_sem_wait 3328 0 CODE 0 text17 dist/default/production\RTOS-2026.production.o
-__end_ofi2___awmod 2CF6 0 CODE 0 text36 dist/default/production\RTOS-2026.production.o
-__pbssBIGRAM 34D 0 BIGRAM 1 bssBIGRAM dist/default/production\RTOS-2026.production.o
+_adc_read 3172 0 CODE 0 text23 dist/default/production\RTOS-2026.production.o
+_sem_init 329C 0 CODE 0 text11 dist/default/production\RTOS-2026.production.o
+_sem_post 2D0C 0 CODE 0 text18 dist/default/production\RTOS-2026.production.o
+_sem_wait 33D2 0 CODE 0 text17 dist/default/production\RTOS-2026.production.o
+__end_ofi2___awmod 2D0C 0 CODE 0 text36 dist/default/production\RTOS-2026.production.o
+__pbssBIGRAM 341 0 BIGRAM 1 bssBIGRAM dist/default/production\RTOS-2026.production.o
 __end_ofi1_priority_rr_scheduler 28AA 0 CODE 0 text21 dist/default/production\RTOS-2026.production.o
 __Lspace_0 0 0 ABS 0 - dist/default/production\RTOS-2026.production.o
 __Lspace_1 0 0 ABS 0 - dist/default/production\RTOS-2026.production.o
 __Lspace_2 0 0 ABS 0 - dist/default/production\RTOS-2026.production.o
 __Lspace_4 0 0 ABS 0 - dist/default/production\RTOS-2026.production.o
-__pbssCOMRAM 5E 0 COMRAM 1 bssCOMRAM dist/default/production\RTOS-2026.production.o
+__pbssCOMRAM 52 0 COMRAM 1 bssCOMRAM dist/default/production\RTOS-2026.production.o
 __HcstackBANK0 0 0 ABS 0 cstackBANK0 dist/default/production\RTOS-2026.production.o
 __HcstackBANK1 0 0 ABS 0 cstackBANK1 dist/default/production\RTOS-2026.production.o
 __HcstackBANK2 0 0 ABS 0 cstackBANK2 dist/default/production\RTOS-2026.production.o
 __HcstackBANK3 0 0 ABS 0 cstackBANK3 dist/default/production\RTOS-2026.production.o
-pipe_write@p 11C 0 BANK1 1 cstackBANK1 dist/default/production\RTOS-2026.production.o
+pipe_write@p 80 0 BANK0 1 cstackBANK0 dist/default/production\RTOS-2026.production.o
 os_create_task@prior 302 0 BANK3 1 cstackBANK3 dist/default/production\RTOS-2026.production.o
-sem_post@sem 120 0 BANK1 1 cstackBANK1 dist/default/production\RTOS-2026.production.o
-__end_of_adc_read 310A 0 CODE 0 text23 dist/default/production\RTOS-2026.production.o
-__end_of_pipe_write 2F8A 0 CODE 0 text16 dist/default/production\RTOS-2026.production.o
+sem_post@sem 11F 0 BANK1 1 cstackBANK1 dist/default/production\RTOS-2026.production.o
+__end_of_adc_read 31AA 0 CODE 0 text23 dist/default/production\RTOS-2026.production.o
+__end_of_pipe_write 2F88 0 CODE 0 text16 dist/default/production\RTOS-2026.production.o
 __LcstackCOMRAM 0 0 ABS 0 cstackCOMRAM dist/default/production\RTOS-2026.production.o
-__end_of_sem_init 32EC 0 CODE 0 text11 dist/default/production\RTOS-2026.production.o
-__end_of_sem_post 2D82 0 CODE 0 text18 dist/default/production\RTOS-2026.production.o
-__end_of_sem_wait 3338 0 CODE 0 text17 dist/default/production\RTOS-2026.production.o
-end_of_initialization 304E 0 CODE 0 cinit dist/default/production\RTOS-2026.production.o
-pipe_read@p 123 0 BANK1 1 cstackBANK1 dist/default/production\RTOS-2026.production.o
-_mutex_recurso 81 0 BANK0 1 bssBANK0 dist/default/production\RTOS-2026.production.o
-RR_scheduler@prox 67 0 BANK0 1 bssBANK0 dist/default/production\RTOS-2026.production.o
+__end_of_sem_init 32C8 0 CODE 0 text11 dist/default/production\RTOS-2026.production.o
+__end_of_sem_post 2DAE 0 CODE 0 text18 dist/default/production\RTOS-2026.production.o
+__end_of_sem_wait 33E2 0 CODE 0 text17 dist/default/production\RTOS-2026.production.o
+end_of_initialization 3032 0 CODE 0 cinit dist/default/production\RTOS-2026.production.o
+pipe_read@p 125 0 BANK1 1 cstackBANK1 dist/default/production\RTOS-2026.production.o
+_mutex_recurso 133 0 BANK1 1 bssBANK1 dist/default/production\RTOS-2026.production.o
+RR_scheduler@prox 5B 0 COMRAM 1 bssCOMRAM dist/default/production\RTOS-2026.production.o
 __Lnvrram 0 0 COMRAM 1 nvrram dist/default/production\RTOS-2026.production.o
 __Hintentry 0 0 ABS 0 intentry dist/default/production\RTOS-2026.production.o
 ?___awmod 300 0 BANK3 1 cstackBANK3 dist/default/production\RTOS-2026.production.o
-i2___awmod 2C48 0 CODE 0 text36 dist/default/production\RTOS-2026.production.o
+i2___awmod 2C5E 0 CODE 0 text36 dist/default/production\RTOS-2026.production.o
 __Hreset_vec 4 0 CODE 0 reset_vec dist/default/production\RTOS-2026.production.o
 __HbssBANK0 0 0 ABS 0 bssBANK0 dist/default/production\RTOS-2026.production.o
+__HbssBANK1 0 0 ABS 0 bssBANK1 dist/default/production\RTOS-2026.production.o
 ___awmod@dividend 300 0 BANK3 1 cstackBANK3 dist/default/production\RTOS-2026.production.o
-__end_ofi1_scheduler 324C 0 CODE 0 text20 dist/default/production\RTOS-2026.production.o
+__end_ofi1_scheduler 3346 0 CODE 0 text20 dist/default/production\RTOS-2026.production.o
 __Lramtop 1000 0 RAM 0 ramtop dist/default/production\RTOS-2026.production.o
 __Lrparam 0 0 COMRAM 1 rparam dist/default/production\RTOS-2026.production.o
-adc_read@channel 11D 0 BANK1 1 cstackBANK1 dist/default/production\RTOS-2026.production.o
-__pcinit 3018 0 CODE 0 cinit dist/default/production\RTOS-2026.production.o
-__ptext0 2E7E 0 CODE 0 text0 dist/default/production\RTOS-2026.production.o
-__ptext1 22D6 0 CODE 0 text1 dist/default/production\RTOS-2026.production.o
-__ptext2 330C 0 CODE 0 text2 dist/default/production\RTOS-2026.production.o
-__ptext3 31CE 0 CODE 0 text3 dist/default/production\RTOS-2026.production.o
-__ptext4 2632 0 CODE 0 text4 dist/default/production\RTOS-2026.production.o
-__ptext5 2AE8 0 CODE 0 text5 dist/default/production\RTOS-2026.production.o
-__ptext6 310A 0 CODE 0 text6 dist/default/production\RTOS-2026.production.o
-__ptext7 2D82 0 CODE 0 text7 dist/default/production\RTOS-2026.production.o
-__ptext8 2F8A 0 CODE 0 text8 dist/default/production\RTOS-2026.production.o
-__ptext9 3338 0 CODE 0 text9 dist/default/production\RTOS-2026.production.o
+adc_read@channel 84 0 BANK0 1 cstackBANK0 dist/default/production\RTOS-2026.production.o
+__pcinit 2FE8 0 CODE 0 cinit dist/default/production\RTOS-2026.production.o
+__ptext0 2F88 0 CODE 0 text0 dist/default/production\RTOS-2026.production.o
+__ptext1 22EC 0 CODE 0 text1 dist/default/production\RTOS-2026.production.o
+__ptext2 33B6 0 CODE 0 text2 dist/default/production\RTOS-2026.production.o
+__ptext3 32C8 0 CODE 0 text3 dist/default/production\RTOS-2026.production.o
+__ptext4 2646 0 CODE 0 text4 dist/default/production\RTOS-2026.production.o
+__ptext5 2AFE 0 CODE 0 text5 dist/default/production\RTOS-2026.production.o
+__ptext6 31AA 0 CODE 0 text6 dist/default/production\RTOS-2026.production.o
+__ptext7 2DAE 0 CODE 0 text7 dist/default/production\RTOS-2026.production.o
+__ptext8 3092 0 CODE 0 text8 dist/default/production\RTOS-2026.production.o
+__ptext9 33E2 0 CODE 0 text9 dist/default/production\RTOS-2026.production.o
 __Lstruct 0 0 COMRAM 1 struct dist/default/production\RTOS-2026.production.o
 __Ltext10 0 0 ABS 0 text10 dist/default/production\RTOS-2026.production.o
 __Ltext11 0 0 ABS 0 text11 dist/default/production\RTOS-2026.production.o
@@ -992,46 +1009,45 @@ __Ltext34 0 0 ABS 0 text34 dist/default/production\RTOS-2026.production.o
 __Ltext35 0 0 ABS 0 text35 dist/default/production\RTOS-2026.production.o
 __Ltext36 0 0 ABS 0 text36 dist/default/production\RTOS-2026.production.o
 __Ltext37 0 0 ABS 0 text37 dist/default/production\RTOS-2026.production.o
-__ramtop 1000 0 RAM 0 ramtop C:\Users\RICHAR~1.STO\AppData\Local\Temp\xcAsgrk.0\driver_tmp_9.o
-__end_of_os_config 313C 0 CODE 0 text6 dist/default/production\RTOS-2026.production.o
-priority_rr_scheduler@current 60 0 BANK0 1 bssBANK0 dist/default/production\RTOS-2026.production.o
+__ramtop 1000 0 RAM 0 ramtop C:\Users\RICHAR~1.STO\AppData\Local\Temp\xcAscwg.0\driver_tmp_9.o
+__end_of_os_config 31DC 0 CODE 0 text6 dist/default/production\RTOS-2026.production.o
+priority_rr_scheduler@current 53 0 COMRAM 1 bssCOMRAM dist/default/production\RTOS-2026.production.o
 __Lpowerup 0 0 CODE 0 powerup dist/default/production\RTOS-2026.production.o
 __Leeprom_data 0 0 EEDATA 0 eeprom_data dist/default/production\RTOS-2026.production.o
 i2___awmod@divisor 4 0 COMRAM 1 cstackCOMRAM dist/default/production\RTOS-2026.production.o
 __H__absolute__ 0 0 ABS 0 __absolute__ dist/default/production\RTOS-2026.production.o
 __psmallconst 1000 0 SMALLCONST 0 smallconst dist/default/production\RTOS-2026.production.o
-os_delay@time 283 0 BANK2 1 cstackBANK2 dist/default/production\RTOS-2026.production.o
+os_delay@time 287 0 BANK2 1 cstackBANK2 dist/default/production\RTOS-2026.production.o
 __Lreset_vec 0 0 CODE 0 reset_vec dist/default/production\RTOS-2026.production.o
-_pwm_set_duty 319E 0 CODE 0 text27 dist/default/production\RTOS-2026.production.o
-?i1___awmod 272 0 BANK2 1 cstackBANK2 dist/default/production\RTOS-2026.production.o
-_rr_quantum 95 0 BANK0 1 dataBANK0 dist/default/production\RTOS-2026.production.o
+_pwm_set_duty 323E 0 CODE 0 text27 dist/default/production\RTOS-2026.production.o
+?i1___awmod 276 0 BANK2 1 cstackBANK2 dist/default/production\RTOS-2026.production.o
+_rr_quantum 5C 0 COMRAM 1 dataCOMRAM dist/default/production\RTOS-2026.production.o
 i2___awmod@sign 7 0 COMRAM 1 cstackCOMRAM dist/default/production\RTOS-2026.production.o
-___heap_hi 0 0 ABS 0 - C:\Users\RICHAR~1.STO\AppData\Local\Temp\xcAsgrk.0\driver_tmp_9.o
-___heap_lo 0 0 ABS 0 - C:\Users\RICHAR~1.STO\AppData\Local\Temp\xcAsgrk.0\driver_tmp_9.o
-_tarefaFeedbackLED 313C 0 CODE 0 text30 dist/default/production\RTOS-2026.production.o
+___heap_hi 0 0 ABS 0 - C:\Users\RICHAR~1.STO\AppData\Local\Temp\xcAscwg.0\driver_tmp_9.o
+___heap_lo 0 0 ABS 0 - C:\Users\RICHAR~1.STO\AppData\Local\Temp\xcAscwg.0\driver_tmp_9.o
+_tarefaFeedbackLED 31DC 0 CODE 0 text30 dist/default/production\RTOS-2026.production.o
 ___param_bank 0 0 ABS 0 - dist/default/production\RTOS-2026.production.o
-___intlo_stack_hi 0 0 STACK 2 stack C:\Users\RICHAR~1.STO\AppData\Local\Temp\xcAsgrk.0\driver_tmp_9.o
-___intlo_stack_lo 0 0 STACK 2 stack C:\Users\RICHAR~1.STO\AppData\Local\Temp\xcAsgrk.0\driver_tmp_9.o
-RR_scheduler@tentativas 66 0 BANK0 1 bssBANK0 dist/default/production\RTOS-2026.production.o
+___intlo_stack_hi 0 0 STACK 2 stack C:\Users\RICHAR~1.STO\AppData\Local\Temp\xcAscwg.0\driver_tmp_9.o
+___intlo_stack_lo 0 0 STACK 2 stack C:\Users\RICHAR~1.STO\AppData\Local\Temp\xcAscwg.0\driver_tmp_9.o
+RR_scheduler@tentativas 5A 0 COMRAM 1 bssCOMRAM dist/default/production\RTOS-2026.production.o
 __Hbigdata 0 0 BIGRAM 1 bigdata dist/default/production\RTOS-2026.production.o
-__end_of__initialization 304E 0 CODE 0 cinit dist/default/production\RTOS-2026.production.o
+__end_of__initialization 3032 0 CODE 0 cinit dist/default/production\RTOS-2026.production.o
 ___awmod@divisor 302 0 BANK3 1 cstackBANK3 dist/default/production\RTOS-2026.production.o
 __Libigdata 0 0 CODE 0 ibigdata dist/default/production\RTOS-2026.production.o
-_os_config 310A 0 CODE 0 text6 dist/default/production\RTOS-2026.production.o
-__pidataBANK0 3346 0 CODE 0 idataBANK0 dist/default/production\RTOS-2026.production.o
+_os_config 31AA 0 CODE 0 text6 dist/default/production\RTOS-2026.production.o
 __Lclrtext 0 0 ABS 0 clrtext dist/default/production\RTOS-2026.production.o
-i2_os_create_task 2E02 0 CODE 0 text37 dist/default/production\RTOS-2026.production.o
+i2_os_create_task 2E2E 0 CODE 0 text37 dist/default/production\RTOS-2026.production.o
 sem_init@sem 300 0 BANK3 1 cstackBANK3 dist/default/production\RTOS-2026.production.o
-tarefaLeituraADC@valor 11F 0 BANK1 1 cstackBANK1 dist/default/production\RTOS-2026.production.o
-_mutex_unlock 29E2 0 CODE 0 text28 dist/default/production\RTOS-2026.production.o
-sem_wait@sem 128 0 BANK1 1 cstackBANK1 dist/default/production\RTOS-2026.production.o
+tarefaLeituraADC@valor 85 0 BANK0 1 cstackBANK0 dist/default/production\RTOS-2026.production.o
+_mutex_unlock 29D8 0 CODE 0 text28 dist/default/production\RTOS-2026.production.o
+sem_wait@sem 129 0 BANK1 1 cstackBANK1 dist/default/production\RTOS-2026.production.o
 __pcstackCOMRAM 2 0 COMRAM 1 cstackCOMRAM dist/default/production\RTOS-2026.production.o
-i2_scheduler 329E 0 CODE 0 text34 dist/default/production\RTOS-2026.production.o
-__end_of_idle 3222 0 CODE 0 text14 dist/default/production\RTOS-2026.production.o
-__end_of_main 2EDE 0 CODE 0 text0 dist/default/production\RTOS-2026.production.o
+i2_scheduler 336E 0 CODE 0 text34 dist/default/production\RTOS-2026.production.o
+__end_of_idle 331C 0 CODE 0 text14 dist/default/production\RTOS-2026.production.o
+__end_of_main 2FE8 0 CODE 0 text0 dist/default/production\RTOS-2026.production.o
 __pintcode 8 0 CODE 0 intcode dist/default/production\RTOS-2026.production.o
-os_task_change_state@task_handle 27C 0 BANK2 1 cstackBANK2 dist/default/production\RTOS-2026.production.o
-_mutex_init 305C 0 CODE 0 text12 dist/default/production\RTOS-2026.production.o
+os_task_change_state@task_handle 280 0 BANK2 1 cstackBANK2 dist/default/production\RTOS-2026.production.o
+_mutex_init 312C 0 CODE 0 text12 dist/default/production\RTOS-2026.production.o
 _mutex_lock 1002 0 CODE 0 text29 dist/default/production\RTOS-2026.production.o
 _FSR0H FEA 0 ABS 0 - dist/default/production\RTOS-2026.production.o
 _FSR0L FE9 0 ABS 0 - dist/default/production\RTOS-2026.production.o
@@ -1052,28 +1068,29 @@ __Lbss 0 0 RAM 1 bss dist/default/production\RTOS-2026.production.o
 __Lram 0 0 ABS 0 ram dist/default/production\RTOS-2026.production.o
 __Lsfr 0 0 ABS 0 sfr dist/default/production\RTOS-2026.production.o
 _CCP1CON FBD 0 ABS 0 - dist/default/production\RTOS-2026.production.o
-__HdataBANK0 0 0 ABS 0 dataBANK0 dist/default/production\RTOS-2026.production.o
-?_adc_read 119 0 BANK1 1 cstackBANK1 dist/default/production\RTOS-2026.production.o
+?_adc_read 80 0 BANK0 1 cstackBANK0 dist/default/production\RTOS-2026.production.o
 __Hsivt_hi 0 0 CODE 0 sivt_hi dist/default/production\RTOS-2026.production.o
 __Hsivt_lo 18 0 CODE 0 sivt_lo dist/default/production\RTOS-2026.production.o
-__initialization 3018 0 CODE 0 cinit dist/default/production\RTOS-2026.production.o
+__initialization 2FE8 0 CODE 0 cinit dist/default/production\RTOS-2026.production.o
 btemp0 1 0 ABS 0 - dist/default/production\RTOS-2026.production.o
 btemp1 2 0 ABS 0 - dist/default/production\RTOS-2026.production.o
 __pbssBANK0 60 0 BANK0 1 bssBANK0 dist/default/production\RTOS-2026.production.o
-__end_of_config_user 2FD2 0 CODE 0 text8 dist/default/production\RTOS-2026.production.o
+__pbssBANK1 132 0 BANK1 1 bssBANK1 dist/default/production\RTOS-2026.production.o
+__end_of_config_user 30E2 0 CODE 0 text8 dist/default/production\RTOS-2026.production.o
+__pdataCOMRAM 5C 0 COMRAM 1 dataCOMRAM dist/default/production\RTOS-2026.production.o
 __Hfardata 0 0 FARRAM 0 fardata dist/default/production\RTOS-2026.production.o
 __Hsmallconst 1002 0 SMALLCONST 0 smallconst dist/default/production\RTOS-2026.production.o
 __Lifardata 0 0 CODE 0 ifardata dist/default/production\RTOS-2026.production.o
-__end_of_pwm_set_duty 31CE 0 CODE 0 text27 dist/default/production\RTOS-2026.production.o
+__end_of_pwm_set_duty 326E 0 CODE 0 text27 dist/default/production\RTOS-2026.production.o
 _CCP1CONbits FBD 0 ABS 0 - dist/default/production\RTOS-2026.production.o
-i1___awmod@counter 276 0 BANK2 1 cstackBANK2 dist/default/production\RTOS-2026.production.o
+i1___awmod@counter 27A 0 BANK2 1 cstackBANK2 dist/default/production\RTOS-2026.production.o
 _ANSELAbits F38 0 ABS 0 - dist/default/production\RTOS-2026.production.o
 _ANSELBbits F39 0 ABS 0 - dist/default/production\RTOS-2026.production.o
 _ANSELCbits F3A 0 ABS 0 - dist/default/production\RTOS-2026.production.o
 _ANSELDbits F3B 0 ABS 0 - dist/default/production\RTOS-2026.production.o
 __Hintsave_regs 0 0 BIGRAM 1 intsave_regs dist/default/production\RTOS-2026.production.o
-priority_rr_scheduler@i 5F 0 COMRAM 1 bssCOMRAM dist/default/production\RTOS-2026.production.o
-__Hintcode 740 0 CODE 0 intcode dist/default/production\RTOS-2026.production.o
+priority_rr_scheduler@i 54 0 COMRAM 1 bssCOMRAM dist/default/production\RTOS-2026.production.o
+__Hintcode 73C 0 CODE 0 intcode dist/default/production\RTOS-2026.production.o
 # %SPLITSTAB Section
 # This section enumerates all the psect splits performed by the assembler.
 # The beginning of the section is indicated by %SPLITSTAB.
@@ -1099,16 +1116,16 @@ __Hintcode 740 0 CODE 0 intcode dist/default/production\RTOS-2026.production.o
 # and size are in units of delta. The file address is in units of bytes.
 # All other numeric quantities are in decimal.
 %SEGMENTS
-text29 0 1002 1002 2345 1
-cstackCOMRAM 1 2 2 5E 1
-cstackBANK1 1 100 100 32 1
-cstackBANK2 1 200 200 86 1
-cstackBANK3 1 300 300 4D 1
+text29 0 1002 1002 23EF 1
+cstackCOMRAM 1 2 2 5B 1
+cstackBANK1 1 100 100 47 1
+cstackBANK2 1 200 200 8A 1
+cstackBANK3 1 300 300 41 1
 reset_vec 0 0 0 4 1
-bssBANK0 1 60 60 37 1
-intcode 0 8 8 73C 1
+bssBANK0 1 60 60 27 1
+intcode 0 8 8 738 1
 smallconst 0 1000 1000 2 1
-bssBIGRAM 1 34D 34D 3FC 1
+bssBIGRAM 1 341 341 3A8 1
 # %NOTES Section
 # This section contains data of all the note-psects.  The beginning of the section
 # is indicated by %NOTES. The first line indicates the name and decimal

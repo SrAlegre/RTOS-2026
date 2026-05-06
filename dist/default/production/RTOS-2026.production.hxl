@@ -1,7 +1,7 @@
 ### HEXMate logfile and output summary ###
 
 ### Command-line arguments ###
- C:\Users\RICHAR~1.STO\AppData\Local\Temp\xcAsgrk.0\driver_tmp_3.o
+ C:\Users\RICHAR~1.STO\AppData\Local\Temp\xcAscwg.0\driver_tmp_3.o
  -Odist/default/production\RTOS-2026.production.hex
  -logfile=dist/default/production\RTOS-2026.production.hxl
  -addressing=1
@@ -9,17 +9,17 @@
 
 ### Memory Usage ###
  Input file ranges:
-  0h - 3h		(C:\Users\RICHAR~1.STO\AppData\Local\Temp\xcAsgrk.0\driver_tmp_3.o)
-  8h - 743h		(C:\Users\RICHAR~1.STO\AppData\Local\Temp\xcAsgrk.0\driver_tmp_3.o)
-  1000h - 3346h		(C:\Users\RICHAR~1.STO\AppData\Local\Temp\xcAsgrk.0\driver_tmp_3.o)
+  0h - 3h		(C:\Users\RICHAR~1.STO\AppData\Local\Temp\xcAscwg.0\driver_tmp_3.o)
+  8h - 73Fh		(C:\Users\RICHAR~1.STO\AppData\Local\Temp\xcAscwg.0\driver_tmp_3.o)
+  1000h - 33F0h		(C:\Users\RICHAR~1.STO\AppData\Local\Temp\xcAscwg.0\driver_tmp_3.o)
  Unused ranges:
   4h - 7h
-  744h - FFFh
+  740h - FFFh
 
 ### Hex Memory Map ###
  Legend:
   -- = Unused memory
-  H1 = Input file             (C:\Users\RICHAR~1.STO\AppData\Local\Temp\xcAsgrk.0\driver_tmp_3.o)
+  H1 = Input file             (C:\Users\RICHAR~1.STO\AppData\Local\Temp\xcAscwg.0\driver_tmp_3.o)
 ----------------------------------------------------------
          | 00 01 02 03 04 05 06 07 08 09 0A 0B 0C 0D 0E 0F
 ----------------------------------------------------------
@@ -139,7 +139,6 @@
 00000710 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00000720 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00000730 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
-00000740 | H1 H1 H1 H1 -- -- -- -- -- -- -- -- -- -- -- --
 ----------------------------------------------------------
 00001000 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00001010 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
@@ -705,5 +704,15 @@
 00003310 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00003320 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00003330 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
-00003340 | H1 H1 H1 H1 H1 H1 H1 -- -- -- -- -- -- -- -- --
-00003350 | --
+00003340 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+00003350 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+00003360 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+00003370 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+00003380 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+00003390 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+000033A0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+000033B0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+000033C0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+000033D0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+000033E0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+000033F0 | H1

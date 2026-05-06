@@ -225,8 +225,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 "7203
 [; ;C:/Program Files/Microchip/MPLABX/v6.30/packs/Microchip/PIC18F-K_DFP/1.15.303/xc8\pic\include\proc/pic18f46k22.h: 7203: extern volatile PORTDbits_t PORTDbits __attribute__((address(0xF83)));
 [v _PORTDbits `VS366 ~T0 @X0 0 e@3971 ]
-"102 user.c
-[; ;user.c: 102:         os_task_change_state(WAITING, 0);
+"103 user.c
+[; ;user.c: 103:         os_task_change_state(WAITING, 0);
 [c E37 0 1 2 3 .. ]
 [n E37 . READY WAITING RUNNING WAITING_SEM  ]
 [v F58 `(v ~T0 @X0 0 tf ]
@@ -236,7 +236,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [n S1 hw_stack TOSL_REG TOSH_REG TOSU_REG ]
 "23
 [; ;./types.h: 23: typedef struct sw_stack {
-[s S2 `S1 -> 16 `i `uc 1 ]
+[s S2 `S1 -> 12 `i `uc 1 ]
 [n S2 sw_stack stack stack_size ]
 "28
 [; ;./types.h: 28: typedef struct tcb {
@@ -1152,103 +1152,103 @@ Version 4.0 HI-TECH Software Intermediate Code
 "67
 [; ;user.c: 67:         sem_post(&sem_processamento);
 [e ( _sem_post (1 &U _sem_processamento ]
-"68
-[; ;user.c: 68:     }
+"69
+[; ;user.c: 69:     }
 }
 [e :U 889 ]
 [e $U 890  ]
 [e :U 891 ]
-"69
-[; ;user.c: 69: }
+"70
+[; ;user.c: 70: }
 [e :UE 888 ]
 }
-"72
-[; ;user.c: 72: TASK tarefaControlePWM(void) {
+"73
+[; ;user.c: 73: TASK tarefaControlePWM(void) {
 [v _tarefaControlePWM `(v ~T0 @X0 1 ef ]
 {
 [e :U _tarefaControlePWM ]
 [f ]
-"73
-[; ;user.c: 73:     while(1) {
+"74
+[; ;user.c: 74:     while(1) {
 [e :U 894 ]
 {
-"74
-[; ;user.c: 74:         sem_wait(&sem_processamento);
+"75
+[; ;user.c: 75:         sem_wait(&sem_processamento);
 [e ( _sem_wait (1 &U _sem_processamento ]
-"76
-[; ;user.c: 76:         mutex_lock(&mutex_recurso);
-[e ( _mutex_lock (1 &U _mutex_recurso ]
 "77
-[; ;user.c: 77:         pwm_set_duty(((uint16_t)dado_processado) << 2);
-[e ( _pwm_set_duty (1 -> << -> -> _dado_processado `us `ui -> 2 `i `us ]
+[; ;user.c: 77:         mutex_lock(&mutex_recurso);
+[e ( _mutex_lock (1 &U _mutex_recurso ]
 "78
-[; ;user.c: 78:         mutex_unlock(&mutex_recurso);
+[; ;user.c: 78:         pwm_set_duty(((uint16_t)dado_processado) << 2);
+[e ( _pwm_set_duty (1 -> << -> -> _dado_processado `us `ui -> 2 `i `us ]
+"79
+[; ;user.c: 79:         mutex_unlock(&mutex_recurso);
 [e ( _mutex_unlock (1 &U _mutex_recurso ]
-"80
-[; ;user.c: 80:     }
+"81
+[; ;user.c: 81:     }
 }
 [e :U 893 ]
 [e $U 894  ]
 [e :U 895 ]
-"81
-[; ;user.c: 81: }
+"82
+[; ;user.c: 82: }
 [e :UE 892 ]
 }
-"84
-[; ;user.c: 84: TASK tarefaFeedbackLED(void) {
+"85
+[; ;user.c: 85: TASK tarefaFeedbackLED(void) {
 [v _tarefaFeedbackLED `(v ~T0 @X0 1 ef ]
 {
 [e :U _tarefaFeedbackLED ]
 [f ]
-"85
-[; ;user.c: 85:     while(1) {
+"86
+[; ;user.c: 86:     while(1) {
 [e :U 898 ]
 {
-"86
-[; ;user.c: 86:         LATDbits.LATD7 = ~LATDbits.LATD7;
-[e = . . _LATDbits 0 7 -> ~ -> . . _LATDbits 0 7 `i `uc ]
 "87
-[; ;user.c: 87:         os_delay(10);
-[e ( _os_delay (1 -> -> 10 `i `uc ]
+[; ;user.c: 87:         LATDbits.LATD7 = ~LATDbits.LATD7;
+[e = . . _LATDbits 0 7 -> ~ -> . . _LATDbits 0 7 `i `uc ]
 "88
-[; ;user.c: 88:     }
+[; ;user.c: 88:         os_delay(10);
+[e ( _os_delay (1 -> -> 10 `i `uc ]
+"89
+[; ;user.c: 89:     }
 }
 [e :U 897 ]
 [e $U 898  ]
 [e :U 899 ]
-"89
-[; ;user.c: 89: }
+"90
+[; ;user.c: 90: }
 [e :UE 896 ]
 }
-"92
-[; ;user.c: 92: TASK tarefaOneShot(void) {
+"93
+[; ;user.c: 93: TASK tarefaOneShot(void) {
 [v _tarefaOneShot `(v ~T0 @X0 1 ef ]
 {
 [e :U _tarefaOneShot ]
 [f ]
-"94
-[; ;user.c: 94:     PORTDbits.RD1 = 1;
-[e = . . _PORTDbits 0 1 -> -> 1 `i `uc ]
 "95
-[; ;user.c: 95:     os_delay(10);
-[e ( _os_delay (1 -> -> 10 `i `uc ]
+[; ;user.c: 95:     PORTDbits.RD1 = 1;
+[e = . . _PORTDbits 0 1 -> -> 1 `i `uc ]
 "96
-[; ;user.c: 96:     PORTDbits.RD1 = 0;
+[; ;user.c: 96:     os_delay(10);
+[e ( _os_delay (1 -> -> 10 `i `uc ]
+"97
+[; ;user.c: 97:     PORTDbits.RD1 = 0;
 [e = . . _PORTDbits 0 1 -> -> 0 `i `uc ]
-"101
-[; ;user.c: 101:     while(1) {
+"102
+[; ;user.c: 102:     while(1) {
 [e :U 902 ]
 {
-"102
-[; ;user.c: 102:         os_task_change_state(WAITING, 0);
-[e ( _os_task_change_state (2 , . `E37 1 -> -> 0 `i `*S3 ]
 "103
-[; ;user.c: 103:     }
+[; ;user.c: 103:         os_task_change_state(WAITING, 0);
+[e ( _os_task_change_state (2 , . `E37 1 -> -> 0 `i `*S3 ]
+"104
+[; ;user.c: 104:     }
 }
 [e :U 901 ]
 [e $U 902  ]
 [e :U 903 ]
-"104
-[; ;user.c: 104: }
+"105
+[; ;user.c: 105: }
 [e :UE 900 ]
 }

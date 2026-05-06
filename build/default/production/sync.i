@@ -175,7 +175,7 @@ typedef struct hw_stack {
 } hw_stack_t;
 
 typedef struct sw_stack {
-    hw_stack_t stack[16];
+    hw_stack_t stack[12];
     uint8_t stack_size;
 } sw_stack_t;
 

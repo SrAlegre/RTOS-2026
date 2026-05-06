@@ -17,7 +17,7 @@ WAITING 1
 RUNNING 2
 WAITING_SEM 3
 ]
-"102 C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\user.c
+"103 C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\user.c
 [e E37 . `uc
 READY 0
 WAITING 1
@@ -161,11 +161,11 @@ WAITING_SEM 3
 [v _tarefaLeituraADC tarefaLeituraADC `(v  1 e 1 0 ]
 "59
 [v _tarefaProcessamento tarefaProcessamento `(v  1 e 1 0 ]
-"72
+"73
 [v _tarefaControlePWM tarefaControlePWM `(v  1 e 1 0 ]
-"84
+"85
 [v _tarefaFeedbackLED tarefaFeedbackLED `(v  1 e 1 0 ]
-"92
+"93
 [v _tarefaOneShot tarefaOneShot `(v  1 e 1 0 ]
 "136 C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026/mem.h
 [v __uDynamicHeap _uDynamicHeap `[512]uc  1 e 512 0 ]
@@ -613,10 +613,10 @@ WAITING_SEM 3
 [v _rr_quantum rr_quantum `uc  1 e 1 0 ]
 [s S67 hw_stack 3 `uc 1 TOSL_REG 1 0 `uc 1 TOSH_REG 1 1 `uc 1 TOSU_REG 1 2 ]
 "9 C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\kernel.c
-[s S71 sw_stack 49 `[16]S67 1 stack 48 0 `uc 1 stack_size 1 48 ]
-[s S74 tcb 72 `uc 1 task_id 1 0 `E37 1 task_state 1 1 `*.37(v 1 task_ptr 2 2 `uc 1 task_delay 1 4 `uc 1 task_priority 1 5 `uc 1 W_REG 1 6 `uc 1 STATUS_REG 1 7 `uc 1 BSR_REG 1 8 `uc 1 PRODL_REG 1 9 `uc 1 PRODH_REG 1 10 `uc 1 FSR0L_REG 1 11 `uc 1 FSR0H_REG 1 12 `uc 1 FSR1L_REG 1 13 `uc 1 FSR1H_REG 1 14 `uc 1 FSR2L_REG 1 15 `uc 1 FSR2H_REG 1 16 `uc 1 TABLAT_REG 1 17 `uc 1 TBLPTRL_REG 1 18 `uc 1 TBLPTRH_REG 1 19 `uc 1 TBLPTRU_REG 1 20 `uc 1 PCLATH_REG 1 21 `uc 1 PCLATU_REG 1 22 `S71 1 task_stack 49 23 ]
-[s S98 ready_queue 508 `[7]S74 1 TASKS 504 0 `uc 1 size 1 504 `*.39S74 1 task_running 2 505 `uc 1 pos_task_running 1 507 ]
-[v _r_queue r_queue `S98  1 e 508 0 ]
+[s S71 sw_stack 37 `[12]S67 1 stack 36 0 `uc 1 stack_size 1 36 ]
+[s S74 tcb 60 `uc 1 task_id 1 0 `E37 1 task_state 1 1 `*.37(v 1 task_ptr 2 2 `uc 1 task_delay 1 4 `uc 1 task_priority 1 5 `uc 1 W_REG 1 6 `uc 1 STATUS_REG 1 7 `uc 1 BSR_REG 1 8 `uc 1 PRODL_REG 1 9 `uc 1 PRODH_REG 1 10 `uc 1 FSR0L_REG 1 11 `uc 1 FSR0H_REG 1 12 `uc 1 FSR1L_REG 1 13 `uc 1 FSR1H_REG 1 14 `uc 1 FSR2L_REG 1 15 `uc 1 FSR2H_REG 1 16 `uc 1 TABLAT_REG 1 17 `uc 1 TBLPTRL_REG 1 18 `uc 1 TBLPTRH_REG 1 19 `uc 1 TBLPTRU_REG 1 20 `uc 1 PCLATH_REG 1 21 `uc 1 PCLATU_REG 1 22 `S71 1 task_stack 37 23 ]
+[s S98 ready_queue 424 `[7]S74 1 TASKS 420 0 `uc 1 size 1 420 `*.39S74 1 task_running 2 421 `uc 1 pos_task_running 1 423 ]
+[v _r_queue r_queue `S98  1 e 424 0 ]
 [s S515 sem 9 `uc 1 contador 1 0 `[6]uc 1 fila 6 1 `uc 1 pos_input 1 7 `uc 1 pos_output 1 8 ]
 "9 C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\user.c
 [s S669 pipe 24 `[4]uc 1 fila_dados 4 0 `uc 1 pos_input 1 4 `uc 1 pos_output 1 5 `S515 1 s_input 9 6 `S515 1 s_output 9 15 ]
@@ -685,9 +685,9 @@ WAITING_SEM 3
 [v os_create_task@id id `uc  1 p 1 wreg ]
 [s S67 hw_stack 3 `uc 1 TOSL_REG 1 0 `uc 1 TOSH_REG 1 1 `uc 1 TOSU_REG 1 2 ]
 "27
-[s S71 sw_stack 49 `[16]S67 1 stack 48 0 `uc 1 stack_size 1 48 ]
-[s S74 tcb 72 `uc 1 task_id 1 0 `E37 1 task_state 1 1 `*.37(v 1 task_ptr 2 2 `uc 1 task_delay 1 4 `uc 1 task_priority 1 5 `uc 1 W_REG 1 6 `uc 1 STATUS_REG 1 7 `uc 1 BSR_REG 1 8 `uc 1 PRODL_REG 1 9 `uc 1 PRODH_REG 1 10 `uc 1 FSR0L_REG 1 11 `uc 1 FSR0H_REG 1 12 `uc 1 FSR1L_REG 1 13 `uc 1 FSR1H_REG 1 14 `uc 1 FSR2L_REG 1 15 `uc 1 FSR2H_REG 1 16 `uc 1 TABLAT_REG 1 17 `uc 1 TBLPTRL_REG 1 18 `uc 1 TBLPTRH_REG 1 19 `uc 1 TBLPTRU_REG 1 20 `uc 1 PCLATH_REG 1 21 `uc 1 PCLATU_REG 1 22 `S71 1 task_stack 49 23 ]
-[v os_create_task@new_task new_task `S74  1 a 72 5 ]
+[s S71 sw_stack 37 `[12]S67 1 stack 36 0 `uc 1 stack_size 1 36 ]
+[s S74 tcb 60 `uc 1 task_id 1 0 `E37 1 task_state 1 1 `*.37(v 1 task_ptr 2 2 `uc 1 task_delay 1 4 `uc 1 task_priority 1 5 `uc 1 W_REG 1 6 `uc 1 STATUS_REG 1 7 `uc 1 BSR_REG 1 8 `uc 1 PRODL_REG 1 9 `uc 1 PRODH_REG 1 10 `uc 1 FSR0L_REG 1 11 `uc 1 FSR0H_REG 1 12 `uc 1 FSR1L_REG 1 13 `uc 1 FSR1H_REG 1 14 `uc 1 FSR2L_REG 1 15 `uc 1 FSR2H_REG 1 16 `uc 1 TABLAT_REG 1 17 `uc 1 TBLPTRL_REG 1 18 `uc 1 TBLPTRH_REG 1 19 `uc 1 TBLPTRU_REG 1 20 `uc 1 PCLATH_REG 1 21 `uc 1 PCLATU_REG 1 22 `S71 1 task_stack 37 23 ]
+[v os_create_task@new_task new_task `S74  1 a 60 5 ]
 "25
 [v os_create_task@id id `uc  1 p 1 wreg ]
 [v os_create_task@func func `*.37(v  1 p 2 0 ]
@@ -711,22 +711,22 @@ WAITING_SEM 3
 {
 [s S515 sem 9 `uc 1 contador 1 0 `[6]uc 1 fila 6 1 `uc 1 pos_input 1 7 `uc 1 pos_output 1 8 ]
 [s S669 pipe 24 `[4]uc 1 fila_dados 4 0 `uc 1 pos_input 1 4 `uc 1 pos_output 1 5 `S515 1 s_input 9 6 `S515 1 s_output 9 15 ]
-[v pipe_init@p p `*.30S669  1 p 1 2 ]
+[v pipe_init@p p `*.30S669  1 p 1 3 ]
 "9
 } 0
 "8 C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\sync.c
 [v _sem_init sem_init `(v  1 e 1 0 ]
 {
 [s S515 sem 9 `uc 1 contador 1 0 `[6]uc 1 fila 6 1 `uc 1 pos_input 1 7 `uc 1 pos_output 1 8 ]
-[v sem_init@sem sem `*.30S515  1 p 1 0 ]
-[v sem_init@valor valor `uc  1 p 1 1 ]
+[v sem_init@sem sem `*.39S515  1 p 2 0 ]
+[v sem_init@valor valor `uc  1 p 1 2 ]
 "12
 } 0
 "43
 [v _mutex_init mutex_init `(v  1 e 1 0 ]
 {
 [s S613 mutex 11 `uc 1 locked 1 0 `uc 1 owner_id 1 1 `[6]uc 1 fila 6 2 `uc 1 pos_input 1 8 `uc 1 pos_output 1 9 `uc 1 waiting_count 1 10 ]
-[v mutex_init@m m `*.30S613  1 p 1 0 ]
+[v mutex_init@m m `*.39S613  1 p 2 0 ]
 "49
 } 0
 "4 C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\io.c
@@ -743,7 +743,7 @@ WAITING_SEM 3
 [v _tarefaLeituraADC tarefaLeituraADC `(v  1 e 1 0 ]
 {
 "52
-[v tarefaLeituraADC@valor valor `uc  1 a 1 31 ]
+[v tarefaLeituraADC@valor valor `uc  1 a 1 13 ]
 "56
 } 0
 "11 C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\com.c
@@ -751,22 +751,22 @@ WAITING_SEM 3
 {
 [s S515 sem 9 `uc 1 contador 1 0 `[6]uc 1 fila 6 1 `uc 1 pos_input 1 7 `uc 1 pos_output 1 8 ]
 [s S669 pipe 24 `[4]uc 1 fila_dados 4 0 `uc 1 pos_input 1 4 `uc 1 pos_output 1 5 `S515 1 s_input 9 6 `S515 1 s_output 9 15 ]
-[v pipe_write@p p `*.30S669  1 p 1 28 ]
-[v pipe_write@dado dado `uc  1 p 1 29 ]
+[v pipe_write@p p `*.30S669  1 p 1 8 ]
+[v pipe_write@dado dado `uc  1 p 1 9 ]
 "17
 } 0
 "14 C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\sync.c
 [v _sem_wait sem_wait `(v  1 e 1 0 ]
 {
 [s S515 sem 9 `uc 1 contador 1 0 `[6]uc 1 fila 6 1 `uc 1 pos_input 1 7 `uc 1 pos_output 1 8 ]
-[v sem_wait@sem sem `*.30S515  1 p 1 40 ]
+[v sem_wait@sem sem `*.39S515  1 p 2 41 ]
 "28
 } 0
 "30
 [v _sem_post sem_post `(v  1 e 1 0 ]
 {
 [s S515 sem 9 `uc 1 contador 1 0 `[6]uc 1 fila 6 1 `uc 1 pos_input 1 7 `uc 1 pos_output 1 8 ]
-[v sem_post@sem sem `*.30S515  1 p 1 32 ]
+[v sem_post@sem sem `*.39S515  1 p 2 31 ]
 "41
 } 0
 "12 C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\kernel.c
@@ -775,7 +775,7 @@ WAITING_SEM 3
 [v os_delay@time time `uc  1 p 1 wreg ]
 [v os_delay@time time `uc  1 p 1 wreg ]
 "14
-[v os_delay@time time `uc  1 p 1 131 ]
+[v os_delay@time time `uc  1 p 1 135 ]
 "22
 } 1
 "9 C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\scheduler.c
@@ -792,11 +792,11 @@ WAITING_SEM 3
 [v i1___awmod __awmod `(i  1 e 2 0 ]
 {
 "10
-[v i1___awmod@sign sign `uc  1 a 1 119 ]
-[v i1___awmod@counter counter `uc  1 a 1 118 ]
+[v i1___awmod@sign sign `uc  1 a 1 123 ]
+[v i1___awmod@counter counter `uc  1 a 1 122 ]
 "7
-[v i1___awmod@dividend dividend `i  1 p 2 114 ]
-[v i1___awmod@divisor divisor `i  1 p 2 116 ]
+[v i1___awmod@dividend dividend `i  1 p 2 118 ]
+[v i1___awmod@divisor divisor `i  1 p 2 120 ]
 "34
 } 0
 "16 C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\io.c
@@ -804,62 +804,62 @@ WAITING_SEM 3
 {
 [v adc_read@channel channel `uc  1 p 1 wreg ]
 [v adc_read@channel channel `uc  1 p 1 wreg ]
-[v adc_read@channel channel `uc  1 p 1 29 ]
+[v adc_read@channel channel `uc  1 p 1 12 ]
 "21
 } 1
 "59 C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\user.c
 [v _tarefaProcessamento tarefaProcessamento `(v  1 e 1 0 ]
 {
 "60
-[v tarefaProcessamento@dado dado `uc  1 a 1 39 ]
-"69
+[v tarefaProcessamento@dado dado `uc  1 a 1 40 ]
+"70
 } 0
 "19 C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\com.c
 [v _pipe_read pipe_read `(v  1 e 1 0 ]
 {
 [s S515 sem 9 `uc 1 contador 1 0 `[6]uc 1 fila 6 1 `uc 1 pos_input 1 7 `uc 1 pos_output 1 8 ]
 [s S669 pipe 24 `[4]uc 1 fila_dados 4 0 `uc 1 pos_input 1 4 `uc 1 pos_output 1 5 `S515 1 s_input 9 6 `S515 1 s_output 9 15 ]
-[v pipe_read@p p `*.30S669  1 p 1 35 ]
-[v pipe_read@dado dado `*.39uc  1 p 2 36 ]
+[v pipe_read@p p `*.30S669  1 p 1 37 ]
+[v pipe_read@dado dado `*.39uc  1 p 2 38 ]
 "25
 } 0
-"72 C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\user.c
+"73 C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\user.c
 [v _tarefaControlePWM tarefaControlePWM `(v  1 e 1 0 ]
 {
-"81
+"82
 } 0
 "32 C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\io.c
 [v _pwm_set_duty pwm_set_duty `(v  1 e 1 0 ]
 {
-[v pwm_set_duty@duty duty `us  1 p 2 40 ]
+[v pwm_set_duty@duty duty `us  1 p 2 41 ]
 "36
 } 0
 "69 C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\sync.c
 [v _mutex_unlock mutex_unlock `(v  1 e 1 0 ]
 {
 "74
-[v mutex_unlock@task_idx task_idx `uc  1 a 1 43 ]
+[v mutex_unlock@task_idx task_idx `uc  1 a 1 46 ]
 [s S613 mutex 11 `uc 1 locked 1 0 `uc 1 owner_id 1 1 `[6]uc 1 fila 6 2 `uc 1 pos_input 1 8 `uc 1 pos_output 1 9 `uc 1 waiting_count 1 10 ]
 "69
-[v mutex_unlock@m m `*.30S613  1 p 1 40 ]
+[v mutex_unlock@m m `*.39S613  1 p 2 41 ]
 "86
 } 0
 "51
 [v _mutex_lock mutex_lock `(v  1 e 1 0 ]
 {
 [s S613 mutex 11 `uc 1 locked 1 0 `uc 1 owner_id 1 1 `[6]uc 1 fila 6 2 `uc 1 pos_input 1 8 `uc 1 pos_output 1 9 `uc 1 waiting_count 1 10 ]
-[v mutex_lock@m m `*.30S613  1 p 1 40 ]
+[v mutex_lock@m m `*.39S613  1 p 2 41 ]
 "67
 } 0
-"84 C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\user.c
+"85 C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\user.c
 [v _tarefaFeedbackLED tarefaFeedbackLED `(v  1 e 1 0 ]
 {
-"89
+"90
 } 0
-"92
+"93
 [v _tarefaOneShot tarefaOneShot `(v  1 e 1 0 ]
 {
-"104
+"105
 } 0
 "97 C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\kernel.c
 [v _os_task_change_state os_task_change_state `(v  1 e 1 0 ]
@@ -867,18 +867,18 @@ WAITING_SEM 3
 [v os_task_change_state@new_state new_state `E37  1 p 1 wreg ]
 [v os_task_change_state@new_state new_state `E37  1 p 1 wreg ]
 [s S67 hw_stack 3 `uc 1 TOSL_REG 1 0 `uc 1 TOSH_REG 1 1 `uc 1 TOSU_REG 1 2 ]
-[s S71 sw_stack 49 `[16]S67 1 stack 48 0 `uc 1 stack_size 1 48 ]
-[s S74 tcb 72 `uc 1 task_id 1 0 `E37 1 task_state 1 1 `*.37(v 1 task_ptr 2 2 `uc 1 task_delay 1 4 `uc 1 task_priority 1 5 `uc 1 W_REG 1 6 `uc 1 STATUS_REG 1 7 `uc 1 BSR_REG 1 8 `uc 1 PRODL_REG 1 9 `uc 1 PRODH_REG 1 10 `uc 1 FSR0L_REG 1 11 `uc 1 FSR0H_REG 1 12 `uc 1 FSR1L_REG 1 13 `uc 1 FSR1H_REG 1 14 `uc 1 FSR2L_REG 1 15 `uc 1 FSR2H_REG 1 16 `uc 1 TABLAT_REG 1 17 `uc 1 TBLPTRL_REG 1 18 `uc 1 TBLPTRH_REG 1 19 `uc 1 TBLPTRU_REG 1 20 `uc 1 PCLATH_REG 1 21 `uc 1 PCLATU_REG 1 22 `S71 1 task_stack 49 23 ]
-[v os_task_change_state@task_handle task_handle `*.39S74  1 p 2 124 ]
+[s S71 sw_stack 37 `[12]S67 1 stack 36 0 `uc 1 stack_size 1 36 ]
+[s S74 tcb 60 `uc 1 task_id 1 0 `E37 1 task_state 1 1 `*.37(v 1 task_ptr 2 2 `uc 1 task_delay 1 4 `uc 1 task_priority 1 5 `uc 1 W_REG 1 6 `uc 1 STATUS_REG 1 7 `uc 1 BSR_REG 1 8 `uc 1 PRODL_REG 1 9 `uc 1 PRODH_REG 1 10 `uc 1 FSR0L_REG 1 11 `uc 1 FSR0H_REG 1 12 `uc 1 FSR1L_REG 1 13 `uc 1 FSR1H_REG 1 14 `uc 1 FSR2L_REG 1 15 `uc 1 FSR2H_REG 1 16 `uc 1 TABLAT_REG 1 17 `uc 1 TBLPTRL_REG 1 18 `uc 1 TBLPTRH_REG 1 19 `uc 1 TBLPTRU_REG 1 20 `uc 1 PCLATH_REG 1 21 `uc 1 PCLATU_REG 1 22 `S71 1 task_stack 37 23 ]
+[v os_task_change_state@task_handle task_handle `*.39S74  1 p 2 128 ]
 "99
-[v os_task_change_state@new_state new_state `E37  1 p 1 133 ]
+[v os_task_change_state@new_state new_state `E37  1 p 1 137 ]
 "111
 } 1
 "26 C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\hw.c
 [v _ISR ISR `IIH(v  1 e 1 0 ]
 {
 "32
-[v ISR@i i `i  1 a 2 90 ]
+[v ISR@i i `i  1 a 2 78 ]
 "62
 } 0
 "9 C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\scheduler.c
@@ -908,9 +908,9 @@ WAITING_SEM 3
 [v i2os_create_task@id id `uc  1 p 1 wreg ]
 [s S67 hw_stack 3 `uc 1 TOSL_REG 1 0 `uc 1 TOSH_REG 1 1 `uc 1 TOSU_REG 1 2 ]
 "27
-[s S71 sw_stack 49 `[16]S67 1 stack 48 0 `uc 1 stack_size 1 48 ]
-[s S74 tcb 72 `uc 1 task_id 1 0 `E37 1 task_state 1 1 `*.37(v 1 task_ptr 2 2 `uc 1 task_delay 1 4 `uc 1 task_priority 1 5 `uc 1 W_REG 1 6 `uc 1 STATUS_REG 1 7 `uc 1 BSR_REG 1 8 `uc 1 PRODL_REG 1 9 `uc 1 PRODH_REG 1 10 `uc 1 FSR0L_REG 1 11 `uc 1 FSR0H_REG 1 12 `uc 1 FSR1L_REG 1 13 `uc 1 FSR1H_REG 1 14 `uc 1 FSR2L_REG 1 15 `uc 1 FSR2H_REG 1 16 `uc 1 TABLAT_REG 1 17 `uc 1 TBLPTRL_REG 1 18 `uc 1 TBLPTRH_REG 1 19 `uc 1 TBLPTRU_REG 1 20 `uc 1 PCLATH_REG 1 21 `uc 1 PCLATU_REG 1 22 `S71 1 task_stack 49 23 ]
-[v i2os_create_task@new_task new_task `S74  1 a 72 5 ]
+[s S71 sw_stack 37 `[12]S67 1 stack 36 0 `uc 1 stack_size 1 36 ]
+[s S74 tcb 60 `uc 1 task_id 1 0 `E37 1 task_state 1 1 `*.37(v 1 task_ptr 2 2 `uc 1 task_delay 1 4 `uc 1 task_priority 1 5 `uc 1 W_REG 1 6 `uc 1 STATUS_REG 1 7 `uc 1 BSR_REG 1 8 `uc 1 PRODL_REG 1 9 `uc 1 PRODH_REG 1 10 `uc 1 FSR0L_REG 1 11 `uc 1 FSR0H_REG 1 12 `uc 1 FSR1L_REG 1 13 `uc 1 FSR1H_REG 1 14 `uc 1 FSR2L_REG 1 15 `uc 1 FSR2H_REG 1 16 `uc 1 TABLAT_REG 1 17 `uc 1 TBLPTRL_REG 1 18 `uc 1 TBLPTRH_REG 1 19 `uc 1 TBLPTRU_REG 1 20 `uc 1 PCLATH_REG 1 21 `uc 1 PCLATU_REG 1 22 `S71 1 task_stack 37 23 ]
+[v i2os_create_task@new_task new_task `S74  1 a 60 5 ]
 "25
 [v i2os_create_task@id id `uc  1 p 1 wreg ]
 [v i2os_create_task@func func `*.37(v  1 p 2 0 ]
