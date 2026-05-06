@@ -53,9 +53,8 @@ void __interrupt() ISR(void)
     if (INTCONbits.INT0IF == 1) {
         INTCONbits.INT0IF = 0;
         // Cria a tarefa de execução única com prioridade alta
-        // ID 9 é apenas um exemplo
-        //os_create_task(4, tarefaOneShot, 5);
-        PORTDbits.RD1 = 1;
+        // ID 6
+        os_create_task(6, tarefaOneShot, 5);
 
     }
 }

@@ -1,202 +1,88 @@
 #include "user.h"
-#include <xc.h>
 #include "kernel.h"
 #include "sync.h"
 #include "com.h"
 #include "io.h"
+#include <xc.h>
 
-sem_t s;
-pipe_t p;
-mutex_t m_led;
+// Objetos de Sincronizacao e Comunicacao
+pipe_t pipe_adc;
+mutex_t mutex_recurso;
+sem_t sem_processamento;
 
-void config_user() {
-
-    ANSELBbits.ANSB0 = 0;
-    TRISBbits.RB0 = 1; // Configura RB0 como entrada de interrupção externa
-    TRISCbits.RC6 = 0;
-    TRISCbits.RC7 = 0;
-    TRISDbits.RD0 = 0;
-    TRISDbits.RD1 = 0;
-    ANSELDbits.ANSD0 = 0;
-    ANSELCbits.ANSC6 = 0;
-    ANSELCbits.ANSC7 = 0;
-    INTCONbits.INT0IE = 1; // Habilita INT0
-    INTCON2bits.INTEDG0 = 1; // Interrupt on falling edge 
-    INTCONbits.INT0IF = 0; // Flag interrupt
-        
-
-
-    //    asm("global _LED_1, _LED_2, _LED_3,_LED_1_mutex, _LED_2_mutex,_LED_1_prio,_LED_2_prio,_LED_3_prio");
-
-    //    asm("global _LED_1, _LED_2, _LED_3");
-    //    asm("global _LED_1_mutex, _LED_2_mutex");
-    //    asm("global _LED_1_prio,_LED_2_prio,_LED_3_prio");
-
-    //asm("global _tarefaLeituraADC");
-    asm("global _tarefaPWN");
-    asm("global _tarefaOneShot");
-
-
-    //  sem_init(&s, 0);
-    // pipe_init(&p);
-    //mutex_init(&m_led);
-    // adc_config();
+void config_user(void)
+{
+    // Configura Pinos
+    TRISD = 0x00; // PORTD como saida (LEDs de status)
+    
+    // Inicializa Perifericos
+    adc_config();
     pwm_init();
+    
+    // Inicializa Primitivas do SO
+    pipe_init(&pipe_adc);
+    mutex_init(&mutex_recurso);
+    sem_init(&sem_processamento, 0);
 
+    // Exporta simbolos para o assembly (necessario para o contexto do professor)
+    asm("global _tarefaLeituraADC");
+    asm("global _tarefaProcessamento");
+    asm("global _tarefaControlePWM");
+    asm("global _tarefaFeedbackLED");
+    asm("global _tarefaOneShot");
 }
 
-TASK acionaMotor() {
-    while (1) {
-
-    }
-}
-
-TASK ligaLed() {
-    while (1) {
-
-    }
-}
-
-TASK apagaLed() {
-    while (1) {
-
-    }
-}
-
-TASK LED_1() {
-    //char *acionamento = SRAMAlloc(6);
-    char acionamento[] = {'L', 'L', 'D', 'L', 'D', 'D'};
-    uint8_t pos = 0;
-    while (1) {
-        PORTCbits.RC6 = ~PORTCbits.RC6;
-        pipe_write(&p, acionamento[pos]);
-        pos = (pos + 1) % 6;
-        //os_delay(5);
-    }
-}
-
-TASK LED_2() {
-    while (1) {
-
-        //sem_post(&controle_leitura);
-        PORTCbits.RC7 = ~PORTCbits.RC7;
-        //sem_post(&s);
-        //os_delay(5);
-    }
-}
-
-TASK LED_3() {
-    char dado;
-    while (1) {
-        pipe_read(&p, &dado);
-        if (dado == 'L')
-            PORTDbits.RD0 = 1;
-        else if (dado == 'D')
-            PORTDbits.RD0 = 0;
-        //os_delay(1);
-        //os_task_change_state(WAITING, NULL);
-    }
-}
-
-
-//teste mutex
-
-TASK LED_1_mutex() {
-    while (1) {
-        mutex_lock(&m_led);
-
-        PORTCbits.RC6 = 1;
-        os_delay(5);
-        PORTCbits.RC6 = 0;
-
-        mutex_unlock(&m_led);
-    }
-}
-
-TASK LED_2_mutex() {
-    while (1) {
-        mutex_lock(&m_led);
-
-        PORTCbits.RC7 = 1;
-        os_delay(5);
-        PORTCbits.RC7 = 0;
-
-        mutex_unlock(&m_led);
-    }
-}
-
-//RR com prioridade
-
-TASK LED_1_prio() {
-    while (1) {
-        PORTCbits.RC6 = 1;
-        os_delay(5);
-        PORTCbits.RC6 = 0;
-    }
-}
-
-TASK LED_2_prio() {
-    while (1) {
-        PORTCbits.RC7 = 1;
-        os_delay(5);
-        PORTCbits.RC7 = 0;
-    }
-}
-
-TASK LED_3_prio() {
-    while (1) {
-        PORTDbits.RD0 = 1;
-        os_delay(5);
-        PORTDbits.RD0 = 0;
-    }
-}
-
-TASK tarefaLeituraADC_UART(void) {
+// TAREFA 1: Le ADC e envia para o PIPE (Prioridade 5)
+TASK tarefaLeituraADC(void) {
     uint16_t valor;
-
-    while (1) {
-        valor = adc_read(0);
-        if (valor > 100) {
-            PORTDbits.RD0 = 1;
-
-        } else {
-            PORTDbits.RD0 = 0;
-
-        }
-        os_delay(10);
+    while(1) {
+        valor = adc_read(0); // Le canal AN0
+        pipe_write(&pipe_adc, (uint8_t)(valor >> 2)); // Envia 8 bits significativos
+        os_delay(10); // Espera 10 ticks
     }
 }
 
-TASK tarefaPWN(void) {
-    uint16_t brilho = 0;
-    int8_t direcao = 1;
-
-    while (1) {
-        pwm_set_duty(brilho);
-
-        if (direcao == 1) {
-            brilho += 10;
-            if (brilho >= 1000) direcao = -1;
-        } else {
-            brilho -= 10;
-            if (brilho <= 10) direcao = 1;
-        }
-
-        os_delay(5);
+// TAREFA 2: Processa dado do PIPE e libera semaforo (Prioridade 5 - Round Robin com T1)
+TASK tarefaProcessamento(void) {
+    uint8_t dado;
+    while(1) {
+        dado = pipe_read(&pipe_adc,&dado);
+        // Processamento ficticio
+        PORTD = dado; 
+        sem_post(&sem_processamento); // Avisa que dado esta pronto para o PWM
     }
 }
 
-// TAREFA One-Shot (Disparada por Interrupcao Externa)
+// TAREFA 3: Controle de PWM baseado no semaforo (Prioridade 7 - Maior)
+TASK tarefaControlePWM(void) {
+    while(1) {
+        sem_wait(&sem_processamento);
+        // Protege o acesso ao PWM com Mutex (exemplo de uso)
+        mutex_lock(&mutex_recurso);
+        pwm_set_duty(PORTD << 2); 
+        mutex_unlock(&mutex_recurso);
+    }
+}
+
+// TAREFA 4: Feedback Visual (Prioridade 3 - Menor)
+TASK tarefaFeedbackLED(void) {
+    while(1) {
+        LATDbits.LATD7 = ~LATDbits.LATD7; // Pisca LED de heartbeat
+        os_delay(50);
+    }
+}
+
+// TAREFA 5: One-Shot (Disparada por Interrupcao Externa)
 TASK tarefaOneShot(void) {
     // Executa uma acao unica e termina
-    PORTDbits.RD1 = 1;
-    os_delay(10);
-    PORTDbits.RD1 = 0;
-
-    // Informa ao kernel que a tarefa acabou
-    //os_task_exit();
-    while (1) {
+    LATDbits.LATD6 = 1;
+    os_delay(20);
+    LATDbits.LATD6 = 0;
+    
+    // Como o SO do professor nao tem "exit_task", 
+    // a tarefa one-shot deve se auto-suspender ou ficar em loop infinito
+    // No hw.c, ela eh recriada a cada interrupcao.
+    while(1) {
         os_task_change_state(WAITING, 0); // Suspende a si mesma
-        os_delay(5);
     }
 }
