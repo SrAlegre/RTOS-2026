@@ -141,7 +141,7 @@ typedef struct hw_stack {
 } hw_stack_t;
 
 typedef struct sw_stack {
-    hw_stack_t stack[31];
+    hw_stack_t stack[16];
     uint8_t stack_size;
 } sw_stack_t;
 
@@ -177,7 +177,7 @@ typedef struct tcb {
 
 
 typedef struct ready_queue {
-    tcb_t TASKS[3 +1];
+    tcb_t TASKS[6 +1];
     uint8_t size;
     tcb_t *task_running;
     uint8_t pos_task_running;
@@ -9943,8 +9943,8 @@ TASK idle();
 
 
 typedef struct sem {
-    int contador;
-    uint8_t fila[3];
+    uint8_t contador;
+    uint8_t fila[6];
     uint8_t pos_input;
     uint8_t pos_output;
 } sem_t;
@@ -9952,7 +9952,7 @@ typedef struct sem {
 typedef struct mutex {
     uint8_t locked;
     uint8_t owner_id;
-    uint8_t fila[3];
+    uint8_t fila[6];
     uint8_t pos_input;
     uint8_t pos_output;
     uint8_t waiting_count;
@@ -10008,6 +10008,8 @@ pipe_t pipe_adc;
 mutex_t mutex_recurso;
 sem_t sem_processamento;
 
+volatile uint8_t dado_processado;
+
 void config_user(void)
 {
 
@@ -10022,7 +10024,7 @@ void config_user(void)
     ANSELCbits.ANSC6 = 0;
     ANSELCbits.ANSC7 = 0;
     INTCONbits.INT0IE = 1;
-    INTCON2bits.INTEDG0 = 1;
+    INTCON2bits.INTEDG0 = 0;
     INTCONbits.INT0IF = 0;
 
 
@@ -10044,10 +10046,9 @@ void config_user(void)
 
 
 TASK tarefaLeituraADC(void) {
-    uint16_t valor;
     while(1) {
-        valor = adc_read(0);
-        pipe_write(&pipe_adc, (uint8_t)(valor >> 2));
+        uint8_t valor = (uint8_t)(adc_read(0) >> 2);
+        pipe_write(&pipe_adc, valor);
         os_delay(10);
     }
 }
@@ -10058,7 +10059,9 @@ TASK tarefaProcessamento(void) {
     while(1) {
         pipe_read(&pipe_adc, &dado);
 
-        PORTD = dado;
+
+        dado_processado = dado;
+        LATD = dado;
         sem_post(&sem_processamento);
     }
 }
@@ -10069,8 +10072,9 @@ TASK tarefaControlePWM(void) {
         sem_wait(&sem_processamento);
 
         mutex_lock(&mutex_recurso);
-        pwm_set_duty(((uint16_t)PORTD) << 2);
+        pwm_set_duty(((uint16_t)dado_processado) << 2);
         mutex_unlock(&mutex_recurso);
+
     }
 }
 
@@ -10078,7 +10082,7 @@ TASK tarefaControlePWM(void) {
 TASK tarefaFeedbackLED(void) {
     while(1) {
         LATDbits.LATD7 = ~LATDbits.LATD7;
-        os_delay(50);
+        os_delay(10);
     }
 }
 

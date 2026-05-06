@@ -7,7 +7,7 @@
 // Padrão POSIX
 
 typedef struct sem {
-    int contador;
+    uint8_t contador;
     uint8_t fila[MAX_USER_TASKS];
     uint8_t pos_input;
     uint8_t pos_output;

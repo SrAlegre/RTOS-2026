@@ -2,6 +2,7 @@
 #include "scheduler.h"
 #include "user.h"
 #include "hw.h"
+#include "os_config.h"
 //#include "mem.h"
 
 // Fila de aptos
@@ -19,21 +20,6 @@ void os_delay(uint8_t time)
     
     ENABLE_ALL_INTERRUPTS();
 }
-
-// Função para a tarefa se auto-eliminar ao fim da execução
-void os_task_exit() {
-    DISABLE_ALL_INTERRUPTS();
-    
-    // Marca a tarefa atual como terminada
-    r_queue.task_running->task_state = READY;
-    
-    // Força uma troca de contexto imediata para outra tarefa pronta
-    scheduler();
-    RESTORE_CONTEXT();
-    
-    ENABLE_ALL_INTERRUPTS(); // Nunca chegará aqui se o scheduler funcionar
-}
-//-------------------------------------------------------//
 
 
 void os_create_task(uint8_t id, f_ptr func, uint8_t prior)
@@ -66,8 +52,12 @@ void os_create_task(uint8_t id, f_ptr func, uint8_t prior)
     new_task.task_stack.stack_size = 0;
     
     // Insere nova tarefa na fila de aptos
-    r_queue.TASKS[r_queue.size++] = new_task;
+    //r_queue.TASKS[r_queue.size++] = new_task;
+    if (r_queue.size < MAX_USER_TASKS) {
+        r_queue.TASKS[r_queue.size++] = new_task;
+        // error: (1360) no space for auto/param os_create_task@new_task
     }
+}
 
 void os_yield()
 {
@@ -99,9 +89,9 @@ void os_config()
 void os_start()
 {  
     setup_hardware();
+    ENABLE_ALL_INTERRUPTS();
     scheduler();
     RESTORE_CONTEXT();
-    ENABLE_ALL_INTERRUPTS();
 }
 
 void os_task_change_state(state_t new_state, tcb_t *task_handle)

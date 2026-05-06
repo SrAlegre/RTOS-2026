@@ -9858,7 +9858,7 @@ typedef struct hw_stack {
 } hw_stack_t;
 
 typedef struct sw_stack {
-    hw_stack_t stack[31];
+    hw_stack_t stack[16];
     uint8_t stack_size;
 } sw_stack_t;
 
@@ -9894,7 +9894,7 @@ typedef struct tcb {
 
 
 typedef struct ready_queue {
-    tcb_t TASKS[3 +1];
+    tcb_t TASKS[6 +1];
     uint8_t size;
     tcb_t *task_running;
     uint8_t pos_task_running;
@@ -9998,6 +9998,8 @@ void __attribute__((picinterrupt(("")))) ISR(void)
 
 
         os_create_task(6, tarefaOneShot, 5);
+
+
 
     }
 }

@@ -55,6 +55,8 @@ void __interrupt() ISR(void)
         // Cria a tarefa de execução única com prioridade alta
         // ID 6
         os_create_task(6, tarefaOneShot, 5);
+        // Ativa tarefa one-shot
+        //os_task_set_ready(tarefaOneShot);
 
     }
 }

@@ -18,7 +18,11 @@ void scheduler() {
 }
 
 uint8_t RR_scheduler() {
-    uint8_t prox = r_queue.pos_task_running, tentativas = 0;
+    static uint8_t prox;
+    static uint8_t tentativas;
+    
+    prox = r_queue.pos_task_running;
+    tentativas = 0;
 
     do {
         prox = (prox + 1) % r_queue.size;
@@ -31,14 +35,18 @@ uint8_t RR_scheduler() {
 }
 
 uint8_t priority_scheduler(void) {
-    uint8_t prox = r_queue.pos_task_running;
+    static uint8_t i;
+    static uint8_t prox;
+    static uint8_t current_task;
+    
+    prox = r_queue.pos_task_running;
 
     while (r_queue.TASKS[prox].task_state != READY)
         prox = (prox + 1) % r_queue.size;
 
-    uint8_t current_task = r_queue.TASKS[prox].task_priority;
+    current_task = r_queue.TASKS[prox].task_priority;
 
-    for (uint8_t i = 1; i < r_queue.size; i++) {
+    for (i = 1; i < r_queue.size; i++) {
         if (r_queue.TASKS[i].task_state == READY &&
                 r_queue.TASKS[i].task_priority > current_task) {
             prox = i;
@@ -50,11 +58,17 @@ uint8_t priority_scheduler(void) {
 }
 
 uint8_t priority_rr_scheduler(void) {
-    uint8_t max_prio = 0;
-    uint8_t found = 0;
+    static uint8_t max_prio;
+    static uint8_t found;
+    static uint8_t i;
+    static uint8_t current;
+    static uint8_t idx;
+    
+    max_prio = 0;
+    found = 0;
 
     // Encontra a maior prioridade entre tarefas prontas
-    for (uint8_t i = 0; i < r_queue.size; i++) {
+    for (i = 0; i < r_queue.size; i++) {
         if (r_queue.TASKS[i].task_state == READY) {
             if (!found || r_queue.TASKS[i].task_priority > max_prio) {
                 max_prio = r_queue.TASKS[i].task_priority;
@@ -63,10 +77,10 @@ uint8_t priority_rr_scheduler(void) {
         }
     }
     if (!found)return 0; // se não achar entao vai mandar o idle
-    uint8_t current = r_queue.pos_task_running;
+    current = r_queue.pos_task_running;
 
-    for (uint8_t i = 0; i < r_queue.size; i++) {
-        uint8_t idx = (current + i) % r_queue.size;
+    for (i = 0; i < r_queue.size; i++) {
+        idx = (current + i) % r_queue.size;
         if (r_queue.TASKS[idx].task_state == READY &&
             r_queue.TASKS[idx].task_priority == max_prio) {
             return idx;

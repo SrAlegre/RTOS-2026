@@ -141,7 +141,7 @@ typedef struct hw_stack {
 } hw_stack_t;
 
 typedef struct sw_stack {
-    hw_stack_t stack[31];
+    hw_stack_t stack[16];
     uint8_t stack_size;
 } sw_stack_t;
 
@@ -177,7 +177,7 @@ typedef struct tcb {
 
 
 typedef struct ready_queue {
-    tcb_t TASKS[3 +1];
+    tcb_t TASKS[6 +1];
     uint8_t size;
     tcb_t *task_running;
     uint8_t pos_task_running;
@@ -194,8 +194,8 @@ typedef struct ready_queue {
 
 
 typedef struct sem {
-    int contador;
-    uint8_t fila[3];
+    uint8_t contador;
+    uint8_t fila[6];
     uint8_t pos_input;
     uint8_t pos_output;
 } sem_t;
@@ -203,7 +203,7 @@ typedef struct sem {
 typedef struct mutex {
     uint8_t locked;
     uint8_t owner_id;
-    uint8_t fila[3];
+    uint8_t fila[6];
     uint8_t pos_input;
     uint8_t pos_output;
     uint8_t waiting_count;

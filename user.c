@@ -10,6 +10,8 @@ pipe_t pipe_adc;
 mutex_t mutex_recurso;
 sem_t sem_processamento;
 
+volatile uint8_t dado_processado;
+
 void config_user(void)
 {
     // Configura Pinos
@@ -24,7 +26,7 @@ void config_user(void)
     ANSELCbits.ANSC6 = 0;
     ANSELCbits.ANSC7 = 0;
     INTCONbits.INT0IE = 1; // Habilita INT0
-    INTCON2bits.INTEDG0 = 1; // Interrupt on falling edge 
+    INTCON2bits.INTEDG0 = 0; // Interrupt on falling edge 
     INTCONbits.INT0IF = 0; // Flag interrupt
     
     // Inicializa Perifericos
@@ -46,10 +48,9 @@ void config_user(void)
 
 // TAREFA 1: Le ADC e envia para o PIPE (Prioridade 5)
 TASK tarefaLeituraADC(void) {
-    uint16_t valor;
     while(1) {
-        valor = adc_read(0); // Le canal AN0
-        pipe_write(&pipe_adc, (uint8_t)(valor >> 2)); // Envia 8 bits significativos
+        uint8_t valor = (uint8_t)(adc_read(0) >> 2); //Le canal AN0 e pega os 8bits +
+        pipe_write(&pipe_adc, valor); // Envia 8 bits significativos
         os_delay(10); // Espera 10 ticks
     }
 }
@@ -59,9 +60,12 @@ TASK tarefaProcessamento(void) {
     uint8_t dado;
     while(1) {
         pipe_read(&pipe_adc, &dado);
+        
         // Processamento ficticio
-        PORTD = dado; 
+        dado_processado = dado;
+        LATD = dado; 
         sem_post(&sem_processamento); // Avisa que dado esta pronto para o PWM
+        //os_delay(1); error: (1360) no space for auto/param os_create_task@new_task
     }
 }
 
@@ -71,8 +75,9 @@ TASK tarefaControlePWM(void) {
         sem_wait(&sem_processamento);
         // Protege o acesso ao PWM com Mutex (exemplo de uso)
         mutex_lock(&mutex_recurso);
-        pwm_set_duty(((uint16_t)PORTD) << 2);
+        pwm_set_duty(((uint16_t)dado_processado) << 2);
         mutex_unlock(&mutex_recurso);
+        //os_delay(1); error: (1359) no space for _mutex_init parameters
     }
 }
 
@@ -80,7 +85,7 @@ TASK tarefaControlePWM(void) {
 TASK tarefaFeedbackLED(void) {
     while(1) {
         LATDbits.LATD7 = ~LATDbits.LATD7; // Pisca LED de heartbeat
-        os_delay(50);
+        os_delay(10);
     }
 }
 
