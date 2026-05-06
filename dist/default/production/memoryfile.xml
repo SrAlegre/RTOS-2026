@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project>
-  <executable name="dist/default/production/RTOS-2026.production.hex">
+  <executable name="dist/default/production\RTOS-2026.production.hex">
     <memory name="program">
       <units>bytes</units>
       <length>65536</length>
-      <used>6577</used>
-      <free>58959</free>
+      <used>7991</used>
+      <free>57545</free>
     </memory>
     <memory name="data">
       <units>bytes</units>
       <length>3896</length>
-      <used>1188</used>
-      <free>2708</free>
+      <used>1223</used>
+      <free>2673</free>
     </memory>
   </executable>
 </project>

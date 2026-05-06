@@ -2,6 +2,7 @@
 #include "kernel.h"
 #include "scheduler.h"
 #include "os_config.h"
+#include "user.h"
 
 // Quantum do algoritmo Round-Robin
 uint8_t rr_quantum = QUANTUM;
@@ -18,6 +19,8 @@ void setup_hardware(void)
     T0CONbits.T0PS      = 0b111; // 1:256
     T0CONbits.TMR0ON    = 1; // Ativa timer
     TMR0                = 0;
+    INTCONbits.GIE = 1;
+    INTCONbits.PEIE = 1;
 }
 
 void __interrupt() ISR(void)
@@ -44,5 +47,15 @@ void __interrupt() ISR(void)
             scheduler();
             RESTORE_CONTEXT();
         }
+    }
+    
+    // Interrupção Externa (Disparador One-Shot)
+    if (INTCONbits.INT0IF == 1) {
+        INTCONbits.INT0IF = 0;
+        // Cria a tarefa de execução única com prioridade alta
+        // ID 9 é apenas um exemplo
+        //os_create_task(4, tarefaOneShot, 5);
+        PORTDbits.RD1 = 1;
+
     }
 }

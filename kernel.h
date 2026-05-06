@@ -14,6 +14,7 @@ extern uint8_t rr_quantum;
 // Chamadas de sistema
 void os_delay(uint8_t time);
 void os_create_task(uint8_t id, f_ptr func, uint8_t prior);
+void os_task_exit();
 void os_yield(void);
 void os_config(void);
 void os_start(void);

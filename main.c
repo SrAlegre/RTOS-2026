@@ -26,7 +26,11 @@ int main() {
 //    os_create_task(3, LED_2_prio, 3); // LED2 prioridade 3 (executa primeiro)
 //    os_create_task(4, LED_3_prio, 2); // LED3 prioridade 2 (executa em segundo)
 
-    os_create_task(2, tarefaLeituraADC_UART, 5);
+    //os_create_task(2, tarefaLeituraADC_UART, 5);
+    os_create_task(3, tarefaPWN, 3);
+    //os_create_task(4, tarefaOneShot, 5);
+    
+    
     os_start();
 
     while (1) {

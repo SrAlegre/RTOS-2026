@@ -10,12 +10,20 @@ pipe_t p;
 mutex_t m_led;
 
 void config_user() {
+
+    ANSELBbits.ANSB0 = 0;
+    TRISBbits.RB0 = 1; // Configura RB0 como entrada de interrupção externa
     TRISCbits.RC6 = 0;
     TRISCbits.RC7 = 0;
     TRISDbits.RD0 = 0;
+    TRISDbits.RD1 = 0;
     ANSELDbits.ANSD0 = 0;
     ANSELCbits.ANSC6 = 0;
     ANSELCbits.ANSC7 = 0;
+    INTCONbits.INT0IE = 1; // Habilita INT0
+    INTCON2bits.INTEDG0 = 1; // Interrupt on falling edge 
+    INTCONbits.INT0IF = 0; // Flag interrupt
+        
 
 
     //    asm("global _LED_1, _LED_2, _LED_3,_LED_1_mutex, _LED_2_mutex,_LED_1_prio,_LED_2_prio,_LED_3_prio");
@@ -26,12 +34,13 @@ void config_user() {
 
     //asm("global _tarefaLeituraADC");
     asm("global _tarefaPWN");
+    asm("global _tarefaOneShot");
 
 
-    sem_init(&s, 0);
-    pipe_init(&p);
-    mutex_init(&m_led);
-    adc_config();
+    //  sem_init(&s, 0);
+    // pipe_init(&p);
+    //mutex_init(&m_led);
+    // adc_config();
     pwm_init();
 
 }
@@ -162,9 +171,9 @@ TASK tarefaPWN(void) {
     uint16_t brilho = 0;
     int8_t direcao = 1;
 
-    while(1) {
+    while (1) {
         pwm_set_duty(brilho);
-        
+
         if (direcao == 1) {
             brilho += 10;
             if (brilho >= 1000) direcao = -1;
@@ -173,6 +182,21 @@ TASK tarefaPWN(void) {
             if (brilho <= 10) direcao = 1;
         }
 
-        os_delay(5); 
+        os_delay(5);
+    }
+}
+
+// TAREFA One-Shot (Disparada por Interrupcao Externa)
+TASK tarefaOneShot(void) {
+    // Executa uma acao unica e termina
+    PORTDbits.RD1 = 1;
+    os_delay(10);
+    PORTDbits.RD1 = 0;
+
+    // Informa ao kernel que a tarefa acabou
+    //os_task_exit();
+    while (1) {
+        os_task_change_state(WAITING, 0); // Suspende a si mesma
+        os_delay(5);
     }
 }

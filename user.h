@@ -23,6 +23,7 @@ TASK LED_3_prio();
 
 TASK tarefaLeituraADC_UART(void);
 TASK tarefaPWN(void);
+TASK tarefaOneShot(void);
 
 #endif	/* USER_H */
 
