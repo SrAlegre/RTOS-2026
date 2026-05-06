@@ -7,9 +7,18 @@ Version 4.0 HI-TECH Software Intermediate Code
 "16
 [; ;./kernel.h: 16: void os_create_task(uint8_t id, f_ptr func, uint8_t prior);
 [v _os_create_task `(v ~T0 @X0 0 ef3`uc`*F6195`uc ]
-"25 ./user.h
-[; ;./user.h: 25: TASK tarefaPWN(void);
-[v _tarefaPWN `(v ~T0 @X0 0 ef ]
+"8 ./user.h
+[; ;./user.h: 8: TASK tarefaLeituraADC(void);
+[v _tarefaLeituraADC `(v ~T0 @X0 0 ef ]
+"9
+[; ;./user.h: 9: TASK tarefaProcessamento(void);
+[v _tarefaProcessamento `(v ~T0 @X0 0 ef ]
+"10
+[; ;./user.h: 10: TASK tarefaControlePWM(void);
+[v _tarefaControlePWM `(v ~T0 @X0 0 ef ]
+"11
+[; ;./user.h: 11: TASK tarefaFeedbackLED(void);
+[v _tarefaFeedbackLED `(v ~T0 @X0 0 ef ]
 "20 ./kernel.h
 [; ;./kernel.h: 20: void os_start(void);
 [v _os_start `(v ~T0 @X0 0 ef ]
@@ -782,27 +791,36 @@ Version 4.0 HI-TECH Software Intermediate Code
 "9
 [; ;main.c: 9:     os_config();
 [e ( _os_config ..  ]
-"30
-[; ;main.c: 30:     os_create_task(3, tarefaPWN, 3);
-[e ( _os_create_task (3 , , -> -> 3 `i `uc &U _tarefaPWN -> -> 3 `i `uc ]
-"34
-[; ;main.c: 34:     os_start();
+"11
+[; ;main.c: 11:     os_create_task(2, tarefaLeituraADC, 1);
+[e ( _os_create_task (3 , , -> -> 2 `i `uc &U _tarefaLeituraADC -> -> 1 `i `uc ]
+"12
+[; ;main.c: 12:     os_create_task(3, tarefaProcessamento, 2);
+[e ( _os_create_task (3 , , -> -> 3 `i `uc &U _tarefaProcessamento -> -> 2 `i `uc ]
+"13
+[; ;main.c: 13:     os_create_task(4, tarefaControlePWM, 3);
+[e ( _os_create_task (3 , , -> -> 4 `i `uc &U _tarefaControlePWM -> -> 3 `i `uc ]
+"14
+[; ;main.c: 14:     os_create_task(5, tarefaFeedbackLED, 4);
+[e ( _os_create_task (3 , , -> -> 5 `i `uc &U _tarefaFeedbackLED -> -> 4 `i `uc ]
+"16
+[; ;main.c: 16:     os_start();
 [e ( _os_start ..  ]
-"36
-[; ;main.c: 36:     while (1) {
+"18
+[; ;main.c: 18:     while (1) {
 [e :U 882 ]
 {
-"38
-[; ;main.c: 38:     }
+"20
+[; ;main.c: 20:     }
 }
 [e :U 881 ]
 [e $U 882  ]
 [e :U 883 ]
-"40
-[; ;main.c: 40:     return 0;
+"22
+[; ;main.c: 22:     return 0;
 [e ) -> 0 `i ]
 [e $UE 880  ]
-"41
-[; ;main.c: 41: }
+"23
+[; ;main.c: 23: }
 [e :UE 880 ]
 }

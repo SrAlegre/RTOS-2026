@@ -229,7 +229,7 @@ typedef struct pipe {
 } pipe_t;
 
 void pipe_init(pipe_t *p);
-void pipe_read(pipe_t *p, char *dado);
+void pipe_read(pipe_t *p, uint8_t *dado);
 void pipe_write(pipe_t *p, char dado);
 # 2 "com.c" 2
 
@@ -249,7 +249,7 @@ void pipe_write(pipe_t *p, char dado)
     sem_post(&p->s_output);
 }
 
-void pipe_read(pipe_t *p, char *dado)
+void pipe_read(pipe_t *p, uint8_t *dado)
 {
     sem_wait(&p->s_output);
     *dado = p->fila_dados[p->pos_output];

@@ -14,6 +14,18 @@ void config_user(void)
 {
     // Configura Pinos
     TRISD = 0x00; // PORTD como saida (LEDs de status)
+    ANSELBbits.ANSB0 = 0;
+    TRISBbits.RB0 = 1; // Configura RB0 como entrada de interrup??o externa
+    TRISCbits.RC6 = 0;
+    TRISCbits.RC7 = 0;
+    TRISDbits.RD0 = 0;
+    TRISDbits.RD1 = 0;
+    ANSELDbits.ANSD0 = 0;
+    ANSELCbits.ANSC6 = 0;
+    ANSELCbits.ANSC7 = 0;
+    INTCONbits.INT0IE = 1; // Habilita INT0
+    INTCON2bits.INTEDG0 = 1; // Interrupt on falling edge 
+    INTCONbits.INT0IF = 0; // Flag interrupt
     
     // Inicializa Perifericos
     adc_config();
@@ -46,7 +58,7 @@ TASK tarefaLeituraADC(void) {
 TASK tarefaProcessamento(void) {
     uint8_t dado;
     while(1) {
-        dado = pipe_read(&pipe_adc,&dado);
+        pipe_read(&pipe_adc, &dado);
         // Processamento ficticio
         PORTD = dado; 
         sem_post(&sem_processamento); // Avisa que dado esta pronto para o PWM
@@ -59,7 +71,7 @@ TASK tarefaControlePWM(void) {
         sem_wait(&sem_processamento);
         // Protege o acesso ao PWM com Mutex (exemplo de uso)
         mutex_lock(&mutex_recurso);
-        pwm_set_duty(PORTD << 2); 
+        pwm_set_duty(((uint16_t)PORTD) << 2);
         mutex_unlock(&mutex_recurso);
     }
 }
@@ -75,9 +87,9 @@ TASK tarefaFeedbackLED(void) {
 // TAREFA 5: One-Shot (Disparada por Interrupcao Externa)
 TASK tarefaOneShot(void) {
     // Executa uma acao unica e termina
-    LATDbits.LATD6 = 1;
-    os_delay(20);
-    LATDbits.LATD6 = 0;
+    PORTDbits.RD1 = 1;
+    os_delay(10);
+    PORTDbits.RD1 = 0;
     
     // Como o SO do professor nao tem "exit_task", 
     // a tarefa one-shot deve se auto-suspender ou ficar em loop infinito

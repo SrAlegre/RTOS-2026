@@ -9931,33 +9931,20 @@ TASK idle();
 
 void config_user(void);
 
-TASK acionaMotor(void);
-TASK ligaLed(void);
-TASK apagaLed(void);
-
-
-TASK LED_1(void);
-TASK LED_2(void);
-TASK LED_3(void);
-
-TASK LED_1_mutex(void);
-TASK LED_2_mutex(void);
-
-TASK LED_1_prio();
-TASK LED_2_prio();
-TASK LED_3_prio();
-
-TASK tarefaLeituraADC_UART(void);
-TASK tarefaPWN(void);
+TASK tarefaLeituraADC(void);
+TASK tarefaProcessamento(void);
+TASK tarefaControlePWM(void);
+TASK tarefaFeedbackLED(void);
 TASK tarefaOneShot(void);
 # 7 "main.c" 2
 
 int main() {
     os_config();
-# 30 "main.c"
-    os_create_task(3, tarefaPWN, 3);
 
-
+    os_create_task(2, tarefaLeituraADC, 1);
+    os_create_task(3, tarefaProcessamento, 2);
+    os_create_task(4, tarefaControlePWM, 3);
+    os_create_task(5, tarefaFeedbackLED, 4);
 
     os_start();
 

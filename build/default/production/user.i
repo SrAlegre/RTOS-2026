@@ -186,26 +186,17 @@ typedef struct ready_queue {
 
 void config_user(void);
 
-TASK acionaMotor(void);
-TASK ligaLed(void);
-TASK apagaLed(void);
-
-
-TASK LED_1(void);
-TASK LED_2(void);
-TASK LED_3(void);
-
-TASK LED_1_mutex(void);
-TASK LED_2_mutex(void);
-
-TASK LED_1_prio();
-TASK LED_2_prio();
-TASK LED_3_prio();
-
-TASK tarefaLeituraADC_UART(void);
-TASK tarefaPWN(void);
+TASK tarefaLeituraADC(void);
+TASK tarefaProcessamento(void);
+TASK tarefaControlePWM(void);
+TASK tarefaFeedbackLED(void);
 TASK tarefaOneShot(void);
 # 2 "user.c" 2
+# 1 "./kernel.h" 1
+
+
+
+
 # 1 "C:\\Program Files\\Microchip\\xc8\\v3.10\\pic\\include/xc.h" 1 3
 # 18 "C:\\Program Files\\Microchip\\xc8\\v3.10\\pic\\include/xc.h" 3
 extern const char __xc8_OPTIM_SPEED;
@@ -9922,13 +9913,7 @@ __attribute__((__unsupported__("The " "Write_b_eep" " routine is no longer suppo
 unsigned char __t1rd16on(void);
 unsigned char __t3rd16on(void);
 # 34 "C:\\Program Files\\Microchip\\xc8\\v3.10\\pic\\include/xc.h" 2 3
-# 3 "user.c" 2
-# 1 "./kernel.h" 1
-
-
-
-
-
+# 6 "./kernel.h" 2
 
 
 extern ready_queue_t r_queue;
@@ -9947,7 +9932,7 @@ void os_start(void);
 void os_task_change_state(state_t new_state, tcb_t *task_handle);
 
 TASK idle();
-# 4 "user.c" 2
+# 3 "user.c" 2
 # 1 "./sync.h" 1
 
 
@@ -9981,7 +9966,7 @@ void sem_post(sem_t *sem);
 void mutex_init(mutex_t *m);
 void mutex_lock(mutex_t *m);
 void mutex_unlock(mutex_t *m);
-# 5 "user.c" 2
+# 4 "user.c" 2
 # 1 "./com.h" 1
 
 
@@ -10000,9 +9985,9 @@ typedef struct pipe {
 } pipe_t;
 
 void pipe_init(pipe_t *p);
-void pipe_read(pipe_t *p, char *dado);
+void pipe_read(pipe_t *p, uint8_t *dado);
 void pipe_write(pipe_t *p, char dado);
-# 6 "user.c" 2
+# 5 "user.c" 2
 # 1 "./io.h" 1
 
 
@@ -10015,14 +10000,18 @@ uint16_t adc_read(uint8_t channel);
 
 void pwm_init(void);
 void pwm_set_duty(uint16_t duty);
-# 7 "user.c" 2
+# 6 "user.c" 2
 
-sem_t s;
-pipe_t p;
-mutex_t m_led;
 
-void config_user() {
 
+pipe_t pipe_adc;
+mutex_t mutex_recurso;
+sem_t sem_processamento;
+
+void config_user(void)
+{
+
+    TRISD = 0x00;
     ANSELBbits.ANSB0 = 0;
     TRISBbits.RB0 = 1;
     TRISCbits.RC6 = 0;
@@ -10035,157 +10024,61 @@ void config_user() {
     INTCONbits.INT0IE = 1;
     INTCON2bits.INTEDG0 = 1;
     INTCONbits.INT0IF = 0;
-# 36 "user.c"
-    __asm("global _tarefaPWN");
-    __asm("global _tarefaOneShot");
 
 
-
-
-
-
+    adc_config();
     pwm_init();
 
-}
 
-TASK acionaMotor() {
-    while (1) {
-
-    }
-}
-
-TASK ligaLed() {
-    while (1) {
-
-    }
-}
-
-TASK apagaLed() {
-    while (1) {
-
-    }
-}
-
-TASK LED_1() {
-
-    char acionamento[] = {'L', 'L', 'D', 'L', 'D', 'D'};
-    uint8_t pos = 0;
-    while (1) {
-        PORTCbits.RC6 = ~PORTCbits.RC6;
-        pipe_write(&p, acionamento[pos]);
-        pos = (pos + 1) % 6;
-
-    }
-}
-
-TASK LED_2() {
-    while (1) {
+    pipe_init(&pipe_adc);
+    mutex_init(&mutex_recurso);
+    sem_init(&sem_processamento, 0);
 
 
-        PORTCbits.RC7 = ~PORTCbits.RC7;
-
-
-    }
-}
-
-TASK LED_3() {
-    char dado;
-    while (1) {
-        pipe_read(&p, &dado);
-        if (dado == 'L')
-            PORTDbits.RD0 = 1;
-        else if (dado == 'D')
-            PORTDbits.RD0 = 0;
-
-
-    }
+    __asm("global _tarefaLeituraADC");
+    __asm("global _tarefaProcessamento");
+    __asm("global _tarefaControlePWM");
+    __asm("global _tarefaFeedbackLED");
+    __asm("global _tarefaOneShot");
 }
 
 
-
-
-TASK LED_1_mutex() {
-    while (1) {
-        mutex_lock(&m_led);
-
-        PORTCbits.RC6 = 1;
-        os_delay(5);
-        PORTCbits.RC6 = 0;
-
-        mutex_unlock(&m_led);
-    }
-}
-
-TASK LED_2_mutex() {
-    while (1) {
-        mutex_lock(&m_led);
-
-        PORTCbits.RC7 = 1;
-        os_delay(5);
-        PORTCbits.RC7 = 0;
-
-        mutex_unlock(&m_led);
-    }
-}
-
-
-
-TASK LED_1_prio() {
-    while (1) {
-        PORTCbits.RC6 = 1;
-        os_delay(5);
-        PORTCbits.RC6 = 0;
-    }
-}
-
-TASK LED_2_prio() {
-    while (1) {
-        PORTCbits.RC7 = 1;
-        os_delay(5);
-        PORTCbits.RC7 = 0;
-    }
-}
-
-TASK LED_3_prio() {
-    while (1) {
-        PORTDbits.RD0 = 1;
-        os_delay(5);
-        PORTDbits.RD0 = 0;
-    }
-}
-
-TASK tarefaLeituraADC_UART(void) {
+TASK tarefaLeituraADC(void) {
     uint16_t valor;
-
-    while (1) {
+    while(1) {
         valor = adc_read(0);
-        if (valor > 100) {
-            PORTDbits.RD0 = 1;
-
-        } else {
-            PORTDbits.RD0 = 0;
-
-        }
+        pipe_write(&pipe_adc, (uint8_t)(valor >> 2));
         os_delay(10);
     }
 }
 
-TASK tarefaPWN(void) {
-    uint16_t brilho = 0;
-    int8_t direcao = 1;
 
-    while (1) {
-        pwm_set_duty(brilho);
+TASK tarefaProcessamento(void) {
+    uint8_t dado;
+    while(1) {
+        pipe_read(&pipe_adc, &dado);
 
-        if (direcao == 1) {
-            brilho += 10;
-            if (brilho >= 1000) direcao = -1;
-        } else {
-            brilho -= 10;
-            if (brilho <= 10) direcao = 1;
-        }
+        PORTD = dado;
+        sem_post(&sem_processamento);
+    }
+}
 
-        os_delay(5);
+
+TASK tarefaControlePWM(void) {
+    while(1) {
+        sem_wait(&sem_processamento);
+
+        mutex_lock(&mutex_recurso);
+        pwm_set_duty(((uint16_t)PORTD) << 2);
+        mutex_unlock(&mutex_recurso);
+    }
+}
+
+
+TASK tarefaFeedbackLED(void) {
+    while(1) {
+        LATDbits.LATD7 = ~LATDbits.LATD7;
+        os_delay(50);
     }
 }
 
@@ -10198,8 +10091,8 @@ TASK tarefaOneShot(void) {
 
 
 
-    while (1) {
+
+    while(1) {
         os_task_change_state(WAITING, 0);
-        os_delay(5);
     }
 }

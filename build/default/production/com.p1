@@ -76,14 +76,14 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :UE 9 ]
 }
 "19
-[; ;com.c: 19: void pipe_read(pipe_t *p, char *dado)
+[; ;com.c: 19: void pipe_read(pipe_t *p, uint8_t *dado)
 [v _pipe_read `(v ~T0 @X0 1 ef2`*S7`*uc ]
 "20
 [; ;com.c: 20: {
 {
 [e :U _pipe_read ]
 "19
-[; ;com.c: 19: void pipe_read(pipe_t *p, char *dado)
+[; ;com.c: 19: void pipe_read(pipe_t *p, uint8_t *dado)
 [v _p `*S7 ~T0 @X0 1 r1 ]
 [v _dado `*uc ~T0 @X0 1 r2 ]
 "20
@@ -94,7 +94,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e ( _sem_wait (1 &U . *U _p 4 ]
 "22
 [; ;com.c: 22:     *dado = p->fila_dados[p->pos_output];
-[e = *U _dado *U + &U . *U _p 0 * -> . *U _p 2 `ux -> -> # *U &U . *U _p 0 `ui `ux ]
+[e = *U _dado -> *U + &U . *U _p 0 * -> . *U _p 2 `ux -> -> # *U &U . *U _p 0 `ui `ux `uc ]
 "23
 [; ;com.c: 23:     p->pos_output = (p->pos_output + 1) % 4;
 [e = . *U _p 2 -> % + -> . *U _p 2 `i -> 1 `i -> 4 `i `uc ]

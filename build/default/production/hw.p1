@@ -128,41 +128,13 @@ Version 4.0 HI-TECH Software Intermediate Code
 "6 ./scheduler.h
 [; ;./scheduler.h: 6: void scheduler(void);
 [v _scheduler `(v ~T0 @X0 0 ef ]
-"7146 C:/Program Files/Microchip/MPLABX/v6.30/packs/Microchip/PIC18F-K_DFP/1.15.303/xc8\pic\include\proc/pic18f46k22.h
-[; ;C:/Program Files/Microchip/MPLABX/v6.30/packs/Microchip/PIC18F-K_DFP/1.15.303/xc8\pic\include\proc/pic18f46k22.h: 7146:     struct {
-[s S363 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S363 . RD0 RD1 RD2 RD3 RD4 RD5 RD6 RD7 ]
-"7156
-[; ;C:/Program Files/Microchip/MPLABX/v6.30/packs/Microchip/PIC18F-K_DFP/1.15.303/xc8\pic\include\proc/pic18f46k22.h: 7156:     struct {
-[s S364 :2 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S364 . . P2B P2C P2D P1B P1C P1D ]
-"7165
-[; ;C:/Program Files/Microchip/MPLABX/v6.30/packs/Microchip/PIC18F-K_DFP/1.15.303/xc8\pic\include\proc/pic18f46k22.h: 7165:     struct {
-[s S365 :1 `uc 1 :1 `uc 1 :4 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S365 . . CCP4 . TX2 RX2 ]
-"7172
-[; ;C:/Program Files/Microchip/MPLABX/v6.30/packs/Microchip/PIC18F-K_DFP/1.15.303/xc8\pic\include\proc/pic18f46k22.h: 7172:     struct {
-[s S366 :3 `uc 1 :1 `uc 1 ]
-[n S366 . . NOT_SS2 ]
-"7176
-[; ;C:/Program Files/Microchip/MPLABX/v6.30/packs/Microchip/PIC18F-K_DFP/1.15.303/xc8\pic\include\proc/pic18f46k22.h: 7176:     struct {
-[s S367 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S367 . SCK2 SDI2 . nSS2 SDO2 . CK2 DT2 ]
-"7186
-[; ;C:/Program Files/Microchip/MPLABX/v6.30/packs/Microchip/PIC18F-K_DFP/1.15.303/xc8\pic\include\proc/pic18f46k22.h: 7186:     struct {
-[s S368 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S368 . SCL2 SDA2 . SS2 ]
-"7192
-[; ;C:/Program Files/Microchip/MPLABX/v6.30/packs/Microchip/PIC18F-K_DFP/1.15.303/xc8\pic\include\proc/pic18f46k22.h: 7192:     struct {
-[s S369 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S369 . AN20 AN21 AN22 AN23 AN24 AN25 AN26 AN27 ]
-"7145
-[; ;C:/Program Files/Microchip/MPLABX/v6.30/packs/Microchip/PIC18F-K_DFP/1.15.303/xc8\pic\include\proc/pic18f46k22.h: 7145: typedef union {
-[u S362 `S363 1 `S364 1 `S365 1 `S366 1 `S367 1 `S368 1 `S369 1 ]
-[n S362 . . . . . . . . ]
-"7203
-[; ;C:/Program Files/Microchip/MPLABX/v6.30/packs/Microchip/PIC18F-K_DFP/1.15.303/xc8\pic\include\proc/pic18f46k22.h: 7203: extern volatile PORTDbits_t PORTDbits __attribute__((address(0xF83)));
-[v _PORTDbits `VS362 ~T0 @X0 0 e@3971 ]
+[v F6197 `(v ~T0 @X0 0 tf ]
+"16 ./kernel.h
+[; ;./kernel.h: 16: void os_create_task(uint8_t id, f_ptr func, uint8_t prior);
+[v _os_create_task `(v ~T0 @X0 0 ef3`uc`*F6197`uc ]
+"12 ./user.h
+[; ;./user.h: 12: TASK tarefaOneShot(void);
+[v _tarefaOneShot `(v ~T0 @X0 0 ef ]
 "52 C:/Program Files/Microchip/MPLABX/v6.30/packs/Microchip/PIC18F-K_DFP/1.15.303/xc8\pic\include\proc/pic18f46k22.h
 [; ;C:/Program Files/Microchip/MPLABX/v6.30/packs/Microchip/PIC18F-K_DFP/1.15.303/xc8\pic\include\proc/pic18f46k22.h: 52: __asm("ANSELA equ 0F38h");
 [; <" ANSELA equ 0F38h ;# ">
@@ -1145,14 +1117,14 @@ Version 4.0 HI-TECH Software Intermediate Code
 "54
 [; ;hw.c: 54:         INTCONbits.INT0IF = 0;
 [e = . . _INTCONbits 0 1 -> -> 0 `i `uc ]
-"58
-[; ;hw.c: 58:         PORTDbits.RD1 = 1;
-[e = . . _PORTDbits 0 1 -> -> 1 `i `uc ]
-"60
-[; ;hw.c: 60:     }
+"57
+[; ;hw.c: 57:         os_create_task(6, tarefaOneShot, 5);
+[e ( _os_create_task (3 , , -> -> 6 `i `uc &U _tarefaOneShot -> -> 5 `i `uc ]
+"59
+[; ;hw.c: 59:     }
 }
 [e :U 906 ]
-"61
-[; ;hw.c: 61: }
+"60
+[; ;hw.c: 60: }
 [e :UE 881 ]
 }

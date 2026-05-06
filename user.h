@@ -9,6 +9,7 @@ TASK tarefaLeituraADC(void);
 TASK tarefaProcessamento(void);
 TASK tarefaControlePWM(void);
 TASK tarefaFeedbackLED(void);
+TASK tarefaOneShot(void);
 
 #endif	/* USER_H */
 

@@ -108,12 +108,12 @@ Version 4.0 HI-TECH Software Intermediate Code
 "11 ./kernel.h
 [; ;./kernel.h: 11: extern uint8_t rr_quantum;
 [v _rr_quantum `uc ~T0 @X0 0 e ]
-[v F6240 `(v ~T0 @X0 0 tf ]
-[v F6243 `(v ~T0 @X0 0 tf ]
+[v F6231 `(v ~T0 @X0 0 tf ]
+[v F6234 `(v ~T0 @X0 0 tf ]
 "23
 [; ;./kernel.h: 23: TASK idle();
 [v _idle `(v ~T0 @X0 0 e? ]
-[v F6253 `(v ~T0 @X0 0 tf ]
+[v F6244 `(v ~T0 @X0 0 tf ]
 "6 ./user.h
 [; ;./user.h: 6: void config_user(void);
 [v _config_user `(v ~T0 @X0 0 ef ]
@@ -1130,7 +1130,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 }
 "39
 [; ;kernel.c: 39: void os_create_task(uint8_t id, f_ptr func, uint8_t prior)
-[v _os_create_task `(v ~T0 @X0 1 ef3`uc`*F6240`uc ]
+[v _os_create_task `(v ~T0 @X0 1 ef3`uc`*F6231`uc ]
 "40
 [; ;kernel.c: 40: {
 {
@@ -1138,7 +1138,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 "39
 [; ;kernel.c: 39: void os_create_task(uint8_t id, f_ptr func, uint8_t prior)
 [v _id `uc ~T0 @X0 1 r1 ]
-[v _func `*F6243 ~T0 @X0 1 r2 ]
+[v _func `*F6234 ~T0 @X0 1 r2 ]
 [v _prior `uc ~T0 @X0 1 r3 ]
 "40
 [; ;kernel.c: 40: {
@@ -1355,7 +1355,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = . _r_queue 3 -> -> 0 `i `uc ]
 "93
 [; ;kernel.c: 93:     os_create_task(1, idle, 0);
-[e ( _os_create_task (3 , , -> -> 1 `i `uc -> &U _idle `*F6253 -> -> 0 `i `uc ]
+[e ( _os_create_task (3 , , -> -> 1 `i `uc -> &U _idle `*F6244 -> -> 0 `i `uc ]
 "94
 [; ;kernel.c: 94:     __asm("global _idle");
 [; <" global _idle ;# ">

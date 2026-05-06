@@ -15,7 +15,7 @@ typedef struct pipe {
 } pipe_t;
 
 void pipe_init(pipe_t *p);
-void pipe_read(pipe_t *p, char *dado);
+void pipe_read(pipe_t *p, uint8_t *dado);
 void pipe_write(pipe_t *p, char dado);
 
 #endif	/* COM_H */
