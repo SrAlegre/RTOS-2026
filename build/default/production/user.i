@@ -177,7 +177,7 @@ typedef struct tcb {
 
 
 typedef struct ready_queue {
-    tcb_t TASKS[4 +1];
+    tcb_t TASKS[6 +1];
     uint8_t size;
     tcb_t *task_running;
     uint8_t pos_task_running;
@@ -9947,7 +9947,7 @@ TASK idle();
 
 typedef struct sem {
     int contador;
-    uint8_t fila[4];
+    uint8_t fila[6];
     uint8_t pos_input;
     uint8_t pos_output;
 } sem_t;
@@ -9955,7 +9955,7 @@ typedef struct sem {
 typedef struct mutex {
     uint8_t locked;
     uint8_t owner_id;
-    uint8_t fila[4];
+    uint8_t fila[6];
     uint8_t pos_input;
     uint8_t pos_output;
     uint8_t waiting_count;
@@ -10013,6 +10013,7 @@ char dado;
 void config_user() {
 
     TRISBbits.RB0 = 1;
+    ANSELBbits.ANSB0 = 0;
 
     TRISCbits.RC6 = 0;
     TRISCbits.RC7 = 0;
@@ -10027,6 +10028,7 @@ void config_user() {
 
 
     __asm("global _LED_1, _LED_2,_READ_ADC,_tarefaPWN");
+
 
 
 
@@ -10114,9 +10116,6 @@ TASK tarefaOneShot(void) {
         os_delay(10);
         LATDbits.LATD1 = 0;
         os_task_change_state(WAITING, 0);
-        mutex_unlock(&m_led);
-
-
     }
 
 }

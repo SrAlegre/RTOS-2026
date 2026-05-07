@@ -124,7 +124,7 @@ typedef uint32_t uint_fast32_t;
 
 typedef struct sem {
     int contador;
-    uint8_t fila[4];
+    uint8_t fila[6];
     uint8_t pos_input;
     uint8_t pos_output;
 } sem_t;
@@ -132,7 +132,7 @@ typedef struct sem {
 typedef struct mutex {
     uint8_t locked;
     uint8_t owner_id;
-    uint8_t fila[4];
+    uint8_t fila[6];
     uint8_t pos_input;
     uint8_t pos_output;
     uint8_t waiting_count;
@@ -211,7 +211,7 @@ typedef struct tcb {
 
 
 typedef struct ready_queue {
-    tcb_t TASKS[4 +1];
+    tcb_t TASKS[6 +1];
     uint8_t size;
     tcb_t *task_running;
     uint8_t pos_task_running;
@@ -9979,7 +9979,7 @@ void sem_wait(sem_t *sem) {
     sem->contador--;
     if (sem->contador < 0) {
         sem->fila[sem->pos_input] = r_queue.pos_task_running;
-        sem->pos_input = (sem->pos_input + 1) % 4;
+        sem->pos_input = (sem->pos_input + 1) % 6;
 
         do { if (r_queue.task_running->task_state == RUNNING) { r_queue.task_running->task_state = WAITING_SEM; r_queue.task_running->BSR_REG = BSR; r_queue.task_running->FSR0H_REG = FSR0H; r_queue.task_running->FSR0L_REG = FSR0L; r_queue.task_running->FSR1H_REG = FSR1H; r_queue.task_running->FSR1L_REG = FSR1L; r_queue.task_running->FSR2H_REG = FSR2H; r_queue.task_running->FSR2L_REG = FSR2L; r_queue.task_running->PCLATH_REG = PCLATH; r_queue.task_running->PCLATU_REG = PCLATU; r_queue.task_running->PRODH_REG = PRODH; r_queue.task_running->PRODL_REG = PRODL; r_queue.task_running->TABLAT_REG = TABLAT; r_queue.task_running->TBLPTRH_REG = TBLPTRH; r_queue.task_running->TBLPTRL_REG = TBLPTRL; r_queue.task_running->TBLPTRU_REG = TBLPTRU; r_queue.task_running->W_REG = WREG; r_queue.task_running->STATUS_REG = STATUS; r_queue.task_running->task_stack.stack_size = 0; while (STKPTR) { r_queue.task_running->task_stack.stack[r_queue.task_running->task_stack.stack_size].TOSL_REG = TOSL; r_queue.task_running->task_stack.stack[r_queue.task_running->task_stack.stack_size].TOSH_REG = TOSH; r_queue.task_running->task_stack.stack[r_queue.task_running->task_stack.stack_size].TOSU_REG = TOSU; r_queue.task_running->task_stack.stack_size += 1; __asm("POP"); } } } while (0);;
         scheduler();
@@ -9996,7 +9996,7 @@ void sem_post(sem_t *sem) {
     if (sem->contador <= 0) {
 
         r_queue.TASKS[sem->fila[sem->pos_output]].task_state = READY;
-        sem->pos_output = (sem->pos_output + 1) % 4;
+        sem->pos_output = (sem->pos_output + 1) % 6;
     }
 
     INTCONbits.GIE = 1;;
@@ -10015,7 +10015,7 @@ void mutex_lock(mutex_t *m) {
 
     if (m->locked) {
         m->fila[m->pos_input] = r_queue.pos_task_running;
-        m->pos_input = (m->pos_input + 1) % 4;
+        m->pos_input = (m->pos_input + 1) % 6;
         m->waiting_count++;
 
         do { if (r_queue.task_running->task_state == RUNNING) { r_queue.task_running->task_state = WAITING; r_queue.task_running->BSR_REG = BSR; r_queue.task_running->FSR0H_REG = FSR0H; r_queue.task_running->FSR0L_REG = FSR0L; r_queue.task_running->FSR1H_REG = FSR1H; r_queue.task_running->FSR1L_REG = FSR1L; r_queue.task_running->FSR2H_REG = FSR2H; r_queue.task_running->FSR2L_REG = FSR2L; r_queue.task_running->PCLATH_REG = PCLATH; r_queue.task_running->PCLATU_REG = PCLATU; r_queue.task_running->PRODH_REG = PRODH; r_queue.task_running->PRODL_REG = PRODL; r_queue.task_running->TABLAT_REG = TABLAT; r_queue.task_running->TBLPTRH_REG = TBLPTRH; r_queue.task_running->TBLPTRL_REG = TBLPTRL; r_queue.task_running->TBLPTRU_REG = TBLPTRU; r_queue.task_running->W_REG = WREG; r_queue.task_running->STATUS_REG = STATUS; r_queue.task_running->task_stack.stack_size = 0; while (STKPTR) { r_queue.task_running->task_stack.stack[r_queue.task_running->task_stack.stack_size].TOSL_REG = TOSL; r_queue.task_running->task_stack.stack[r_queue.task_running->task_stack.stack_size].TOSH_REG = TOSH; r_queue.task_running->task_stack.stack[r_queue.task_running->task_stack.stack_size].TOSU_REG = TOSU; r_queue.task_running->task_stack.stack_size += 1; __asm("POP"); } } } while (0);;
@@ -10035,7 +10035,7 @@ void mutex_unlock(mutex_t *m) {
         if(m->waiting_count>0){
             uint8_t task_idx =m->fila[m->pos_output];
             r_queue.TASKS[task_idx].task_state = READY;
-            m->pos_output = (m->pos_output+1)%4;
+            m->pos_output = (m->pos_output+1)%6;
             m->waiting_count--;
             m->owner_id = r_queue.TASKS[task_idx].task_id;
         }

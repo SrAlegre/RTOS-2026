@@ -57,7 +57,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [n S878 tcb task_id task_state task_ptr task_delay task_priority W_REG STATUS_REG BSR_REG PRODL_REG PRODH_REG FSR0L_REG FSR0H_REG FSR1L_REG FSR1H_REG FSR2L_REG FSR2H_REG TABLAT_REG TBLPTRL_REG TBLPTRH_REG TBLPTRU_REG PCLATH_REG PCLATU_REG task_stack ]
 "59
 [; ;./types.h: 59: typedef struct ready_queue {
-[s S879 `S878 -> 5 `i `uc 1 `*S878 1 `uc 1 ]
+[s S879 `S878 -> 7 `i `uc 1 `*S878 1 `uc 1 ]
 [n S879 ready_queue TASKS size task_running pos_task_running ]
 "8 ./kernel.h
 [; ;./kernel.h: 8: extern ready_queue_t r_queue;
@@ -128,13 +128,41 @@ Version 4.0 HI-TECH Software Intermediate Code
 "6 ./scheduler.h
 [; ;./scheduler.h: 6: void scheduler(void);
 [v _scheduler `(v ~T0 @X0 0 ef ]
-[v F6197 `(v ~T0 @X0 0 tf ]
-"16 ./kernel.h
-[; ;./kernel.h: 16: void os_create_task(uint8_t id, f_ptr func, uint8_t prior);
-[v _os_create_task `(v ~T0 @X0 0 ef3`uc`*F6197`uc ]
-"15 ./user.h
-[; ;./user.h: 15: TASK tarefaOneShot(void);
-[v _tarefaOneShot `(v ~T0 @X0 0 ef ]
+"6839 D:/Microchip/MPLABX/v6.30/packs/Microchip/PIC18F-K_DFP/1.15.303/xc8\pic\include\proc/pic18f46k22.h
+[; ;D:/Microchip/MPLABX/v6.30/packs/Microchip/PIC18F-K_DFP/1.15.303/xc8\pic\include\proc/pic18f46k22.h: 6839:     struct {
+[s S355 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S355 . RC0 RC1 RC2 RC3 RC4 RC5 RC6 RC7 ]
+"6849
+[; ;D:/Microchip/MPLABX/v6.30/packs/Microchip/PIC18F-K_DFP/1.15.303/xc8\pic\include\proc/pic18f46k22.h: 6849:     struct {
+[s S356 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S356 . T1OSO T1OSI T5CKI SCK SDI SDO TX RX ]
+"6859
+[; ;D:/Microchip/MPLABX/v6.30/packs/Microchip/PIC18F-K_DFP/1.15.303/xc8\pic\include\proc/pic18f46k22.h: 6859:     struct {
+[s S357 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S357 . P2B P2A P1A SCL SDA . CK DT ]
+"6869
+[; ;D:/Microchip/MPLABX/v6.30/packs/Microchip/PIC18F-K_DFP/1.15.303/xc8\pic\include\proc/pic18f46k22.h: 6869:     struct {
+[s S358 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S358 . T1CKI CCP2 CCP1 SCK1 SDI1 SDO1 TX1 RX1 ]
+"6879
+[; ;D:/Microchip/MPLABX/v6.30/packs/Microchip/PIC18F-K_DFP/1.15.303/xc8\pic\include\proc/pic18f46k22.h: 6879:     struct {
+[s S359 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S359 . T3CKI . CTPLS SCL1 SDA1 . CK1 DT1 ]
+"6889
+[; ;D:/Microchip/MPLABX/v6.30/packs/Microchip/PIC18F-K_DFP/1.15.303/xc8\pic\include\proc/pic18f46k22.h: 6889:     struct {
+[s S360 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S360 . T3G . AN14 AN15 AN16 AN17 AN18 AN19 ]
+"6899
+[; ;D:/Microchip/MPLABX/v6.30/packs/Microchip/PIC18F-K_DFP/1.15.303/xc8\pic\include\proc/pic18f46k22.h: 6899:     struct {
+[s S361 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S361 . . PA2 PA1 ]
+"6838
+[; ;D:/Microchip/MPLABX/v6.30/packs/Microchip/PIC18F-K_DFP/1.15.303/xc8\pic\include\proc/pic18f46k22.h: 6838: typedef union {
+[u S354 `S355 1 `S356 1 `S357 1 `S358 1 `S359 1 `S360 1 `S361 1 ]
+[n S354 . . . . . . . . ]
+"6905
+[; ;D:/Microchip/MPLABX/v6.30/packs/Microchip/PIC18F-K_DFP/1.15.303/xc8\pic\include\proc/pic18f46k22.h: 6905: extern volatile PORTCbits_t PORTCbits __attribute__((address(0xF82)));
+[v _PORTCbits `VS354 ~T0 @X0 0 e@3970 ]
 "52 D:/Microchip/MPLABX/v6.30/packs/Microchip/PIC18F-K_DFP/1.15.303/xc8\pic\include\proc/pic18f46k22.h
 [; ;D:/Microchip/MPLABX/v6.30/packs/Microchip/PIC18F-K_DFP/1.15.303/xc8\pic\include\proc/pic18f46k22.h: 52: __asm("ANSELA equ 0F38h");
 [; <" ANSELA equ 0F38h ;# ">
@@ -1113,14 +1141,14 @@ Version 4.0 HI-TECH Software Intermediate Code
 "51
 [; ;hw.c: 51:         INTCONbits.INT0IF = 0;
 [e = . . _INTCONbits 0 1 -> -> 0 `i `uc ]
-"52
-[; ;hw.c: 52:         os_create_task(6, tarefaOneShot, 6);
-[e ( _os_create_task (3 , , -> -> 6 `i `uc &U _tarefaOneShot -> -> 6 `i `uc ]
-"54
-[; ;hw.c: 54:     }
+"53
+[; ;hw.c: 53:         PORTCbits.RC7 = ~PORTCbits.RC7;
+[e = . . _PORTCbits 0 7 -> ~ -> . . _PORTCbits 0 7 `i `uc ]
+"55
+[; ;hw.c: 55:     }
 }
 [e :U 906 ]
-"55
-[; ;hw.c: 55: }
+"56
+[; ;hw.c: 56: }
 [e :UE 881 ]
 }

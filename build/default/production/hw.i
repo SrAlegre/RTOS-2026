@@ -9894,7 +9894,7 @@ typedef struct tcb {
 
 
 typedef struct ready_queue {
-    tcb_t TASKS[4 +1];
+    tcb_t TASKS[6 +1];
     uint8_t size;
     tcb_t *task_running;
     uint8_t pos_task_running;
@@ -9994,7 +9994,8 @@ void __attribute__((picinterrupt(("")))) ISR(void) {
 
     if (INTCONbits.INT0IF == 1) {
         INTCONbits.INT0IF = 0;
-        os_create_task(6, tarefaOneShot, 6);
+
+        PORTCbits.RC7 = ~PORTCbits.RC7;
 
     }
 }

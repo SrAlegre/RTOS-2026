@@ -14,6 +14,7 @@ char dado;
 void config_user() {
     //asm("global _tarefaPWN");
     TRISBbits.RB0 = 1;
+    ANSELBbits.ANSB0 = 0;
 
     TRISCbits.RC6 = 0;
     TRISCbits.RC7 = 0;
@@ -28,7 +29,8 @@ void config_user() {
 
 
     asm("global _LED_1, _LED_2,_READ_ADC,_tarefaPWN");
-    // asm("global _LED_1_prio,_LED_2_prio,_LED_3_prio");
+     //asm("global _LED_1_prio,_LED_2_prio,_LED_3_prio");
+
 
 
 
@@ -43,10 +45,10 @@ TASK LED_1(void) {
     char seq[] = {'L', 'L', 'D', 'L', 'D', 'D'};
     uint8_t pos = 0;
     while (1) {
-        PORTCbits.RC6 = ~PORTCbits.RC6; 
-        pipe_write(&p, seq[pos]); 
+        PORTCbits.RC6 = ~PORTCbits.RC6; // pisca LED RC6
+        pipe_write(&p, seq[pos]); // envia L ou D no pipe
         pos = (pos + 1) % 6;
-        sem_post(&s); 
+        sem_post(&s); // avisa tarefa 3
         mutex_lock(&m_led);
         os_delay(5);
         mutex_unlock(&m_led);
@@ -115,9 +117,6 @@ TASK tarefaOneShot(void) {
         os_delay(10);
         LATDbits.LATD1 = 0;
         os_task_change_state(WAITING, 0);
-        mutex_unlock(&m_led);
-
-
     }
 
 }

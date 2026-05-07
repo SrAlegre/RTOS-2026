@@ -1,7 +1,7 @@
 Version 4.0 HI-TECH Software Intermediate Code
 "9 ./sync.h
 [; ;./sync.h: 9: typedef struct sem {
-[s S5 `i 1 `uc -> 4 `i `uc 1 `uc 1 ]
+[s S5 `i 1 `uc -> 6 `i `uc 1 `uc 1 ]
 [n S5 sem contador fila pos_input pos_output ]
 "9 ./com.h
 [; ;./com.h: 9: typedef struct pipe {

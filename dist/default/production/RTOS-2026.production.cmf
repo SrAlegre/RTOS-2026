@@ -12,55 +12,55 @@
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
 $dist/default/production\RTOS-2026.production.o
-cinit CODE 0 2A06 2A06 66 1 2
-text0 CODE 0 2ACE 2ACE 60 1 2
-text1 CODE 0 2096 2096 2F4 1 2
-text2 CODE 0 2E4E 2E4E 1C 1 2
-text3 CODE 0 2E6A 2E6A 1A 1 2
-text4 CODE 0 238A 238A 138 1 2
-text5 CODE 0 2DFE 2DFE 28 1 2
-text6 CODE 0 2A6C 2A6C 62 1 2
-text7 CODE 0 2C8C 2C8C 42 1 2
-text8 CODE 0 2EEA 2EEA E 1 2
-text9 CODE 0 2D0A 2D0A 3A 1 2
-text10 CODE 0 2D44 2D44 30 1 2
-text11 CODE 0 2CCE 2CCE 3C 1 2
-text12 CODE 0 2E26 2E26 28 1 2
-text13 CODE 0 2DD4 2DD4 2A 1 2
-text14 CODE 0 28E2 28E2 9E 1 2
-text15 CODE 0 2B2E 2B2E 5E 1 2
-text16 CODE 0 15B8 15B8 592 1 2
-text17 CODE 0 2980 2980 86 1 2
-text18 CODE 0 1B4A 1B4A 54C 1 2
-text19 CODE 0 2722 2722 FC 1 2
-text20 CODE 0 1002 1002 5B6 1 2
-text21 CODE 0 2E84 2E84 1A 1 2
-text22 CODE 0 24C2 24C2 138 1 2
-text23 CODE 0 281E 281E C4 1 2
-text24 CODE 0 2C42 2C42 4A 1 2
-text25 CODE 0 2BEA 2BEA 58 1 2
-text26 CODE 0 2D74 2D74 30 1 2
-text27 CODE 0 2E9E 2E9E 1A 1 2
-text28 CODE 0 2ED2 2ED2 18 1 2
-text29 CODE 0 2DA4 2DA4 30 1 2
-text31 CODE 0 2EB8 2EB8 1A 1 2
-text32 CODE 0 25FA 25FA 128 1 2
-text33 CODE 0 2B8C 2B8C 5E 1 2
-idataCOMRAM CODE 0 2EF8 2EF8 7 1 1
-cstackCOMRAM COMRAM 1 2 2 43 1 1
-cstackBANK0 BANK0 1 76 76 9 1 1
-cstackBANK1 BANK1 1 100 100 3C 1 1
-cstackBANK3 BANK3 1 300 300 76 1 1
-cstackBANK4 BANK4 1 400 400 31 1 1
-bssBANK0 BANK0 1 60 60 16 1 1
-bssBANK2 BANK2 1 200 200 F4 1 1
-intcode CODE 0 8 8 622 1 2
+cinit CODE 0 2D7A 2D7A 62 1 2
+text0 CODE 0 2DDC 2DDC 60 1 2
+text1 CODE 0 231E 231E 35A 1 2
+text2 CODE 0 317C 317C 1C 1 2
+text3 CODE 0 30B0 30B0 2A 1 2
+text4 CODE 0 2678 2678 138 1 2
+text5 CODE 0 2FEE 2FEE 32 1 2
+text6 CODE 0 2D0E 2D0E 6C 1 2
+text7 CODE 0 2F34 2F34 44 1 2
+text8 CODE 0 31CA 31CA E 1 2
+text9 CODE 0 2FB4 2FB4 3A 1 2
+text10 CODE 0 3020 3020 30 1 2
+text11 CODE 0 2F78 2F78 3C 1 2
+text12 CODE 0 3104 3104 28 1 2
+text13 CODE 0 312C 312C 28 1 2
+text14 CODE 0 2BD4 2BD4 9E 1 2
+text15 CODE 0 2E94 2E94 56 1 2
+text16 CODE 0 169A 169A 670 1 2
+text17 CODE 0 2C72 2C72 9C 1 2
+text18 CODE 0 1D0A 1D0A 614 1 2
+text19 CODE 0 2A1E 2A1E 106 1 2
+text20 CODE 0 1002 1002 698 1 2
+text21 CODE 0 30DA 30DA 2A 1 2
+text22 CODE 0 27B0 27B0 138 1 2
+text23 CODE 0 2B24 2B24 B0 1 2
+text24 CODE 0 2EEA 2EEA 4A 1 2
+text25 CODE 0 2E3C 2E3C 58 1 2
+text26 CODE 0 3050 3050 30 1 2
+text27 CODE 0 3198 3198 1A 1 2
+text28 CODE 0 31B2 31B2 18 1 2
+text29 CODE 0 3080 3080 30 1 2
+text31 CODE 0 3154 3154 28 1 2
+text32 CODE 0 28E8 28E8 136 1 2
+idataCOMRAM CODE 0 31DE 31DE 1 1 1
+cstackCOMRAM COMRAM 1 2 2 19 1 1
+cstackBANK0 BANK0 1 8F 8F 20 1 1
+cstackBANK1 BANK1 1 100 100 42 1 1
+cstackBANK2 BANK2 1 200 200 80 1 1
+cstackBANK3 BANK3 1 300 300 35 1 1
+bssBANK0 BANK0 1 60 60 2F 1 1
+intcode CODE 0 8 8 746 1 2
 smallconst SMALLCONST 0 1000 1000 2 1 2
-dataCOMRAM COMRAM 1 57 57 7 1 1
-bssBIGRAM BIGRAM 1 431 431 200 1 1
-bssCOMRAM COMRAM 1 45 45 12 1 1
-$C:\Users\Yuri\AppData\Local\Temp\xcAs3uc.0\driver_tmp_9.o
-init CODE 0 62A 62A 4 1 2
+idataBANK0 CODE 0 31D8 31D8 6 1 1
+dataBANK0 BANK0 1 AF AF 6 1 1
+dataCOMRAM COMRAM 1 1C 1C 1 1 1
+bssBIGRAM BIGRAM 1 335 335 354 1 1
+bssCOMRAM COMRAM 1 1B 1B 1 1 1
+$C:\Users\Yuri\AppData\Local\Temp\xcAs2fo.0\driver_tmp_9.o
+init CODE 0 74E 74E 4 1 2
 reset_vec CODE 0 0 0 4 1 2
 # %UNUSED Section
 # This section enumerates the unused ranges of each CLASS. Each entry
@@ -68,45 +68,42 @@ reset_vec CODE 0 0 0 4 1 2
 #    <class name> <range> <delta>
 # Addresses given in the range are in hexadecimal and units of delta.
 %UNUSED
-RAM 7F-FF 1
-RAM 13C-1FF 1
-RAM 2F4-2FF 1
-RAM 376-3FF 1
-RAM 631-F37 1
+RAM B5-FF 1
+RAM 142-1FF 1
+RAM 280-2FF 1
+RAM 689-F37 1
 SFR F38-FFF 1
-BANK0 7F-FF 1
-BANK1 13C-1FF 1
-BANK2 2F4-2FF 1
-BANK3 376-3FF 1
-BANK6 631-6FF 1
+BANK0 B5-FF 1
+BANK1 142-1FF 1
+BANK2 280-2FF 1
+BANK6 689-6FF 1
 BANK7 700-7FF 1
 BANK8 800-8FF 1
 BANK9 900-9FF 1
 CONST 4-7 1
-CONST 62E-FFF 1
-CONST 2EFF-FFFF 1
+CONST 752-FFF 1
+CONST 31DF-FFFF 1
 IDLOC 200000-200007 1
-SMALLCONST 2EFF-FFFF 1
+SMALLCONST 31DF-FFFF 1
 CODE 4-7 1
-CODE 62E-FFF 1
-CODE 2EFF-FFFF 1
+CODE 752-FFF 1
+CODE 31DF-FFFF 1
 BANK10 A00-AFF 1
 BANK11 B00-BFF 1
 BANK12 C00-CFF 1
 BANK13 D00-DFF 1
 BANK14 E00-EFF 1
 BANK15 F00-F37 1
-BIGRAM 5E-5F 1
-BIGRAM 7F-FF 1
-BIGRAM 13C-1FF 1
-BIGRAM 2F4-2FF 1
-BIGRAM 376-3FF 1
-BIGRAM 631-F37 1
+BIGRAM 1D-5F 1
+BIGRAM B5-FF 1
+BIGRAM 142-1FF 1
+BIGRAM 280-2FF 1
+BIGRAM 689-F37 1
 BIGSFR F38-FFF 1
-COMRAM 5E-5F 1
+COMRAM 1D-5F 1
 CONFIG 300000-30000D 1
 EEDATA F00000-F003FF 1
-MEDIUMCONST 2EFF-FFFF 1
+MEDIUMCONST 31DF-FFFF 1
 # %LINETAB Section
 # This section enumerates the file/line to address mappings.
 # The beginning of the section is indicated by %LINETAB.
@@ -121,7 +118,7 @@ MEDIUMCONST 2EFF-FFFF 1
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production\RTOS-2026.production.o
-8 intcode CODE >11752:C:\Users\Yuri\AppData\Local\Temp\xcAs3uc.0\driver_tmp_1.s
+8 intcode CODE >11914:C:\Users\Yuri\AppData\Local\Temp\xcAs2fo.0\driver_tmp_1.s
 8 intcode CODE >25:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\hw.c
 22 intcode CODE >26:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\hw.c
 30 intcode CODE >27:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\hw.c
@@ -131,399 +128,371 @@ $dist/default/production\RTOS-2026.production.o
 8A intcode CODE >33:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\hw.c
 B8 intcode CODE >34:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\hw.c
 D8 intcode CODE >37:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\hw.c
-102 intcode CODE >41:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\hw.c
-104 intcode CODE >42:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\hw.c
-114 intcode CODE >43:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\hw.c
-118 intcode CODE >44:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\hw.c
-330 intcode CODE >45:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\hw.c
-334 intcode CODE >46:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\hw.c
-5EC intcode CODE >50:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\hw.c
-5FA intcode CODE >51:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\hw.c
-5FC intcode CODE >52:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\hw.c
-60E intcode CODE >55:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\hw.c
-2B8C text33 CODE >22:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\kernel.c
-2B8E text33 CODE >26:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\kernel.c
-2B92 text33 CODE >27:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\kernel.c
-2B94 text33 CODE >28:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\kernel.c
-2B98 text33 CODE >29:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\kernel.c
-2BA0 text33 CODE >30:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\kernel.c
-2BA2 text33 CODE >32:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\kernel.c
-2BA4 text33 CODE >33:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\kernel.c
-2BA6 text33 CODE >34:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\kernel.c
-2BA8 text33 CODE >35:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\kernel.c
-2BAA text33 CODE >36:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\kernel.c
-2BAC text33 CODE >37:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\kernel.c
-2BAE text33 CODE >38:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\kernel.c
-2BB0 text33 CODE >39:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\kernel.c
-2BB2 text33 CODE >40:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\kernel.c
-2BB4 text33 CODE >41:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\kernel.c
-2BB6 text33 CODE >42:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\kernel.c
-2BB8 text33 CODE >43:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\kernel.c
-2BBA text33 CODE >44:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\kernel.c
-2BBC text33 CODE >45:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\kernel.c
-2BBE text33 CODE >46:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\kernel.c
-2BC0 text33 CODE >47:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\kernel.c
-2BC2 text33 CODE >48:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\kernel.c
-2BC4 text33 CODE >49:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\kernel.c
-2BC6 text33 CODE >52:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\kernel.c
-2BE8 text33 CODE >53:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\kernel.c
-25FA text32 CODE >51:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\scheduler.c
-25FA text32 CODE >52:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\scheduler.c
-25FC text32 CODE >53:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\scheduler.c
-25FE text32 CODE >55:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\scheduler.c
-2604 text32 CODE >56:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\scheduler.c
-2624 text32 CODE >57:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\scheduler.c
-2656 text32 CODE >58:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\scheduler.c
-266A text32 CODE >59:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\scheduler.c
-266E text32 CODE >62:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\scheduler.c
-2684 text32 CODE >63:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\scheduler.c
-269A text32 CODE >64:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\scheduler.c
-269E text32 CODE >66:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\scheduler.c
-26A4 text32 CODE >67:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\scheduler.c
-26AA text32 CODE >68:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\scheduler.c
-26C0 text32 CODE >69:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\scheduler.c
-2702 text32 CODE >71:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\scheduler.c
-2708 text32 CODE >73:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\scheduler.c
-2720 text32 CODE >75:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\scheduler.c
-2EB8 text31 CODE >9:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\scheduler.c
-2EB8 text31 CODE >15:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\scheduler.c
-2EC0 text31 CODE >17:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\scheduler.c
-2ED0 text31 CODE >18:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\scheduler.c
-2DA4 text29 CODE >35:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\io.c
-2DA4 text29 CODE >37:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\io.c
-2DBE text29 CODE >38:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\io.c
-2DD2 text29 CODE >39:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\io.c
-2ED2 text28 CODE >78:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\user.c
-2ED2 text28 CODE >79:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\user.c
-2ED2 text28 CODE >80:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\user.c
-2EDE text28 CODE >81:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\user.c
-2E9E text27 CODE >17:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\io.c
-2E9E text27 CODE >19:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\io.c
-2EA0 text27 CODE >21:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\io.c
-2EAE text27 CODE >24:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\io.c
-2EB6 text27 CODE >25:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\io.c
-2D74 text26 CODE >67:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\user.c
-2D74 text26 CODE >68:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\user.c
-2D74 text26 CODE >69:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\user.c
-2D90 text26 CODE >70:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\user.c
-2D92 text26 CODE >71:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\user.c
-2D96 text26 CODE >72:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\user.c
-2D98 text26 CODE >74:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\user.c
-2BEA text25 CODE >19:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\com.c
-2BEA text25 CODE >21:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\com.c
-2BF6 text25 CODE >22:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\com.c
-2C18 text25 CODE >23:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\com.c
-2C36 text25 CODE >24:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\com.c
-2C40 text25 CODE >25:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\com.c
-2C42 text24 CODE >56:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\user.c
-2C42 text24 CODE >57:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\user.c
-2C42 text24 CODE >58:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\user.c
-2C4C text24 CODE >59:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\user.c
-2C5A text24 CODE >60:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\user.c
-2C6C text24 CODE >61:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\user.c
-2C72 text24 CODE >62:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\user.c
-2C84 text24 CODE >63:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\user.c
-281E text23 CODE >7:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
-281E text23 CODE >12:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
-2822 text23 CODE >13:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
-2832 text23 CODE >14:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
-283A text23 CODE >15:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
-2840 text23 CODE >17:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
-2850 text23 CODE >18:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
-2858 text23 CODE >19:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
-286A text23 CODE >20:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
-2870 text23 CODE >21:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
-2874 text23 CODE >22:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
-287A text23 CODE >23:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
-287E text23 CODE >21:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
-288E text23 CODE >26:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
-28A6 text23 CODE >27:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
-28AE text23 CODE >28:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
-28B4 text23 CODE >29:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
-28BC text23 CODE >31:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
-28CE text23 CODE >32:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
-28D8 text23 CODE >33:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
-28E0 text23 CODE >34:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
-24C2 text22 CODE >51:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\scheduler.c
-24C2 text22 CODE >52:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\scheduler.c
-24C6 text22 CODE >53:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\scheduler.c
-24C8 text22 CODE >55:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\scheduler.c
-24CE text22 CODE >56:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\scheduler.c
-24EE text22 CODE >57:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\scheduler.c
-2520 text22 CODE >58:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\scheduler.c
-2534 text22 CODE >59:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\scheduler.c
-2538 text22 CODE >62:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\scheduler.c
-2550 text22 CODE >63:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\scheduler.c
-2566 text22 CODE >64:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\scheduler.c
-256A text22 CODE >66:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\scheduler.c
-2570 text22 CODE >67:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\scheduler.c
-2576 text22 CODE >68:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\scheduler.c
-2594 text22 CODE >69:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\scheduler.c
-25D6 text22 CODE >71:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\scheduler.c
-25DC text22 CODE >73:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\scheduler.c
-25F8 text22 CODE >75:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\scheduler.c
-2E84 text21 CODE >9:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\scheduler.c
-2E84 text21 CODE >15:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\scheduler.c
-2E8C text21 CODE >17:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\scheduler.c
-2E9C text21 CODE >18:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\scheduler.c
+104 intcode CODE >41:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\hw.c
+106 intcode CODE >42:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\hw.c
+116 intcode CODE >43:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\hw.c
+11A intcode CODE >44:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\hw.c
+3B4 intcode CODE >45:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\hw.c
+3B8 intcode CODE >46:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\hw.c
+6FE intcode CODE >50:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\hw.c
+70C intcode CODE >51:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\hw.c
+70E intcode CODE >53:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\hw.c
+732 intcode CODE >56:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\hw.c
+28E8 text32 CODE >51:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\scheduler.c
+28E8 text32 CODE >52:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\scheduler.c
+28EA text32 CODE >53:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\scheduler.c
+28EC text32 CODE >55:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\scheduler.c
+28F2 text32 CODE >56:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\scheduler.c
+2912 text32 CODE >57:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\scheduler.c
+2944 text32 CODE >58:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\scheduler.c
+2958 text32 CODE >59:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\scheduler.c
+295C text32 CODE >62:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\scheduler.c
+2974 text32 CODE >63:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\scheduler.c
+298A text32 CODE >64:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\scheduler.c
+298E text32 CODE >66:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\scheduler.c
+2994 text32 CODE >67:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\scheduler.c
+299A text32 CODE >68:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\scheduler.c
+29B8 text32 CODE >69:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\scheduler.c
+29FA text32 CODE >71:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\scheduler.c
+2A00 text32 CODE >73:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\scheduler.c
+2A1C text32 CODE >75:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\scheduler.c
+3154 text31 CODE >9:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\scheduler.c
+3154 text31 CODE >15:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\scheduler.c
+315E text31 CODE >17:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\scheduler.c
+317A text31 CODE >18:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\scheduler.c
+3080 text29 CODE >35:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\io.c
+3080 text29 CODE >37:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\io.c
+309A text29 CODE >38:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\io.c
+30AE text29 CODE >39:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\io.c
+31B2 text28 CODE >80:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\user.c
+31B2 text28 CODE >81:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\user.c
+31B2 text28 CODE >82:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\user.c
+31BE text28 CODE >83:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\user.c
+3198 text27 CODE >17:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\io.c
+3198 text27 CODE >19:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\io.c
+319A text27 CODE >21:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\io.c
+31A8 text27 CODE >24:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\io.c
+31B0 text27 CODE >25:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\io.c
+3050 text26 CODE >69:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\user.c
+3050 text26 CODE >70:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\user.c
+3050 text26 CODE >71:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\user.c
+306C text26 CODE >72:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\user.c
+306E text26 CODE >73:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\user.c
+3072 text26 CODE >74:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\user.c
+3074 text26 CODE >76:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\user.c
+2E3C text25 CODE >19:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\com.c
+2E3C text25 CODE >21:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\com.c
+2E48 text25 CODE >22:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\com.c
+2E6A text25 CODE >23:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\com.c
+2E88 text25 CODE >24:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\com.c
+2E92 text25 CODE >25:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\com.c
+2EEA text24 CODE >58:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\user.c
+2EEA text24 CODE >59:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\user.c
+2EEA text24 CODE >60:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\user.c
+2EF4 text24 CODE >61:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\user.c
+2F02 text24 CODE >62:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\user.c
+2F14 text24 CODE >63:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\user.c
+2F1A text24 CODE >64:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\user.c
+2F2C text24 CODE >65:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\user.c
+2B24 text23 CODE >7:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
+2B24 text23 CODE >12:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
+2B28 text23 CODE >13:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
+2B36 text23 CODE >14:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
+2B3E text23 CODE >15:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
+2B42 text23 CODE >17:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
+2B50 text23 CODE >18:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
+2B58 text23 CODE >19:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
+2B6A text23 CODE >20:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
+2B6E text23 CODE >21:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
+2B72 text23 CODE >22:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
+2B78 text23 CODE >23:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
+2B7A text23 CODE >21:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
+2B88 text23 CODE >26:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
+2B9E text23 CODE >27:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
+2BA6 text23 CODE >28:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
+2BAC text23 CODE >29:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
+2BB2 text23 CODE >31:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
+2BC2 text23 CODE >32:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
+2BCA text23 CODE >33:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
+2BD2 text23 CODE >34:C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
+27B0 text22 CODE >51:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\scheduler.c
+27B0 text22 CODE >52:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\scheduler.c
+27B4 text22 CODE >53:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\scheduler.c
+27B6 text22 CODE >55:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\scheduler.c
+27BC text22 CODE >56:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\scheduler.c
+27DC text22 CODE >57:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\scheduler.c
+280E text22 CODE >58:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\scheduler.c
+2822 text22 CODE >59:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\scheduler.c
+2826 text22 CODE >62:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\scheduler.c
+283E text22 CODE >63:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\scheduler.c
+2854 text22 CODE >64:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\scheduler.c
+2858 text22 CODE >66:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\scheduler.c
+285E text22 CODE >67:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\scheduler.c
+2864 text22 CODE >68:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\scheduler.c
+2882 text22 CODE >69:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\scheduler.c
+28C4 text22 CODE >71:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\scheduler.c
+28CA text22 CODE >73:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\scheduler.c
+28E6 text22 CODE >75:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\scheduler.c
+30DA text21 CODE >9:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\scheduler.c
+30DA text21 CODE >15:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\scheduler.c
+30E6 text21 CODE >17:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\scheduler.c
+3102 text21 CODE >18:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\scheduler.c
 1002 text20 CODE >51:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\sync.c
 1002 text20 CODE >52:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\sync.c
 1004 text20 CODE >54:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\sync.c
 101C text20 CODE >55:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\sync.c
-103A text20 CODE >56:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\sync.c
-1058 text20 CODE >57:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\sync.c
-1064 text20 CODE >59:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\sync.c
-12A4 text20 CODE >60:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\sync.c
-12A8 text20 CODE >61:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\sync.c
-1594 text20 CODE >63:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\sync.c
-159E text20 CODE >64:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\sync.c
-15B4 text20 CODE >66:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\sync.c
-15B6 text20 CODE >67:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\sync.c
-2722 text19 CODE >69:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\sync.c
-2722 text19 CODE >70:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\sync.c
-2724 text19 CODE >71:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\sync.c
-2760 text19 CODE >73:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\sync.c
-277A text19 CODE >74:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\sync.c
-279E text19 CODE >75:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\sync.c
-27B0 text19 CODE >76:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\sync.c
-27D2 text19 CODE >77:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\sync.c
-27E0 text19 CODE >78:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\sync.c
-2802 text19 CODE >79:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\sync.c
-2806 text19 CODE >81:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\sync.c
-280E text19 CODE >82:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\sync.c
-281A text19 CODE >85:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\sync.c
-281C text19 CODE >86:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\sync.c
-1B4A text18 CODE >10:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\kernel.c
-1B4E text18 CODE >12:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\kernel.c
-1B50 text18 CODE >14:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\kernel.c
-1D90 text18 CODE >15:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\kernel.c
-1DA6 text18 CODE >16:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\kernel.c
-1DAA text18 CODE >17:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\kernel.c
-2092 text18 CODE >19:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\kernel.c
-2094 text18 CODE >20:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\kernel.c
-2980 text17 CODE >30:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\sync.c
-2980 text17 CODE >31:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\sync.c
-2982 text17 CODE >33:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\sync.c
-2990 text17 CODE >34:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\sync.c
-29B4 text17 CODE >36:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\sync.c
-29E4 text17 CODE >37:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\sync.c
-2A02 text17 CODE >40:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\sync.c
-2A04 text17 CODE >41:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\sync.c
-15B8 text16 CODE >14:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\sync.c
-15B8 text16 CODE >15:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\sync.c
-15BA text16 CODE >17:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\sync.c
-15C8 text16 CODE >18:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\sync.c
-15DE text16 CODE >19:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\sync.c
-15FC text16 CODE >20:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\sync.c
-161A text16 CODE >22:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\sync.c
-185A text16 CODE >23:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\sync.c
-185E text16 CODE >24:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\sync.c
-1B46 text16 CODE >27:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\sync.c
-1B48 text16 CODE >28:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\sync.c
-2B2E text15 CODE >11:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\com.c
-2B2E text15 CODE >13:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\com.c
-2B3A text15 CODE >14:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\com.c
-2B5C text15 CODE >15:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\com.c
-2B7E text15 CODE >16:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\com.c
-2B8A text15 CODE >17:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\com.c
-28E2 text14 CODE >42:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\user.c
-28E2 text14 CODE >43:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\user.c
-28F4 text14 CODE >44:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\user.c
-28F8 text14 CODE >46:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\user.c
-2920 text14 CODE >47:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\user.c
-293A text14 CODE >48:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\user.c
-2958 text14 CODE >49:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\user.c
-2960 text14 CODE >50:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\user.c
-296A text14 CODE >51:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\user.c
-2970 text14 CODE >52:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\user.c
-2DD4 text13 CODE >104:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\kernel.c
-2DD4 text13 CODE >106:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\kernel.c
-2DD6 text13 CODE >109:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\kernel.c
-2E26 text12 CODE >4:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\io.c
-2E26 text12 CODE >5:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\io.c
-2E2A text12 CODE >6:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\io.c
-2E2E text12 CODE >7:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\io.c
-2E32 text12 CODE >8:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\io.c
-2E34 text12 CODE >9:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\io.c
-2E3C text12 CODE >10:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\io.c
-2E44 text12 CODE >11:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\io.c
-2E46 text12 CODE >12:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\io.c
-2E4A text12 CODE >13:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\io.c
-2E4C text12 CODE >15:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\io.c
-2CCE text11 CODE >43:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\sync.c
-2CCE text11 CODE >44:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\sync.c
-2CD8 text11 CODE >45:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\sync.c
-2CE4 text11 CODE >46:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\sync.c
-2CF0 text11 CODE >47:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\sync.c
-2CFC text11 CODE >48:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\sync.c
-2D08 text11 CODE >49:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\sync.c
-2D44 text10 CODE >8:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\sync.c
-2D44 text10 CODE >9:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\sync.c
-2D5A text10 CODE >10:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\sync.c
-2D66 text10 CODE >11:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\sync.c
-2D72 text10 CODE >12:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\sync.c
-2D0A text9 CODE >3:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\com.c
-2D0A text9 CODE >5:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\com.c
-2D18 text9 CODE >6:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\com.c
-2D24 text9 CODE >7:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\com.c
-2D32 text9 CODE >8:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\com.c
-2D42 text9 CODE >9:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\com.c
-2EEA text8 CODE >27:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\io.c
-2EEA text8 CODE >29:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\io.c
-2EEC text8 CODE >30:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\io.c
-2EF0 text8 CODE >31:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\io.c
-2EF4 text8 CODE >32:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\io.c
-2EF6 text8 CODE >33:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\io.c
-2C8C text7 CODE >14:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\user.c
-2C8C text7 CODE >16:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\user.c
-2C8E text7 CODE >18:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\user.c
-2C90 text7 CODE >19:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\user.c
-2C92 text7 CODE >20:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\user.c
-2C94 text7 CODE >21:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\user.c
-2C98 text7 CODE >22:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\user.c
-2C9A text7 CODE >23:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\user.c
-2C9C text7 CODE >25:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\user.c
-2C9E text7 CODE >26:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\user.c
-2CA0 text7 CODE >27:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\user.c
-2CA2 text7 CODE >35:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\user.c
-2CA6 text7 CODE >36:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\user.c
-2CAA text7 CODE >37:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\user.c
-2CB8 text7 CODE >38:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\user.c
-2CC2 text7 CODE >39:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\user.c
-2CCC text7 CODE >40:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\user.c
-2A6C text6 CODE >22:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\kernel.c
-2A70 text6 CODE >26:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\kernel.c
-2A74 text6 CODE >27:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\kernel.c
-2A78 text6 CODE >28:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\kernel.c
-2A7C text6 CODE >29:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\kernel.c
-2A84 text6 CODE >30:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\kernel.c
-2A86 text6 CODE >32:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\kernel.c
-2A88 text6 CODE >33:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\kernel.c
-2A8A text6 CODE >34:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\kernel.c
-2A8C text6 CODE >35:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\kernel.c
-2A8E text6 CODE >36:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\kernel.c
-2A90 text6 CODE >37:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\kernel.c
-2A92 text6 CODE >38:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\kernel.c
-2A94 text6 CODE >39:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\kernel.c
-2A96 text6 CODE >40:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\kernel.c
-2A98 text6 CODE >41:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\kernel.c
-2A9A text6 CODE >42:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\kernel.c
-2A9C text6 CODE >43:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\kernel.c
-2A9E text6 CODE >44:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\kernel.c
-2AA0 text6 CODE >45:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\kernel.c
-2AA2 text6 CODE >46:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\kernel.c
-2AA4 text6 CODE >47:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\kernel.c
-2AA6 text6 CODE >48:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\kernel.c
-2AA8 text6 CODE >49:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\kernel.c
-2AAA text6 CODE >52:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\kernel.c
-2ACC text6 CODE >53:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\kernel.c
-2DFE text5 CODE >66:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\kernel.c
-2DFE text5 CODE >68:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\kernel.c
-2E02 text5 CODE >69:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\kernel.c
-2E0A text5 CODE >70:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\kernel.c
-2E0C text5 CODE >73:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\kernel.c
-2E20 text5 CODE >76:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\kernel.c
-2E24 text5 CODE >77:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\kernel.c
-238A text4 CODE >51:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\scheduler.c
-238A text4 CODE >52:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\scheduler.c
-238E text4 CODE >53:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\scheduler.c
-2390 text4 CODE >55:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\scheduler.c
-2396 text4 CODE >56:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\scheduler.c
-23B6 text4 CODE >57:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\scheduler.c
-23E8 text4 CODE >58:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\scheduler.c
-23FC text4 CODE >59:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\scheduler.c
-2400 text4 CODE >62:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\scheduler.c
-2418 text4 CODE >63:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\scheduler.c
-242E text4 CODE >64:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\scheduler.c
-2432 text4 CODE >66:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\scheduler.c
-2438 text4 CODE >67:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\scheduler.c
-243E text4 CODE >68:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\scheduler.c
-245C text4 CODE >69:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\scheduler.c
-249E text4 CODE >71:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\scheduler.c
-24A4 text4 CODE >73:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\scheduler.c
-24C0 text4 CODE >75:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\scheduler.c
-2E6A text3 CODE >9:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\scheduler.c
-2E6A text3 CODE >15:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\scheduler.c
-2E72 text3 CODE >17:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\scheduler.c
-2E82 text3 CODE >18:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\scheduler.c
-2E4E text2 CODE >10:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\hw.c
-2E4E text2 CODE >12:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\hw.c
-2E50 text2 CODE >13:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\hw.c
-2E52 text2 CODE >14:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\hw.c
-2E54 text2 CODE >15:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\hw.c
-2E56 text2 CODE >16:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\hw.c
-2E58 text2 CODE >17:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\hw.c
-2E5C text2 CODE >18:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\hw.c
-2E5E text2 CODE >19:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\hw.c
-2E64 text2 CODE >20:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\hw.c
-2E66 text2 CODE >21:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\hw.c
-2E68 text2 CODE >23:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\hw.c
-2096 text1 CODE >79:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\kernel.c
-2096 text1 CODE >81:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\kernel.c
-209A text1 CODE >82:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\kernel.c
-209E text1 CODE >83:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\kernel.c
-2386 text1 CODE >84:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\kernel.c
-2388 text1 CODE >85:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\kernel.c
-2ACE text0 CODE >8:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\main.c
-2ACE text0 CODE >9:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\main.c
-2AD2 text0 CODE >15:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\main.c
-2AE6 text0 CODE >16:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\main.c
-2AFA text0 CODE >17:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\main.c
-2B0E text0 CODE >18:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\main.c
-2B22 text0 CODE >25:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\main.c
-2B26 text0 CODE >27:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\main.c
-2B26 text0 CODE >29:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\main.c
-2A06 cinit CODE >3866:C:\Users\Yuri\AppData\Local\Temp\xcAs3uc.0\driver_tmp_1.s
-2A06 cinit CODE >3868:C:\Users\Yuri\AppData\Local\Temp\xcAs3uc.0\driver_tmp_1.s
-2A06 cinit CODE >3871:C:\Users\Yuri\AppData\Local\Temp\xcAs3uc.0\driver_tmp_1.s
-2A06 cinit CODE >3921:C:\Users\Yuri\AppData\Local\Temp\xcAs3uc.0\driver_tmp_1.s
-2A08 cinit CODE >3922:C:\Users\Yuri\AppData\Local\Temp\xcAs3uc.0\driver_tmp_1.s
-2A0A cinit CODE >3923:C:\Users\Yuri\AppData\Local\Temp\xcAs3uc.0\driver_tmp_1.s
-2A0C cinit CODE >3924:C:\Users\Yuri\AppData\Local\Temp\xcAs3uc.0\driver_tmp_1.s
-2A0E cinit CODE >3925:C:\Users\Yuri\AppData\Local\Temp\xcAs3uc.0\driver_tmp_1.s
-2A10 cinit CODE >3926:C:\Users\Yuri\AppData\Local\Temp\xcAs3uc.0\driver_tmp_1.s
-2A12 cinit CODE >3927:C:\Users\Yuri\AppData\Local\Temp\xcAs3uc.0\driver_tmp_1.s
-2A16 cinit CODE >3928:C:\Users\Yuri\AppData\Local\Temp\xcAs3uc.0\driver_tmp_1.s
-2A1A cinit CODE >3929:C:\Users\Yuri\AppData\Local\Temp\xcAs3uc.0\driver_tmp_1.s
-2A1A cinit CODE >3930:C:\Users\Yuri\AppData\Local\Temp\xcAs3uc.0\driver_tmp_1.s
-2A1C cinit CODE >3931:C:\Users\Yuri\AppData\Local\Temp\xcAs3uc.0\driver_tmp_1.s
-2A20 cinit CODE >3932:C:\Users\Yuri\AppData\Local\Temp\xcAs3uc.0\driver_tmp_1.s
-2A22 cinit CODE >3933:C:\Users\Yuri\AppData\Local\Temp\xcAs3uc.0\driver_tmp_1.s
-2A24 cinit CODE >3934:C:\Users\Yuri\AppData\Local\Temp\xcAs3uc.0\driver_tmp_1.s
-2A26 cinit CODE >3938:C:\Users\Yuri\AppData\Local\Temp\xcAs3uc.0\driver_tmp_1.s
-2A2A cinit CODE >3939:C:\Users\Yuri\AppData\Local\Temp\xcAs3uc.0\driver_tmp_1.s
-2A2E cinit CODE >3940:C:\Users\Yuri\AppData\Local\Temp\xcAs3uc.0\driver_tmp_1.s
-2A2E cinit CODE >3941:C:\Users\Yuri\AppData\Local\Temp\xcAs3uc.0\driver_tmp_1.s
-2A30 cinit CODE >3942:C:\Users\Yuri\AppData\Local\Temp\xcAs3uc.0\driver_tmp_1.s
-2A32 cinit CODE >3943:C:\Users\Yuri\AppData\Local\Temp\xcAs3uc.0\driver_tmp_1.s
-2A34 cinit CODE >3944:C:\Users\Yuri\AppData\Local\Temp\xcAs3uc.0\driver_tmp_1.s
-2A36 cinit CODE >3945:C:\Users\Yuri\AppData\Local\Temp\xcAs3uc.0\driver_tmp_1.s
-2A38 cinit CODE >3946:C:\Users\Yuri\AppData\Local\Temp\xcAs3uc.0\driver_tmp_1.s
-2A3A cinit CODE >3949:C:\Users\Yuri\AppData\Local\Temp\xcAs3uc.0\driver_tmp_1.s
-2A3E cinit CODE >3950:C:\Users\Yuri\AppData\Local\Temp\xcAs3uc.0\driver_tmp_1.s
-2A40 cinit CODE >3951:C:\Users\Yuri\AppData\Local\Temp\xcAs3uc.0\driver_tmp_1.s
-2A40 cinit CODE >3952:C:\Users\Yuri\AppData\Local\Temp\xcAs3uc.0\driver_tmp_1.s
-2A42 cinit CODE >3953:C:\Users\Yuri\AppData\Local\Temp\xcAs3uc.0\driver_tmp_1.s
-2A44 cinit CODE >3954:C:\Users\Yuri\AppData\Local\Temp\xcAs3uc.0\driver_tmp_1.s
-2A46 cinit CODE >3957:C:\Users\Yuri\AppData\Local\Temp\xcAs3uc.0\driver_tmp_1.s
-2A4A cinit CODE >3958:C:\Users\Yuri\AppData\Local\Temp\xcAs3uc.0\driver_tmp_1.s
-2A4C cinit CODE >3959:C:\Users\Yuri\AppData\Local\Temp\xcAs3uc.0\driver_tmp_1.s
-2A4C cinit CODE >3960:C:\Users\Yuri\AppData\Local\Temp\xcAs3uc.0\driver_tmp_1.s
-2A4E cinit CODE >3961:C:\Users\Yuri\AppData\Local\Temp\xcAs3uc.0\driver_tmp_1.s
-2A50 cinit CODE >3962:C:\Users\Yuri\AppData\Local\Temp\xcAs3uc.0\driver_tmp_1.s
-2A52 cinit CODE >3965:C:\Users\Yuri\AppData\Local\Temp\xcAs3uc.0\driver_tmp_1.s
-2A56 cinit CODE >3966:C:\Users\Yuri\AppData\Local\Temp\xcAs3uc.0\driver_tmp_1.s
-2A58 cinit CODE >3967:C:\Users\Yuri\AppData\Local\Temp\xcAs3uc.0\driver_tmp_1.s
-2A58 cinit CODE >3968:C:\Users\Yuri\AppData\Local\Temp\xcAs3uc.0\driver_tmp_1.s
-2A5A cinit CODE >3969:C:\Users\Yuri\AppData\Local\Temp\xcAs3uc.0\driver_tmp_1.s
-2A5C cinit CODE >3970:C:\Users\Yuri\AppData\Local\Temp\xcAs3uc.0\driver_tmp_1.s
-2A5E cinit CODE >3976:C:\Users\Yuri\AppData\Local\Temp\xcAs3uc.0\driver_tmp_1.s
-2A5E cinit CODE >3978:C:\Users\Yuri\AppData\Local\Temp\xcAs3uc.0\driver_tmp_1.s
-2A60 cinit CODE >3979:C:\Users\Yuri\AppData\Local\Temp\xcAs3uc.0\driver_tmp_1.s
-2A62 cinit CODE >3981:C:\Users\Yuri\AppData\Local\Temp\xcAs3uc.0\driver_tmp_1.s
-2A64 cinit CODE >3982:C:\Users\Yuri\AppData\Local\Temp\xcAs3uc.0\driver_tmp_1.s
-2A66 cinit CODE >3983:C:\Users\Yuri\AppData\Local\Temp\xcAs3uc.0\driver_tmp_1.s
-2A68 cinit CODE >3984:C:\Users\Yuri\AppData\Local\Temp\xcAs3uc.0\driver_tmp_1.s
+103E text20 CODE >56:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\sync.c
+1074 text20 CODE >57:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\sync.c
+1082 text20 CODE >59:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\sync.c
+1320 text20 CODE >60:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\sync.c
+1324 text20 CODE >61:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\sync.c
+1676 text20 CODE >63:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\sync.c
+1680 text20 CODE >64:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\sync.c
+1696 text20 CODE >66:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\sync.c
+1698 text20 CODE >67:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\sync.c
+2A1E text19 CODE >69:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\sync.c
+2A1E text19 CODE >70:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\sync.c
+2A20 text19 CODE >71:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\sync.c
+2A5C text19 CODE >73:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\sync.c
+2A76 text19 CODE >74:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\sync.c
+2A94 text19 CODE >75:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\sync.c
+2AA6 text19 CODE >76:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\sync.c
+2ADC text19 CODE >77:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\sync.c
+2AEA text19 CODE >78:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\sync.c
+2B08 text19 CODE >79:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\sync.c
+2B0C text19 CODE >81:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\sync.c
+2B14 text19 CODE >82:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\sync.c
+2B20 text19 CODE >85:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\sync.c
+2B22 text19 CODE >86:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\sync.c
+1D0A text18 CODE >10:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\kernel.c
+1D0E text18 CODE >12:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\kernel.c
+1D10 text18 CODE >14:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\kernel.c
+1FAE text18 CODE >15:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\kernel.c
+1FC8 text18 CODE >16:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\kernel.c
+1FCC text18 CODE >17:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\kernel.c
+231A text18 CODE >19:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\kernel.c
+231C text18 CODE >20:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\kernel.c
+2C72 text17 CODE >30:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\sync.c
+2C72 text17 CODE >31:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\sync.c
+2C74 text17 CODE >33:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\sync.c
+2C82 text17 CODE >34:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\sync.c
+2CA6 text17 CODE >36:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\sync.c
+2CD6 text17 CODE >37:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\sync.c
+2D0A text17 CODE >40:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\sync.c
+2D0C text17 CODE >41:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\sync.c
+169A text16 CODE >14:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\sync.c
+169A text16 CODE >15:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\sync.c
+169C text16 CODE >17:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\sync.c
+16AA text16 CODE >18:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\sync.c
+16C0 text16 CODE >19:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\sync.c
+16E2 text16 CODE >20:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\sync.c
+1716 text16 CODE >22:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\sync.c
+19B4 text16 CODE >23:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\sync.c
+19B8 text16 CODE >24:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\sync.c
+1D06 text16 CODE >27:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\sync.c
+1D08 text16 CODE >28:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\sync.c
+2E94 text15 CODE >11:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\com.c
+2E94 text15 CODE >13:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\com.c
+2EA2 text15 CODE >14:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\com.c
+2EBE text15 CODE >15:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\com.c
+2EDC text15 CODE >16:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\com.c
+2EE8 text15 CODE >17:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\com.c
+2BD4 text14 CODE >44:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\user.c
+2BD4 text14 CODE >45:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\user.c
+2BE6 text14 CODE >46:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\user.c
+2BEA text14 CODE >48:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\user.c
+2C12 text14 CODE >49:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\user.c
+2C26 text14 CODE >50:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\user.c
+2C48 text14 CODE >51:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\user.c
+2C52 text14 CODE >52:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\user.c
+2C5C text14 CODE >53:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\user.c
+2C62 text14 CODE >54:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\user.c
+312C text13 CODE >104:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\kernel.c
+312C text13 CODE >106:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\kernel.c
+312E text13 CODE >109:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\kernel.c
+3104 text12 CODE >4:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\io.c
+3104 text12 CODE >5:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\io.c
+3108 text12 CODE >6:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\io.c
+310C text12 CODE >7:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\io.c
+3110 text12 CODE >8:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\io.c
+3112 text12 CODE >9:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\io.c
+311A text12 CODE >10:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\io.c
+3122 text12 CODE >11:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\io.c
+3124 text12 CODE >12:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\io.c
+3128 text12 CODE >13:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\io.c
+312A text12 CODE >15:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\io.c
+2F78 text11 CODE >43:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\sync.c
+2F78 text11 CODE >44:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\sync.c
+2F82 text11 CODE >45:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\sync.c
+2F8E text11 CODE >46:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\sync.c
+2F9A text11 CODE >47:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\sync.c
+2FA6 text11 CODE >48:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\sync.c
+2FB2 text11 CODE >49:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\sync.c
+3020 text10 CODE >8:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\sync.c
+3020 text10 CODE >9:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\sync.c
+3036 text10 CODE >10:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\sync.c
+3042 text10 CODE >11:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\sync.c
+304E text10 CODE >12:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\sync.c
+2FB4 text9 CODE >3:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\com.c
+2FB4 text9 CODE >5:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\com.c
+2FC2 text9 CODE >6:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\com.c
+2FCE text9 CODE >7:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\com.c
+2FDC text9 CODE >8:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\com.c
+2FEC text9 CODE >9:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\com.c
+31CA text8 CODE >27:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\io.c
+31CA text8 CODE >29:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\io.c
+31CC text8 CODE >30:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\io.c
+31D0 text8 CODE >31:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\io.c
+31D4 text8 CODE >32:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\io.c
+31D6 text8 CODE >33:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\io.c
+2F34 text7 CODE >14:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\user.c
+2F34 text7 CODE >16:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\user.c
+2F36 text7 CODE >17:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\user.c
+2F3A text7 CODE >19:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\user.c
+2F3C text7 CODE >20:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\user.c
+2F3E text7 CODE >21:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\user.c
+2F40 text7 CODE >22:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\user.c
+2F42 text7 CODE >23:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\user.c
+2F44 text7 CODE >24:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\user.c
+2F46 text7 CODE >26:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\user.c
+2F48 text7 CODE >27:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\user.c
+2F4A text7 CODE >28:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\user.c
+2F4C text7 CODE >37:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\user.c
+2F50 text7 CODE >38:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\user.c
+2F54 text7 CODE >39:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\user.c
+2F62 text7 CODE >40:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\user.c
+2F6C text7 CODE >41:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\user.c
+2F76 text7 CODE >42:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\user.c
+2D0E text6 CODE >22:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\kernel.c
+2D12 text6 CODE >26:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\kernel.c
+2D16 text6 CODE >27:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\kernel.c
+2D1A text6 CODE >28:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\kernel.c
+2D1E text6 CODE >29:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\kernel.c
+2D26 text6 CODE >30:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\kernel.c
+2D28 text6 CODE >32:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\kernel.c
+2D2A text6 CODE >33:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\kernel.c
+2D2C text6 CODE >34:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\kernel.c
+2D2E text6 CODE >35:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\kernel.c
+2D30 text6 CODE >36:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\kernel.c
+2D32 text6 CODE >37:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\kernel.c
+2D34 text6 CODE >38:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\kernel.c
+2D36 text6 CODE >39:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\kernel.c
+2D38 text6 CODE >40:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\kernel.c
+2D3A text6 CODE >41:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\kernel.c
+2D3C text6 CODE >42:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\kernel.c
+2D3E text6 CODE >43:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\kernel.c
+2D40 text6 CODE >44:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\kernel.c
+2D42 text6 CODE >45:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\kernel.c
+2D44 text6 CODE >46:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\kernel.c
+2D46 text6 CODE >47:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\kernel.c
+2D48 text6 CODE >48:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\kernel.c
+2D4A text6 CODE >49:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\kernel.c
+2D4C text6 CODE >52:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\kernel.c
+2D78 text6 CODE >53:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\kernel.c
+2FEE text5 CODE >66:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\kernel.c
+2FEE text5 CODE >68:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\kernel.c
+2FF4 text5 CODE >69:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\kernel.c
+3000 text5 CODE >70:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\kernel.c
+3006 text5 CODE >73:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\kernel.c
+301A text5 CODE >76:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\kernel.c
+301E text5 CODE >77:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\kernel.c
+2678 text4 CODE >51:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\scheduler.c
+2678 text4 CODE >52:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\scheduler.c
+267C text4 CODE >53:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\scheduler.c
+267E text4 CODE >55:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\scheduler.c
+2684 text4 CODE >56:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\scheduler.c
+26A4 text4 CODE >57:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\scheduler.c
+26D6 text4 CODE >58:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\scheduler.c
+26EA text4 CODE >59:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\scheduler.c
+26EE text4 CODE >62:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\scheduler.c
+2706 text4 CODE >63:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\scheduler.c
+271C text4 CODE >64:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\scheduler.c
+2720 text4 CODE >66:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\scheduler.c
+2726 text4 CODE >67:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\scheduler.c
+272C text4 CODE >68:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\scheduler.c
+274A text4 CODE >69:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\scheduler.c
+278C text4 CODE >71:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\scheduler.c
+2792 text4 CODE >73:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\scheduler.c
+27AE text4 CODE >75:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\scheduler.c
+30B0 text3 CODE >9:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\scheduler.c
+30B0 text3 CODE >15:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\scheduler.c
+30BC text3 CODE >17:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\scheduler.c
+30D8 text3 CODE >18:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\scheduler.c
+317C text2 CODE >10:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\hw.c
+317C text2 CODE >12:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\hw.c
+317E text2 CODE >13:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\hw.c
+3180 text2 CODE >14:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\hw.c
+3182 text2 CODE >15:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\hw.c
+3184 text2 CODE >16:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\hw.c
+3186 text2 CODE >17:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\hw.c
+318A text2 CODE >18:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\hw.c
+318C text2 CODE >19:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\hw.c
+3192 text2 CODE >20:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\hw.c
+3194 text2 CODE >21:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\hw.c
+3196 text2 CODE >23:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\hw.c
+231E text1 CODE >79:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\kernel.c
+231E text1 CODE >81:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\kernel.c
+2322 text1 CODE >82:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\kernel.c
+2326 text1 CODE >83:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\kernel.c
+2674 text1 CODE >84:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\kernel.c
+2676 text1 CODE >85:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\kernel.c
+2DDC text0 CODE >8:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\main.c
+2DDC text0 CODE >9:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\main.c
+2DE0 text0 CODE >15:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\main.c
+2DF4 text0 CODE >16:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\main.c
+2E08 text0 CODE >17:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\main.c
+2E1C text0 CODE >18:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\main.c
+2E30 text0 CODE >25:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\main.c
+2E34 text0 CODE >27:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\main.c
+2E34 text0 CODE >29:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\main.c
+2D7A cinit CODE >3879:C:\Users\Yuri\AppData\Local\Temp\xcAs2fo.0\driver_tmp_1.s
+2D7A cinit CODE >3881:C:\Users\Yuri\AppData\Local\Temp\xcAs2fo.0\driver_tmp_1.s
+2D7A cinit CODE >3884:C:\Users\Yuri\AppData\Local\Temp\xcAs2fo.0\driver_tmp_1.s
+2D7A cinit CODE >3933:C:\Users\Yuri\AppData\Local\Temp\xcAs2fo.0\driver_tmp_1.s
+2D7C cinit CODE >3934:C:\Users\Yuri\AppData\Local\Temp\xcAs2fo.0\driver_tmp_1.s
+2D7E cinit CODE >3935:C:\Users\Yuri\AppData\Local\Temp\xcAs2fo.0\driver_tmp_1.s
+2D80 cinit CODE >3936:C:\Users\Yuri\AppData\Local\Temp\xcAs2fo.0\driver_tmp_1.s
+2D82 cinit CODE >3937:C:\Users\Yuri\AppData\Local\Temp\xcAs2fo.0\driver_tmp_1.s
+2D84 cinit CODE >3938:C:\Users\Yuri\AppData\Local\Temp\xcAs2fo.0\driver_tmp_1.s
+2D86 cinit CODE >3939:C:\Users\Yuri\AppData\Local\Temp\xcAs2fo.0\driver_tmp_1.s
+2D8A cinit CODE >3940:C:\Users\Yuri\AppData\Local\Temp\xcAs2fo.0\driver_tmp_1.s
+2D8E cinit CODE >3941:C:\Users\Yuri\AppData\Local\Temp\xcAs2fo.0\driver_tmp_1.s
+2D8E cinit CODE >3942:C:\Users\Yuri\AppData\Local\Temp\xcAs2fo.0\driver_tmp_1.s
+2D90 cinit CODE >3943:C:\Users\Yuri\AppData\Local\Temp\xcAs2fo.0\driver_tmp_1.s
+2D94 cinit CODE >3944:C:\Users\Yuri\AppData\Local\Temp\xcAs2fo.0\driver_tmp_1.s
+2D96 cinit CODE >3945:C:\Users\Yuri\AppData\Local\Temp\xcAs2fo.0\driver_tmp_1.s
+2D98 cinit CODE >3946:C:\Users\Yuri\AppData\Local\Temp\xcAs2fo.0\driver_tmp_1.s
+2D9A cinit CODE >3950:C:\Users\Yuri\AppData\Local\Temp\xcAs2fo.0\driver_tmp_1.s
+2D9C cinit CODE >3951:C:\Users\Yuri\AppData\Local\Temp\xcAs2fo.0\driver_tmp_1.s
+2D9E cinit CODE >3952:C:\Users\Yuri\AppData\Local\Temp\xcAs2fo.0\driver_tmp_1.s
+2DA0 cinit CODE >3953:C:\Users\Yuri\AppData\Local\Temp\xcAs2fo.0\driver_tmp_1.s
+2DA2 cinit CODE >3954:C:\Users\Yuri\AppData\Local\Temp\xcAs2fo.0\driver_tmp_1.s
+2DA4 cinit CODE >3955:C:\Users\Yuri\AppData\Local\Temp\xcAs2fo.0\driver_tmp_1.s
+2DA6 cinit CODE >3956:C:\Users\Yuri\AppData\Local\Temp\xcAs2fo.0\driver_tmp_1.s
+2DA8 cinit CODE >3957:C:\Users\Yuri\AppData\Local\Temp\xcAs2fo.0\driver_tmp_1.s
+2DAC cinit CODE >3961:C:\Users\Yuri\AppData\Local\Temp\xcAs2fo.0\driver_tmp_1.s
+2DB0 cinit CODE >3962:C:\Users\Yuri\AppData\Local\Temp\xcAs2fo.0\driver_tmp_1.s
+2DB4 cinit CODE >3963:C:\Users\Yuri\AppData\Local\Temp\xcAs2fo.0\driver_tmp_1.s
+2DB4 cinit CODE >3964:C:\Users\Yuri\AppData\Local\Temp\xcAs2fo.0\driver_tmp_1.s
+2DB6 cinit CODE >3965:C:\Users\Yuri\AppData\Local\Temp\xcAs2fo.0\driver_tmp_1.s
+2DB8 cinit CODE >3966:C:\Users\Yuri\AppData\Local\Temp\xcAs2fo.0\driver_tmp_1.s
+2DBA cinit CODE >3967:C:\Users\Yuri\AppData\Local\Temp\xcAs2fo.0\driver_tmp_1.s
+2DBC cinit CODE >3968:C:\Users\Yuri\AppData\Local\Temp\xcAs2fo.0\driver_tmp_1.s
+2DBE cinit CODE >3969:C:\Users\Yuri\AppData\Local\Temp\xcAs2fo.0\driver_tmp_1.s
+2DC0 cinit CODE >3972:C:\Users\Yuri\AppData\Local\Temp\xcAs2fo.0\driver_tmp_1.s
+2DC4 cinit CODE >3973:C:\Users\Yuri\AppData\Local\Temp\xcAs2fo.0\driver_tmp_1.s
+2DC6 cinit CODE >3974:C:\Users\Yuri\AppData\Local\Temp\xcAs2fo.0\driver_tmp_1.s
+2DC6 cinit CODE >3975:C:\Users\Yuri\AppData\Local\Temp\xcAs2fo.0\driver_tmp_1.s
+2DC8 cinit CODE >3976:C:\Users\Yuri\AppData\Local\Temp\xcAs2fo.0\driver_tmp_1.s
+2DCA cinit CODE >3977:C:\Users\Yuri\AppData\Local\Temp\xcAs2fo.0\driver_tmp_1.s
+2DCC cinit CODE >3980:C:\Users\Yuri\AppData\Local\Temp\xcAs2fo.0\driver_tmp_1.s
+2DCE cinit CODE >3986:C:\Users\Yuri\AppData\Local\Temp\xcAs2fo.0\driver_tmp_1.s
+2DCE cinit CODE >3988:C:\Users\Yuri\AppData\Local\Temp\xcAs2fo.0\driver_tmp_1.s
+2DD0 cinit CODE >3989:C:\Users\Yuri\AppData\Local\Temp\xcAs2fo.0\driver_tmp_1.s
+2DD2 cinit CODE >3991:C:\Users\Yuri\AppData\Local\Temp\xcAs2fo.0\driver_tmp_1.s
+2DD4 cinit CODE >3992:C:\Users\Yuri\AppData\Local\Temp\xcAs2fo.0\driver_tmp_1.s
+2DD6 cinit CODE >3993:C:\Users\Yuri\AppData\Local\Temp\xcAs2fo.0\driver_tmp_1.s
+2DD8 cinit CODE >3994:C:\Users\Yuri\AppData\Local\Temp\xcAs2fo.0\driver_tmp_1.s
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -537,121 +506,120 @@ D8 intcode CODE >37:D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\hw.c
 # is the name of the object file in which the symbol was defined.
 %SYMTAB
 _p 60 0 BANK0 1 bssBANK0 dist/default/production\RTOS-2026.production.o
-_s 4E 0 COMRAM 1 bssCOMRAM dist/default/production\RTOS-2026.production.o
-i1priority_rr_scheduler@max_prio 35B 0 BANK3 1 cstackBANK3 dist/default/production\RTOS-2026.production.o
+_s 85 0 BANK0 1 bssBANK0 dist/default/production\RTOS-2026.production.o
+i1priority_rr_scheduler@max_prio 270 0 BANK2 1 cstackBANK2 dist/default/production\RTOS-2026.production.o
+__LdataBANK0 0 0 ABS 0 dataBANK0 dist/default/production\RTOS-2026.production.o
 __Lmediumconst 0 0 MEDIUMCONST 0 mediumconst dist/default/production\RTOS-2026.production.o
-__Hspace_0 2EFF 0 ABS 0 - dist/default/production\RTOS-2026.production.o
-__Hspace_1 631 0 ABS 0 - dist/default/production\RTOS-2026.production.o
+__Hspace_0 31DF 0 ABS 0 - dist/default/production\RTOS-2026.production.o
+__Hspace_1 689 0 ABS 0 - dist/default/production\RTOS-2026.production.o
 __Hspace_2 0 0 ABS 0 - dist/default/production\RTOS-2026.production.o
 __Hspace_4 0 0 ABS 0 - dist/default/production\RTOS-2026.production.o
-i1priority_rr_scheduler@idx 35F 0 BANK3 1 cstackBANK3 dist/default/production\RTOS-2026.production.o
+__HidataBANK0 0 0 ABS 0 idataBANK0 dist/default/production\RTOS-2026.production.o
+i1priority_rr_scheduler@idx 274 0 BANK2 1 cstackBANK2 dist/default/production\RTOS-2026.production.o
 __Hibigdata 0 0 CODE 0 ibigdata dist/default/production\RTOS-2026.production.o
 __mediumconst 1000 0 SMALLCONST 0 smallconst dist/default/production\RTOS-2026.production.o
-__end_of_mutex_unlock 281E 0 CODE 0 text19 dist/default/production\RTOS-2026.production.o
+__end_of_mutex_unlock 2B24 0 CODE 0 text19 dist/default/production\RTOS-2026.production.o
 __Heeprom_data 0 0 EEDATA 0 eeprom_data dist/default/production\RTOS-2026.production.o
 _TBLPTRH FF7 0 ABS 0 - dist/default/production\RTOS-2026.production.o
 _TBLPTRL FF6 0 ABS 0 - dist/default/production\RTOS-2026.production.o
 _TBLPTRU FF8 0 ABS 0 - dist/default/production\RTOS-2026.production.o
-__end_ofi2_os_create_task 2BEA 0 CODE 0 text33 dist/default/production\RTOS-2026.production.o
-os_create_task@new_task 401 0 BANK4 1 cstackBANK4 dist/default/production\RTOS-2026.production.o
+os_create_task@new_task 305 0 BANK3 1 cstackBANK3 dist/default/production\RTOS-2026.production.o
 __L__absolute__ 0 0 ABS 0 __absolute__ dist/default/production\RTOS-2026.production.o
-__end_of_mutex_init 2D0A 0 CODE 0 text11 dist/default/production\RTOS-2026.production.o
-__end_of_mutex_lock 15B8 0 CODE 0 text20 dist/default/production\RTOS-2026.production.o
-ISR@i 43 0 COMRAM 1 cstackCOMRAM dist/default/production\RTOS-2026.production.o
+__end_of_mutex_init 2FB4 0 CODE 0 text11 dist/default/production\RTOS-2026.production.o
+__end_of_mutex_lock 169A 0 CODE 0 text20 dist/default/production\RTOS-2026.production.o
+ISR@i 19 0 COMRAM 1 cstackCOMRAM dist/default/production\RTOS-2026.production.o
 __Lsmallconst 1000 0 SMALLCONST 0 smallconst dist/default/production\RTOS-2026.production.o
 _TMR0 FD6 0 ABS 0 - dist/default/production\RTOS-2026.production.o
 _TOSH FFE 0 ABS 0 - dist/default/production\RTOS-2026.production.o
 _TOSL FFD 0 ABS 0 - dist/default/production\RTOS-2026.production.o
 _TOSU FFF 0 ABS 0 - dist/default/production\RTOS-2026.production.o
 _WREG FE8 0 ABS 0 - dist/default/production\RTOS-2026.production.o
-___sp 0 0 STACK 2 stack C:\Users\Yuri\AppData\Local\Temp\xcAs3uc.0\driver_tmp_9.o
-_dado 56 0 COMRAM 1 bssCOMRAM dist/default/production\RTOS-2026.production.o
-_idle 2DD4 0 CODE 0 text13 dist/default/production\RTOS-2026.production.o
-_main 2ACE 0 CODE 0 text0 dist/default/production\RTOS-2026.production.o
+___sp 0 0 STACK 2 stack C:\Users\Yuri\AppData\Local\Temp\xcAs2fo.0\driver_tmp_9.o
+_dado 1B 0 COMRAM 1 bssCOMRAM dist/default/production\RTOS-2026.production.o
+_idle 312C 0 CODE 0 text13 dist/default/production\RTOS-2026.production.o
+_main 2DDC 0 CODE 0 text0 dist/default/production\RTOS-2026.production.o
 btemp 1 0 ABS 0 - dist/default/production\RTOS-2026.production.o
-___stack_hi 0 0 STACK 2 stack C:\Users\Yuri\AppData\Local\Temp\xcAs3uc.0\driver_tmp_9.o
-___stack_lo 0 0 STACK 2 stack C:\Users\Yuri\AppData\Local\Temp\xcAs3uc.0\driver_tmp_9.o
+___stack_hi 0 0 STACK 2 stack C:\Users\Yuri\AppData\Local\Temp\xcAs2fo.0\driver_tmp_9.o
+___stack_lo 0 0 STACK 2 stack C:\Users\Yuri\AppData\Local\Temp\xcAs2fo.0\driver_tmp_9.o
 __HbssBIGRAM 0 0 ABS 0 bssBIGRAM dist/default/production\RTOS-2026.production.o
-start 62A 0 CODE 0 init C:\Users\Yuri\AppData\Local\Temp\xcAs3uc.0\driver_tmp_9.o
+start 74E 0 CODE 0 init C:\Users\Yuri\AppData\Local\Temp\xcAs2fo.0\driver_tmp_9.o
 __HbssCOMRAM 0 0 ABS 0 bssCOMRAM dist/default/production\RTOS-2026.production.o
-_os_delay 1B4A 0 CODE 0 text18 dist/default/production\RTOS-2026.production.o
-_os_start 2096 0 CODE 0 text1 dist/default/production\RTOS-2026.production.o
-mutex_unlock@task_idx 7D 0 BANK0 1 cstackBANK0 dist/default/production\RTOS-2026.production.o
+_os_delay 1D0A 0 CODE 0 text18 dist/default/production\RTOS-2026.production.o
+_os_start 231E 0 CODE 0 text1 dist/default/production\RTOS-2026.production.o
+mutex_unlock@task_idx A2 0 BANK0 1 cstackBANK0 dist/default/production\RTOS-2026.production.o
+__LidataBANK0 0 0 ABS 0 idataBANK0 dist/default/production\RTOS-2026.production.o
 __Hpowerup 0 0 CODE 0 powerup dist/default/production\RTOS-2026.production.o
-___awmod@sign 7C 0 BANK0 1 cstackBANK0 dist/default/production\RTOS-2026.production.o
-__end_of_os_delay 2096 0 CODE 0 text18 dist/default/production\RTOS-2026.production.o
+___awmod@sign 134 0 BANK1 1 cstackBANK1 dist/default/production\RTOS-2026.production.o
+__end_of_os_delay 231E 0 CODE 0 text18 dist/default/production\RTOS-2026.production.o
 _T0CONbits FD5 0 ABS 0 - dist/default/production\RTOS-2026.production.o
-__end_of_os_start 238A 0 CODE 0 text1 dist/default/production\RTOS-2026.production.o
+__end_of_os_start 2678 0 CODE 0 text1 dist/default/production\RTOS-2026.production.o
 __HdataCOMRAM 0 0 ABS 0 dataCOMRAM dist/default/production\RTOS-2026.production.o
 __LbssBIGRAM 0 0 ABS 0 bssBIGRAM dist/default/production\RTOS-2026.production.o
-__accesstop 60 0 ABS 0 - C:\Users\Yuri\AppData\Local\Temp\xcAs3uc.0\driver_tmp_9.o
-intlevel0 0 0 CODE 0 text C:\Users\Yuri\AppData\Local\Temp\xcAs3uc.0\driver_tmp_9.o
-intlevel1 0 0 CODE 0 text C:\Users\Yuri\AppData\Local\Temp\xcAs3uc.0\driver_tmp_9.o
-intlevel2 0 0 CODE 0 text C:\Users\Yuri\AppData\Local\Temp\xcAs3uc.0\driver_tmp_9.o
-intlevel3 0 0 CODE 0 text C:\Users\Yuri\AppData\Local\Temp\xcAs3uc.0\driver_tmp_9.o
+__accesstop 60 0 ABS 0 - C:\Users\Yuri\AppData\Local\Temp\xcAs2fo.0\driver_tmp_9.o
+intlevel0 0 0 CODE 0 text C:\Users\Yuri\AppData\Local\Temp\xcAs2fo.0\driver_tmp_9.o
+intlevel1 0 0 CODE 0 text C:\Users\Yuri\AppData\Local\Temp\xcAs2fo.0\driver_tmp_9.o
+intlevel2 0 0 CODE 0 text C:\Users\Yuri\AppData\Local\Temp\xcAs2fo.0\driver_tmp_9.o
+intlevel3 0 0 CODE 0 text C:\Users\Yuri\AppData\Local\Temp\xcAs2fo.0\driver_tmp_9.o
 __LbssCOMRAM 0 0 ABS 0 bssCOMRAM dist/default/production\RTOS-2026.production.o
-__end_of_pipe_init 2D44 0 CODE 0 text9 dist/default/production\RTOS-2026.production.o
-__end_of_pipe_read 2C42 0 CODE 0 text25 dist/default/production\RTOS-2026.production.o
+__end_of_pipe_init 2FEE 0 CODE 0 text9 dist/default/production\RTOS-2026.production.o
+__end_of_pipe_read 2E94 0 CODE 0 text25 dist/default/production\RTOS-2026.production.o
 __LnvFARRAM 0 0 FARRAM 0 nvFARRAM dist/default/production\RTOS-2026.production.o
-priority_rr_scheduler@found 36B 0 BANK3 1 cstackBANK3 dist/default/production\RTOS-2026.production.o
+priority_rr_scheduler@found 303 0 BANK3 1 cstackBANK3 dist/default/production\RTOS-2026.production.o
 __Hifardata 0 0 CODE 0 ifardata dist/default/production\RTOS-2026.production.o
 __Hclrtext 0 0 ABS 0 clrtext dist/default/production\RTOS-2026.production.o
-__pidataCOMRAM 2EF8 0 CODE 0 idataCOMRAM dist/default/production\RTOS-2026.production.o
-__end_of_tarefaPWN 2EEA 0 CODE 0 text28 dist/default/production\RTOS-2026.production.o
-_pipe_init 2D0A 0 CODE 0 text9 dist/default/production\RTOS-2026.production.o
-_pipe_read 2BEA 0 CODE 0 text25 dist/default/production\RTOS-2026.production.o
-i1priority_rr_scheduler@found 35C 0 BANK3 1 cstackBANK3 dist/default/production\RTOS-2026.production.o
-___inthi_sp 0 0 STACK 2 stack C:\Users\Yuri\AppData\Local\Temp\xcAs3uc.0\driver_tmp_9.o
+__pidataCOMRAM 31DE 0 CODE 0 idataCOMRAM dist/default/production\RTOS-2026.production.o
+__end_of_tarefaPWN 31CA 0 CODE 0 text28 dist/default/production\RTOS-2026.production.o
+_pipe_init 2FB4 0 CODE 0 text9 dist/default/production\RTOS-2026.production.o
+_pipe_read 2E3C 0 CODE 0 text25 dist/default/production\RTOS-2026.production.o
+i1priority_rr_scheduler@found 271 0 BANK2 1 cstackBANK2 dist/default/production\RTOS-2026.production.o
+___inthi_sp 0 0 STACK 2 stack C:\Users\Yuri\AppData\Local\Temp\xcAs2fo.0\driver_tmp_9.o
 i2priority_rr_scheduler@idx 8 0 COMRAM 1 cstackCOMRAM dist/default/production\RTOS-2026.production.o
-___intlo_sp 0 0 STACK 2 stack C:\Users\Yuri\AppData\Local\Temp\xcAs3uc.0\driver_tmp_9.o
+___intlo_sp 0 0 STACK 2 stack C:\Users\Yuri\AppData\Local\Temp\xcAs2fo.0\driver_tmp_9.o
 __LdataCOMRAM 0 0 ABS 0 dataCOMRAM dist/default/production\RTOS-2026.production.o
-_READ_ADC 2D74 0 CODE 0 text26 dist/default/production\RTOS-2026.production.o
+_READ_ADC 3050 0 CODE 0 text26 dist/default/production\RTOS-2026.production.o
 _CCPR1L FBE 0 ABS 0 - dist/default/production\RTOS-2026.production.o
 __Hintcode_body 0 0 ABS 0 intcode_body dist/default/production\RTOS-2026.production.o
-mutex_init@m 368 0 BANK3 1 cstackBANK3 dist/default/production\RTOS-2026.production.o
+mutex_init@m 300 0 BANK3 1 cstackBANK3 dist/default/production\RTOS-2026.production.o
 __Lintsave_regs 0 0 BIGRAM 1 intsave_regs dist/default/production\RTOS-2026.production.o
-pipe_read@dado 138 0 BANK1 1 cstackBANK1 dist/default/production\RTOS-2026.production.o
-__end_of_READ_ADC 2DA4 0 CODE 0 text26 dist/default/production\RTOS-2026.production.o
-_tarefaPWN 2ED2 0 CODE 0 text28 dist/default/production\RTOS-2026.production.o
+pipe_read@dado 13E 0 BANK1 1 cstackBANK1 dist/default/production\RTOS-2026.production.o
+__end_of_READ_ADC 3080 0 CODE 0 text26 dist/default/production\RTOS-2026.production.o
+_tarefaPWN 31B2 0 CODE 0 text28 dist/default/production\RTOS-2026.production.o
 __Hmediumconst 0 0 MEDIUMCONST 0 mediumconst dist/default/production\RTOS-2026.production.o
-i2os_create_task@prior 4 0 COMRAM 1 cstackCOMRAM dist/default/production\RTOS-2026.production.o
 __Hintcodelo 18 0 CODE 0 intcodelo dist/default/production\RTOS-2026.production.o
-_tarefaOneShot 0 0 ABS 0 - dist/default/production\RTOS-2026.production.o
-__end_of___awmod 28E2 0 CODE 0 text23 dist/default/production\RTOS-2026.production.o
-mutex_lock@m 11E 0 BANK1 1 cstackBANK1 dist/default/production\RTOS-2026.production.o
-pwm_set_duty@duty 359 0 BANK3 1 cstackBANK3 dist/default/production\RTOS-2026.production.o
-__end_ofi2_scheduler 2ED2 0 CODE 0 text31 dist/default/production\RTOS-2026.production.o
+__end_of___awmod 2BD4 0 CODE 0 text23 dist/default/production\RTOS-2026.production.o
+mutex_lock@m 9F 0 BANK0 1 cstackBANK0 dist/default/production\RTOS-2026.production.o
+pwm_set_duty@duty 26E 0 BANK2 1 cstackBANK2 dist/default/production\RTOS-2026.production.o
+__end_ofi2_scheduler 317C 0 CODE 0 text31 dist/default/production\RTOS-2026.production.o
 __LidataCOMRAM 0 0 ABS 0 idataCOMRAM dist/default/production\RTOS-2026.production.o
 _INTCON2bits FF1 0 ABS 0 - dist/default/production\RTOS-2026.production.o
-_adc_config 2E26 0 CODE 0 text12 dist/default/production\RTOS-2026.production.o
+_adc_config 3104 0 CODE 0 text12 dist/default/production\RTOS-2026.production.o
 __Lintcodelo 18 0 CODE 0 intcodelo dist/default/production\RTOS-2026.production.o
-start_initialization 2A06 0 CODE 0 cinit dist/default/production\RTOS-2026.production.o
+start_initialization 2D7A 0 CODE 0 cinit dist/default/production\RTOS-2026.production.o
 __HnvFARRAM 0 0 FARRAM 0 nvFARRAM dist/default/production\RTOS-2026.production.o
 _PCLATH FFA 0 ABS 0 - dist/default/production\RTOS-2026.production.o
 _PCLATU FFB 0 ABS 0 - dist/default/production\RTOS-2026.production.o
 _TRISAbits F92 0 ABS 0 - dist/default/production\RTOS-2026.production.o
 _TRISBbits F93 0 ABS 0 - dist/default/production\RTOS-2026.production.o
-_r_queue 200 0 BANK2 1 bssBANK2 dist/default/production\RTOS-2026.production.o
+_r_queue 535 0 BIGRAM 1 bssBIGRAM dist/default/production\RTOS-2026.production.o
 _TRISCbits F94 0 ABS 0 - dist/default/production\RTOS-2026.production.o
 _TRISDbits F95 0 ABS 0 - dist/default/production\RTOS-2026.production.o
-pipe_write@dado 127 0 BANK1 1 cstackBANK1 dist/default/production\RTOS-2026.production.o
-_pwm_init 2EEA 0 CODE 0 text8 dist/default/production\RTOS-2026.production.o
+pipe_write@dado A0 0 BANK0 1 cstackBANK0 dist/default/production\RTOS-2026.production.o
+_pwm_init 31CA 0 CODE 0 text8 dist/default/production\RTOS-2026.production.o
 ___rparam_used 1 0 ABS 0 - dist/default/production\RTOS-2026.production.o
-i2os_create_task@id 5 0 COMRAM 1 cstackCOMRAM dist/default/production\RTOS-2026.production.o
-i1priority_rr_scheduler@current 35A 0 BANK3 1 cstackBANK3 dist/default/production\RTOS-2026.production.o
-__pcstackBANK0 76 0 BANK0 1 cstackBANK0 dist/default/production\RTOS-2026.production.o
+i1priority_rr_scheduler@current 26F 0 BANK2 1 cstackBANK2 dist/default/production\RTOS-2026.production.o
+__pcstackBANK0 8F 0 BANK0 1 cstackBANK0 dist/default/production\RTOS-2026.production.o
 __pcstackBANK1 100 0 BANK1 1 cstackBANK1 dist/default/production\RTOS-2026.production.o
+__pcstackBANK2 200 0 BANK2 1 cstackBANK2 dist/default/production\RTOS-2026.production.o
 __pcstackBANK3 300 0 BANK3 1 cstackBANK3 dist/default/production\RTOS-2026.production.o
-__pcstackBANK4 400 0 BANK4 1 cstackBANK4 dist/default/production\RTOS-2026.production.o
 _STATUS FD8 0 ABS 0 - dist/default/production\RTOS-2026.production.o
 _STKPTR FFC 0 ABS 0 - dist/default/production\RTOS-2026.production.o
-i1_scheduler 2E84 0 CODE 0 text21 dist/default/production\RTOS-2026.production.o
+i1_scheduler 30DA 0 CODE 0 text21 dist/default/production\RTOS-2026.production.o
 _TABLAT FF5 0 ABS 0 - dist/default/production\RTOS-2026.production.o
-__end_of_pwm_init 2EF8 0 CODE 0 text8 dist/default/production\RTOS-2026.production.o
-_os_create_task 2A6C 0 CODE 0 text6 dist/default/production\RTOS-2026.production.o
-isa$xinst 0 0 ABS 0 - C:\Users\Yuri\AppData\Local\Temp\xcAs3uc.0\driver_tmp_9.o
-os_create_task@func 368 0 BANK3 1 cstackBANK3 dist/default/production\RTOS-2026.production.o
-__end_of_priority_rr_scheduler 24C2 0 CODE 0 text4 dist/default/production\RTOS-2026.production.o
+__end_of_pwm_init 31D8 0 CODE 0 text8 dist/default/production\RTOS-2026.production.o
+_os_create_task 2D0E 0 CODE 0 text6 dist/default/production\RTOS-2026.production.o
+isa$xinst 0 0 ABS 0 - C:\Users\Yuri\AppData\Local\Temp\xcAs2fo.0\driver_tmp_9.o
+os_create_task@func 300 0 BANK3 1 cstackBANK3 dist/default/production\RTOS-2026.production.o
+__end_of_priority_rr_scheduler 27B0 0 CODE 0 text4 dist/default/production\RTOS-2026.production.o
 __Hbank0 0 0 ABS 0 bank0 dist/default/production\RTOS-2026.production.o
 __Hbank1 0 0 ABS 0 bank1 dist/default/production\RTOS-2026.production.o
 __Hbank2 0 0 ABS 0 bank2 dist/default/production\RTOS-2026.production.o
@@ -690,11 +658,11 @@ __Hbigbss 0 0 BIGRAM 1 bigbss dist/default/production\RTOS-2026.production.o
 __Hbigram 0 0 ABS 0 bigram dist/default/production\RTOS-2026.production.o
 __Hbigsfr 0 0 ABS 0 bigsfr dist/default/production\RTOS-2026.production.o
 __smallconst 1000 0 SMALLCONST 0 smallconst dist/default/production\RTOS-2026.production.o
-sem_init@valor 369 0 BANK3 1 cstackBANK3 dist/default/production\RTOS-2026.production.o
-priority_rr_scheduler@idx 36E 0 BANK3 1 cstackBANK3 dist/default/production\RTOS-2026.production.o
+sem_init@valor 301 0 BANK3 1 cstackBANK3 dist/default/production\RTOS-2026.production.o
+priority_rr_scheduler@idx 306 0 BANK3 1 cstackBANK3 dist/default/production\RTOS-2026.production.o
 __Hcomram 0 0 ABS 0 comram dist/default/production\RTOS-2026.production.o
 __Hconfig 0 0 ABS 0 config dist/default/production\RTOS-2026.production.o
-__end_of_adc_config 2E4E 0 CODE 0 text12 dist/default/production\RTOS-2026.production.o
+__end_of_adc_config 312C 0 CODE 0 text12 dist/default/production\RTOS-2026.production.o
 __Lbank0 0 0 ABS 0 bank0 dist/default/production\RTOS-2026.production.o
 __Lbank1 0 0 ABS 0 bank1 dist/default/production\RTOS-2026.production.o
 __Lbank2 0 0 ABS 0 bank2 dist/default/production\RTOS-2026.production.o
@@ -723,18 +691,18 @@ __Ltext6 0 0 ABS 0 text6 dist/default/production\RTOS-2026.production.o
 __Ltext7 0 0 ABS 0 text7 dist/default/production\RTOS-2026.production.o
 __Ltext8 0 0 ABS 0 text8 dist/default/production\RTOS-2026.production.o
 __Ltext9 0 0 ABS 0 text9 dist/default/production\RTOS-2026.production.o
-_priority_rr_scheduler 238A 0 CODE 0 text4 dist/default/production\RTOS-2026.production.o
+_priority_rr_scheduler 2678 0 CODE 0 text4 dist/default/production\RTOS-2026.production.o
 __Hfarbss 0 0 FARRAM 0 farbss dist/default/production\RTOS-2026.production.o
 __Lintcode_body 0 0 ABS 0 intcode_body dist/default/production\RTOS-2026.production.o
 _PORTCbits F82 0 ABS 0 - dist/default/production\RTOS-2026.production.o
 _PORTDbits F83 0 ABS 0 - dist/default/production\RTOS-2026.production.o
-_setup_hardware 2E4E 0 CODE 0 text2 dist/default/production\RTOS-2026.production.o
+_setup_hardware 317C 0 CODE 0 text2 dist/default/production\RTOS-2026.production.o
 _INTCONbits FF2 0 ABS 0 - dist/default/production\RTOS-2026.production.o
-priority_rr_scheduler@max_prio 36A 0 BANK3 1 cstackBANK3 dist/default/production\RTOS-2026.production.o
+priority_rr_scheduler@max_prio 302 0 BANK3 1 cstackBANK3 dist/default/production\RTOS-2026.production.o
 __Habs1 0 0 ABS 0 abs1 dist/default/production\RTOS-2026.production.o
 __Hdata 0 0 ABS 0 data dist/default/production\RTOS-2026.production.o
 __Hheap 0 0 HEAP 7 heap dist/default/production\RTOS-2026.production.o
-__Hinit 62E 0 CODE 0 init dist/default/production\RTOS-2026.production.o
+__Hinit 752 0 CODE 0 init dist/default/production\RTOS-2026.production.o
 __Hrbit 0 0 COMRAM 1 rbit dist/default/production\RTOS-2026.production.o
 __Hrbss 0 0 COMRAM 1 rbss dist/default/production\RTOS-2026.production.o
 __Htemp 0 0 COMRAM 1 temp dist/default/production\RTOS-2026.production.o
@@ -742,51 +710,51 @@ __Htext 0 0 ABS 0 text dist/default/production\RTOS-2026.production.o
 __Labs1 0 0 ABS 0 abs1 dist/default/production\RTOS-2026.production.o
 __Ldata 0 0 ABS 0 data dist/default/production\RTOS-2026.production.o
 __Lheap 0 0 HEAP 7 heap dist/default/production\RTOS-2026.production.o
-__Linit 62A 0 CODE 0 init dist/default/production\RTOS-2026.production.o
+__Linit 74E 0 CODE 0 init dist/default/production\RTOS-2026.production.o
 __Lrbit 0 0 COMRAM 1 rbit dist/default/production\RTOS-2026.production.o
 __Lrbss 0 0 COMRAM 1 rbss dist/default/production\RTOS-2026.production.o
 __Ltemp 0 0 COMRAM 1 temp dist/default/production\RTOS-2026.production.o
 __Ltext 0 0 ABS 0 text dist/default/production\RTOS-2026.production.o
-i2_priority_rr_scheduler 25FA 0 CODE 0 text32 dist/default/production\RTOS-2026.production.o
-i2priority_rr_scheduler@i_1745 6 0 COMRAM 1 cstackCOMRAM dist/default/production\RTOS-2026.production.o
+i2_priority_rr_scheduler 28E8 0 CODE 0 text32 dist/default/production\RTOS-2026.production.o
+i2priority_rr_scheduler@i_1768 6 0 COMRAM 1 cstackCOMRAM dist/default/production\RTOS-2026.production.o
 __LcstackBANK0 0 0 ABS 0 cstackBANK0 dist/default/production\RTOS-2026.production.o
 __LcstackBANK1 0 0 ABS 0 cstackBANK1 dist/default/production\RTOS-2026.production.o
+__LcstackBANK2 0 0 ABS 0 cstackBANK2 dist/default/production\RTOS-2026.production.o
 __LcstackBANK3 0 0 ABS 0 cstackBANK3 dist/default/production\RTOS-2026.production.o
-__LcstackBANK4 0 0 ABS 0 cstackBANK4 dist/default/production\RTOS-2026.production.o
 int$flags 1 0 ABS 0 - dist/default/production\RTOS-2026.production.o
 __HcstackCOMRAM 0 0 ABS 0 cstackCOMRAM dist/default/production\RTOS-2026.production.o
-__end_ofi2_priority_rr_scheduler 2722 0 CODE 0 text32 dist/default/production\RTOS-2026.production.o
+__end_ofi2_priority_rr_scheduler 2A1E 0 CODE 0 text32 dist/default/production\RTOS-2026.production.o
 __Hintret 0 0 ABS 0 intret dist/default/production\RTOS-2026.production.o
 __Hirdata 0 0 CODE 0 irdata dist/default/production\RTOS-2026.production.o
 _BSR FE0 0 ABS 0 - dist/default/production\RTOS-2026.production.o
 _ISR 8 0 CODE 0 intcode dist/default/production\RTOS-2026.production.o
 _PR2 FBB 0 ABS 0 - dist/default/production\RTOS-2026.production.o
-__S0 2EFF 0 ABS 0 - dist/default/production\RTOS-2026.production.o
-__S1 631 0 ABS 0 - dist/default/production\RTOS-2026.production.o
+__S0 31DF 0 ABS 0 - dist/default/production\RTOS-2026.production.o
+__S1 689 0 ABS 0 - dist/default/production\RTOS-2026.production.o
 __S4 0 0 ABS 0 - dist/default/production\RTOS-2026.production.o
 __S5 0 0 ABS 0 - dist/default/production\RTOS-2026.production.o
-__end_of_os_create_task 2ACE 0 CODE 0 text6 dist/default/production\RTOS-2026.production.o
+__end_of_os_create_task 2D7A 0 CODE 0 text6 dist/default/production\RTOS-2026.production.o
 __HidataCOMRAM 0 0 ABS 0 idataCOMRAM dist/default/production\RTOS-2026.production.o
-__uDynamicHeap 431 0 BIGRAM 1 bssBIGRAM dist/default/production\RTOS-2026.production.o
+__uDynamicHeap 335 0 BIGRAM 1 bssBIGRAM dist/default/production\RTOS-2026.production.o
 __Lbigdata 0 0 BIGRAM 1 bigdata dist/default/production\RTOS-2026.production.o
 __Hnvrram 0 0 COMRAM 1 nvrram dist/default/production\RTOS-2026.production.o
-LED_1@pos 12E 0 BANK1 1 cstackBANK1 dist/default/production\RTOS-2026.production.o
-LED_1@seq 128 0 BANK1 1 cstackBANK1 dist/default/production\RTOS-2026.production.o
-mutex_unlock@m 11E 0 BANK1 1 cstackBANK1 dist/default/production\RTOS-2026.production.o
-__end_of_ISR 62A 0 CODE 0 intcode dist/default/production\RTOS-2026.production.o
-LED_1@F6269 57 0 COMRAM 1 dataCOMRAM dist/default/production\RTOS-2026.production.o
+LED_1@pos AE 0 BANK0 1 cstackBANK0 dist/default/production\RTOS-2026.production.o
+LED_1@seq A8 0 BANK0 1 cstackBANK0 dist/default/production\RTOS-2026.production.o
+mutex_unlock@m 9F 0 BANK0 1 cstackBANK0 dist/default/production\RTOS-2026.production.o
+__end_of_ISR 74E 0 CODE 0 intcode dist/default/production\RTOS-2026.production.o
+LED_1@F6269 AF 0 BANK0 1 dataBANK0 dist/default/production\RTOS-2026.production.o
 __Lintentry 0 0 ABS 0 intentry dist/default/production\RTOS-2026.production.o
-_config_user 2C8C 0 CODE 0 text7 dist/default/production\RTOS-2026.production.o
+_config_user 2F34 0 CODE 0 text7 dist/default/production\RTOS-2026.production.o
 __Hramtop 1000 0 RAM 0 ramtop dist/default/production\RTOS-2026.production.o
 i2priority_rr_scheduler@i 7 0 COMRAM 1 cstackCOMRAM dist/default/production\RTOS-2026.production.o
-__end_of_scheduler 2E84 0 CODE 0 text3 dist/default/production\RTOS-2026.production.o
+__end_of_scheduler 30DA 0 CODE 0 text3 dist/default/production\RTOS-2026.production.o
 __Hrparam 0 0 COMRAM 1 rparam dist/default/production\RTOS-2026.production.o
+__pdataBANK0 AF 0 BANK0 1 dataBANK0 dist/default/production\RTOS-2026.production.o
 __activetblptr 2 0 ABS 0 - dist/default/production\RTOS-2026.production.o
-os_create_task@id 400 0 BANK4 1 cstackBANK4 dist/default/production\RTOS-2026.production.o
+os_create_task@id 304 0 BANK3 1 cstackBANK3 dist/default/production\RTOS-2026.production.o
 __Hstruct 0 0 COMRAM 1 struct dist/default/production\RTOS-2026.production.o
 __LbssBANK0 0 0 ABS 0 bssBANK0 dist/default/production\RTOS-2026.production.o
-__LbssBANK2 0 0 ABS 0 bssBANK2 dist/default/production\RTOS-2026.production.o
-__end_of_setup_hardware 2E6A 0 CODE 0 text2 dist/default/production\RTOS-2026.production.o
+__end_of_setup_hardware 3198 0 CODE 0 text2 dist/default/production\RTOS-2026.production.o
 __Htext10 0 0 ABS 0 text10 dist/default/production\RTOS-2026.production.o
 __Htext11 0 0 ABS 0 text11 dist/default/production\RTOS-2026.production.o
 __Htext12 0 0 ABS 0 text12 dist/default/production\RTOS-2026.production.o
@@ -809,34 +777,31 @@ __Htext28 0 0 ABS 0 text28 dist/default/production\RTOS-2026.production.o
 __Htext29 0 0 ABS 0 text29 dist/default/production\RTOS-2026.production.o
 __Htext31 0 0 ABS 0 text31 dist/default/production\RTOS-2026.production.o
 __Htext32 0 0 ABS 0 text32 dist/default/production\RTOS-2026.production.o
-__Htext33 0 0 ABS 0 text33 dist/default/production\RTOS-2026.production.o
-_pipe_write 2B2E 0 CODE 0 text15 dist/default/production\RTOS-2026.production.o
-___awmod@counter 7B 0 BANK0 1 cstackBANK0 dist/default/production\RTOS-2026.production.o
-__ptext10 2D44 0 CODE 0 text10 dist/default/production\RTOS-2026.production.o
-__ptext11 2CCE 0 CODE 0 text11 dist/default/production\RTOS-2026.production.o
-__ptext12 2E26 0 CODE 0 text12 dist/default/production\RTOS-2026.production.o
-__ptext13 2DD4 0 CODE 0 text13 dist/default/production\RTOS-2026.production.o
-__ptext14 28E2 0 CODE 0 text14 dist/default/production\RTOS-2026.production.o
-__ptext15 2B2E 0 CODE 0 text15 dist/default/production\RTOS-2026.production.o
-__ptext16 15B8 0 CODE 0 text16 dist/default/production\RTOS-2026.production.o
-__ptext17 2980 0 CODE 0 text17 dist/default/production\RTOS-2026.production.o
-__ptext18 1B4A 0 CODE 0 text18 dist/default/production\RTOS-2026.production.o
-__ptext19 2722 0 CODE 0 text19 dist/default/production\RTOS-2026.production.o
+_pipe_write 2E94 0 CODE 0 text15 dist/default/production\RTOS-2026.production.o
+___awmod@counter 133 0 BANK1 1 cstackBANK1 dist/default/production\RTOS-2026.production.o
+__ptext10 3020 0 CODE 0 text10 dist/default/production\RTOS-2026.production.o
+__ptext11 2F78 0 CODE 0 text11 dist/default/production\RTOS-2026.production.o
+__ptext12 3104 0 CODE 0 text12 dist/default/production\RTOS-2026.production.o
+__ptext13 312C 0 CODE 0 text13 dist/default/production\RTOS-2026.production.o
+__ptext14 2BD4 0 CODE 0 text14 dist/default/production\RTOS-2026.production.o
+__ptext15 2E94 0 CODE 0 text15 dist/default/production\RTOS-2026.production.o
+__ptext16 169A 0 CODE 0 text16 dist/default/production\RTOS-2026.production.o
+__ptext17 2C72 0 CODE 0 text17 dist/default/production\RTOS-2026.production.o
+__ptext18 1D0A 0 CODE 0 text18 dist/default/production\RTOS-2026.production.o
+__ptext19 2A1E 0 CODE 0 text19 dist/default/production\RTOS-2026.production.o
 __ptext20 1002 0 CODE 0 text20 dist/default/production\RTOS-2026.production.o
-__ptext21 2E84 0 CODE 0 text21 dist/default/production\RTOS-2026.production.o
-__ptext22 24C2 0 CODE 0 text22 dist/default/production\RTOS-2026.production.o
-__ptext23 281E 0 CODE 0 text23 dist/default/production\RTOS-2026.production.o
-__ptext24 2C42 0 CODE 0 text24 dist/default/production\RTOS-2026.production.o
-__ptext25 2BEA 0 CODE 0 text25 dist/default/production\RTOS-2026.production.o
-__ptext26 2D74 0 CODE 0 text26 dist/default/production\RTOS-2026.production.o
-__ptext27 2E9E 0 CODE 0 text27 dist/default/production\RTOS-2026.production.o
-__ptext28 2ED2 0 CODE 0 text28 dist/default/production\RTOS-2026.production.o
-__ptext29 2DA4 0 CODE 0 text29 dist/default/production\RTOS-2026.production.o
-__ptext31 2EB8 0 CODE 0 text31 dist/default/production\RTOS-2026.production.o
-__ptext32 25FA 0 CODE 0 text32 dist/default/production\RTOS-2026.production.o
-__ptext33 2B8C 0 CODE 0 text33 dist/default/production\RTOS-2026.production.o
-i2os_create_task@new_task 6 0 COMRAM 1 cstackCOMRAM dist/default/production\RTOS-2026.production.o
-___awmod 281E 0 CODE 0 text23 dist/default/production\RTOS-2026.production.o
+__ptext21 30DA 0 CODE 0 text21 dist/default/production\RTOS-2026.production.o
+__ptext22 27B0 0 CODE 0 text22 dist/default/production\RTOS-2026.production.o
+__ptext23 2B24 0 CODE 0 text23 dist/default/production\RTOS-2026.production.o
+__ptext24 2EEA 0 CODE 0 text24 dist/default/production\RTOS-2026.production.o
+__ptext25 2E3C 0 CODE 0 text25 dist/default/production\RTOS-2026.production.o
+__ptext26 3050 0 CODE 0 text26 dist/default/production\RTOS-2026.production.o
+__ptext27 3198 0 CODE 0 text27 dist/default/production\RTOS-2026.production.o
+__ptext28 31B2 0 CODE 0 text28 dist/default/production\RTOS-2026.production.o
+__ptext29 3080 0 CODE 0 text29 dist/default/production\RTOS-2026.production.o
+__ptext31 3154 0 CODE 0 text31 dist/default/production\RTOS-2026.production.o
+__ptext32 28E8 0 CODE 0 text32 dist/default/production\RTOS-2026.production.o
+___awmod 2B24 0 CODE 0 text23 dist/default/production\RTOS-2026.production.o
 __Lbank10 0 0 ABS 0 bank10 dist/default/production\RTOS-2026.production.o
 __Lbank11 0 0 ABS 0 bank11 dist/default/production\RTOS-2026.production.o
 __Lbank12 0 0 ABS 0 bank12 dist/default/production\RTOS-2026.production.o
@@ -846,78 +811,76 @@ __Lbank15 0 0 ABS 0 bank15 dist/default/production\RTOS-2026.production.o
 __Lbigbss 0 0 BIGRAM 1 bigbss dist/default/production\RTOS-2026.production.o
 __Lbigram 0 0 ABS 0 bigram dist/default/production\RTOS-2026.production.o
 __Lbigsfr 0 0 ABS 0 bigsfr dist/default/production\RTOS-2026.production.o
-_scheduler 2E6A 0 CODE 0 text3 dist/default/production\RTOS-2026.production.o
+_scheduler 30B0 0 CODE 0 text3 dist/default/production\RTOS-2026.production.o
 __Lcomram 0 0 ABS 0 comram dist/default/production\RTOS-2026.production.o
 __Lconfig 0 0 ABS 0 config dist/default/production\RTOS-2026.production.o
-i1priority_rr_scheduler@i_1745 35D 0 BANK3 1 cstackBANK3 dist/default/production\RTOS-2026.production.o
+i1priority_rr_scheduler@i_1768 272 0 BANK2 1 cstackBANK2 dist/default/production\RTOS-2026.production.o
 _LATDbits F8C 0 ABS 0 - dist/default/production\RTOS-2026.production.o
 __Lsivt_hi 0 0 CODE 0 sivt_hi dist/default/production\RTOS-2026.production.o
 __Lsivt_lo 18 0 CODE 0 sivt_lo dist/default/production\RTOS-2026.production.o
-pipe_init@p 36C 0 BANK3 1 cstackBANK3 dist/default/production\RTOS-2026.production.o
+pipe_init@p 304 0 BANK3 1 cstackBANK3 dist/default/production\RTOS-2026.production.o
 __Lfarbss 0 0 FARRAM 0 farbss dist/default/production\RTOS-2026.production.o
-___inthi_stack_hi 0 0 STACK 2 stack C:\Users\Yuri\AppData\Local\Temp\xcAs3uc.0\driver_tmp_9.o
-___inthi_stack_lo 0 0 STACK 2 stack C:\Users\Yuri\AppData\Local\Temp\xcAs3uc.0\driver_tmp_9.o
+___inthi_stack_hi 0 0 STACK 2 stack C:\Users\Yuri\AppData\Local\Temp\xcAs2fo.0\driver_tmp_9.o
+___inthi_stack_lo 0 0 STACK 2 stack C:\Users\Yuri\AppData\Local\Temp\xcAs2fo.0\driver_tmp_9.o
 __Lfardata 0 0 FARRAM 0 fardata dist/default/production\RTOS-2026.production.o
-isa$std 1 0 ABS 0 - C:\Users\Yuri\AppData\Local\Temp\xcAs3uc.0\driver_tmp_9.o
-i2os_create_task@func 2 0 COMRAM 1 cstackCOMRAM dist/default/production\RTOS-2026.production.o
-stackhi 0 0 ABS 0 - C:\Users\Yuri\AppData\Local\Temp\xcAs3uc.0\driver_tmp_9.o
-stacklo 0 0 ABS 0 - C:\Users\Yuri\AppData\Local\Temp\xcAs3uc.0\driver_tmp_9.o
+isa$std 1 0 ABS 0 - C:\Users\Yuri\AppData\Local\Temp\xcAs2fo.0\driver_tmp_9.o
+stackhi 0 0 ABS 0 - C:\Users\Yuri\AppData\Local\Temp\xcAs2fo.0\driver_tmp_9.o
+stacklo 0 0 ABS 0 - C:\Users\Yuri\AppData\Local\Temp\xcAs2fo.0\driver_tmp_9.o
 __Lintcode 8 0 CODE 0 intcode dist/default/production\RTOS-2026.production.o
-i1_priority_rr_scheduler 24C2 0 CODE 0 text22 dist/default/production\RTOS-2026.production.o
+i1_priority_rr_scheduler 27B0 0 CODE 0 text22 dist/default/production\RTOS-2026.production.o
 __Lintret 0 0 ABS 0 intret dist/default/production\RTOS-2026.production.o
 __Lirdata 0 0 CODE 0 irdata dist/default/production\RTOS-2026.production.o
 _ADCON0bits FC2 0 ABS 0 - dist/default/production\RTOS-2026.production.o
 _ADCON1bits FC1 0 ABS 0 - dist/default/production\RTOS-2026.production.o
 _ADCON2bits FC0 0 ABS 0 - dist/default/production\RTOS-2026.production.o
-_adc_read 2E9E 0 CODE 0 text27 dist/default/production\RTOS-2026.production.o
-_sem_init 2D44 0 CODE 0 text10 dist/default/production\RTOS-2026.production.o
-_sem_post 2980 0 CODE 0 text17 dist/default/production\RTOS-2026.production.o
-_sem_wait 15B8 0 CODE 0 text16 dist/default/production\RTOS-2026.production.o
-__pbssBIGRAM 431 0 BIGRAM 1 bssBIGRAM dist/default/production\RTOS-2026.production.o
-__end_ofi1_priority_rr_scheduler 25FA 0 CODE 0 text22 dist/default/production\RTOS-2026.production.o
+_adc_read 3198 0 CODE 0 text27 dist/default/production\RTOS-2026.production.o
+_sem_init 3020 0 CODE 0 text10 dist/default/production\RTOS-2026.production.o
+_sem_post 2C72 0 CODE 0 text17 dist/default/production\RTOS-2026.production.o
+_sem_wait 169A 0 CODE 0 text16 dist/default/production\RTOS-2026.production.o
+__pbssBIGRAM 335 0 BIGRAM 1 bssBIGRAM dist/default/production\RTOS-2026.production.o
+__end_ofi1_priority_rr_scheduler 28E8 0 CODE 0 text22 dist/default/production\RTOS-2026.production.o
 __Lspace_0 0 0 ABS 0 - dist/default/production\RTOS-2026.production.o
 __Lspace_1 0 0 ABS 0 - dist/default/production\RTOS-2026.production.o
 __Lspace_2 0 0 ABS 0 - dist/default/production\RTOS-2026.production.o
 __Lspace_4 0 0 ABS 0 - dist/default/production\RTOS-2026.production.o
-__pbssCOMRAM 45 0 COMRAM 1 bssCOMRAM dist/default/production\RTOS-2026.production.o
+__pbssCOMRAM 1B 0 COMRAM 1 bssCOMRAM dist/default/production\RTOS-2026.production.o
 i2priority_rr_scheduler@found 5 0 COMRAM 1 cstackCOMRAM dist/default/production\RTOS-2026.production.o
 __HcstackBANK0 0 0 ABS 0 cstackBANK0 dist/default/production\RTOS-2026.production.o
 __HcstackBANK1 0 0 ABS 0 cstackBANK1 dist/default/production\RTOS-2026.production.o
+__HcstackBANK2 0 0 ABS 0 cstackBANK2 dist/default/production\RTOS-2026.production.o
 __HcstackBANK3 0 0 ABS 0 cstackBANK3 dist/default/production\RTOS-2026.production.o
-__HcstackBANK4 0 0 ABS 0 cstackBANK4 dist/default/production\RTOS-2026.production.o
-pipe_write@p 126 0 BANK1 1 cstackBANK1 dist/default/production\RTOS-2026.production.o
-os_create_task@prior 36A 0 BANK3 1 cstackBANK3 dist/default/production\RTOS-2026.production.o
-sem_post@sem 12F 0 BANK1 1 cstackBANK1 dist/default/production\RTOS-2026.production.o
-__end_of_adc_read 2EB8 0 CODE 0 text27 dist/default/production\RTOS-2026.production.o
-__end_of_pipe_write 2B8C 0 CODE 0 text15 dist/default/production\RTOS-2026.production.o
+pipe_write@p 9F 0 BANK0 1 cstackBANK0 dist/default/production\RTOS-2026.production.o
+os_create_task@prior 302 0 BANK3 1 cstackBANK3 dist/default/production\RTOS-2026.production.o
+sem_post@sem 135 0 BANK1 1 cstackBANK1 dist/default/production\RTOS-2026.production.o
+__end_of_adc_read 31B2 0 CODE 0 text27 dist/default/production\RTOS-2026.production.o
+__end_of_pipe_write 2EEA 0 CODE 0 text15 dist/default/production\RTOS-2026.production.o
 __LcstackCOMRAM 0 0 ABS 0 cstackCOMRAM dist/default/production\RTOS-2026.production.o
-__end_of_sem_init 2D74 0 CODE 0 text10 dist/default/production\RTOS-2026.production.o
-__end_of_sem_post 2A06 0 CODE 0 text17 dist/default/production\RTOS-2026.production.o
-__end_of_sem_wait 1B4A 0 CODE 0 text16 dist/default/production\RTOS-2026.production.o
-end_of_initialization 2A5E 0 CODE 0 cinit dist/default/production\RTOS-2026.production.o
-pipe_read@p 137 0 BANK1 1 cstackBANK1 dist/default/production\RTOS-2026.production.o
+__end_of_sem_init 3050 0 CODE 0 text10 dist/default/production\RTOS-2026.production.o
+__end_of_sem_post 2D0E 0 CODE 0 text17 dist/default/production\RTOS-2026.production.o
+__end_of_sem_wait 1D0A 0 CODE 0 text16 dist/default/production\RTOS-2026.production.o
+end_of_initialization 2DCE 0 CODE 0 cinit dist/default/production\RTOS-2026.production.o
+pipe_read@p 13D 0 BANK1 1 cstackBANK1 dist/default/production\RTOS-2026.production.o
 __Lnvrram 0 0 COMRAM 1 nvrram dist/default/production\RTOS-2026.production.o
 __Hintentry 0 0 ABS 0 intentry dist/default/production\RTOS-2026.production.o
-?___awmod 11E 0 BANK1 1 cstackBANK1 dist/default/production\RTOS-2026.production.o
+?___awmod 12F 0 BANK1 1 cstackBANK1 dist/default/production\RTOS-2026.production.o
 __Hreset_vec 4 0 CODE 0 reset_vec dist/default/production\RTOS-2026.production.o
-i1priority_rr_scheduler@i 35E 0 BANK3 1 cstackBANK3 dist/default/production\RTOS-2026.production.o
+i1priority_rr_scheduler@i 273 0 BANK2 1 cstackBANK2 dist/default/production\RTOS-2026.production.o
 __HbssBANK0 0 0 ABS 0 bssBANK0 dist/default/production\RTOS-2026.production.o
-__HbssBANK2 0 0 ABS 0 bssBANK2 dist/default/production\RTOS-2026.production.o
-___awmod@dividend 11E 0 BANK1 1 cstackBANK1 dist/default/production\RTOS-2026.production.o
-__end_ofi1_scheduler 2E9E 0 CODE 0 text21 dist/default/production\RTOS-2026.production.o
+___awmod@dividend 12F 0 BANK1 1 cstackBANK1 dist/default/production\RTOS-2026.production.o
+__end_ofi1_scheduler 3104 0 CODE 0 text21 dist/default/production\RTOS-2026.production.o
 __Lramtop 1000 0 RAM 0 ramtop dist/default/production\RTOS-2026.production.o
 __Lrparam 0 0 COMRAM 1 rparam dist/default/production\RTOS-2026.production.o
-__pcinit 2A06 0 CODE 0 cinit dist/default/production\RTOS-2026.production.o
-__ptext0 2ACE 0 CODE 0 text0 dist/default/production\RTOS-2026.production.o
-__ptext1 2096 0 CODE 0 text1 dist/default/production\RTOS-2026.production.o
-__ptext2 2E4E 0 CODE 0 text2 dist/default/production\RTOS-2026.production.o
-__ptext3 2E6A 0 CODE 0 text3 dist/default/production\RTOS-2026.production.o
-__ptext4 238A 0 CODE 0 text4 dist/default/production\RTOS-2026.production.o
-__ptext5 2DFE 0 CODE 0 text5 dist/default/production\RTOS-2026.production.o
-__ptext6 2A6C 0 CODE 0 text6 dist/default/production\RTOS-2026.production.o
-__ptext7 2C8C 0 CODE 0 text7 dist/default/production\RTOS-2026.production.o
-__ptext8 2EEA 0 CODE 0 text8 dist/default/production\RTOS-2026.production.o
-__ptext9 2D0A 0 CODE 0 text9 dist/default/production\RTOS-2026.production.o
+__pcinit 2D7A 0 CODE 0 cinit dist/default/production\RTOS-2026.production.o
+__ptext0 2DDC 0 CODE 0 text0 dist/default/production\RTOS-2026.production.o
+__ptext1 231E 0 CODE 0 text1 dist/default/production\RTOS-2026.production.o
+__ptext2 317C 0 CODE 0 text2 dist/default/production\RTOS-2026.production.o
+__ptext3 30B0 0 CODE 0 text3 dist/default/production\RTOS-2026.production.o
+__ptext4 2678 0 CODE 0 text4 dist/default/production\RTOS-2026.production.o
+__ptext5 2FEE 0 CODE 0 text5 dist/default/production\RTOS-2026.production.o
+__ptext6 2D0E 0 CODE 0 text6 dist/default/production\RTOS-2026.production.o
+__ptext7 2F34 0 CODE 0 text7 dist/default/production\RTOS-2026.production.o
+__ptext8 31CA 0 CODE 0 text8 dist/default/production\RTOS-2026.production.o
+__ptext9 2FB4 0 CODE 0 text9 dist/default/production\RTOS-2026.production.o
 __Lstruct 0 0 COMRAM 1 struct dist/default/production\RTOS-2026.production.o
 __Ltext10 0 0 ABS 0 text10 dist/default/production\RTOS-2026.production.o
 __Ltext11 0 0 ABS 0 text11 dist/default/production\RTOS-2026.production.o
@@ -941,42 +904,41 @@ __Ltext28 0 0 ABS 0 text28 dist/default/production\RTOS-2026.production.o
 __Ltext29 0 0 ABS 0 text29 dist/default/production\RTOS-2026.production.o
 __Ltext31 0 0 ABS 0 text31 dist/default/production\RTOS-2026.production.o
 __Ltext32 0 0 ABS 0 text32 dist/default/production\RTOS-2026.production.o
-__Ltext33 0 0 ABS 0 text33 dist/default/production\RTOS-2026.production.o
-__ramtop 1000 0 RAM 0 ramtop C:\Users\Yuri\AppData\Local\Temp\xcAs3uc.0\driver_tmp_9.o
-__end_of_os_config 2E26 0 CODE 0 text5 dist/default/production\RTOS-2026.production.o
-priority_rr_scheduler@current 369 0 BANK3 1 cstackBANK3 dist/default/production\RTOS-2026.production.o
+__ramtop 1000 0 RAM 0 ramtop C:\Users\Yuri\AppData\Local\Temp\xcAs2fo.0\driver_tmp_9.o
+__end_of_os_config 3020 0 CODE 0 text5 dist/default/production\RTOS-2026.production.o
+priority_rr_scheduler@current 301 0 BANK3 1 cstackBANK3 dist/default/production\RTOS-2026.production.o
 __Lpowerup 0 0 CODE 0 powerup dist/default/production\RTOS-2026.production.o
 __Leeprom_data 0 0 EEDATA 0 eeprom_data dist/default/production\RTOS-2026.production.o
 i2priority_rr_scheduler@max_prio 4 0 COMRAM 1 cstackCOMRAM dist/default/production\RTOS-2026.production.o
 __H__absolute__ 0 0 ABS 0 __absolute__ dist/default/production\RTOS-2026.production.o
 __psmallconst 1000 0 SMALLCONST 0 smallconst dist/default/production\RTOS-2026.production.o
-os_delay@time 367 0 BANK3 1 cstackBANK3 dist/default/production\RTOS-2026.production.o
+os_delay@time 27F 0 BANK2 1 cstackBANK2 dist/default/production\RTOS-2026.production.o
 __Lreset_vec 0 0 CODE 0 reset_vec dist/default/production\RTOS-2026.production.o
-_pwm_set_duty 2DA4 0 CODE 0 text29 dist/default/production\RTOS-2026.production.o
-_rr_quantum 5D 0 COMRAM 1 dataCOMRAM dist/default/production\RTOS-2026.production.o
-___heap_hi 0 0 ABS 0 - C:\Users\Yuri\AppData\Local\Temp\xcAs3uc.0\driver_tmp_9.o
-___heap_lo 0 0 ABS 0 - C:\Users\Yuri\AppData\Local\Temp\xcAs3uc.0\driver_tmp_9.o
+_pwm_set_duty 3080 0 CODE 0 text29 dist/default/production\RTOS-2026.production.o
+_rr_quantum 1C 0 COMRAM 1 dataCOMRAM dist/default/production\RTOS-2026.production.o
+___heap_hi 0 0 ABS 0 - C:\Users\Yuri\AppData\Local\Temp\xcAs2fo.0\driver_tmp_9.o
+___heap_lo 0 0 ABS 0 - C:\Users\Yuri\AppData\Local\Temp\xcAs2fo.0\driver_tmp_9.o
 ___param_bank 0 0 ABS 0 - dist/default/production\RTOS-2026.production.o
-___intlo_stack_hi 0 0 STACK 2 stack C:\Users\Yuri\AppData\Local\Temp\xcAs3uc.0\driver_tmp_9.o
-___intlo_stack_lo 0 0 STACK 2 stack C:\Users\Yuri\AppData\Local\Temp\xcAs3uc.0\driver_tmp_9.o
+___intlo_stack_hi 0 0 STACK 2 stack C:\Users\Yuri\AppData\Local\Temp\xcAs2fo.0\driver_tmp_9.o
+___intlo_stack_lo 0 0 STACK 2 stack C:\Users\Yuri\AppData\Local\Temp\xcAs2fo.0\driver_tmp_9.o
 __Hbigdata 0 0 BIGRAM 1 bigdata dist/default/production\RTOS-2026.production.o
-__end_of__initialization 2A5E 0 CODE 0 cinit dist/default/production\RTOS-2026.production.o
-___awmod@divisor 120 0 BANK1 1 cstackBANK1 dist/default/production\RTOS-2026.production.o
+__end_of__initialization 2DCE 0 CODE 0 cinit dist/default/production\RTOS-2026.production.o
+___awmod@divisor 131 0 BANK1 1 cstackBANK1 dist/default/production\RTOS-2026.production.o
 __Libigdata 0 0 CODE 0 ibigdata dist/default/production\RTOS-2026.production.o
-_os_config 2DFE 0 CODE 0 text5 dist/default/production\RTOS-2026.production.o
+_os_config 2FEE 0 CODE 0 text5 dist/default/production\RTOS-2026.production.o
+__pidataBANK0 31D8 0 CODE 0 idataBANK0 dist/default/production\RTOS-2026.production.o
 __Lclrtext 0 0 ABS 0 clrtext dist/default/production\RTOS-2026.production.o
-i2_os_create_task 2B8C 0 CODE 0 text33 dist/default/production\RTOS-2026.production.o
-sem_init@sem 368 0 BANK3 1 cstackBANK3 dist/default/production\RTOS-2026.production.o
-_mutex_unlock 2722 0 CODE 0 text19 dist/default/production\RTOS-2026.production.o
-sem_wait@sem 12F 0 BANK1 1 cstackBANK1 dist/default/production\RTOS-2026.production.o
+sem_init@sem 300 0 BANK3 1 cstackBANK3 dist/default/production\RTOS-2026.production.o
+_mutex_unlock 2A1E 0 CODE 0 text19 dist/default/production\RTOS-2026.production.o
+sem_wait@sem 135 0 BANK1 1 cstackBANK1 dist/default/production\RTOS-2026.production.o
 __pcstackCOMRAM 2 0 COMRAM 1 cstackCOMRAM dist/default/production\RTOS-2026.production.o
-i2_scheduler 2EB8 0 CODE 0 text31 dist/default/production\RTOS-2026.production.o
-__end_of_idle 2DFE 0 CODE 0 text13 dist/default/production\RTOS-2026.production.o
-__end_of_main 2B2E 0 CODE 0 text0 dist/default/production\RTOS-2026.production.o
+i2_scheduler 3154 0 CODE 0 text31 dist/default/production\RTOS-2026.production.o
+__end_of_idle 3154 0 CODE 0 text13 dist/default/production\RTOS-2026.production.o
+__end_of_main 2E3C 0 CODE 0 text0 dist/default/production\RTOS-2026.production.o
 __pintcode 8 0 CODE 0 intcode dist/default/production\RTOS-2026.production.o
-__end_of_LED_1 2980 0 CODE 0 text14 dist/default/production\RTOS-2026.production.o
-__end_of_LED_2 2C8C 0 CODE 0 text24 dist/default/production\RTOS-2026.production.o
-_mutex_init 2CCE 0 CODE 0 text11 dist/default/production\RTOS-2026.production.o
+__end_of_LED_1 2C72 0 CODE 0 text14 dist/default/production\RTOS-2026.production.o
+__end_of_LED_2 2F34 0 CODE 0 text24 dist/default/production\RTOS-2026.production.o
+_mutex_init 2F78 0 CODE 0 text11 dist/default/production\RTOS-2026.production.o
 _mutex_lock 1002 0 CODE 0 text20 dist/default/production\RTOS-2026.production.o
 _ADRES FC3 0 ABS 0 - dist/default/production\RTOS-2026.production.o
 _FSR0H FEA 0 ABS 0 - dist/default/production\RTOS-2026.production.o
@@ -985,8 +947,8 @@ _FSR1H FE2 0 ABS 0 - dist/default/production\RTOS-2026.production.o
 _FSR1L FE1 0 ABS 0 - dist/default/production\RTOS-2026.production.o
 _FSR2H FDA 0 ABS 0 - dist/default/production\RTOS-2026.production.o
 _FSR2L FD9 0 ABS 0 - dist/default/production\RTOS-2026.production.o
-_LED_1 28E2 0 CODE 0 text14 dist/default/production\RTOS-2026.production.o
-_LED_2 2C42 0 CODE 0 text24 dist/default/production\RTOS-2026.production.o
+_LED_1 2BD4 0 CODE 0 text14 dist/default/production\RTOS-2026.production.o
+_LED_2 2EEA 0 CODE 0 text24 dist/default/production\RTOS-2026.production.o
 _PRODH FF4 0 ABS 0 - dist/default/production\RTOS-2026.production.o
 _PRODL FF3 0 ABS 0 - dist/default/production\RTOS-2026.production.o
 _T2CON FBA 0 ABS 0 - dist/default/production\RTOS-2026.production.o
@@ -998,31 +960,32 @@ __LRAM 1 0 ABS 0 - dist/default/production\RTOS-2026.production.o
 __Lbss 0 0 RAM 1 bss dist/default/production\RTOS-2026.production.o
 __Lram 0 0 ABS 0 ram dist/default/production\RTOS-2026.production.o
 __Lsfr 0 0 ABS 0 sfr dist/default/production\RTOS-2026.production.o
-_m_led 45 0 COMRAM 1 bssCOMRAM dist/default/production\RTOS-2026.production.o
+_m_led 7A 0 BANK0 1 bssBANK0 dist/default/production\RTOS-2026.production.o
 _CCP1CON FBD 0 ABS 0 - dist/default/production\RTOS-2026.production.o
-?_adc_read 13A 0 BANK1 1 cstackBANK1 dist/default/production\RTOS-2026.production.o
+__HdataBANK0 0 0 ABS 0 dataBANK0 dist/default/production\RTOS-2026.production.o
+?_adc_read 140 0 BANK1 1 cstackBANK1 dist/default/production\RTOS-2026.production.o
 __Hsivt_hi 0 0 CODE 0 sivt_hi dist/default/production\RTOS-2026.production.o
 __Hsivt_lo 18 0 CODE 0 sivt_lo dist/default/production\RTOS-2026.production.o
-__initialization 2A06 0 CODE 0 cinit dist/default/production\RTOS-2026.production.o
+__initialization 2D7A 0 CODE 0 cinit dist/default/production\RTOS-2026.production.o
 i2priority_rr_scheduler@current 3 0 COMRAM 1 cstackCOMRAM dist/default/production\RTOS-2026.production.o
 btemp0 1 0 ABS 0 - dist/default/production\RTOS-2026.production.o
 btemp1 2 0 ABS 0 - dist/default/production\RTOS-2026.production.o
 __pbssBANK0 60 0 BANK0 1 bssBANK0 dist/default/production\RTOS-2026.production.o
-__pbssBANK2 200 0 BANK2 1 bssBANK2 dist/default/production\RTOS-2026.production.o
-__end_of_config_user 2CCE 0 CODE 0 text7 dist/default/production\RTOS-2026.production.o
-__pdataCOMRAM 57 0 COMRAM 1 dataCOMRAM dist/default/production\RTOS-2026.production.o
+__end_of_config_user 2F78 0 CODE 0 text7 dist/default/production\RTOS-2026.production.o
+__pdataCOMRAM 1C 0 COMRAM 1 dataCOMRAM dist/default/production\RTOS-2026.production.o
 __Hfardata 0 0 FARRAM 0 fardata dist/default/production\RTOS-2026.production.o
 __Hsmallconst 1002 0 SMALLCONST 0 smallconst dist/default/production\RTOS-2026.production.o
 __Lifardata 0 0 CODE 0 ifardata dist/default/production\RTOS-2026.production.o
-priority_rr_scheduler@i_1745 36C 0 BANK3 1 cstackBANK3 dist/default/production\RTOS-2026.production.o
-__end_of_pwm_set_duty 2DD4 0 CODE 0 text29 dist/default/production\RTOS-2026.production.o
+priority_rr_scheduler@i_1768 304 0 BANK3 1 cstackBANK3 dist/default/production\RTOS-2026.production.o
+__end_of_pwm_set_duty 30B0 0 CODE 0 text29 dist/default/production\RTOS-2026.production.o
 _CCP1CONbits FBD 0 ABS 0 - dist/default/production\RTOS-2026.production.o
 _ANSELAbits F38 0 ABS 0 - dist/default/production\RTOS-2026.production.o
+_ANSELBbits F39 0 ABS 0 - dist/default/production\RTOS-2026.production.o
 _ANSELCbits F3A 0 ABS 0 - dist/default/production\RTOS-2026.production.o
 _ANSELDbits F3B 0 ABS 0 - dist/default/production\RTOS-2026.production.o
 __Hintsave_regs 0 0 BIGRAM 1 intsave_regs dist/default/production\RTOS-2026.production.o
-priority_rr_scheduler@i 36D 0 BANK3 1 cstackBANK3 dist/default/production\RTOS-2026.production.o
-__Hintcode 62A 0 CODE 0 intcode dist/default/production\RTOS-2026.production.o
+priority_rr_scheduler@i 305 0 BANK3 1 cstackBANK3 dist/default/production\RTOS-2026.production.o
+__Hintcode 74E 0 CODE 0 intcode dist/default/production\RTOS-2026.production.o
 # %SPLITSTAB Section
 # This section enumerates all the psect splits performed by the assembler.
 # The beginning of the section is indicated by %SPLITSTAB.
@@ -1048,17 +1011,16 @@ __Hintcode 62A 0 CODE 0 intcode dist/default/production\RTOS-2026.production.o
 # and size are in units of delta. The file address is in units of bytes.
 # All other numeric quantities are in decimal.
 %SEGMENTS
-text20 0 1002 1002 1EFD 1
-cstackCOMRAM 1 2 2 5C 1
-cstackBANK1 1 100 100 3C 1
-cstackBANK3 1 300 300 76 1
-cstackBANK4 1 400 400 31 1
+text20 0 1002 1002 21DD 1
+cstackCOMRAM 1 2 2 1B 1
+cstackBANK1 1 100 100 42 1
+cstackBANK2 1 200 200 80 1
+cstackBANK3 1 300 300 35 1
 reset_vec 0 0 0 4 1
-bssBANK0 1 60 60 1F 1
-bssBANK2 1 200 200 F4 1
-intcode 0 8 8 626 1
+bssBANK0 1 60 60 55 1
+intcode 0 8 8 74A 1
 smallconst 0 1000 1000 2 1
-bssBIGRAM 1 431 431 200 1
+bssBIGRAM 1 335 335 354 1
 # %NOTES Section
 # This section contains data of all the note-psects.  The beginning of the section
 # is indicated by %NOTES. The first line indicates the name and decimal

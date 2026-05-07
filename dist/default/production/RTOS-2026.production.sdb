@@ -17,7 +17,7 @@ WAITING 1
 RUNNING 2
 WAITING_SEM 3
 ]
-"117 D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\user.c
+"119 D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\user.c
 [e E37 . `uc
 READY 0
 WAITING 1
@@ -120,7 +120,6 @@ WAITING_SEM 3
 [v _os_delay os_delay `(v  1 e 1 0 ]
 "22
 [v _os_create_task os_create_task `(v  1 e 1 0 ]
-[v i2_os_create_task os_create_task `(v  1 e 1 0 ]
 "66
 [v _os_config os_config `(v  1 e 1 0 ]
 "79
@@ -155,16 +154,14 @@ WAITING_SEM 3
 [v _mutex_unlock mutex_unlock `(v  1 e 1 0 ]
 "14 D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\user.c
 [v _config_user config_user `(v  1 e 1 0 ]
-"42
+"44
 [v _LED_1 LED_1 `(v  1 e 1 0 ]
-"56
+"58
 [v _LED_2 LED_2 `(v  1 e 1 0 ]
-"67
+"69
 [v _READ_ADC READ_ADC `(v  1 e 1 0 ]
-"78
+"80
 [v _tarefaPWN tarefaPWN `(v  1 e 1 0 ]
-"111
-[v _tarefaOneShot tarefaOneShot `(v  1 e 1 0 ]
 "136 D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026/mem.h
 [v __uDynamicHeap _uDynamicHeap `[512]uc  1 e 512 0 ]
 [s S897 . 1 `uc 1 ANSA0 1 0 :1:0 
@@ -177,7 +174,17 @@ WAITING_SEM 3
 "65 D:/Microchip/MPLABX/v6.30/packs/Microchip/PIC18F-K_DFP/1.15.303/xc8\pic\include\proc/pic18f46k22.h
 [u S904 . 1 `S897 1 . 1 0 ]
 [v _ANSELAbits ANSELAbits `VES904  1 e 1 @3896 ]
-[s S1154 . 1 `uc 1 . 1 0 :2:0 
+[s S1071 . 1 `uc 1 ANSB0 1 0 :1:0 
+`uc 1 ANSB1 1 0 :1:1 
+`uc 1 ANSB2 1 0 :1:2 
+`uc 1 ANSB3 1 0 :1:3 
+`uc 1 ANSB4 1 0 :1:4 
+`uc 1 ANSB5 1 0 :1:5 
+]
+"110
+[u S1078 . 1 `S1071 1 . 1 0 ]
+[v _ANSELBbits ANSELBbits `VES1078  1 e 1 @3897 ]
+[s S1171 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 ANSC2 1 0 :1:2 
 `uc 1 ANSC3 1 0 :1:3 
 `uc 1 ANSC4 1 0 :1:4 
@@ -186,9 +193,9 @@ WAITING_SEM 3
 `uc 1 ANSC7 1 0 :1:7 
 ]
 "161
-[u S1162 . 1 `S1154 1 . 1 0 ]
-[v _ANSELCbits ANSELCbits `VES1162  1 e 1 @3898 ]
-[s S1133 . 1 `uc 1 ANSD0 1 0 :1:0 
+[u S1179 . 1 `S1171 1 . 1 0 ]
+[v _ANSELCbits ANSELCbits `VES1179  1 e 1 @3898 ]
+[s S1150 . 1 `uc 1 ANSD0 1 0 :1:0 
 `uc 1 ANSD1 1 0 :1:1 
 `uc 1 ANSD2 1 0 :1:2 
 `uc 1 ANSD3 1 0 :1:3 
@@ -198,8 +205,8 @@ WAITING_SEM 3
 `uc 1 ANSD7 1 0 :1:7 
 ]
 "213
-[u S1142 . 1 `S1133 1 . 1 0 ]
-[v _ANSELDbits ANSELDbits `VES1142  1 e 1 @3899 ]
+[u S1159 . 1 `S1150 1 . 1 0 ]
+[v _ANSELDbits ANSELDbits `VES1159  1 e 1 @3899 ]
 [s S202 . 1 `uc 1 RC0 1 0 :1:0 
 `uc 1 RC1 1 0 :1:1 
 `uc 1 RC2 1 0 :1:2 
@@ -261,7 +268,7 @@ WAITING_SEM 3
 ]
 [u S291 . 1 `S202 1 . 1 0 `S242 1 . 1 0 `S251 1 . 1 0 `S260 1 . 1 0 `S269 1 . 1 0 `S278 1 . 1 0 `S287 1 . 1 0 ]
 [v _PORTCbits PORTCbits `VES291  1 e 1 @3970 ]
-[s S1102 . 1 `uc 1 RD0 1 0 :1:0 
+[s S1119 . 1 `uc 1 RD0 1 0 :1:0 
 `uc 1 RD1 1 0 :1:1 
 `uc 1 RD2 1 0 :1:2 
 `uc 1 RD3 1 0 :1:3 
@@ -271,7 +278,7 @@ WAITING_SEM 3
 `uc 1 RD7 1 0 :1:7 
 ]
 "7203
-[s S1323 . 1 `uc 1 . 1 0 :2:0 
+[s S1340 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 P2B 1 0 :1:2 
 `uc 1 P2C 1 0 :1:3 
 `uc 1 P2D 1 0 :1:4 
@@ -279,16 +286,16 @@ WAITING_SEM 3
 `uc 1 P1C 1 0 :1:6 
 `uc 1 P1D 1 0 :1:7 
 ]
-[s S1331 . 1 `uc 1 . 1 0 :1:0 
+[s S1348 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 CCP4 1 0 :1:1 
 `uc 1 . 1 0 :4:2 
 `uc 1 TX2 1 0 :1:6 
 `uc 1 RX2 1 0 :1:7 
 ]
-[s S1337 . 1 `uc 1 . 1 0 :3:0 
+[s S1354 . 1 `uc 1 . 1 0 :3:0 
 `uc 1 NOT_SS2 1 0 :1:3 
 ]
-[s S1340 . 1 `uc 1 SCK2 1 0 :1:0 
+[s S1357 . 1 `uc 1 SCK2 1 0 :1:0 
 `uc 1 SDI2 1 0 :1:1 
 `uc 1 . 1 0 :1:2 
 `uc 1 nSS2 1 0 :1:3 
@@ -297,12 +304,12 @@ WAITING_SEM 3
 `uc 1 CK2 1 0 :1:6 
 `uc 1 DT2 1 0 :1:7 
 ]
-[s S1349 . 1 `uc 1 SCL2 1 0 :1:0 
+[s S1366 . 1 `uc 1 SCL2 1 0 :1:0 
 `uc 1 SDA2 1 0 :1:1 
 `uc 1 . 1 0 :1:2 
 `uc 1 SS2 1 0 :1:3 
 ]
-[s S1354 . 1 `uc 1 AN20 1 0 :1:0 
+[s S1371 . 1 `uc 1 AN20 1 0 :1:0 
 `uc 1 AN21 1 0 :1:1 
 `uc 1 AN22 1 0 :1:2 
 `uc 1 AN23 1 0 :1:3 
@@ -311,9 +318,9 @@ WAITING_SEM 3
 `uc 1 AN26 1 0 :1:6 
 `uc 1 AN27 1 0 :1:7 
 ]
-[u S1363 . 1 `S1102 1 . 1 0 `S1323 1 . 1 0 `S1331 1 . 1 0 `S1337 1 . 1 0 `S1340 1 . 1 0 `S1349 1 . 1 0 `S1354 1 . 1 0 ]
-[v _PORTDbits PORTDbits `VES1363  1 e 1 @3971 ]
-[s S1423 . 1 `uc 1 LATD0 1 0 :1:0 
+[u S1380 . 1 `S1119 1 . 1 0 `S1340 1 . 1 0 `S1348 1 . 1 0 `S1354 1 . 1 0 `S1357 1 . 1 0 `S1366 1 . 1 0 `S1371 1 . 1 0 ]
+[v _PORTDbits PORTDbits `VES1380  1 e 1 @3971 ]
+[s S1440 . 1 `uc 1 LATD0 1 0 :1:0 
 `uc 1 LATD1 1 0 :1:1 
 `uc 1 LATD2 1 0 :1:2 
 `uc 1 LATD3 1 0 :1:3 
@@ -323,7 +330,7 @@ WAITING_SEM 3
 `uc 1 LATD7 1 0 :1:7 
 ]
 "7921
-[s S1432 . 1 `uc 1 LD0 1 0 :1:0 
+[s S1449 . 1 `uc 1 LD0 1 0 :1:0 
 `uc 1 LD1 1 0 :1:1 
 `uc 1 LD2 1 0 :1:2 
 `uc 1 LD3 1 0 :1:3 
@@ -332,8 +339,8 @@ WAITING_SEM 3
 `uc 1 LD6 1 0 :1:6 
 `uc 1 LD7 1 0 :1:7 
 ]
-[u S1441 . 1 `S1423 1 . 1 0 `S1432 1 . 1 0 ]
-[v _LATDbits LATDbits `VES1441  1 e 1 @3980 ]
+[u S1458 . 1 `S1440 1 . 1 0 `S1449 1 . 1 0 ]
+[v _LATDbits LATDbits `VES1458  1 e 1 @3980 ]
 [s S857 . 1 `uc 1 TRISA0 1 0 :1:0 
 `uc 1 TRISA1 1 0 :1:1 
 `uc 1 TRISA2 1 0 :1:2 
@@ -388,7 +395,7 @@ WAITING_SEM 3
 "8534
 [u S211 . 1 `S193 1 . 1 0 `S202 1 . 1 0 ]
 [v _TRISCbits TRISCbits `VES211  1 e 1 @3988 ]
-[s S1093 . 1 `uc 1 TRISD0 1 0 :1:0 
+[s S1110 . 1 `uc 1 TRISD0 1 0 :1:0 
 `uc 1 TRISD1 1 0 :1:1 
 `uc 1 TRISD2 1 0 :1:2 
 `uc 1 TRISD3 1 0 :1:3 
@@ -398,8 +405,8 @@ WAITING_SEM 3
 `uc 1 TRISD7 1 0 :1:7 
 ]
 "8756
-[u S1111 . 1 `S1093 1 . 1 0 `S1102 1 . 1 0 ]
-[v _TRISDbits TRISDbits `VES1111  1 e 1 @3989 ]
+[u S1128 . 1 `S1110 1 . 1 0 `S1119 1 . 1 0 ]
+[v _TRISDbits TRISDbits `VES1128  1 e 1 @3989 ]
 "13230
 [v _T2CON T2CON `VEuc  1 e 1 @4026 ]
 "13301
@@ -490,7 +497,7 @@ WAITING_SEM 3
 [v _ADCON0bits ADCON0bits `VES758  1 e 1 @4034 ]
 "13734
 [v _ADRES ADRES `VEus  1 e 2 @4035 ]
-[s S1774 . 1 `uc 1 T0PS 1 0 :3:0 
+[s S1797 . 1 `uc 1 T0PS 1 0 :3:0 
 `uc 1 PSA 1 0 :1:3 
 `uc 1 T0SE 1 0 :1:4 
 `uc 1 T0CS 1 0 :1:5 
@@ -498,12 +505,12 @@ WAITING_SEM 3
 `uc 1 TMR0ON 1 0 :1:7 
 ]
 "16147
-[s S1781 . 1 `uc 1 T0PS0 1 0 :1:0 
+[s S1804 . 1 `uc 1 T0PS0 1 0 :1:0 
 `uc 1 T0PS1 1 0 :1:1 
 `uc 1 T0PS2 1 0 :1:2 
 ]
-[u S1785 . 1 `S1774 1 . 1 0 `S1781 1 . 1 0 ]
-[v _T0CONbits T0CONbits `VES1785  1 e 1 @4053 ]
+[u S1808 . 1 `S1797 1 . 1 0 `S1804 1 . 1 0 ]
+[v _T0CONbits T0CONbits `VES1808  1 e 1 @4053 ]
 "16197
 [v _TMR0 TMR0 `VEus  1 e 2 @4054 ]
 "16244
@@ -524,11 +531,11 @@ WAITING_SEM 3
 [v _FSR0L FSR0L `VEuc  1 e 1 @4073 ]
 "16655
 [v _FSR0H FSR0H `VEuc  1 e 1 @4074 ]
-[s S1200 . 1 `uc 1 . 1 0 :7:0 
+[s S1217 . 1 `uc 1 . 1 0 :7:0 
 `uc 1 NOT_RBPU 1 0 :1:7 
 ]
 "16879
-[s S1203 . 1 `uc 1 RBIP 1 0 :1:0 
+[s S1220 . 1 `uc 1 RBIP 1 0 :1:0 
 `uc 1 . 1 0 :1:1 
 `uc 1 TMR0IP 1 0 :1:2 
 `uc 1 . 1 0 :1:3 
@@ -537,11 +544,11 @@ WAITING_SEM 3
 `uc 1 INTEDG0 1 0 :1:6 
 `uc 1 nRBPU 1 0 :1:7 
 ]
-[s S1212 . 1 `uc 1 . 1 0 :7:0 
+[s S1229 . 1 `uc 1 . 1 0 :7:0 
 `uc 1 RBPU 1 0 :1:7 
 ]
-[u S1215 . 1 `S1200 1 . 1 0 `S1203 1 . 1 0 `S1212 1 . 1 0 ]
-[v _INTCON2bits INTCON2bits `VES1215  1 e 1 @4081 ]
+[u S1232 . 1 `S1217 1 . 1 0 `S1220 1 . 1 0 `S1229 1 . 1 0 ]
+[v _INTCON2bits INTCON2bits `VES1232  1 e 1 @4081 ]
 [s S103 . 1 `uc 1 RBIF 1 0 :1:0 
 `uc 1 INT0IF 1 0 :1:1 
 `uc 1 TMR0IF 1 0 :1:2 
@@ -597,17 +604,17 @@ WAITING_SEM 3
 "7 D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\kernel.c
 [s S71 sw_stack 25 `[8]S67 1 stack 24 0 `uc 1 stack_size 1 24 ]
 [s S74 tcb 48 `uc 1 task_id 1 0 `E37 1 task_state 1 1 `*.37(v 1 task_ptr 2 2 `uc 1 task_delay 1 4 `uc 1 task_priority 1 5 `uc 1 W_REG 1 6 `uc 1 STATUS_REG 1 7 `uc 1 BSR_REG 1 8 `uc 1 PRODL_REG 1 9 `uc 1 PRODH_REG 1 10 `uc 1 FSR0L_REG 1 11 `uc 1 FSR0H_REG 1 12 `uc 1 FSR1L_REG 1 13 `uc 1 FSR1H_REG 1 14 `uc 1 FSR2L_REG 1 15 `uc 1 FSR2H_REG 1 16 `uc 1 TABLAT_REG 1 17 `uc 1 TBLPTRL_REG 1 18 `uc 1 TBLPTRH_REG 1 19 `uc 1 TBLPTRU_REG 1 20 `uc 1 PCLATH_REG 1 21 `uc 1 PCLATU_REG 1 22 `S71 1 task_stack 25 23 ]
-[s S98 ready_queue 244 `[5]S74 1 TASKS 240 0 `uc 1 size 1 240 `*.39S74 1 task_running 2 241 `uc 1 pos_task_running 1 243 ]
-[v _r_queue r_queue `S98  1 e 244 0 ]
-[s S515 sem 8 `i 1 contador 2 0 `[4]uc 1 fila 4 2 `uc 1 pos_input 1 6 `uc 1 pos_output 1 7 ]
+[s S98 ready_queue 340 `[7]S74 1 TASKS 336 0 `uc 1 size 1 336 `*.39S74 1 task_running 2 337 `uc 1 pos_task_running 1 339 ]
+[v _r_queue r_queue `S98  1 e 340 0 ]
+[s S515 sem 10 `i 1 contador 2 0 `[6]uc 1 fila 6 2 `uc 1 pos_input 1 8 `uc 1 pos_output 1 9 ]
 "9 D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\user.c
-[v _s s `S515  1 e 8 0 ]
+[v _s s `S515  1 e 10 0 ]
 "10
-[s S669 pipe 22 `[4]uc 1 fila_dados 4 0 `uc 1 pos_input 1 4 `uc 1 pos_output 1 5 `S515 1 s_input 8 6 `S515 1 s_output 8 14 ]
-[v _p p `S669  1 e 22 0 ]
-[s S613 mutex 9 `uc 1 locked 1 0 `uc 1 owner_id 1 1 `[4]uc 1 fila 4 2 `uc 1 pos_input 1 6 `uc 1 pos_output 1 7 `uc 1 waiting_count 1 8 ]
+[s S669 pipe 26 `[4]uc 1 fila_dados 4 0 `uc 1 pos_input 1 4 `uc 1 pos_output 1 5 `S515 1 s_input 10 6 `S515 1 s_output 10 16 ]
+[v _p p `S669  1 e 26 0 ]
+[s S613 mutex 11 `uc 1 locked 1 0 `uc 1 owner_id 1 1 `[6]uc 1 fila 6 2 `uc 1 pos_input 1 8 `uc 1 pos_output 1 9 `uc 1 waiting_count 1 10 ]
 "11
-[v _m_led m_led `S613  1 e 9 0 ]
+[v _m_led m_led `S613  1 e 11 0 ]
 "12
 [v _dado dado `uc  1 e 1 0 ]
 "8 D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\main.c
@@ -634,17 +641,17 @@ WAITING_SEM 3
 [v _priority_rr_scheduler priority_rr_scheduler `(uc  1 e 1 0 ]
 {
 "67
-[v priority_rr_scheduler@idx idx `uc  1 a 1 110 ]
+[v priority_rr_scheduler@idx idx `uc  1 a 1 6 ]
 "66
-[v priority_rr_scheduler@i_1745 i `uc  1 a 1 108 ]
+[v priority_rr_scheduler@i_1768 i `uc  1 a 1 4 ]
 "55
-[v priority_rr_scheduler@i i `uc  1 a 1 109 ]
+[v priority_rr_scheduler@i i `uc  1 a 1 5 ]
 "53
-[v priority_rr_scheduler@found found `uc  1 a 1 107 ]
+[v priority_rr_scheduler@found found `uc  1 a 1 3 ]
 "52
-[v priority_rr_scheduler@max_prio max_prio `uc  1 a 1 106 ]
+[v priority_rr_scheduler@max_prio max_prio `uc  1 a 1 2 ]
 "64
-[v priority_rr_scheduler@current current `uc  1 a 1 105 ]
+[v priority_rr_scheduler@current current `uc  1 a 1 1 ]
 "75
 } 0
 "66 D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\kernel.c
@@ -660,19 +667,19 @@ WAITING_SEM 3
 "24
 [s S71 sw_stack 25 `[8]S67 1 stack 24 0 `uc 1 stack_size 1 24 ]
 [s S74 tcb 48 `uc 1 task_id 1 0 `E37 1 task_state 1 1 `*.37(v 1 task_ptr 2 2 `uc 1 task_delay 1 4 `uc 1 task_priority 1 5 `uc 1 W_REG 1 6 `uc 1 STATUS_REG 1 7 `uc 1 BSR_REG 1 8 `uc 1 PRODL_REG 1 9 `uc 1 PRODH_REG 1 10 `uc 1 FSR0L_REG 1 11 `uc 1 FSR0H_REG 1 12 `uc 1 FSR1L_REG 1 13 `uc 1 FSR1H_REG 1 14 `uc 1 FSR2L_REG 1 15 `uc 1 FSR2H_REG 1 16 `uc 1 TABLAT_REG 1 17 `uc 1 TBLPTRL_REG 1 18 `uc 1 TBLPTRH_REG 1 19 `uc 1 TBLPTRU_REG 1 20 `uc 1 PCLATH_REG 1 21 `uc 1 PCLATU_REG 1 22 `S71 1 task_stack 25 23 ]
-[v os_create_task@new_task new_task `S74  1 a 48 1 ]
+[v os_create_task@new_task new_task `S74  1 a 48 5 ]
 "22
 [v os_create_task@id id `uc  1 p 1 wreg ]
-[v os_create_task@func func `*.37(v  1 p 2 104 ]
-[v os_create_task@prior prior `uc  1 p 1 106 ]
+[v os_create_task@func func `*.37(v  1 p 2 0 ]
+[v os_create_task@prior prior `uc  1 p 1 2 ]
 "26
-[v os_create_task@id id `uc  1 p 1 0 ]
+[v os_create_task@id id `uc  1 p 1 4 ]
 "53
 } 1
 "14 D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\user.c
 [v _config_user config_user `(v  1 e 1 0 ]
 {
-"40
+"42
 } 0
 "27 D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\io.c
 [v _pwm_init pwm_init `(v  1 e 1 0 ]
@@ -682,24 +689,24 @@ WAITING_SEM 3
 "3 D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\com.c
 [v _pipe_init pipe_init `(v  1 e 1 0 ]
 {
-[s S515 sem 8 `i 1 contador 2 0 `[4]uc 1 fila 4 2 `uc 1 pos_input 1 6 `uc 1 pos_output 1 7 ]
-[s S669 pipe 22 `[4]uc 1 fila_dados 4 0 `uc 1 pos_input 1 4 `uc 1 pos_output 1 5 `S515 1 s_input 8 6 `S515 1 s_output 8 14 ]
-[v pipe_init@p p `*.30S669  1 p 1 108 ]
+[s S515 sem 10 `i 1 contador 2 0 `[6]uc 1 fila 6 2 `uc 1 pos_input 1 8 `uc 1 pos_output 1 9 ]
+[s S669 pipe 26 `[4]uc 1 fila_dados 4 0 `uc 1 pos_input 1 4 `uc 1 pos_output 1 5 `S515 1 s_input 10 6 `S515 1 s_output 10 16 ]
+[v pipe_init@p p `*.30S669  1 p 1 4 ]
 "9
 } 0
 "8 D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\sync.c
 [v _sem_init sem_init `(v  1 e 1 0 ]
 {
-[s S515 sem 8 `i 1 contador 2 0 `[4]uc 1 fila 4 2 `uc 1 pos_input 1 6 `uc 1 pos_output 1 7 ]
-[v sem_init@sem sem `*.30S515  1 p 1 104 ]
-[v sem_init@valor valor `uc  1 p 1 105 ]
+[s S515 sem 10 `i 1 contador 2 0 `[6]uc 1 fila 6 2 `uc 1 pos_input 1 8 `uc 1 pos_output 1 9 ]
+[v sem_init@sem sem `*.30S515  1 p 1 0 ]
+[v sem_init@valor valor `uc  1 p 1 1 ]
 "12
 } 0
 "43
 [v _mutex_init mutex_init `(v  1 e 1 0 ]
 {
-[s S613 mutex 9 `uc 1 locked 1 0 `uc 1 owner_id 1 1 `[4]uc 1 fila 4 2 `uc 1 pos_input 1 6 `uc 1 pos_output 1 7 `uc 1 waiting_count 1 8 ]
-[v mutex_init@m m `*.30S613  1 p 1 104 ]
+[s S613 mutex 11 `uc 1 locked 1 0 `uc 1 owner_id 1 1 `[6]uc 1 fila 6 2 `uc 1 pos_input 1 8 `uc 1 pos_output 1 9 `uc 1 waiting_count 1 10 ]
+[v mutex_init@m m `*.30S613  1 p 1 0 ]
 "49
 } 0
 "4 D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\io.c
@@ -712,38 +719,38 @@ WAITING_SEM 3
 {
 "111
 } 0
-"42 D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\user.c
+"44 D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\user.c
 [v _LED_1 LED_1 `(v  1 e 1 0 ]
 {
-"43
-[v LED_1@seq seq `[6]uc  1 a 6 40 ]
+"45
+[v LED_1@seq seq `[6]uc  1 a 6 25 ]
+"46
+[v LED_1@pos pos `uc  1 a 1 31 ]
 "44
-[v LED_1@pos pos `uc  1 a 1 46 ]
-"42
 [v LED_1@F6269 F6269 `[6]uc  1 s 6 F6269 ]
-"54
+"56
 } 0
 "11 D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\com.c
 [v _pipe_write pipe_write `(v  1 e 1 0 ]
 {
-[s S515 sem 8 `i 1 contador 2 0 `[4]uc 1 fila 4 2 `uc 1 pos_input 1 6 `uc 1 pos_output 1 7 ]
-[s S669 pipe 22 `[4]uc 1 fila_dados 4 0 `uc 1 pos_input 1 4 `uc 1 pos_output 1 5 `S515 1 s_input 8 6 `S515 1 s_output 8 14 ]
-[v pipe_write@p p `*.30S669  1 p 1 38 ]
-[v pipe_write@dado dado `uc  1 p 1 39 ]
+[s S515 sem 10 `i 1 contador 2 0 `[6]uc 1 fila 6 2 `uc 1 pos_input 1 8 `uc 1 pos_output 1 9 ]
+[s S669 pipe 26 `[4]uc 1 fila_dados 4 0 `uc 1 pos_input 1 4 `uc 1 pos_output 1 5 `S515 1 s_input 10 6 `S515 1 s_output 10 16 ]
+[v pipe_write@p p `*.30S669  1 p 1 16 ]
+[v pipe_write@dado dado `uc  1 p 1 17 ]
 "17
 } 0
 "14 D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\sync.c
 [v _sem_wait sem_wait `(v  1 e 1 0 ]
 {
-[s S515 sem 8 `i 1 contador 2 0 `[4]uc 1 fila 4 2 `uc 1 pos_input 1 6 `uc 1 pos_output 1 7 ]
-[v sem_wait@sem sem `*.30S515  1 p 1 47 ]
+[s S515 sem 10 `i 1 contador 2 0 `[6]uc 1 fila 6 2 `uc 1 pos_input 1 8 `uc 1 pos_output 1 9 ]
+[v sem_wait@sem sem `*.30S515  1 p 1 53 ]
 "28
 } 0
 "30
 [v _sem_post sem_post `(v  1 e 1 0 ]
 {
-[s S515 sem 8 `i 1 contador 2 0 `[4]uc 1 fila 4 2 `uc 1 pos_input 1 6 `uc 1 pos_output 1 7 ]
-[v sem_post@sem sem `*.30S515  1 p 1 47 ]
+[s S515 sem 10 `i 1 contador 2 0 `[6]uc 1 fila 6 2 `uc 1 pos_input 1 8 `uc 1 pos_output 1 9 ]
+[v sem_post@sem sem `*.30S515  1 p 1 53 ]
 "41
 } 0
 "10 D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\kernel.c
@@ -752,24 +759,24 @@ WAITING_SEM 3
 [v os_delay@time time `uc  1 p 1 wreg ]
 [v os_delay@time time `uc  1 p 1 wreg ]
 "12
-[v os_delay@time time `uc  1 p 1 103 ]
+[v os_delay@time time `uc  1 p 1 127 ]
 "20
 } 1
 "69 D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\sync.c
 [v _mutex_unlock mutex_unlock `(v  1 e 1 0 ]
 {
 "74
-[v mutex_unlock@task_idx task_idx `uc  1 a 1 7 ]
-[s S613 mutex 9 `uc 1 locked 1 0 `uc 1 owner_id 1 1 `[4]uc 1 fila 4 2 `uc 1 pos_input 1 6 `uc 1 pos_output 1 7 `uc 1 waiting_count 1 8 ]
+[v mutex_unlock@task_idx task_idx `uc  1 a 1 19 ]
+[s S613 mutex 11 `uc 1 locked 1 0 `uc 1 owner_id 1 1 `[6]uc 1 fila 6 2 `uc 1 pos_input 1 8 `uc 1 pos_output 1 9 `uc 1 waiting_count 1 10 ]
 "69
-[v mutex_unlock@m m `*.30S613  1 p 1 30 ]
+[v mutex_unlock@m m `*.30S613  1 p 1 16 ]
 "86
 } 0
 "51
 [v _mutex_lock mutex_lock `(v  1 e 1 0 ]
 {
-[s S613 mutex 9 `uc 1 locked 1 0 `uc 1 owner_id 1 1 `[4]uc 1 fila 4 2 `uc 1 pos_input 1 6 `uc 1 pos_output 1 7 `uc 1 waiting_count 1 8 ]
-[v mutex_lock@m m `*.30S613  1 p 1 30 ]
+[s S613 mutex 11 `uc 1 locked 1 0 `uc 1 owner_id 1 1 `[6]uc 1 fila 6 2 `uc 1 pos_input 1 8 `uc 1 pos_output 1 9 `uc 1 waiting_count 1 10 ]
+[v mutex_lock@m m `*.30S613  1 p 1 16 ]
 "67
 } 0
 "9 D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\scheduler.c
@@ -781,71 +788,71 @@ WAITING_SEM 3
 [v i1_priority_rr_scheduler priority_rr_scheduler `(uc  1 e 1 0 ]
 {
 "67
-[v i1priority_rr_scheduler@idx idx `uc  1 a 1 95 ]
+[v i1priority_rr_scheduler@idx idx `uc  1 a 1 116 ]
 "55
-[v i1priority_rr_scheduler@i i `uc  1 a 1 94 ]
+[v i1priority_rr_scheduler@i i `uc  1 a 1 115 ]
 "66
-[v i1priority_rr_scheduler@i_1745 i `uc  1 a 1 93 ]
+[v i1priority_rr_scheduler@i_1768 i `uc  1 a 1 114 ]
 "53
-[v i1priority_rr_scheduler@found found `uc  1 a 1 92 ]
+[v i1priority_rr_scheduler@found found `uc  1 a 1 113 ]
 "52
-[v i1priority_rr_scheduler@max_prio max_prio `uc  1 a 1 91 ]
+[v i1priority_rr_scheduler@max_prio max_prio `uc  1 a 1 112 ]
 "64
-[v i1priority_rr_scheduler@current current `uc  1 a 1 90 ]
+[v i1priority_rr_scheduler@current current `uc  1 a 1 111 ]
 "75
 } 0
 "7 C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
 [v ___awmod __awmod `(i  1 e 2 0 ]
 {
 "10
-[v ___awmod@sign sign `uc  1 a 1 6 ]
-[v ___awmod@counter counter `uc  1 a 1 5 ]
+[v ___awmod@sign sign `uc  1 a 1 52 ]
+[v ___awmod@counter counter `uc  1 a 1 51 ]
 "7
-[v ___awmod@dividend dividend `i  1 p 2 30 ]
-[v ___awmod@divisor divisor `i  1 p 2 32 ]
+[v ___awmod@dividend dividend `i  1 p 2 47 ]
+[v ___awmod@divisor divisor `i  1 p 2 49 ]
 "34
 } 0
-"56 D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\user.c
+"58 D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\user.c
 [v _LED_2 LED_2 `(v  1 e 1 0 ]
 {
-"65
+"67
 } 0
 "19 D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\com.c
 [v _pipe_read pipe_read `(v  1 e 1 0 ]
 {
-[s S515 sem 8 `i 1 contador 2 0 `[4]uc 1 fila 4 2 `uc 1 pos_input 1 6 `uc 1 pos_output 1 7 ]
-[s S669 pipe 22 `[4]uc 1 fila_dados 4 0 `uc 1 pos_input 1 4 `uc 1 pos_output 1 5 `S515 1 s_input 8 6 `S515 1 s_output 8 14 ]
-[v pipe_read@p p `*.30S669  1 p 1 55 ]
-[v pipe_read@dado dado `*.30uc  1 p 1 56 ]
+[s S515 sem 10 `i 1 contador 2 0 `[6]uc 1 fila 6 2 `uc 1 pos_input 1 8 `uc 1 pos_output 1 9 ]
+[s S669 pipe 26 `[4]uc 1 fila_dados 4 0 `uc 1 pos_input 1 4 `uc 1 pos_output 1 5 `S515 1 s_input 10 6 `S515 1 s_output 10 16 ]
+[v pipe_read@p p `*.30S669  1 p 1 61 ]
+[v pipe_read@dado dado `*.30uc  1 p 1 62 ]
 "25
 } 0
-"67 D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\user.c
+"69 D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\user.c
 [v _READ_ADC READ_ADC `(v  1 e 1 0 ]
 {
-"76
+"78
 } 0
 "17 D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\io.c
 [v _adc_read adc_read `(us  1 e 2 0 ]
 {
 "25
 } 0
-"78 D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\user.c
+"80 D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\user.c
 [v _tarefaPWN tarefaPWN `(v  1 e 1 0 ]
 {
-"83
+"85
 } 0
 "35 D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\io.c
 [v _pwm_set_duty pwm_set_duty `(v  1 e 1 0 ]
 {
-[v pwm_set_duty@duty duty `us  1 p 2 89 ]
+[v pwm_set_duty@duty duty `us  1 p 2 110 ]
 "39
 } 0
 "25 D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\hw.c
 [v _ISR ISR `IIH(v  1 e 1 0 ]
 {
 "30
-[v ISR@i i `i  1 a 2 65 ]
-"55
+[v ISR@i i `i  1 a 2 23 ]
+"56
 } 0
 "9 D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\scheduler.c
 [v i2_scheduler scheduler `(v  1 e 1 0 ]
@@ -860,7 +867,7 @@ WAITING_SEM 3
 "55
 [v i2priority_rr_scheduler@i i `uc  1 a 1 5 ]
 "66
-[v i2priority_rr_scheduler@i_1745 i `uc  1 a 1 4 ]
+[v i2priority_rr_scheduler@i_1768 i `uc  1 a 1 4 ]
 "53
 [v i2priority_rr_scheduler@found found `uc  1 a 1 3 ]
 "52
@@ -869,20 +876,3 @@ WAITING_SEM 3
 [v i2priority_rr_scheduler@current current `uc  1 a 1 1 ]
 "75
 } 0
-"22 D:\Biblioteca\Desktop\Projeto de SO embarcado\RTOS-2026\kernel.c
-[v i2_os_create_task os_create_task `(v  1 e 1 0 ]
-{
-[v i2os_create_task@id id `uc  1 p 1 wreg ]
-[s S67 hw_stack 3 `uc 1 TOSL_REG 1 0 `uc 1 TOSH_REG 1 1 `uc 1 TOSU_REG 1 2 ]
-"24
-[s S71 sw_stack 25 `[8]S67 1 stack 24 0 `uc 1 stack_size 1 24 ]
-[s S74 tcb 48 `uc 1 task_id 1 0 `E37 1 task_state 1 1 `*.37(v 1 task_ptr 2 2 `uc 1 task_delay 1 4 `uc 1 task_priority 1 5 `uc 1 W_REG 1 6 `uc 1 STATUS_REG 1 7 `uc 1 BSR_REG 1 8 `uc 1 PRODL_REG 1 9 `uc 1 PRODH_REG 1 10 `uc 1 FSR0L_REG 1 11 `uc 1 FSR0H_REG 1 12 `uc 1 FSR1L_REG 1 13 `uc 1 FSR1H_REG 1 14 `uc 1 FSR2L_REG 1 15 `uc 1 FSR2H_REG 1 16 `uc 1 TABLAT_REG 1 17 `uc 1 TBLPTRL_REG 1 18 `uc 1 TBLPTRH_REG 1 19 `uc 1 TBLPTRU_REG 1 20 `uc 1 PCLATH_REG 1 21 `uc 1 PCLATU_REG 1 22 `S71 1 task_stack 25 23 ]
-[v i2os_create_task@new_task new_task `S74  1 a 48 4 ]
-"22
-[v i2os_create_task@id id `uc  1 p 1 wreg ]
-[v i2os_create_task@func func `*.37(v  1 p 2 0 ]
-[v i2os_create_task@prior prior `uc  1 p 1 2 ]
-"26
-[v i2os_create_task@id id `uc  1 p 1 3 ]
-"53
-} 1

@@ -184,7 +184,7 @@ typedef struct tcb {
 
 
 typedef struct ready_queue {
-    tcb_t TASKS[4 +1];
+    tcb_t TASKS[6 +1];
     uint8_t size;
     tcb_t *task_running;
     uint8_t pos_task_running;
@@ -9952,7 +9952,7 @@ uint8_t RR_scheduler() {
         prox++;
         if (prox >= r_queue.size) prox = 0;
         tentativas++;
-        if (tentativas >= (4 + 1)) return 0;
+        if (tentativas >= (6 + 1)) return 0;
     } while (r_queue.TASKS[prox].task_state != READY ||
             r_queue.TASKS[prox].task_ptr == idle);
     return prox;

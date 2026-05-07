@@ -18,7 +18,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [n S3 tcb task_id task_state task_ptr task_delay task_priority W_REG STATUS_REG BSR_REG PRODL_REG PRODH_REG FSR0L_REG FSR0H_REG FSR1L_REG FSR1H_REG FSR2L_REG FSR2H_REG TABLAT_REG TBLPTRL_REG TBLPTRH_REG TBLPTRU_REG PCLATH_REG PCLATU_REG task_stack ]
 "59
 [; ;./types.h: 59: typedef struct ready_queue {
-[s S4 `S3 -> 5 `i `uc 1 `*S3 1 `uc 1 ]
+[s S4 `S3 -> 7 `i `uc 1 `*S3 1 `uc 1 ]
 [n S4 ready_queue TASKS size task_running pos_task_running ]
 "7 scheduler.c
 [; ;scheduler.c: 7: extern ready_queue_t r_queue;
@@ -833,8 +833,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;scheduler.c: 25:         tentativas++;
 [e ++ _tentativas -> -> 1 `i `uc ]
 "26
-[; ;scheduler.c: 26:         if (tentativas >= (4 + 1)) return 0;
-[e $ ! >= -> _tentativas `i + -> 4 `i -> 1 `i 886  ]
+[; ;scheduler.c: 26:         if (tentativas >= (6 + 1)) return 0;
+[e $ ! >= -> _tentativas `i + -> 6 `i -> 1 `i 886  ]
 [e ) -> -> 0 `i `uc ]
 [e $UE 881  ]
 [e :U 886 ]
