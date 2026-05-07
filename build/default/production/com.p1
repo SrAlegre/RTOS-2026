@@ -1,15 +1,15 @@
 Version 4.0 HI-TECH Software Intermediate Code
 "9 ./sync.h
 [; ;./sync.h: 9: typedef struct sem {
-[s S5 `i 1 `uc -> 6 `i `uc 1 `uc 1 ]
+[s S5 `c 1 `uc -> 6 `i `uc 1 `uc 1 ]
 [n S5 sem contador fila pos_input pos_output ]
 "9 ./com.h
 [; ;./com.h: 9: typedef struct pipe {
 [s S7 `uc -> 4 `i `uc 1 `uc 1 `S5 1 `S5 1 ]
 [n S7 pipe fila_dados pos_input pos_output s_input s_output ]
 "26 ./sync.h
-[; ;./sync.h: 26: void sem_init(sem_t *sem, uint8_t valor);
-[v _sem_init `(v ~T0 @X0 0 ef2`*S5`uc ]
+[; ;./sync.h: 26: void sem_init(sem_t *sem, int8_t valor);
+[v _sem_init `(v ~T0 @X0 0 ef2`*S5`c ]
 "27
 [; ;./sync.h: 27: void sem_wait(sem_t *sem);
 [v _sem_wait `(v ~T0 @X0 0 ef1`*S5 ]
@@ -37,10 +37,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = . *U _p 2 -> -> 0 `i `uc ]
 "7
 [; ;com.c: 7:     sem_init(&p->s_input, 4);
-[e ( _sem_init (2 , &U . *U _p 3 -> -> 4 `i `uc ]
+[e ( _sem_init (2 , &U . *U _p 3 -> -> 4 `i `c ]
 "8
 [; ;com.c: 8:     sem_init(&p->s_output, 0);
-[e ( _sem_init (2 , &U . *U _p 4 -> -> 0 `i `uc ]
+[e ( _sem_init (2 , &U . *U _p 4 -> -> 0 `i `c ]
 "9
 [; ;com.c: 9: }
 [e :UE 8 ]

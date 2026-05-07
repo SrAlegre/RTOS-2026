@@ -5,7 +5,7 @@
 // Fila de aptos
 extern ready_queue_t r_queue;
 
-void sem_init(sem_t *sem, uint8_t valor) {
+void sem_init(sem_t *sem, int8_t valor) {
     sem->contador = valor;
     sem->pos_input = 0;
     sem->pos_output = 0;

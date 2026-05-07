@@ -29,8 +29,8 @@ void config_user() {
 
 
     asm("global _LED_1, _LED_2,_READ_ADC,_tarefaPWN");
-     //asm("global _LED_1_prio,_LED_2_prio,_LED_3_prio");
-
+    //asm("global _LED_1_prio,_LED_2_prio,_LED_3_prio");
+    asm("global _tarefaOneShot");
 
 
 

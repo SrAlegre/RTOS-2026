@@ -50,7 +50,11 @@ void __interrupt() ISR(void) {
     if (INTCONbits.INT0IF == 1) {
         INTCONbits.INT0IF = 0;
 
-        PORTCbits.RC7 = ~PORTCbits.RC7;
+        //PORTCbits.RC7 = ~PORTCbits.RC7;
+        os_create_task(6, tarefaOneShot, 6);
+        SAVE_CONTEXT(READY);
+        scheduler();
+        RESTORE_CONTEXT();
 
     }
 }
