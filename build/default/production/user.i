@@ -10073,7 +10073,7 @@ TASK tarefaControlePWM(void) {
 
 TASK tarefaFeedbackLED(void) {
     while(1) {
-        LATDbits.LATD7 = ~LATDbits.LATD7;
+        LATDbits.LATD0 = ~LATDbits.LATD0;
         os_delay(5);
     }
 }

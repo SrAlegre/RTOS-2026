@@ -9954,46 +9954,46 @@ void os_delay(uint8_t time)
     { (((&r_queue.TASKS[r_queue.pos_task_running]))->state_prio = (uint8_t)((((&r_queue.TASKS[r_queue.pos_task_running]))->state_prio & 0xFC) | (uint8_t)(WAITING))); (&r_queue.TASKS[r_queue.pos_task_running])->BSR_REG = BSR; (&r_queue.TASKS[r_queue.pos_task_running])->W_REG = WREG; (&r_queue.TASKS[r_queue.pos_task_running])->STATUS_REG = STATUS; (&r_queue.TASKS[r_queue.pos_task_running])->FSR0H_REG = FSR0H; (&r_queue.TASKS[r_queue.pos_task_running])->FSR0L_REG = FSR0L; (&r_queue.TASKS[r_queue.pos_task_running])->task_stack.stack[0].TOSL_REG = TOSL; (&r_queue.TASKS[r_queue.pos_task_running])->task_stack.stack[0].TOSH_REG = TOSH; (&r_queue.TASKS[r_queue.pos_task_running])->task_stack.stack[0].TOSU_REG = TOSU; };
     r_queue.TASKS[r_queue.pos_task_running].task_delay = time;
     scheduler();
-    { (((&r_queue.TASKS[r_queue.pos_task_running]))->state_prio = (uint8_t)((((&r_queue.TASKS[r_queue.pos_task_running]))->state_prio & 0xFC) | (uint8_t)(RUNNING))); BSR = (&r_queue.TASKS[r_queue.pos_task_running])->BSR_REG; WREG = (&r_queue.TASKS[r_queue.pos_task_running])->W_REG; STATUS = (&r_queue.TASKS[r_queue.pos_task_running])->STATUS_REG; FSR0H = (&r_queue.TASKS[r_queue.pos_task_running])->FSR0H_REG; FSR0L = (&r_queue.TASKS[r_queue.pos_task_running])->FSR0L_REG; TOSL = (&r_queue.TASKS[r_queue.pos_task_running])->task_stack.stack[0].TOSL_REG; TOSH = (&r_queue.TASKS[r_queue.pos_task_running])->task_stack.stack[0].TOSH_REG; TOSU = (&r_queue.TASKS[r_queue.pos_task_running])->task_stack.stack[0].TOSU_REG; __asm("RETURN"); };
+    { if ((((&r_queue.TASKS[r_queue.pos_task_running]))->state_prio & 0x03) == READY) { (((&r_queue.TASKS[r_queue.pos_task_running]))->state_prio = (uint8_t)((((&r_queue.TASKS[r_queue.pos_task_running]))->state_prio & 0xFC) | (uint8_t)(RUNNING))); } BSR = (&r_queue.TASKS[r_queue.pos_task_running])->BSR_REG; WREG = (&r_queue.TASKS[r_queue.pos_task_running])->W_REG; STATUS = (&r_queue.TASKS[r_queue.pos_task_running])->STATUS_REG; FSR0H = (&r_queue.TASKS[r_queue.pos_task_running])->FSR0H_REG; FSR0L = (&r_queue.TASKS[r_queue.pos_task_running])->FSR0L_REG; TOSL = (&r_queue.TASKS[r_queue.pos_task_running])->task_stack.stack[0].TOSL_REG; TOSH = (&r_queue.TASKS[r_queue.pos_task_running])->task_stack.stack[0].TOSH_REG; TOSU = (&r_queue.TASKS[r_queue.pos_task_running])->task_stack.stack[0].TOSU_REG; STKPTR = 1; __asm("RETURN"); };
 
     INTCONbits.GIE = 1;;
 }
 
 
-void os_create_task(uint8_t id, f_ptr func, uint8_t prior)
-{
-    tcb_t *new_task;
+    void os_create_task(uint8_t id, f_ptr func, uint8_t prior)
+    {
+        tcb_t *new_task;
 
-    if (r_queue.size >= 5 +1)
-        return;
+        if (r_queue.size >= 5 +1)
+            return;
 
-    new_task = &r_queue.TASKS[r_queue.size];
+        new_task = &r_queue.TASKS[r_queue.size];
 
-    new_task->task_id = id;
-    new_task->task_delay = 0;
-    new_task->task_ptr = func;
-    (((*new_task)).state_prio = (uint8_t)((((*new_task)).state_prio & 0xFC) | (uint8_t)(READY)));
-    (((*new_task)).state_prio = (uint8_t)((((*new_task)).state_prio & 0x03) | ((uint8_t)(prior) << 2)));
+        new_task->task_id = id;
+        new_task->task_delay = 0;
+        new_task->task_ptr = func;
+        (((*new_task)).state_prio = (uint8_t)((((*new_task)).state_prio & 0xFC) | (uint8_t)(READY)));
+        (((*new_task)).state_prio = (uint8_t)((((*new_task)).state_prio & 0x03) | ((uint8_t)(prior) << 2)));
 
-    new_task->BSR_REG = 0;
-    new_task->STATUS_REG = 0;
-    new_task->W_REG = 0;
-    new_task->FSR0H_REG = 0;
-    new_task->FSR0L_REG = 0;
+        new_task->BSR_REG = 0;
+        new_task->STATUS_REG = 0x00;
+        new_task->W_REG = 0;
+        new_task->FSR0H_REG = 0;
+        new_task->FSR0L_REG = 0;
 
 
-    new_task->task_stack.stack[0].TOSL_REG =
-    ((uint16_t)func) & 0xFF;
+        new_task->task_stack.stack[0].TOSL_REG =
+        ((uint16_t)func) & 0xFF;
 
-    new_task->task_stack.stack[0].TOSH_REG =
-    (((uint16_t)func) >> 8) & 0xFF;
+        new_task->task_stack.stack[0].TOSH_REG =
+        (((uint16_t)func) >> 8) & 0xFF;
 
-    new_task->task_stack.stack[0].TOSU_REG = 0;
+        new_task->task_stack.stack[0].TOSU_REG = 0;
 
-    new_task->task_stack.stack_size = 1;
+        new_task->task_stack.stack_size = 1;
 
-    r_queue.size++;
-}
+        r_queue.size++;
+    }
 
 void os_yield()
 {
@@ -10001,7 +10001,7 @@ void os_yield()
 
     { (((&r_queue.TASKS[r_queue.pos_task_running]))->state_prio = (uint8_t)((((&r_queue.TASKS[r_queue.pos_task_running]))->state_prio & 0xFC) | (uint8_t)(READY))); (&r_queue.TASKS[r_queue.pos_task_running])->BSR_REG = BSR; (&r_queue.TASKS[r_queue.pos_task_running])->W_REG = WREG; (&r_queue.TASKS[r_queue.pos_task_running])->STATUS_REG = STATUS; (&r_queue.TASKS[r_queue.pos_task_running])->FSR0H_REG = FSR0H; (&r_queue.TASKS[r_queue.pos_task_running])->FSR0L_REG = FSR0L; (&r_queue.TASKS[r_queue.pos_task_running])->task_stack.stack[0].TOSL_REG = TOSL; (&r_queue.TASKS[r_queue.pos_task_running])->task_stack.stack[0].TOSH_REG = TOSH; (&r_queue.TASKS[r_queue.pos_task_running])->task_stack.stack[0].TOSU_REG = TOSU; };
     scheduler();
-    { (((&r_queue.TASKS[r_queue.pos_task_running]))->state_prio = (uint8_t)((((&r_queue.TASKS[r_queue.pos_task_running]))->state_prio & 0xFC) | (uint8_t)(RUNNING))); BSR = (&r_queue.TASKS[r_queue.pos_task_running])->BSR_REG; WREG = (&r_queue.TASKS[r_queue.pos_task_running])->W_REG; STATUS = (&r_queue.TASKS[r_queue.pos_task_running])->STATUS_REG; FSR0H = (&r_queue.TASKS[r_queue.pos_task_running])->FSR0H_REG; FSR0L = (&r_queue.TASKS[r_queue.pos_task_running])->FSR0L_REG; TOSL = (&r_queue.TASKS[r_queue.pos_task_running])->task_stack.stack[0].TOSL_REG; TOSH = (&r_queue.TASKS[r_queue.pos_task_running])->task_stack.stack[0].TOSH_REG; TOSU = (&r_queue.TASKS[r_queue.pos_task_running])->task_stack.stack[0].TOSU_REG; __asm("RETURN"); };
+    { if ((((&r_queue.TASKS[r_queue.pos_task_running]))->state_prio & 0x03) == READY) { (((&r_queue.TASKS[r_queue.pos_task_running]))->state_prio = (uint8_t)((((&r_queue.TASKS[r_queue.pos_task_running]))->state_prio & 0xFC) | (uint8_t)(RUNNING))); } BSR = (&r_queue.TASKS[r_queue.pos_task_running])->BSR_REG; WREG = (&r_queue.TASKS[r_queue.pos_task_running])->W_REG; STATUS = (&r_queue.TASKS[r_queue.pos_task_running])->STATUS_REG; FSR0H = (&r_queue.TASKS[r_queue.pos_task_running])->FSR0H_REG; FSR0L = (&r_queue.TASKS[r_queue.pos_task_running])->FSR0L_REG; TOSL = (&r_queue.TASKS[r_queue.pos_task_running])->task_stack.stack[0].TOSL_REG; TOSH = (&r_queue.TASKS[r_queue.pos_task_running])->task_stack.stack[0].TOSH_REG; TOSU = (&r_queue.TASKS[r_queue.pos_task_running])->task_stack.stack[0].TOSU_REG; STKPTR = 1; __asm("RETURN"); };
 
     INTCONbits.GIE = 1;;
 }
@@ -10026,7 +10026,7 @@ void os_start()
 {
     setup_hardware();
     scheduler();
-    { (((&r_queue.TASKS[r_queue.pos_task_running]))->state_prio = (uint8_t)((((&r_queue.TASKS[r_queue.pos_task_running]))->state_prio & 0xFC) | (uint8_t)(RUNNING))); BSR = (&r_queue.TASKS[r_queue.pos_task_running])->BSR_REG; WREG = (&r_queue.TASKS[r_queue.pos_task_running])->W_REG; STATUS = (&r_queue.TASKS[r_queue.pos_task_running])->STATUS_REG; FSR0H = (&r_queue.TASKS[r_queue.pos_task_running])->FSR0H_REG; FSR0L = (&r_queue.TASKS[r_queue.pos_task_running])->FSR0L_REG; TOSL = (&r_queue.TASKS[r_queue.pos_task_running])->task_stack.stack[0].TOSL_REG; TOSH = (&r_queue.TASKS[r_queue.pos_task_running])->task_stack.stack[0].TOSH_REG; TOSU = (&r_queue.TASKS[r_queue.pos_task_running])->task_stack.stack[0].TOSU_REG; __asm("RETURN"); };
+    { if ((((&r_queue.TASKS[r_queue.pos_task_running]))->state_prio & 0x03) == READY) { (((&r_queue.TASKS[r_queue.pos_task_running]))->state_prio = (uint8_t)((((&r_queue.TASKS[r_queue.pos_task_running]))->state_prio & 0xFC) | (uint8_t)(RUNNING))); } BSR = (&r_queue.TASKS[r_queue.pos_task_running])->BSR_REG; WREG = (&r_queue.TASKS[r_queue.pos_task_running])->W_REG; STATUS = (&r_queue.TASKS[r_queue.pos_task_running])->STATUS_REG; FSR0H = (&r_queue.TASKS[r_queue.pos_task_running])->FSR0H_REG; FSR0L = (&r_queue.TASKS[r_queue.pos_task_running])->FSR0L_REG; TOSL = (&r_queue.TASKS[r_queue.pos_task_running])->task_stack.stack[0].TOSL_REG; TOSH = (&r_queue.TASKS[r_queue.pos_task_running])->task_stack.stack[0].TOSH_REG; TOSU = (&r_queue.TASKS[r_queue.pos_task_running])->task_stack.stack[0].TOSU_REG; STKPTR = 1; __asm("RETURN"); };
     INTCONbits.GIE = 1;;
 }
 
@@ -10037,7 +10037,7 @@ void os_task_change_state(state_t new_state, tcb_t *task_handle)
     if (task_handle == ((void*)0)) {
         { (((&r_queue.TASKS[r_queue.pos_task_running]))->state_prio = (uint8_t)((((&r_queue.TASKS[r_queue.pos_task_running]))->state_prio & 0xFC) | (uint8_t)(new_state))); (&r_queue.TASKS[r_queue.pos_task_running])->BSR_REG = BSR; (&r_queue.TASKS[r_queue.pos_task_running])->W_REG = WREG; (&r_queue.TASKS[r_queue.pos_task_running])->STATUS_REG = STATUS; (&r_queue.TASKS[r_queue.pos_task_running])->FSR0H_REG = FSR0H; (&r_queue.TASKS[r_queue.pos_task_running])->FSR0L_REG = FSR0L; (&r_queue.TASKS[r_queue.pos_task_running])->task_stack.stack[0].TOSL_REG = TOSL; (&r_queue.TASKS[r_queue.pos_task_running])->task_stack.stack[0].TOSH_REG = TOSH; (&r_queue.TASKS[r_queue.pos_task_running])->task_stack.stack[0].TOSU_REG = TOSU; };
         scheduler();
-        { (((&r_queue.TASKS[r_queue.pos_task_running]))->state_prio = (uint8_t)((((&r_queue.TASKS[r_queue.pos_task_running]))->state_prio & 0xFC) | (uint8_t)(RUNNING))); BSR = (&r_queue.TASKS[r_queue.pos_task_running])->BSR_REG; WREG = (&r_queue.TASKS[r_queue.pos_task_running])->W_REG; STATUS = (&r_queue.TASKS[r_queue.pos_task_running])->STATUS_REG; FSR0H = (&r_queue.TASKS[r_queue.pos_task_running])->FSR0H_REG; FSR0L = (&r_queue.TASKS[r_queue.pos_task_running])->FSR0L_REG; TOSL = (&r_queue.TASKS[r_queue.pos_task_running])->task_stack.stack[0].TOSL_REG; TOSH = (&r_queue.TASKS[r_queue.pos_task_running])->task_stack.stack[0].TOSH_REG; TOSU = (&r_queue.TASKS[r_queue.pos_task_running])->task_stack.stack[0].TOSU_REG; __asm("RETURN"); };
+        { if ((((&r_queue.TASKS[r_queue.pos_task_running]))->state_prio & 0x03) == READY) { (((&r_queue.TASKS[r_queue.pos_task_running]))->state_prio = (uint8_t)((((&r_queue.TASKS[r_queue.pos_task_running]))->state_prio & 0xFC) | (uint8_t)(RUNNING))); } BSR = (&r_queue.TASKS[r_queue.pos_task_running])->BSR_REG; WREG = (&r_queue.TASKS[r_queue.pos_task_running])->W_REG; STATUS = (&r_queue.TASKS[r_queue.pos_task_running])->STATUS_REG; FSR0H = (&r_queue.TASKS[r_queue.pos_task_running])->FSR0H_REG; FSR0L = (&r_queue.TASKS[r_queue.pos_task_running])->FSR0L_REG; TOSL = (&r_queue.TASKS[r_queue.pos_task_running])->task_stack.stack[0].TOSL_REG; TOSH = (&r_queue.TASKS[r_queue.pos_task_running])->task_stack.stack[0].TOSH_REG; TOSU = (&r_queue.TASKS[r_queue.pos_task_running])->task_stack.stack[0].TOSU_REG; STKPTR = 1; __asm("RETURN"); };
     }
     else {
         (((*task_handle)).state_prio = (uint8_t)((((*task_handle)).state_prio & 0xFC) | (uint8_t)(new_state)));

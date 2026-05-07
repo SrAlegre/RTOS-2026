@@ -21,6 +21,7 @@ void setup_hardware(void)
     TMR0                = 0;
     INTCONbits.GIE = 1;
     INTCONbits.PEIE = 1;
+    TRISCbits.RC0 = 0;
 }
 
 void __interrupt() ISR(void)

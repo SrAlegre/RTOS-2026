@@ -22,40 +22,40 @@ void os_delay(uint8_t time)
 }
 
 
-void os_create_task(uint8_t id, f_ptr func, uint8_t prior)
-{
-    tcb_t *new_task;
-    
-    if (r_queue.size >= MAX_USER_TASKS+1)
-        return;
-    
-    new_task = &r_queue.TASKS[r_queue.size];
+    void os_create_task(uint8_t id, f_ptr func, uint8_t prior)
+    {
+        tcb_t *new_task;
 
-    new_task->task_id        = id;
-    new_task->task_delay    = 0;
-    new_task->task_ptr      = func;
-    SET_STATE((*new_task), READY);
-    SET_PRIO((*new_task), prior);
-    
-    new_task->BSR_REG       = 0;
-    new_task->STATUS_REG    = 0;
-    new_task->W_REG         = 0;
-    new_task->FSR0H_REG      = 0;
-    new_task->FSR0L_REG      = 0;
+        if (r_queue.size >= MAX_USER_TASKS+1)
+            return;
 
-    
-    new_task->task_stack.stack[0].TOSL_REG =
-    ((uint16_t)func) & 0xFF;
+        new_task = &r_queue.TASKS[r_queue.size];
 
-    new_task->task_stack.stack[0].TOSH_REG =
-    (((uint16_t)func) >> 8) & 0xFF;
+        new_task->task_id        = id;
+        new_task->task_delay    = 0;
+        new_task->task_ptr      = func;
+        SET_STATE((*new_task), READY);
+        SET_PRIO((*new_task), prior);
 
-    new_task->task_stack.stack[0].TOSU_REG = 0;
+        new_task->BSR_REG       = 0;
+        new_task->STATUS_REG    = 0x00;
+        new_task->W_REG         = 0;
+        new_task->FSR0H_REG      = 0;
+        new_task->FSR0L_REG      = 0;
 
-    new_task->task_stack.stack_size = 1;
 
-    r_queue.size++;
-}
+        new_task->task_stack.stack[0].TOSL_REG =
+        ((uint16_t)func) & 0xFF;
+
+        new_task->task_stack.stack[0].TOSH_REG =
+        (((uint16_t)func) >> 8) & 0xFF;
+
+        new_task->task_stack.stack[0].TOSU_REG = 0;
+
+        new_task->task_stack.stack_size = 1;
+
+        r_queue.size++;
+    }
 
 void os_yield()
 {

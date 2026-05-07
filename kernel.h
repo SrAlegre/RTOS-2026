@@ -47,7 +47,10 @@ TASK idle();
 
 #define RESTORE_CONTEXT() { \
 \
-    SET_STATE_PTR(CURRENT_TASK, RUNNING); \
+    if (GET_STATE_PTR(CURRENT_TASK) == READY) \
+    {\
+        SET_STATE_PTR(CURRENT_TASK, RUNNING);\
+    }\
 \
     BSR = CURRENT_TASK->BSR_REG; \
     WREG = CURRENT_TASK->W_REG; \
@@ -60,6 +63,7 @@ TASK idle();
     TOSH = CURRENT_TASK->task_stack.stack[0].TOSH_REG; \
     TOSU = CURRENT_TASK->task_stack.stack[0].TOSU_REG; \
 \
+    STKPTR = 1;\
     asm("RETURN"); \
 }
 

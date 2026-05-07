@@ -1173,8 +1173,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U 898 ]
 {
 "91
-[; ;user.c: 91:         LATDbits.LATD7 = ~LATDbits.LATD7;
-[e = . . _LATDbits 0 7 -> ~ -> . . _LATDbits 0 7 `i `uc ]
+[; ;user.c: 91:         LATDbits.LATD0 = ~LATDbits.LATD0;
+[e = . . _LATDbits 0 0 -> ~ -> . . _LATDbits 0 0 `i `uc ]
 "92
 [; ;user.c: 92:         os_delay(5);
 [e ( _os_delay (1 -> -> 5 `i `uc ]

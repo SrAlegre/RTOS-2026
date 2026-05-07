@@ -88,7 +88,7 @@ TASK tarefaControlePWM(void) {
 // TAREFA 4: Feedback Visual (Prioridade 3 - Menor)
 TASK tarefaFeedbackLED(void) {
     while(1) {
-        LATDbits.LATD7 = ~LATDbits.LATD7; // Pisca LED de heartbeat
+        LATDbits.LATD0 = ~LATDbits.LATD0; // Pisca LED de heartbeat
         os_delay(5);
     }
 }
