@@ -87,9 +87,9 @@ void os_config()
 void os_start()
 {  
     setup_hardware();
-    ENABLE_ALL_INTERRUPTS();
     scheduler();
     RESTORE_CONTEXT();
+    ENABLE_ALL_INTERRUPTS();
 }
 
 void os_task_change_state(state_t new_state, tcb_t *task_handle)

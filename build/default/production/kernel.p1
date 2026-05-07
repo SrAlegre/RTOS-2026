@@ -36,7 +36,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;C:/Program Files/Microchip/MPLABX/v6.30/packs/Microchip/PIC18F-K_DFP/1.15.303/xc8\pic\include\proc/pic18f46k22.h: 16956: extern volatile INTCONbits_t INTCONbits __attribute__((address(0xFF2)));
 [v _INTCONbits `VS829 ~T0 @X0 0 e@4082 ]
 "16 kernel.c
-[; ;kernel.c: 16:     { if (((r_queue.TASKS[r_queue.pos_task_running]).state_prio & 0x03) == RUNNING) { ((r_queue.TASKS[r_queue.pos_task_running]).state_prio = (uint8_t)(((r_queue.TASKS[r_queue.pos_task_running]).state_prio & 0xFC) | (uint8_t)(WAITING))); r_queue.TASKS[r_queue.pos_task_running].BSR_REG = BSR; r_queue.TASKS[r_queue.pos_task_running].W_REG = WREG; r_queue.TASKS[r_queue.pos_task_running].STATUS_REG = STATUS; r_queue.TASKS[r_queue.pos_task_running].FSR0H_REG = FSR0H; r_queue.TASKS[r_queue.pos_task_running].FSR0L_REG = FSR0L; r_queue.TASKS[r_queue.pos_task_running].task_stack.stack_size = 0; while (STKPTR > 0) { r_queue.TASKS[r_queue.pos_task_running].task_stack.stack[r_queue.TASKS[r_queue.pos_task_running].task_stack.stack_size].TOSL_REG = TOSL; r_queue.TASKS[r_queue.pos_task_running].task_stack.stack[r_queue.TASKS[r_queue.pos_task_running].task_stack.stack_size].TOSH_REG = TOSH; r_queue.TASKS[r_queue.pos_task_running].task_stack.stack[r_queue.TASKS[r_queue.pos_task_running].task_stack.stack_size].TOSU_REG = TOSU; r_queue.TASKS[r_queue.pos_task_running].task_stack.stack_size++; __asm("POP"); } } };
+[; ;kernel.c: 16:     { (((&r_queue.TASKS[r_queue.pos_task_running]))->state_prio = (uint8_t)((((&r_queue.TASKS[r_queue.pos_task_running]))->state_prio & 0xFC) | (uint8_t)(WAITING))); (&r_queue.TASKS[r_queue.pos_task_running])->BSR_REG = BSR; (&r_queue.TASKS[r_queue.pos_task_running])->W_REG = WREG; (&r_queue.TASKS[r_queue.pos_task_running])->STATUS_REG = STATUS; (&r_queue.TASKS[r_queue.pos_task_running])->FSR0H_REG = FSR0H; (&r_queue.TASKS[r_queue.pos_task_running])->FSR0L_REG = FSR0L; (&r_queue.TASKS[r_queue.pos_task_running])->task_stack.stack[0].TOSL_REG = TOSL; (&r_queue.TASKS[r_queue.pos_task_running])->task_stack.stack[0].TOSH_REG = TOSH; (&r_queue.TASKS[r_queue.pos_task_running])->task_stack.stack[0].TOSU_REG = TOSU; };
 [c E37 0 1 2 3 .. ]
 [n E37 . READY WAITING RUNNING WAITING_SEM  ]
 "16449 C:/Program Files/Microchip/MPLABX/v6.30/packs/Microchip/PIC18F-K_DFP/1.15.303/xc8\pic\include\proc/pic18f46k22.h
@@ -63,9 +63,6 @@ Version 4.0 HI-TECH Software Intermediate Code
 "17402
 [; ;C:/Program Files/Microchip/MPLABX/v6.30/packs/Microchip/PIC18F-K_DFP/1.15.303/xc8\pic\include\proc/pic18f46k22.h: 17402: extern volatile unsigned char TOSU __attribute__((address(0xFFF)));
 [v _TOSU `Vuc ~T0 @X0 0 e@4095 ]
-"17249
-[; ;C:/Program Files/Microchip/MPLABX/v6.30/packs/Microchip/PIC18F-K_DFP/1.15.303/xc8\pic\include\proc/pic18f46k22.h: 17249: extern volatile unsigned char STKPTR __attribute__((address(0xFFC)));
-[v _STKPTR `Vuc ~T0 @X0 0 e@4092 ]
 "6 ./scheduler.h
 [; ;./scheduler.h: 6: void scheduler(void);
 [v _scheduler `(v ~T0 @X0 0 ef ]
@@ -910,31 +907,17 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;kernel.c: 14:     INTCONbits.GIE = 0;;
 [e = . . _INTCONbits 1 7 -> -> 0 `i `uc ]
 "16
-[; ;kernel.c: 16:     { if (((r_queue.TASKS[r_queue.pos_task_running]).state_prio & 0x03) == RUNNING) { ((r_queue.TASKS[r_queue.pos_task_running]).state_prio = (uint8_t)(((r_queue.TASKS[r_queue.pos_task_running]).state_prio & 0xFC) | (uint8_t)(WAITING))); r_queue.TASKS[r_queue.pos_task_running].BSR_REG = BSR; r_queue.TASKS[r_queue.pos_task_running].W_REG = WREG; r_queue.TASKS[r_queue.pos_task_running].STATUS_REG = STATUS; r_queue.TASKS[r_queue.pos_task_running].FSR0H_REG = FSR0H; r_queue.TASKS[r_queue.pos_task_running].FSR0L_REG = FSR0L; r_queue.TASKS[r_queue.pos_task_running].task_stack.stack_size = 0; while (STKPTR > 0) { r_queue.TASKS[r_queue.pos_task_running].task_stack.stack[r_queue.TASKS[r_queue.pos_task_running].task_stack.stack_size].TOSL_REG = TOSL; r_queue.TASKS[r_queue.pos_task_running].task_stack.stack[r_queue.TASKS[r_queue.pos_task_running].task_stack.stack_size].TOSH_REG = TOSH; r_queue.TASKS[r_queue.pos_task_running].task_stack.stack[r_queue.TASKS[r_queue.pos_task_running].task_stack.stack_size].TOSU_REG = TOSU; r_queue.TASKS[r_queue.pos_task_running].task_stack.stack_size++; __asm("POP"); } } };
+[; ;kernel.c: 16:     { (((&r_queue.TASKS[r_queue.pos_task_running]))->state_prio = (uint8_t)((((&r_queue.TASKS[r_queue.pos_task_running]))->state_prio & 0xFC) | (uint8_t)(WAITING))); (&r_queue.TASKS[r_queue.pos_task_running])->BSR_REG = BSR; (&r_queue.TASKS[r_queue.pos_task_running])->W_REG = WREG; (&r_queue.TASKS[r_queue.pos_task_running])->STATUS_REG = STATUS; (&r_queue.TASKS[r_queue.pos_task_running])->FSR0H_REG = FSR0H; (&r_queue.TASKS[r_queue.pos_task_running])->FSR0L_REG = FSR0L; (&r_queue.TASKS[r_queue.pos_task_running])->task_stack.stack[0].TOSL_REG = TOSL; (&r_queue.TASKS[r_queue.pos_task_running])->task_stack.stack[0].TOSH_REG = TOSH; (&r_queue.TASKS[r_queue.pos_task_running])->task_stack.stack[0].TOSU_REG = TOSU; };
 {
-[e $ ! == & -> . *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 3 `i -> 3 `i -> . `E37 2 `i 881  ]
-{
-[e = . *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 3 -> | & -> . *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 3 `i -> 252 `i -> -> . `E37 1 `uc `i `uc ]
-[e = . *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 6 _BSR ]
-[e = . *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 4 _WREG ]
-[e = . *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 5 _STATUS ]
-[e = . *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 8 _FSR0H ]
-[e = . *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 7 _FSR0L ]
-[e = . . *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 9 1 -> -> 0 `i `uc ]
-[e $U 882  ]
-[e :U 883 ]
-{
-[e = . *U + &U . . *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 9 0 * -> . . *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 9 1 `ux -> -> # *U &U . . *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 9 0 `ui `ux 0 _TOSL ]
-[e = . *U + &U . . *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 9 0 * -> . . *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 9 1 `ux -> -> # *U &U . . *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 9 0 `ui `ux 1 _TOSH ]
-[e = . *U + &U . . *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 9 0 * -> . . *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 9 1 `ux -> -> # *U &U . . *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 9 0 `ui `ux 2 _TOSU ]
-[e ++ . . *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 9 1 -> -> 1 `i `uc ]
-[; <" POP ;# ">
-}
-[e :U 882 ]
-[e $ > -> _STKPTR `i -> 0 `i 883  ]
-[e :U 884 ]
-}
-[e :U 881 ]
+[e = . *U &U *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 3 -> | & -> . *U &U *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 3 `i -> 252 `i -> -> . `E37 1 `uc `i `uc ]
+[e = . *U &U *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 6 _BSR ]
+[e = . *U &U *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 4 _WREG ]
+[e = . *U &U *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 5 _STATUS ]
+[e = . *U &U *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 8 _FSR0H ]
+[e = . *U &U *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 7 _FSR0L ]
+[e = . *U + &U . . *U &U *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 9 0 * -> -> -> 0 `i `ui `ux -> -> # *U &U . . *U &U *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 9 0 `ui `ux 0 _TOSL ]
+[e = . *U + &U . . *U &U *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 9 0 * -> -> -> 0 `i `ui `ux -> -> # *U &U . . *U &U *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 9 0 `ui `ux 1 _TOSH ]
+[e = . *U + &U . . *U &U *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 9 0 * -> -> -> 0 `i `ui `ux -> -> # *U &U . . *U &U *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 9 0 `ui `ux 2 _TOSU ]
 }
 "17
 [; ;kernel.c: 17:     r_queue.TASKS[r_queue.pos_task_running].task_delay = time;
@@ -943,31 +926,18 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;kernel.c: 18:     scheduler();
 [e ( _scheduler ..  ]
 "19
-[; ;kernel.c: 19:     { if (((r_queue.TASKS[r_queue.pos_task_running]).state_prio & 0x03) == READY) { ((r_queue.TASKS[r_queue.pos_task_running]).state_prio = (uint8_t)(((r_queue.TASKS[r_queue.pos_task_running]).state_prio & 0xFC) | (uint8_t)(RUNNING))); BSR = r_queue.TASKS[r_queue.pos_task_running].BSR_REG; WREG = r_queue.TASKS[r_queue.pos_task_running].W_REG; STATUS = r_queue.TASKS[r_queue.pos_task_running].STATUS_REG; FSR0H = r_queue.TASKS[r_queue.pos_task_running].FSR0H_REG; FSR0L = r_queue.TASKS[r_queue.pos_task_running].FSR0L_REG; while (r_queue.TASKS[r_queue.pos_task_running].task_stack.stack_size > 0) { r_queue.TASKS[r_queue.pos_task_running].task_stack.stack_size--; TOSL = r_queue.TASKS[r_queue.pos_task_running].task_stack.stack[r_queue.TASKS[r_queue.pos_task_running].task_stack.stack_size].TOSL_REG; TOSH = r_queue.TASKS[r_queue.pos_task_running].task_stack.stack[r_queue.TASKS[r_queue.pos_task_running].task_stack.stack_size].TOSH_REG; TOSU = r_queue.TASKS[r_queue.pos_task_running].task_stack.stack[r_queue.TASKS[r_queue.pos_task_running].task_stack.stack_size].TOSU_REG; __asm("PUSH"); } __asm("RETURN"); } };
+[; ;kernel.c: 19:     { (((&r_queue.TASKS[r_queue.pos_task_running]))->state_prio = (uint8_t)((((&r_queue.TASKS[r_queue.pos_task_running]))->state_prio & 0xFC) | (uint8_t)(RUNNING))); BSR = (&r_queue.TASKS[r_queue.pos_task_running])->BSR_REG; WREG = (&r_queue.TASKS[r_queue.pos_task_running])->W_REG; STATUS = (&r_queue.TASKS[r_queue.pos_task_running])->STATUS_REG; FSR0H = (&r_queue.TASKS[r_queue.pos_task_running])->FSR0H_REG; FSR0L = (&r_queue.TASKS[r_queue.pos_task_running])->FSR0L_REG; TOSL = (&r_queue.TASKS[r_queue.pos_task_running])->task_stack.stack[0].TOSL_REG; TOSH = (&r_queue.TASKS[r_queue.pos_task_running])->task_stack.stack[0].TOSH_REG; TOSU = (&r_queue.TASKS[r_queue.pos_task_running])->task_stack.stack[0].TOSU_REG; __asm("RETURN"); };
 {
-[e $ ! == & -> . *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 3 `i -> 3 `i -> . `E37 0 `i 885  ]
-{
-[e = . *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 3 -> | & -> . *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 3 `i -> 252 `i -> -> . `E37 2 `uc `i `uc ]
-[e = _BSR . *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 6 ]
-[e = _WREG . *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 4 ]
-[e = _STATUS . *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 5 ]
-[e = _FSR0H . *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 8 ]
-[e = _FSR0L . *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 7 ]
-[e $U 886  ]
-[e :U 887 ]
-{
-[e -- . . *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 9 1 -> -> 1 `i `uc ]
-[e = _TOSL . *U + &U . . *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 9 0 * -> . . *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 9 1 `ux -> -> # *U &U . . *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 9 0 `ui `ux 0 ]
-[e = _TOSH . *U + &U . . *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 9 0 * -> . . *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 9 1 `ux -> -> # *U &U . . *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 9 0 `ui `ux 1 ]
-[e = _TOSU . *U + &U . . *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 9 0 * -> . . *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 9 1 `ux -> -> # *U &U . . *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 9 0 `ui `ux 2 ]
-[; <" PUSH ;# ">
-}
-[e :U 886 ]
-[e $ > -> . . *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 9 1 `i -> 0 `i 887  ]
-[e :U 888 ]
+[e = . *U &U *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 3 -> | & -> . *U &U *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 3 `i -> 252 `i -> -> . `E37 2 `uc `i `uc ]
+[e = _BSR . *U &U *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 6 ]
+[e = _WREG . *U &U *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 4 ]
+[e = _STATUS . *U &U *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 5 ]
+[e = _FSR0H . *U &U *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 8 ]
+[e = _FSR0L . *U &U *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 7 ]
+[e = _TOSL . *U + &U . . *U &U *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 9 0 * -> -> -> 0 `i `ui `ux -> -> # *U &U . . *U &U *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 9 0 `ui `ux 0 ]
+[e = _TOSH . *U + &U . . *U &U *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 9 0 * -> -> -> 0 `i `ui `ux -> -> # *U &U . . *U &U *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 9 0 `ui `ux 1 ]
+[e = _TOSU . *U + &U . . *U &U *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 9 0 * -> -> -> 0 `i `ui `ux -> -> # *U &U . . *U &U *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 9 0 `ui `ux 2 ]
 [; <" RETURN ;# ">
-}
-[e :U 885 ]
 }
 "21
 [; ;kernel.c: 21:     INTCONbits.GIE = 1;;
@@ -996,11 +966,11 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _new_task `*S3 ~T0 @X0 1 a ]
 "29
 [; ;kernel.c: 29:     if (r_queue.size >= 5 +1)
-[e $ ! >= -> . _r_queue 1 `i + -> 5 `i -> 1 `i 890  ]
+[e $ ! >= -> . _r_queue 1 `i + -> 5 `i -> 1 `i 882  ]
 "30
 [; ;kernel.c: 30:         return;
-[e $UE 889  ]
-[e :U 890 ]
+[e $UE 881  ]
+[e :U 882 ]
 "32
 [; ;kernel.c: 32:     new_task = &r_queue.TASKS[r_queue.size];
 [e = _new_task &U *U + &U . _r_queue 0 * -> . _r_queue 1 `ux -> -> # *U &U . _r_queue 0 `ui `ux ]
@@ -1051,7 +1021,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e ++ . _r_queue 1 -> -> 1 `i `uc ]
 "58
 [; ;kernel.c: 58: }
-[e :UE 889 ]
+[e :UE 881 ]
 }
 "60
 [; ;kernel.c: 60: void os_yield()
@@ -1065,68 +1035,41 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;kernel.c: 62:     INTCONbits.GIE = 0;;
 [e = . . _INTCONbits 1 7 -> -> 0 `i `uc ]
 "64
-[; ;kernel.c: 64:     { if (((r_queue.TASKS[r_queue.pos_task_running]).state_prio & 0x03) == RUNNING) { ((r_queue.TASKS[r_queue.pos_task_running]).state_prio = (uint8_t)(((r_queue.TASKS[r_queue.pos_task_running]).state_prio & 0xFC) | (uint8_t)(READY))); r_queue.TASKS[r_queue.pos_task_running].BSR_REG = BSR; r_queue.TASKS[r_queue.pos_task_running].W_REG = WREG; r_queue.TASKS[r_queue.pos_task_running].STATUS_REG = STATUS; r_queue.TASKS[r_queue.pos_task_running].FSR0H_REG = FSR0H; r_queue.TASKS[r_queue.pos_task_running].FSR0L_REG = FSR0L; r_queue.TASKS[r_queue.pos_task_running].task_stack.stack_size = 0; while (STKPTR > 0) { r_queue.TASKS[r_queue.pos_task_running].task_stack.stack[r_queue.TASKS[r_queue.pos_task_running].task_stack.stack_size].TOSL_REG = TOSL; r_queue.TASKS[r_queue.pos_task_running].task_stack.stack[r_queue.TASKS[r_queue.pos_task_running].task_stack.stack_size].TOSH_REG = TOSH; r_queue.TASKS[r_queue.pos_task_running].task_stack.stack[r_queue.TASKS[r_queue.pos_task_running].task_stack.stack_size].TOSU_REG = TOSU; r_queue.TASKS[r_queue.pos_task_running].task_stack.stack_size++; __asm("POP"); } } };
+[; ;kernel.c: 64:     { (((&r_queue.TASKS[r_queue.pos_task_running]))->state_prio = (uint8_t)((((&r_queue.TASKS[r_queue.pos_task_running]))->state_prio & 0xFC) | (uint8_t)(READY))); (&r_queue.TASKS[r_queue.pos_task_running])->BSR_REG = BSR; (&r_queue.TASKS[r_queue.pos_task_running])->W_REG = WREG; (&r_queue.TASKS[r_queue.pos_task_running])->STATUS_REG = STATUS; (&r_queue.TASKS[r_queue.pos_task_running])->FSR0H_REG = FSR0H; (&r_queue.TASKS[r_queue.pos_task_running])->FSR0L_REG = FSR0L; (&r_queue.TASKS[r_queue.pos_task_running])->task_stack.stack[0].TOSL_REG = TOSL; (&r_queue.TASKS[r_queue.pos_task_running])->task_stack.stack[0].TOSH_REG = TOSH; (&r_queue.TASKS[r_queue.pos_task_running])->task_stack.stack[0].TOSU_REG = TOSU; };
 {
-[e $ ! == & -> . *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 3 `i -> 3 `i -> . `E37 2 `i 892  ]
-{
-[e = . *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 3 -> | & -> . *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 3 `i -> 252 `i -> -> . `E37 0 `uc `i `uc ]
-[e = . *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 6 _BSR ]
-[e = . *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 4 _WREG ]
-[e = . *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 5 _STATUS ]
-[e = . *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 8 _FSR0H ]
-[e = . *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 7 _FSR0L ]
-[e = . . *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 9 1 -> -> 0 `i `uc ]
-[e $U 893  ]
-[e :U 894 ]
-{
-[e = . *U + &U . . *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 9 0 * -> . . *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 9 1 `ux -> -> # *U &U . . *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 9 0 `ui `ux 0 _TOSL ]
-[e = . *U + &U . . *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 9 0 * -> . . *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 9 1 `ux -> -> # *U &U . . *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 9 0 `ui `ux 1 _TOSH ]
-[e = . *U + &U . . *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 9 0 * -> . . *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 9 1 `ux -> -> # *U &U . . *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 9 0 `ui `ux 2 _TOSU ]
-[e ++ . . *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 9 1 -> -> 1 `i `uc ]
-[; <" POP ;# ">
-}
-[e :U 893 ]
-[e $ > -> _STKPTR `i -> 0 `i 894  ]
-[e :U 895 ]
-}
-[e :U 892 ]
+[e = . *U &U *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 3 -> | & -> . *U &U *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 3 `i -> 252 `i -> -> . `E37 0 `uc `i `uc ]
+[e = . *U &U *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 6 _BSR ]
+[e = . *U &U *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 4 _WREG ]
+[e = . *U &U *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 5 _STATUS ]
+[e = . *U &U *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 8 _FSR0H ]
+[e = . *U &U *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 7 _FSR0L ]
+[e = . *U + &U . . *U &U *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 9 0 * -> -> -> 0 `i `ui `ux -> -> # *U &U . . *U &U *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 9 0 `ui `ux 0 _TOSL ]
+[e = . *U + &U . . *U &U *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 9 0 * -> -> -> 0 `i `ui `ux -> -> # *U &U . . *U &U *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 9 0 `ui `ux 1 _TOSH ]
+[e = . *U + &U . . *U &U *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 9 0 * -> -> -> 0 `i `ui `ux -> -> # *U &U . . *U &U *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 9 0 `ui `ux 2 _TOSU ]
 }
 "65
 [; ;kernel.c: 65:     scheduler();
 [e ( _scheduler ..  ]
 "66
-[; ;kernel.c: 66:     { if (((r_queue.TASKS[r_queue.pos_task_running]).state_prio & 0x03) == READY) { ((r_queue.TASKS[r_queue.pos_task_running]).state_prio = (uint8_t)(((r_queue.TASKS[r_queue.pos_task_running]).state_prio & 0xFC) | (uint8_t)(RUNNING))); BSR = r_queue.TASKS[r_queue.pos_task_running].BSR_REG; WREG = r_queue.TASKS[r_queue.pos_task_running].W_REG; STATUS = r_queue.TASKS[r_queue.pos_task_running].STATUS_REG; FSR0H = r_queue.TASKS[r_queue.pos_task_running].FSR0H_REG; FSR0L = r_queue.TASKS[r_queue.pos_task_running].FSR0L_REG; while (r_queue.TASKS[r_queue.pos_task_running].task_stack.stack_size > 0) { r_queue.TASKS[r_queue.pos_task_running].task_stack.stack_size--; TOSL = r_queue.TASKS[r_queue.pos_task_running].task_stack.stack[r_queue.TASKS[r_queue.pos_task_running].task_stack.stack_size].TOSL_REG; TOSH = r_queue.TASKS[r_queue.pos_task_running].task_stack.stack[r_queue.TASKS[r_queue.pos_task_running].task_stack.stack_size].TOSH_REG; TOSU = r_queue.TASKS[r_queue.pos_task_running].task_stack.stack[r_queue.TASKS[r_queue.pos_task_running].task_stack.stack_size].TOSU_REG; __asm("PUSH"); } __asm("RETURN"); } };
+[; ;kernel.c: 66:     { (((&r_queue.TASKS[r_queue.pos_task_running]))->state_prio = (uint8_t)((((&r_queue.TASKS[r_queue.pos_task_running]))->state_prio & 0xFC) | (uint8_t)(RUNNING))); BSR = (&r_queue.TASKS[r_queue.pos_task_running])->BSR_REG; WREG = (&r_queue.TASKS[r_queue.pos_task_running])->W_REG; STATUS = (&r_queue.TASKS[r_queue.pos_task_running])->STATUS_REG; FSR0H = (&r_queue.TASKS[r_queue.pos_task_running])->FSR0H_REG; FSR0L = (&r_queue.TASKS[r_queue.pos_task_running])->FSR0L_REG; TOSL = (&r_queue.TASKS[r_queue.pos_task_running])->task_stack.stack[0].TOSL_REG; TOSH = (&r_queue.TASKS[r_queue.pos_task_running])->task_stack.stack[0].TOSH_REG; TOSU = (&r_queue.TASKS[r_queue.pos_task_running])->task_stack.stack[0].TOSU_REG; __asm("RETURN"); };
 {
-[e $ ! == & -> . *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 3 `i -> 3 `i -> . `E37 0 `i 896  ]
-{
-[e = . *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 3 -> | & -> . *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 3 `i -> 252 `i -> -> . `E37 2 `uc `i `uc ]
-[e = _BSR . *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 6 ]
-[e = _WREG . *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 4 ]
-[e = _STATUS . *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 5 ]
-[e = _FSR0H . *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 8 ]
-[e = _FSR0L . *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 7 ]
-[e $U 897  ]
-[e :U 898 ]
-{
-[e -- . . *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 9 1 -> -> 1 `i `uc ]
-[e = _TOSL . *U + &U . . *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 9 0 * -> . . *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 9 1 `ux -> -> # *U &U . . *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 9 0 `ui `ux 0 ]
-[e = _TOSH . *U + &U . . *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 9 0 * -> . . *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 9 1 `ux -> -> # *U &U . . *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 9 0 `ui `ux 1 ]
-[e = _TOSU . *U + &U . . *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 9 0 * -> . . *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 9 1 `ux -> -> # *U &U . . *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 9 0 `ui `ux 2 ]
-[; <" PUSH ;# ">
-}
-[e :U 897 ]
-[e $ > -> . . *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 9 1 `i -> 0 `i 898  ]
-[e :U 899 ]
+[e = . *U &U *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 3 -> | & -> . *U &U *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 3 `i -> 252 `i -> -> . `E37 2 `uc `i `uc ]
+[e = _BSR . *U &U *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 6 ]
+[e = _WREG . *U &U *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 4 ]
+[e = _STATUS . *U &U *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 5 ]
+[e = _FSR0H . *U &U *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 8 ]
+[e = _FSR0L . *U &U *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 7 ]
+[e = _TOSL . *U + &U . . *U &U *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 9 0 * -> -> -> 0 `i `ui `ux -> -> # *U &U . . *U &U *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 9 0 `ui `ux 0 ]
+[e = _TOSH . *U + &U . . *U &U *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 9 0 * -> -> -> 0 `i `ui `ux -> -> # *U &U . . *U &U *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 9 0 `ui `ux 1 ]
+[e = _TOSU . *U + &U . . *U &U *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 9 0 * -> -> -> 0 `i `ui `ux -> -> # *U &U . . *U &U *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 9 0 `ui `ux 2 ]
 [; <" RETURN ;# ">
-}
-[e :U 896 ]
 }
 "68
 [; ;kernel.c: 68:     INTCONbits.GIE = 1;;
 [e = . . _INTCONbits 1 7 -> -> 1 `i `uc ]
 "69
 [; ;kernel.c: 69: }
-[e :UE 891 ]
+[e :UE 883 ]
 }
 "71
 [; ;kernel.c: 71: void os_config()
@@ -1153,7 +1096,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e ( _config_user ..  ]
 "85
 [; ;kernel.c: 85: }
-[e :UE 900 ]
+[e :UE 884 ]
 }
 "87
 [; ;kernel.c: 87: void os_start()
@@ -1167,41 +1110,28 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;kernel.c: 89:     setup_hardware();
 [e ( _setup_hardware ..  ]
 "90
-[; ;kernel.c: 90:     INTCONbits.GIE = 1;;
-[e = . . _INTCONbits 1 7 -> -> 1 `i `uc ]
-"91
-[; ;kernel.c: 91:     scheduler();
+[; ;kernel.c: 90:     scheduler();
 [e ( _scheduler ..  ]
-"92
-[; ;kernel.c: 92:     { if (((r_queue.TASKS[r_queue.pos_task_running]).state_prio & 0x03) == READY) { ((r_queue.TASKS[r_queue.pos_task_running]).state_prio = (uint8_t)(((r_queue.TASKS[r_queue.pos_task_running]).state_prio & 0xFC) | (uint8_t)(RUNNING))); BSR = r_queue.TASKS[r_queue.pos_task_running].BSR_REG; WREG = r_queue.TASKS[r_queue.pos_task_running].W_REG; STATUS = r_queue.TASKS[r_queue.pos_task_running].STATUS_REG; FSR0H = r_queue.TASKS[r_queue.pos_task_running].FSR0H_REG; FSR0L = r_queue.TASKS[r_queue.pos_task_running].FSR0L_REG; while (r_queue.TASKS[r_queue.pos_task_running].task_stack.stack_size > 0) { r_queue.TASKS[r_queue.pos_task_running].task_stack.stack_size--; TOSL = r_queue.TASKS[r_queue.pos_task_running].task_stack.stack[r_queue.TASKS[r_queue.pos_task_running].task_stack.stack_size].TOSL_REG; TOSH = r_queue.TASKS[r_queue.pos_task_running].task_stack.stack[r_queue.TASKS[r_queue.pos_task_running].task_stack.stack_size].TOSH_REG; TOSU = r_queue.TASKS[r_queue.pos_task_running].task_stack.stack[r_queue.TASKS[r_queue.pos_task_running].task_stack.stack_size].TOSU_REG; __asm("PUSH"); } __asm("RETURN"); } };
+"91
+[; ;kernel.c: 91:     { (((&r_queue.TASKS[r_queue.pos_task_running]))->state_prio = (uint8_t)((((&r_queue.TASKS[r_queue.pos_task_running]))->state_prio & 0xFC) | (uint8_t)(RUNNING))); BSR = (&r_queue.TASKS[r_queue.pos_task_running])->BSR_REG; WREG = (&r_queue.TASKS[r_queue.pos_task_running])->W_REG; STATUS = (&r_queue.TASKS[r_queue.pos_task_running])->STATUS_REG; FSR0H = (&r_queue.TASKS[r_queue.pos_task_running])->FSR0H_REG; FSR0L = (&r_queue.TASKS[r_queue.pos_task_running])->FSR0L_REG; TOSL = (&r_queue.TASKS[r_queue.pos_task_running])->task_stack.stack[0].TOSL_REG; TOSH = (&r_queue.TASKS[r_queue.pos_task_running])->task_stack.stack[0].TOSH_REG; TOSU = (&r_queue.TASKS[r_queue.pos_task_running])->task_stack.stack[0].TOSU_REG; __asm("RETURN"); };
 {
-[e $ ! == & -> . *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 3 `i -> 3 `i -> . `E37 0 `i 902  ]
-{
-[e = . *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 3 -> | & -> . *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 3 `i -> 252 `i -> -> . `E37 2 `uc `i `uc ]
-[e = _BSR . *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 6 ]
-[e = _WREG . *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 4 ]
-[e = _STATUS . *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 5 ]
-[e = _FSR0H . *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 8 ]
-[e = _FSR0L . *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 7 ]
-[e $U 903  ]
-[e :U 904 ]
-{
-[e -- . . *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 9 1 -> -> 1 `i `uc ]
-[e = _TOSL . *U + &U . . *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 9 0 * -> . . *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 9 1 `ux -> -> # *U &U . . *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 9 0 `ui `ux 0 ]
-[e = _TOSH . *U + &U . . *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 9 0 * -> . . *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 9 1 `ux -> -> # *U &U . . *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 9 0 `ui `ux 1 ]
-[e = _TOSU . *U + &U . . *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 9 0 * -> . . *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 9 1 `ux -> -> # *U &U . . *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 9 0 `ui `ux 2 ]
-[; <" PUSH ;# ">
-}
-[e :U 903 ]
-[e $ > -> . . *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 9 1 `i -> 0 `i 904  ]
-[e :U 905 ]
+[e = . *U &U *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 3 -> | & -> . *U &U *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 3 `i -> 252 `i -> -> . `E37 2 `uc `i `uc ]
+[e = _BSR . *U &U *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 6 ]
+[e = _WREG . *U &U *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 4 ]
+[e = _STATUS . *U &U *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 5 ]
+[e = _FSR0H . *U &U *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 8 ]
+[e = _FSR0L . *U &U *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 7 ]
+[e = _TOSL . *U + &U . . *U &U *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 9 0 * -> -> -> 0 `i `ui `ux -> -> # *U &U . . *U &U *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 9 0 `ui `ux 0 ]
+[e = _TOSH . *U + &U . . *U &U *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 9 0 * -> -> -> 0 `i `ui `ux -> -> # *U &U . . *U &U *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 9 0 `ui `ux 1 ]
+[e = _TOSU . *U + &U . . *U &U *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 9 0 * -> -> -> 0 `i `ui `ux -> -> # *U &U . . *U &U *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 9 0 `ui `ux 2 ]
 [; <" RETURN ;# ">
 }
-[e :U 902 ]
-}
+"92
+[; ;kernel.c: 92:     INTCONbits.GIE = 1;;
+[e = . . _INTCONbits 1 7 -> -> 1 `i `uc ]
 "93
 [; ;kernel.c: 93: }
-[e :UE 901 ]
+[e :UE 885 ]
 }
 "95
 [; ;kernel.c: 95: void os_task_change_state(state_t new_state, tcb_t *task_handle)
@@ -1222,72 +1152,45 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = . . _INTCONbits 1 7 -> -> 0 `i `uc ]
 "99
 [; ;kernel.c: 99:     if (task_handle == ((void*)0)) {
-[e $ ! == _task_handle -> -> -> 0 `i `*v `*S3 907  ]
+[e $ ! == _task_handle -> -> -> 0 `i `*v `*S3 887  ]
 {
 "100
-[; ;kernel.c: 100:         { if (((r_queue.TASKS[r_queue.pos_task_running]).state_prio & 0x03) == RUNNING) { ((r_queue.TASKS[r_queue.pos_task_running]).state_prio = (uint8_t)(((r_queue.TASKS[r_queue.pos_task_running]).state_prio & 0xFC) | (uint8_t)(new_state))); r_queue.TASKS[r_queue.pos_task_running].BSR_REG = BSR; r_queue.TASKS[r_queue.pos_task_running].W_REG = WREG; r_queue.TASKS[r_queue.pos_task_running].STATUS_REG = STATUS; r_queue.TASKS[r_queue.pos_task_running].FSR0H_REG = FSR0H; r_queue.TASKS[r_queue.pos_task_running].FSR0L_REG = FSR0L; r_queue.TASKS[r_queue.pos_task_running].task_stack.stack_size = 0; while (STKPTR > 0) { r_queue.TASKS[r_queue.pos_task_running].task_stack.stack[r_queue.TASKS[r_queue.pos_task_running].task_stack.stack_size].TOSL_REG = TOSL; r_queue.TASKS[r_queue.pos_task_running].task_stack.stack[r_queue.TASKS[r_queue.pos_task_running].task_stack.stack_size].TOSH_REG = TOSH; r_queue.TASKS[r_queue.pos_task_running].task_stack.stack[r_queue.TASKS[r_queue.pos_task_running].task_stack.stack_size].TOSU_REG = TOSU; r_queue.TASKS[r_queue.pos_task_running].task_stack.stack_size++; __asm("POP"); } } };
+[; ;kernel.c: 100:         { (((&r_queue.TASKS[r_queue.pos_task_running]))->state_prio = (uint8_t)((((&r_queue.TASKS[r_queue.pos_task_running]))->state_prio & 0xFC) | (uint8_t)(new_state))); (&r_queue.TASKS[r_queue.pos_task_running])->BSR_REG = BSR; (&r_queue.TASKS[r_queue.pos_task_running])->W_REG = WREG; (&r_queue.TASKS[r_queue.pos_task_running])->STATUS_REG = STATUS; (&r_queue.TASKS[r_queue.pos_task_running])->FSR0H_REG = FSR0H; (&r_queue.TASKS[r_queue.pos_task_running])->FSR0L_REG = FSR0L; (&r_queue.TASKS[r_queue.pos_task_running])->task_stack.stack[0].TOSL_REG = TOSL; (&r_queue.TASKS[r_queue.pos_task_running])->task_stack.stack[0].TOSH_REG = TOSH; (&r_queue.TASKS[r_queue.pos_task_running])->task_stack.stack[0].TOSU_REG = TOSU; };
 {
-[e $ ! == & -> . *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 3 `i -> 3 `i -> . `E37 2 `i 908  ]
-{
-[e = . *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 3 -> | & -> . *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 3 `i -> 252 `i -> -> _new_state `uc `i `uc ]
-[e = . *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 6 _BSR ]
-[e = . *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 4 _WREG ]
-[e = . *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 5 _STATUS ]
-[e = . *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 8 _FSR0H ]
-[e = . *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 7 _FSR0L ]
-[e = . . *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 9 1 -> -> 0 `i `uc ]
-[e $U 909  ]
-[e :U 910 ]
-{
-[e = . *U + &U . . *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 9 0 * -> . . *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 9 1 `ux -> -> # *U &U . . *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 9 0 `ui `ux 0 _TOSL ]
-[e = . *U + &U . . *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 9 0 * -> . . *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 9 1 `ux -> -> # *U &U . . *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 9 0 `ui `ux 1 _TOSH ]
-[e = . *U + &U . . *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 9 0 * -> . . *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 9 1 `ux -> -> # *U &U . . *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 9 0 `ui `ux 2 _TOSU ]
-[e ++ . . *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 9 1 -> -> 1 `i `uc ]
-[; <" POP ;# ">
-}
-[e :U 909 ]
-[e $ > -> _STKPTR `i -> 0 `i 910  ]
-[e :U 911 ]
-}
-[e :U 908 ]
+[e = . *U &U *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 3 -> | & -> . *U &U *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 3 `i -> 252 `i -> -> _new_state `uc `i `uc ]
+[e = . *U &U *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 6 _BSR ]
+[e = . *U &U *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 4 _WREG ]
+[e = . *U &U *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 5 _STATUS ]
+[e = . *U &U *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 8 _FSR0H ]
+[e = . *U &U *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 7 _FSR0L ]
+[e = . *U + &U . . *U &U *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 9 0 * -> -> -> 0 `i `ui `ux -> -> # *U &U . . *U &U *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 9 0 `ui `ux 0 _TOSL ]
+[e = . *U + &U . . *U &U *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 9 0 * -> -> -> 0 `i `ui `ux -> -> # *U &U . . *U &U *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 9 0 `ui `ux 1 _TOSH ]
+[e = . *U + &U . . *U &U *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 9 0 * -> -> -> 0 `i `ui `ux -> -> # *U &U . . *U &U *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 9 0 `ui `ux 2 _TOSU ]
 }
 "101
 [; ;kernel.c: 101:         scheduler();
 [e ( _scheduler ..  ]
 "102
-[; ;kernel.c: 102:         { if (((r_queue.TASKS[r_queue.pos_task_running]).state_prio & 0x03) == READY) { ((r_queue.TASKS[r_queue.pos_task_running]).state_prio = (uint8_t)(((r_queue.TASKS[r_queue.pos_task_running]).state_prio & 0xFC) | (uint8_t)(RUNNING))); BSR = r_queue.TASKS[r_queue.pos_task_running].BSR_REG; WREG = r_queue.TASKS[r_queue.pos_task_running].W_REG; STATUS = r_queue.TASKS[r_queue.pos_task_running].STATUS_REG; FSR0H = r_queue.TASKS[r_queue.pos_task_running].FSR0H_REG; FSR0L = r_queue.TASKS[r_queue.pos_task_running].FSR0L_REG; while (r_queue.TASKS[r_queue.pos_task_running].task_stack.stack_size > 0) { r_queue.TASKS[r_queue.pos_task_running].task_stack.stack_size--; TOSL = r_queue.TASKS[r_queue.pos_task_running].task_stack.stack[r_queue.TASKS[r_queue.pos_task_running].task_stack.stack_size].TOSL_REG; TOSH = r_queue.TASKS[r_queue.pos_task_running].task_stack.stack[r_queue.TASKS[r_queue.pos_task_running].task_stack.stack_size].TOSH_REG; TOSU = r_queue.TASKS[r_queue.pos_task_running].task_stack.stack[r_queue.TASKS[r_queue.pos_task_running].task_stack.stack_size].TOSU_REG; __asm("PUSH"); } __asm("RETURN"); } };
+[; ;kernel.c: 102:         { (((&r_queue.TASKS[r_queue.pos_task_running]))->state_prio = (uint8_t)((((&r_queue.TASKS[r_queue.pos_task_running]))->state_prio & 0xFC) | (uint8_t)(RUNNING))); BSR = (&r_queue.TASKS[r_queue.pos_task_running])->BSR_REG; WREG = (&r_queue.TASKS[r_queue.pos_task_running])->W_REG; STATUS = (&r_queue.TASKS[r_queue.pos_task_running])->STATUS_REG; FSR0H = (&r_queue.TASKS[r_queue.pos_task_running])->FSR0H_REG; FSR0L = (&r_queue.TASKS[r_queue.pos_task_running])->FSR0L_REG; TOSL = (&r_queue.TASKS[r_queue.pos_task_running])->task_stack.stack[0].TOSL_REG; TOSH = (&r_queue.TASKS[r_queue.pos_task_running])->task_stack.stack[0].TOSH_REG; TOSU = (&r_queue.TASKS[r_queue.pos_task_running])->task_stack.stack[0].TOSU_REG; __asm("RETURN"); };
 {
-[e $ ! == & -> . *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 3 `i -> 3 `i -> . `E37 0 `i 912  ]
-{
-[e = . *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 3 -> | & -> . *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 3 `i -> 252 `i -> -> . `E37 2 `uc `i `uc ]
-[e = _BSR . *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 6 ]
-[e = _WREG . *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 4 ]
-[e = _STATUS . *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 5 ]
-[e = _FSR0H . *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 8 ]
-[e = _FSR0L . *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 7 ]
-[e $U 913  ]
-[e :U 914 ]
-{
-[e -- . . *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 9 1 -> -> 1 `i `uc ]
-[e = _TOSL . *U + &U . . *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 9 0 * -> . . *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 9 1 `ux -> -> # *U &U . . *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 9 0 `ui `ux 0 ]
-[e = _TOSH . *U + &U . . *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 9 0 * -> . . *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 9 1 `ux -> -> # *U &U . . *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 9 0 `ui `ux 1 ]
-[e = _TOSU . *U + &U . . *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 9 0 * -> . . *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 9 1 `ux -> -> # *U &U . . *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 9 0 `ui `ux 2 ]
-[; <" PUSH ;# ">
-}
-[e :U 913 ]
-[e $ > -> . . *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 9 1 `i -> 0 `i 914  ]
-[e :U 915 ]
+[e = . *U &U *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 3 -> | & -> . *U &U *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 3 `i -> 252 `i -> -> . `E37 2 `uc `i `uc ]
+[e = _BSR . *U &U *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 6 ]
+[e = _WREG . *U &U *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 4 ]
+[e = _STATUS . *U &U *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 5 ]
+[e = _FSR0H . *U &U *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 8 ]
+[e = _FSR0L . *U &U *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 7 ]
+[e = _TOSL . *U + &U . . *U &U *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 9 0 * -> -> -> 0 `i `ui `ux -> -> # *U &U . . *U &U *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 9 0 `ui `ux 0 ]
+[e = _TOSH . *U + &U . . *U &U *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 9 0 * -> -> -> 0 `i `ui `ux -> -> # *U &U . . *U &U *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 9 0 `ui `ux 1 ]
+[e = _TOSU . *U + &U . . *U &U *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 9 0 * -> -> -> 0 `i `ui `ux -> -> # *U &U . . *U &U *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 9 0 `ui `ux 2 ]
 [; <" RETURN ;# ">
-}
-[e :U 912 ]
 }
 "103
 [; ;kernel.c: 103:     }
 }
-[e $U 916  ]
+[e $U 888  ]
 "104
 [; ;kernel.c: 104:     else {
-[e :U 907 ]
+[e :U 887 ]
 {
 "105
 [; ;kernel.c: 105:         (((*task_handle)).state_prio = (uint8_t)((((*task_handle)).state_prio & 0xFC) | (uint8_t)(new_state)));
@@ -1295,13 +1198,13 @@ Version 4.0 HI-TECH Software Intermediate Code
 "106
 [; ;kernel.c: 106:     }
 }
-[e :U 916 ]
+[e :U 888 ]
 "108
 [; ;kernel.c: 108:     INTCONbits.GIE = 1;;
 [e = . . _INTCONbits 1 7 -> -> 1 `i `uc ]
 "109
 [; ;kernel.c: 109: }
-[e :UE 906 ]
+[e :UE 886 ]
 }
 "112
 [; ;kernel.c: 112: TASK idle()
@@ -1316,7 +1219,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = . . _TRISCbits 1 0 -> -> 0 `i `uc ]
 "115
 [; ;kernel.c: 115:     while (1) {
-[e :U 919 ]
+[e :U 891 ]
 {
 "117
 [; ;kernel.c: 117:         PORTCbits.RC0 = ~PORTCbits.RC0;
@@ -1324,10 +1227,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 "118
 [; ;kernel.c: 118:     }
 }
-[e :U 918 ]
-[e $U 919  ]
-[e :U 920 ]
+[e :U 890 ]
+[e $U 891  ]
+[e :U 892 ]
 "119
 [; ;kernel.c: 119: }
-[e :UE 917 ]
+[e :UE 889 ]
 }

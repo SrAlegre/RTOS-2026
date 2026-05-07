@@ -26,52 +26,42 @@ TASK idle();
 #define ENABLE_ALL_INTERRUPTS() INTCONbits.GIE = 1;
 
 #define CURRENT_TASK \
-   r_queue.TASKS[r_queue.pos_task_running]
+   (&r_queue.TASKS[r_queue.pos_task_running])
 
 #define SAVE_CONTEXT(state) { \
-    if (GET_STATE(CURRENT_TASK) == RUNNING) { \
-        SET_STATE(CURRENT_TASK, state); \
-        CURRENT_TASK.BSR_REG = BSR; \
-        CURRENT_TASK.W_REG = WREG; \
-        CURRENT_TASK.STATUS_REG = STATUS; \
-        CURRENT_TASK.FSR0H_REG = FSR0H; \
-        CURRENT_TASK.FSR0L_REG = FSR0L; \
-        CURRENT_TASK.task_stack.stack_size = 0; \
 \
-        while (STKPTR > 0) { \
-            CURRENT_TASK.task_stack.stack[CURRENT_TASK.task_stack.stack_size].TOSL_REG = TOSL; \
-            CURRENT_TASK.task_stack.stack[CURRENT_TASK.task_stack.stack_size].TOSH_REG = TOSH; \
-            CURRENT_TASK.task_stack.stack[CURRENT_TASK.task_stack.stack_size].TOSU_REG = TOSU; \
+    SET_STATE_PTR(CURRENT_TASK, state); \
 \
-            CURRENT_TASK.task_stack.stack_size++; \
+    CURRENT_TASK->BSR_REG = BSR; \
+    CURRENT_TASK->W_REG = WREG; \
+    CURRENT_TASK->STATUS_REG = STATUS; \
 \
-            asm("POP"); \
-        } \
-    } \
+    CURRENT_TASK->FSR0H_REG = FSR0H; \
+    CURRENT_TASK->FSR0L_REG = FSR0L; \
+\
+    CURRENT_TASK->task_stack.stack[0].TOSL_REG = TOSL; \
+    CURRENT_TASK->task_stack.stack[0].TOSH_REG = TOSH; \
+    CURRENT_TASK->task_stack.stack[0].TOSU_REG = TOSU; \
+\
 }
+
 #define RESTORE_CONTEXT() { \
-    if (GET_STATE(CURRENT_TASK) == READY) { \
-        SET_STATE(CURRENT_TASK, RUNNING); \
 \
-        BSR = CURRENT_TASK.BSR_REG; \
-        WREG = CURRENT_TASK.W_REG; \
-        STATUS = CURRENT_TASK.STATUS_REG; \
-        FSR0H = CURRENT_TASK.FSR0H_REG; \
-        FSR0L = CURRENT_TASK.FSR0L_REG; \
+    SET_STATE_PTR(CURRENT_TASK, RUNNING); \
 \
-        while (CURRENT_TASK.task_stack.stack_size > 0) { \
+    BSR = CURRENT_TASK->BSR_REG; \
+    WREG = CURRENT_TASK->W_REG; \
+    STATUS = CURRENT_TASK->STATUS_REG; \
 \
-            CURRENT_TASK.task_stack.stack_size--; \
+    FSR0H = CURRENT_TASK->FSR0H_REG; \
+    FSR0L = CURRENT_TASK->FSR0L_REG; \
 \
-            TOSL = CURRENT_TASK.task_stack.stack[CURRENT_TASK.task_stack.stack_size].TOSL_REG; \
-            TOSH = CURRENT_TASK.task_stack.stack[CURRENT_TASK.task_stack.stack_size].TOSH_REG; \
-            TOSU = CURRENT_TASK.task_stack.stack[CURRENT_TASK.task_stack.stack_size].TOSU_REG; \
+    TOSL = CURRENT_TASK->task_stack.stack[0].TOSL_REG; \
+    TOSH = CURRENT_TASK->task_stack.stack[0].TOSH_REG; \
+    TOSU = CURRENT_TASK->task_stack.stack[0].TOSU_REG; \
 \
-            asm("PUSH"); \
-        } \
-\
-        asm("RETURN"); \
-    } \
+    asm("RETURN"); \
 }
+
 #endif	/* KERNEL_H */
 
