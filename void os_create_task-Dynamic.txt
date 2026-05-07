@@ -1,0 +1,60 @@
+void os_create_task(uint8_t id, f_ptr func, uint8_t prior)
+{
+    int slot = -1;
+
+    // Procura por um slot vazio ou uma tarefa que já terminou
+    for(int i = 0; i < MAX_USER_TASKS + 1; i++) {
+        if(i >= r_queue.size) { // Slot novo
+            slot = i;
+            r_queue.size++;
+            break;
+        }
+        if(r_queue.TASKS[i].task_state == TERMINATED) { // Reutiliza slot
+            slot = i;
+            break;
+        }
+    }
+    if (slot != -1) {
+        tcb_t* new_task = &r_queue.TASKS[slot];
+        new_task->task_id = id;
+        new_task->task_state = READY;
+        new_task->task_ptr = func;
+        new_task->task_priority = prior;
+        new_task->task_delay = 0;
+        // Reinicializa o stack e registradores (como você já faz no kernel.c original)
+        //new_task->stack_ptr = 0; // Se você usa stack de hardware, resete o ponteiro
+        
+        new_task->BSR_REG        = 0;
+        new_task->FSR0H_REG      = 0;
+        new_task->FSR0L_REG      = 0;
+        new_task->FSR1H_REG      = 0;
+        new_task->FSR1L_REG      = 0;
+        new_task->FSR2H_REG      = 0;
+        new_task->FSR2L_REG      = 0;
+        new_task->PCLATH_REG     = 0;
+        new_task->PCLATU_REG     = 0;
+        new_task->PRODH_REG      = 0;
+        new_task->PRODL_REG      = 0;
+        new_task->STATUS_REG     = 0;
+        new_task->TABLAT_REG     = 0;
+        new_task->TBLPTRH_REG    = 0;
+        new_task->TBLPTRL_REG    = 0;
+        new_task->TBLPTRU_REG    = 0;
+        new_task->W_REG          = 0;
+        new_task->task_stack.stack_size = 0;
+    
+    // Insere nova tarefa na fila de aptos
+    //r_queue.TASKS[r_queue.size++] = new_task;
+        
+    }
+    
+    //tcb_t new_task;
+  
+    //new_task.task_id        = id;
+    //new_task.task_delay     = 0;
+    //new_task.task_priority  = prior;
+    //new_task.task_ptr       = func;
+    //new_task.task_state     = READY;
+    
+    
+}

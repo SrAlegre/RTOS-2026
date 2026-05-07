@@ -3,10 +3,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 "19 ./kernel.h
 [; ;./kernel.h: 19: void os_config(void);
 [v _os_config `(v ~T0 @X0 0 ef ]
-[v F6195 `(v ~T0 @X0 0 tf ]
+[v F6181 `(v ~T0 @X0 0 tf ]
 "16
 [; ;./kernel.h: 16: void os_create_task(uint8_t id, f_ptr func, uint8_t prior);
-[v _os_create_task `(v ~T0 @X0 0 ef3`uc`*F6195`uc ]
+[v _os_create_task `(v ~T0 @X0 0 ef3`uc`*F6181`uc ]
 "8 ./user.h
 [; ;./user.h: 8: TASK tarefaLeituraADC(void);
 [v _tarefaLeituraADC `(v ~T0 @X0 0 ef ]
@@ -803,24 +803,24 @@ Version 4.0 HI-TECH Software Intermediate Code
 "14
 [; ;main.c: 14:     os_create_task(5, tarefaFeedbackLED, 4);
 [e ( _os_create_task (3 , , -> -> 5 `i `uc &U _tarefaFeedbackLED -> -> 4 `i `uc ]
-"16
-[; ;main.c: 16:     os_start();
+"17
+[; ;main.c: 17:     os_start();
 [e ( _os_start ..  ]
-"18
-[; ;main.c: 18:     while (1) {
+"19
+[; ;main.c: 19:     while (1) {
 [e :U 882 ]
 {
-"20
-[; ;main.c: 20:     }
+"21
+[; ;main.c: 21:     }
 }
 [e :U 881 ]
 [e $U 882  ]
 [e :U 883 ]
-"22
-[; ;main.c: 22:     return 0;
+"23
+[; ;main.c: 23:     return 0;
 [e ) -> 0 `i ]
 [e $UE 880  ]
-"23
-[; ;main.c: 23: }
+"24
+[; ;main.c: 24: }
 [e :UE 880 ]
 }

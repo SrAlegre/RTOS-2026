@@ -9848,7 +9848,7 @@ typedef enum {READY = 0,
               RUNNING,
               WAITING_SEM
              } state_t;
-
+# 42 "./types.h"
 typedef void (*f_ptr)(void);
 
 typedef struct hw_stack {
@@ -9858,35 +9858,22 @@ typedef struct hw_stack {
 } hw_stack_t;
 
 typedef struct sw_stack {
-    hw_stack_t stack[12];
+    hw_stack_t stack[8];
     uint8_t stack_size;
 } sw_stack_t;
 
 typedef struct tcb {
     uint8_t task_id;
-    state_t task_state;
-
     f_ptr task_ptr;
     uint8_t task_delay;
-    uint8_t task_priority;
+    uint8_t state_prio;
+
 
     uint8_t W_REG;
     uint8_t STATUS_REG;
     uint8_t BSR_REG;
-    uint8_t PRODL_REG;
-    uint8_t PRODH_REG;
     uint8_t FSR0L_REG;
     uint8_t FSR0H_REG;
-    uint8_t FSR1L_REG;
-    uint8_t FSR1H_REG;
-    uint8_t FSR2L_REG;
-    uint8_t FSR2H_REG;
-    uint8_t TABLAT_REG;
-    uint8_t TBLPTRL_REG;
-    uint8_t TBLPTRH_REG;
-    uint8_t TBLPTRU_REG;
-    uint8_t PCLATH_REG;
-    uint8_t PCLATU_REG;
 
 
     sw_stack_t task_stack;
@@ -9894,9 +9881,9 @@ typedef struct tcb {
 
 
 typedef struct ready_queue {
-    tcb_t TASKS[6 +1];
+    tcb_t TASKS[5 +1];
     uint8_t size;
-    tcb_t *task_running;
+
     uint8_t pos_task_running;
 } ready_queue_t;
 # 5 "./kernel.h" 2
@@ -9976,7 +9963,7 @@ void __attribute__((picinterrupt(("")))) ISR(void)
             if (r_queue.TASKS[i].task_delay > 0) {
                 r_queue.TASKS[i].task_delay--;
                 if (r_queue.TASKS[i].task_delay == 0) {
-                    r_queue.TASKS[i].task_state = READY;
+                    ((r_queue.TASKS[i]).state_prio = (uint8_t)(((r_queue.TASKS[i]).state_prio & 0xFC) | (uint8_t)(READY)));
                 }
             }
         }
@@ -9986,9 +9973,9 @@ void __attribute__((picinterrupt(("")))) ISR(void)
         rr_quantum--;
         if (rr_quantum == 0) {
             rr_quantum = 20;
-            do { if (r_queue.task_running->task_state == RUNNING) { r_queue.task_running->task_state = READY; r_queue.task_running->BSR_REG = BSR; r_queue.task_running->FSR0H_REG = FSR0H; r_queue.task_running->FSR0L_REG = FSR0L; r_queue.task_running->FSR1H_REG = FSR1H; r_queue.task_running->FSR1L_REG = FSR1L; r_queue.task_running->FSR2H_REG = FSR2H; r_queue.task_running->FSR2L_REG = FSR2L; r_queue.task_running->PCLATH_REG = PCLATH; r_queue.task_running->PCLATU_REG = PCLATU; r_queue.task_running->PRODH_REG = PRODH; r_queue.task_running->PRODL_REG = PRODL; r_queue.task_running->TABLAT_REG = TABLAT; r_queue.task_running->TBLPTRH_REG = TBLPTRH; r_queue.task_running->TBLPTRL_REG = TBLPTRL; r_queue.task_running->TBLPTRU_REG = TBLPTRU; r_queue.task_running->W_REG = WREG; r_queue.task_running->STATUS_REG = STATUS; r_queue.task_running->task_stack.stack_size = 0; while (STKPTR) { r_queue.task_running->task_stack.stack[r_queue.task_running->task_stack.stack_size].TOSL_REG = TOSL; r_queue.task_running->task_stack.stack[r_queue.task_running->task_stack.stack_size].TOSH_REG = TOSH; r_queue.task_running->task_stack.stack[r_queue.task_running->task_stack.stack_size].TOSU_REG = TOSU; r_queue.task_running->task_stack.stack_size += 1; __asm("POP"); } } } while (0);;
+            { if (((r_queue.TASKS[r_queue.pos_task_running]).state_prio & 0x03) == RUNNING) { ((r_queue.TASKS[r_queue.pos_task_running]).state_prio = (uint8_t)(((r_queue.TASKS[r_queue.pos_task_running]).state_prio & 0xFC) | (uint8_t)(READY))); r_queue.TASKS[r_queue.pos_task_running].BSR_REG = BSR; r_queue.TASKS[r_queue.pos_task_running].W_REG = WREG; r_queue.TASKS[r_queue.pos_task_running].STATUS_REG = STATUS; r_queue.TASKS[r_queue.pos_task_running].FSR0H_REG = FSR0H; r_queue.TASKS[r_queue.pos_task_running].FSR0L_REG = FSR0L; r_queue.TASKS[r_queue.pos_task_running].task_stack.stack_size = 0; while (STKPTR > 0) { r_queue.TASKS[r_queue.pos_task_running].task_stack.stack[r_queue.TASKS[r_queue.pos_task_running].task_stack.stack_size].TOSL_REG = TOSL; r_queue.TASKS[r_queue.pos_task_running].task_stack.stack[r_queue.TASKS[r_queue.pos_task_running].task_stack.stack_size].TOSH_REG = TOSH; r_queue.TASKS[r_queue.pos_task_running].task_stack.stack[r_queue.TASKS[r_queue.pos_task_running].task_stack.stack_size].TOSU_REG = TOSU; r_queue.TASKS[r_queue.pos_task_running].task_stack.stack_size++; __asm("POP"); } } };
             scheduler();
-            do { if (r_queue.task_running->task_state == READY) { r_queue.task_running->task_state = RUNNING; BSR = r_queue.task_running->BSR_REG; FSR0H = r_queue.task_running->FSR0H_REG; FSR0L = r_queue.task_running->FSR0L_REG; FSR1H = r_queue.task_running->FSR1H_REG; FSR1L = r_queue.task_running->FSR1L_REG; FSR2H = r_queue.task_running->FSR2H_REG; FSR2L = r_queue.task_running->FSR2L_REG; PCLATH = r_queue.task_running->PCLATH_REG; PCLATU = r_queue.task_running->PCLATU_REG; PRODH = r_queue.task_running->PRODH_REG; PRODL = r_queue.task_running->PRODL_REG; TABLAT = r_queue.task_running->TABLAT_REG; TBLPTRH = r_queue.task_running->TBLPTRH_REG; TBLPTRL = r_queue.task_running->TBLPTRL_REG; TBLPTRU = r_queue.task_running->TBLPTRU_REG; STATUS = r_queue.task_running->STATUS_REG; WREG = r_queue.task_running->W_REG; STKPTR = 0; if (r_queue.task_running->task_stack.stack_size > 0) { do { __asm("PUSH"); r_queue.task_running->task_stack.stack_size -= 1; TOSL = r_queue.task_running->task_stack.stack[r_queue.task_running->task_stack.stack_size].TOSL_REG; TOSH = r_queue.task_running->task_stack.stack[r_queue.task_running->task_stack.stack_size].TOSH_REG; TOSU = r_queue.task_running->task_stack.stack[r_queue.task_running->task_stack.stack_size].TOSU_REG; } while (r_queue.task_running->task_stack.stack_size); } else { __asm("PUSH"); TOSL = (uint8_t)((uint24_t)r_queue.task_running->task_ptr & 0xFF); TOSH = (uint8_t)(((uint24_t)r_queue.task_running->task_ptr >> 8) & 0xFF); TOSU = (uint8_t)(((uint24_t)r_queue.task_running->task_ptr >> 16) & 0xFF); } rr_quantum = 20; } } while (0);;
+            { if (((r_queue.TASKS[r_queue.pos_task_running]).state_prio & 0x03) == READY) { ((r_queue.TASKS[r_queue.pos_task_running]).state_prio = (uint8_t)(((r_queue.TASKS[r_queue.pos_task_running]).state_prio & 0xFC) | (uint8_t)(RUNNING))); BSR = r_queue.TASKS[r_queue.pos_task_running].BSR_REG; WREG = r_queue.TASKS[r_queue.pos_task_running].W_REG; STATUS = r_queue.TASKS[r_queue.pos_task_running].STATUS_REG; FSR0H = r_queue.TASKS[r_queue.pos_task_running].FSR0H_REG; FSR0L = r_queue.TASKS[r_queue.pos_task_running].FSR0L_REG; while (r_queue.TASKS[r_queue.pos_task_running].task_stack.stack_size > 0) { r_queue.TASKS[r_queue.pos_task_running].task_stack.stack_size--; TOSL = r_queue.TASKS[r_queue.pos_task_running].task_stack.stack[r_queue.TASKS[r_queue.pos_task_running].task_stack.stack_size].TOSL_REG; TOSH = r_queue.TASKS[r_queue.pos_task_running].task_stack.stack[r_queue.TASKS[r_queue.pos_task_running].task_stack.stack_size].TOSH_REG; TOSU = r_queue.TASKS[r_queue.pos_task_running].task_stack.stack[r_queue.TASKS[r_queue.pos_task_running].task_stack.stack_size].TOSU_REG; __asm("PUSH"); } __asm("RETURN"); } };
         }
     }
 
@@ -9997,7 +9984,7 @@ void __attribute__((picinterrupt(("")))) ISR(void)
         INTCONbits.INT0IF = 0;
 
 
-        os_create_task(6, tarefaOneShot, 5);
+        os_create_task(6, tarefaOneShot, 6);
 
 
 

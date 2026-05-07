@@ -3,35 +3,35 @@
 [d edition pro ]
 [d chip 18F46K22 ]
 [d frameptr 4065 ]
-"9 C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\kernel.c
+"16 C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\kernel.c
 [e E37 . `uc
 READY 0
 WAITING 1
 RUNNING 2
 WAITING_SEM 3
 ]
-"19 C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\sync.c
+"27 C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\sync.c
 [e E64 . `uc
 READY 0
 WAITING 1
 RUNNING 2
 WAITING_SEM 3
 ]
-"103 C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\user.c
+"70 C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\user.c
 [e E37 . `uc
 READY 0
 WAITING 1
 RUNNING 2
 WAITING_SEM 3
 ]
-"15 C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\scheduler.c
+"36 C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\scheduler.c
 [e E41 . `uc
 READY 0
 WAITING 1
 RUNNING 2
 WAITING_SEM 3
 ]
-"33 C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\hw.c
+"36 C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\hw.c
 [e E6143 . `uc
 READY 0
 WAITING 1
@@ -56,8 +56,6 @@ WAITING_SEM 3
 [v ___awdiv __awdiv `(i  1 e 2 0 ]
 "7 C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
 [v ___awmod __awmod `(i  1 e 2 0 ]
-[v i1___awmod __awmod `(i  1 e 2 0 ]
-[v i2___awmod __awmod `(i  1 e 2 0 ]
 "4 C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\fleq.c
 [v ___fleq __fleq `(b  1 e 0 0 ]
 "62 C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\float.c
@@ -104,7 +102,7 @@ WAITING_SEM 3
 [v _pipe_init pipe_init `(v  1 e 1 0 ]
 "11
 [v _pipe_write pipe_write `(v  1 e 1 0 ]
-"19
+"24
 [v _pipe_read pipe_read `(v  1 e 1 0 ]
 "11 C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\hw.c
 [v _setup_hardware setup_hardware `(v  1 e 1 0 ]
@@ -123,13 +121,13 @@ WAITING_SEM 3
 "25
 [v _os_create_task os_create_task `(v  1 e 1 0 ]
 [v i2_os_create_task os_create_task `(v  1 e 1 0 ]
-"73
+"71
 [v _os_config os_config `(v  1 e 1 0 ]
-"89
+"87
 [v _os_start os_start `(v  1 e 1 0 ]
-"97
+"95
 [v _os_task_change_state os_task_change_state `(v  1 e 1 0 ]
-"114
+"112
 [v _idle idle `(v  1 e 1 0 ]
 "8 C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\main.c
 [v _main main `(i  1 e 2 0 ]
@@ -139,7 +137,7 @@ WAITING_SEM 3
 [v _scheduler scheduler `(v  1 e 1 0 ]
 [v i1_scheduler scheduler `(v  1 e 1 0 ]
 [v i2_scheduler scheduler `(v  1 e 1 0 ]
-"60
+"69
 [v _priority_rr_scheduler priority_rr_scheduler `(uc  1 e 1 0 ]
 [v i1_priority_rr_scheduler priority_rr_scheduler `(uc  1 e 1 0 ]
 [v i2_priority_rr_scheduler priority_rr_scheduler `(uc  1 e 1 0 ]
@@ -147,13 +145,13 @@ WAITING_SEM 3
 [v _sem_init sem_init `(v  1 e 1 0 ]
 "14
 [v _sem_wait sem_wait `(v  1 e 1 0 ]
-"30
+"35
 [v _sem_post sem_post `(v  1 e 1 0 ]
-"43
+"48
 [v _mutex_init mutex_init `(v  1 e 1 0 ]
-"51
+"56
 [v _mutex_lock mutex_lock `(v  1 e 1 0 ]
-"69
+"82
 [v _mutex_unlock mutex_unlock `(v  1 e 1 0 ]
 "15 C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\user.c
 [v _config_user config_user `(v  1 e 1 0 ]
@@ -161,15 +159,15 @@ WAITING_SEM 3
 [v _tarefaLeituraADC tarefaLeituraADC `(v  1 e 1 0 ]
 "59
 [v _tarefaProcessamento tarefaProcessamento `(v  1 e 1 0 ]
-"73
+"76
 [v _tarefaControlePWM tarefaControlePWM `(v  1 e 1 0 ]
-"85
+"89
 [v _tarefaFeedbackLED tarefaFeedbackLED `(v  1 e 1 0 ]
-"93
+"97
 [v _tarefaOneShot tarefaOneShot `(v  1 e 1 0 ]
 "136 C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026/mem.h
 [v __uDynamicHeap _uDynamicHeap `[512]uc  1 e 512 0 ]
-[s S897 . 1 `uc 1 ANSA0 1 0 :1:0 
+[s S775 . 1 `uc 1 ANSA0 1 0 :1:0 
 `uc 1 ANSA1 1 0 :1:1 
 `uc 1 ANSA2 1 0 :1:2 
 `uc 1 ANSA3 1 0 :1:3 
@@ -177,9 +175,9 @@ WAITING_SEM 3
 `uc 1 ANSA5 1 0 :1:5 
 ]
 "65 C:/Program Files/Microchip/MPLABX/v6.30/packs/Microchip/PIC18F-K_DFP/1.15.303/xc8\pic\include\proc/pic18f46k22.h
-[u S904 . 1 `S897 1 . 1 0 ]
-[v _ANSELAbits ANSELAbits `VES904  1 e 1 @3896 ]
-[s S1032 . 1 `uc 1 ANSB0 1 0 :1:0 
+[u S782 . 1 `S775 1 . 1 0 ]
+[v _ANSELAbits ANSELAbits `VES782  1 e 1 @3896 ]
+[s S910 . 1 `uc 1 ANSB0 1 0 :1:0 
 `uc 1 ANSB1 1 0 :1:1 
 `uc 1 ANSB2 1 0 :1:2 
 `uc 1 ANSB3 1 0 :1:3 
@@ -187,9 +185,9 @@ WAITING_SEM 3
 `uc 1 ANSB5 1 0 :1:5 
 ]
 "110
-[u S1039 . 1 `S1032 1 . 1 0 ]
-[v _ANSELBbits ANSELBbits `VES1039  1 e 1 @3897 ]
-[s S1172 . 1 `uc 1 . 1 0 :2:0 
+[u S917 . 1 `S910 1 . 1 0 ]
+[v _ANSELBbits ANSELBbits `VES917  1 e 1 @3897 ]
+[s S1050 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 ANSC2 1 0 :1:2 
 `uc 1 ANSC3 1 0 :1:3 
 `uc 1 ANSC4 1 0 :1:4 
@@ -198,9 +196,9 @@ WAITING_SEM 3
 `uc 1 ANSC7 1 0 :1:7 
 ]
 "161
-[u S1180 . 1 `S1172 1 . 1 0 ]
-[v _ANSELCbits ANSELCbits `VES1180  1 e 1 @3898 ]
-[s S1151 . 1 `uc 1 ANSD0 1 0 :1:0 
+[u S1058 . 1 `S1050 1 . 1 0 ]
+[v _ANSELCbits ANSELCbits `VES1058  1 e 1 @3898 ]
+[s S1029 . 1 `uc 1 ANSD0 1 0 :1:0 
 `uc 1 ANSD1 1 0 :1:1 
 `uc 1 ANSD2 1 0 :1:2 
 `uc 1 ANSD3 1 0 :1:3 
@@ -210,9 +208,9 @@ WAITING_SEM 3
 `uc 1 ANSD7 1 0 :1:7 
 ]
 "213
-[u S1160 . 1 `S1151 1 . 1 0 ]
-[v _ANSELDbits ANSELDbits `VES1160  1 e 1 @3899 ]
-[s S202 . 1 `uc 1 RC0 1 0 :1:0 
+[u S1038 . 1 `S1029 1 . 1 0 ]
+[v _ANSELDbits ANSELDbits `VES1038  1 e 1 @3899 ]
+[s S175 . 1 `uc 1 RC0 1 0 :1:0 
 `uc 1 RC1 1 0 :1:1 
 `uc 1 RC2 1 0 :1:2 
 `uc 1 RC3 1 0 :1:3 
@@ -222,7 +220,7 @@ WAITING_SEM 3
 `uc 1 RC7 1 0 :1:7 
 ]
 "6905
-[s S242 . 1 `uc 1 T1OSO 1 0 :1:0 
+[s S215 . 1 `uc 1 T1OSO 1 0 :1:0 
 `uc 1 T1OSI 1 0 :1:1 
 `uc 1 T5CKI 1 0 :1:2 
 `uc 1 SCK 1 0 :1:3 
@@ -231,7 +229,7 @@ WAITING_SEM 3
 `uc 1 TX 1 0 :1:6 
 `uc 1 RX 1 0 :1:7 
 ]
-[s S251 . 1 `uc 1 P2B 1 0 :1:0 
+[s S224 . 1 `uc 1 P2B 1 0 :1:0 
 `uc 1 P2A 1 0 :1:1 
 `uc 1 P1A 1 0 :1:2 
 `uc 1 SCL 1 0 :1:3 
@@ -240,7 +238,7 @@ WAITING_SEM 3
 `uc 1 CK 1 0 :1:6 
 `uc 1 DT 1 0 :1:7 
 ]
-[s S260 . 1 `uc 1 T1CKI 1 0 :1:0 
+[s S233 . 1 `uc 1 T1CKI 1 0 :1:0 
 `uc 1 CCP2 1 0 :1:1 
 `uc 1 CCP1 1 0 :1:2 
 `uc 1 SCK1 1 0 :1:3 
@@ -249,7 +247,7 @@ WAITING_SEM 3
 `uc 1 TX1 1 0 :1:6 
 `uc 1 RX1 1 0 :1:7 
 ]
-[s S269 . 1 `uc 1 T3CKI 1 0 :1:0 
+[s S242 . 1 `uc 1 T3CKI 1 0 :1:0 
 `uc 1 . 1 0 :1:1 
 `uc 1 CTPLS 1 0 :1:2 
 `uc 1 SCL1 1 0 :1:3 
@@ -258,7 +256,7 @@ WAITING_SEM 3
 `uc 1 CK1 1 0 :1:6 
 `uc 1 DT1 1 0 :1:7 
 ]
-[s S278 . 1 `uc 1 T3G 1 0 :1:0 
+[s S251 . 1 `uc 1 T3G 1 0 :1:0 
 `uc 1 . 1 0 :1:1 
 `uc 1 AN14 1 0 :1:2 
 `uc 1 AN15 1 0 :1:3 
@@ -267,67 +265,15 @@ WAITING_SEM 3
 `uc 1 AN18 1 0 :1:6 
 `uc 1 AN19 1 0 :1:7 
 ]
-[s S287 . 1 `uc 1 . 1 0 :1:0 
+[s S260 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 PA2 1 0 :1:1 
 `uc 1 PA1 1 0 :1:2 
 ]
-[u S291 . 1 `S202 1 . 1 0 `S242 1 . 1 0 `S251 1 . 1 0 `S260 1 . 1 0 `S269 1 . 1 0 `S278 1 . 1 0 `S287 1 . 1 0 ]
-[v _PORTCbits PORTCbits `VES291  1 e 1 @3970 ]
-[s S1120 . 1 `uc 1 RD0 1 0 :1:0 
-`uc 1 RD1 1 0 :1:1 
-`uc 1 RD2 1 0 :1:2 
-`uc 1 RD3 1 0 :1:3 
-`uc 1 RD4 1 0 :1:4 
-`uc 1 RD5 1 0 :1:5 
-`uc 1 RD6 1 0 :1:6 
-`uc 1 RD7 1 0 :1:7 
-]
-"7203
-[s S1317 . 1 `uc 1 . 1 0 :2:0 
-`uc 1 P2B 1 0 :1:2 
-`uc 1 P2C 1 0 :1:3 
-`uc 1 P2D 1 0 :1:4 
-`uc 1 P1B 1 0 :1:5 
-`uc 1 P1C 1 0 :1:6 
-`uc 1 P1D 1 0 :1:7 
-]
-[s S1325 . 1 `uc 1 . 1 0 :1:0 
-`uc 1 CCP4 1 0 :1:1 
-`uc 1 . 1 0 :4:2 
-`uc 1 TX2 1 0 :1:6 
-`uc 1 RX2 1 0 :1:7 
-]
-[s S1331 . 1 `uc 1 . 1 0 :3:0 
-`uc 1 NOT_SS2 1 0 :1:3 
-]
-[s S1334 . 1 `uc 1 SCK2 1 0 :1:0 
-`uc 1 SDI2 1 0 :1:1 
-`uc 1 . 1 0 :1:2 
-`uc 1 nSS2 1 0 :1:3 
-`uc 1 SDO2 1 0 :1:4 
-`uc 1 . 1 0 :1:5 
-`uc 1 CK2 1 0 :1:6 
-`uc 1 DT2 1 0 :1:7 
-]
-[s S1343 . 1 `uc 1 SCL2 1 0 :1:0 
-`uc 1 SDA2 1 0 :1:1 
-`uc 1 . 1 0 :1:2 
-`uc 1 SS2 1 0 :1:3 
-]
-[s S1348 . 1 `uc 1 AN20 1 0 :1:0 
-`uc 1 AN21 1 0 :1:1 
-`uc 1 AN22 1 0 :1:2 
-`uc 1 AN23 1 0 :1:3 
-`uc 1 AN24 1 0 :1:4 
-`uc 1 AN25 1 0 :1:5 
-`uc 1 AN26 1 0 :1:6 
-`uc 1 AN27 1 0 :1:7 
-]
-[u S1357 . 1 `S1120 1 . 1 0 `S1317 1 . 1 0 `S1325 1 . 1 0 `S1331 1 . 1 0 `S1334 1 . 1 0 `S1343 1 . 1 0 `S1348 1 . 1 0 ]
-[v _PORTDbits PORTDbits `VES1357  1 e 1 @3971 ]
+[u S264 . 1 `S175 1 . 1 0 `S215 1 . 1 0 `S224 1 . 1 0 `S233 1 . 1 0 `S242 1 . 1 0 `S251 1 . 1 0 `S260 1 . 1 0 ]
+[v _PORTCbits PORTCbits `VES264  1 e 1 @3970 ]
 "7894
 [v _LATD LATD `VEuc  1 e 1 @3980 ]
-[s S1268 . 1 `uc 1 LATD0 1 0 :1:0 
+[s S1171 . 1 `uc 1 LATD0 1 0 :1:0 
 `uc 1 LATD1 1 0 :1:1 
 `uc 1 LATD2 1 0 :1:2 
 `uc 1 LATD3 1 0 :1:3 
@@ -337,7 +283,7 @@ WAITING_SEM 3
 `uc 1 LATD7 1 0 :1:7 
 ]
 "7921
-[s S1277 . 1 `uc 1 LD0 1 0 :1:0 
+[s S1180 . 1 `uc 1 LD0 1 0 :1:0 
 `uc 1 LD1 1 0 :1:1 
 `uc 1 LD2 1 0 :1:2 
 `uc 1 LD3 1 0 :1:3 
@@ -346,9 +292,9 @@ WAITING_SEM 3
 `uc 1 LD6 1 0 :1:6 
 `uc 1 LD7 1 0 :1:7 
 ]
-[u S1286 . 1 `S1268 1 . 1 0 `S1277 1 . 1 0 ]
-[v _LATDbits LATDbits `VES1286  1 e 1 @3980 ]
-[s S857 . 1 `uc 1 TRISA0 1 0 :1:0 
+[u S1189 . 1 `S1171 1 . 1 0 `S1180 1 . 1 0 ]
+[v _LATDbits LATDbits `VES1189  1 e 1 @3980 ]
+[s S735 . 1 `uc 1 TRISA0 1 0 :1:0 
 `uc 1 TRISA1 1 0 :1:1 
 `uc 1 TRISA2 1 0 :1:2 
 `uc 1 TRISA3 1 0 :1:3 
@@ -358,7 +304,7 @@ WAITING_SEM 3
 `uc 1 TRISA7 1 0 :1:7 
 ]
 "8090
-[s S866 . 1 `uc 1 RA0 1 0 :1:0 
+[s S744 . 1 `uc 1 RA0 1 0 :1:0 
 `uc 1 RA1 1 0 :1:1 
 `uc 1 RA2 1 0 :1:2 
 `uc 1 RA3 1 0 :1:3 
@@ -367,9 +313,9 @@ WAITING_SEM 3
 `uc 1 RA6 1 0 :1:6 
 `uc 1 RA7 1 0 :1:7 
 ]
-[u S875 . 1 `S857 1 . 1 0 `S866 1 . 1 0 ]
-[v _TRISAbits TRISAbits `VES875  1 e 1 @3986 ]
-[s S1049 . 1 `uc 1 TRISB0 1 0 :1:0 
+[u S753 . 1 `S735 1 . 1 0 `S744 1 . 1 0 ]
+[v _TRISAbits TRISAbits `VES753  1 e 1 @3986 ]
+[s S927 . 1 `uc 1 TRISB0 1 0 :1:0 
 `uc 1 TRISB1 1 0 :1:1 
 `uc 1 TRISB2 1 0 :1:2 
 `uc 1 TRISB3 1 0 :1:3 
@@ -379,7 +325,7 @@ WAITING_SEM 3
 `uc 1 TRISB7 1 0 :1:7 
 ]
 "8312
-[s S1058 . 1 `uc 1 RB0 1 0 :1:0 
+[s S936 . 1 `uc 1 RB0 1 0 :1:0 
 `uc 1 RB1 1 0 :1:1 
 `uc 1 RB2 1 0 :1:2 
 `uc 1 RB3 1 0 :1:3 
@@ -388,9 +334,9 @@ WAITING_SEM 3
 `uc 1 RB6 1 0 :1:6 
 `uc 1 RB7 1 0 :1:7 
 ]
-[u S1067 . 1 `S1049 1 . 1 0 `S1058 1 . 1 0 ]
-[v _TRISBbits TRISBbits `VES1067  1 e 1 @3987 ]
-[s S193 . 1 `uc 1 TRISC0 1 0 :1:0 
+[u S945 . 1 `S927 1 . 1 0 `S936 1 . 1 0 ]
+[v _TRISBbits TRISBbits `VES945  1 e 1 @3987 ]
+[s S166 . 1 `uc 1 TRISC0 1 0 :1:0 
 `uc 1 TRISC1 1 0 :1:1 
 `uc 1 TRISC2 1 0 :1:2 
 `uc 1 TRISC3 1 0 :1:3 
@@ -400,11 +346,11 @@ WAITING_SEM 3
 `uc 1 TRISC7 1 0 :1:7 
 ]
 "8534
-[u S211 . 1 `S193 1 . 1 0 `S202 1 . 1 0 ]
-[v _TRISCbits TRISCbits `VES211  1 e 1 @3988 ]
+[u S184 . 1 `S166 1 . 1 0 `S175 1 . 1 0 ]
+[v _TRISCbits TRISCbits `VES184  1 e 1 @3988 ]
 "8724
 [v _TRISD TRISD `VEuc  1 e 1 @3989 ]
-[s S1111 . 1 `uc 1 TRISD0 1 0 :1:0 
+[s S989 . 1 `uc 1 TRISD0 1 0 :1:0 
 `uc 1 TRISD1 1 0 :1:1 
 `uc 1 TRISD2 1 0 :1:2 
 `uc 1 TRISD3 1 0 :1:3 
@@ -414,20 +360,29 @@ WAITING_SEM 3
 `uc 1 TRISD7 1 0 :1:7 
 ]
 "8756
-[u S1129 . 1 `S1111 1 . 1 0 `S1120 1 . 1 0 ]
-[v _TRISDbits TRISDbits `VES1129  1 e 1 @3989 ]
+[s S998 . 1 `uc 1 RD0 1 0 :1:0 
+`uc 1 RD1 1 0 :1:1 
+`uc 1 RD2 1 0 :1:2 
+`uc 1 RD3 1 0 :1:3 
+`uc 1 RD4 1 0 :1:4 
+`uc 1 RD5 1 0 :1:5 
+`uc 1 RD6 1 0 :1:6 
+`uc 1 RD7 1 0 :1:7 
+]
+[u S1007 . 1 `S989 1 . 1 0 `S998 1 . 1 0 ]
+[v _TRISDbits TRISDbits `VES1007  1 e 1 @3989 ]
 "13230
 [v _T2CON T2CON `VEuc  1 e 1 @4026 ]
 "13301
 [v _PR2 PR2 `VEuc  1 e 1 @4027 ]
 "13341
 [v _CCP1CON CCP1CON `VEuc  1 e 1 @4029 ]
-[s S942 . 1 `uc 1 CCP1M 1 0 :4:0 
+[s S820 . 1 `uc 1 CCP1M 1 0 :4:0 
 `uc 1 DC1B 1 0 :2:4 
 `uc 1 P1M 1 0 :2:6 
 ]
 "13363
-[s S946 . 1 `uc 1 CCP1M0 1 0 :1:0 
+[s S824 . 1 `uc 1 CCP1M0 1 0 :1:0 
 `uc 1 CCP1M1 1 0 :1:1 
 `uc 1 CCP1M2 1 0 :1:2 
 `uc 1 CCP1M3 1 0 :1:3 
@@ -436,50 +391,50 @@ WAITING_SEM 3
 `uc 1 P1M0 1 0 :1:6 
 `uc 1 P1M1 1 0 :1:7 
 ]
-[u S955 . 1 `S942 1 . 1 0 `S946 1 . 1 0 ]
-[v _CCP1CONbits CCP1CONbits `VES955  1 e 1 @4029 ]
+[u S833 . 1 `S820 1 . 1 0 `S824 1 . 1 0 ]
+[v _CCP1CONbits CCP1CONbits `VES833  1 e 1 @4029 ]
 "13430
 [v _CCPR1L CCPR1L `VEuc  1 e 1 @4030 ]
-[s S829 . 1 `uc 1 ADCS 1 0 :3:0 
+[s S707 . 1 `uc 1 ADCS 1 0 :3:0 
 `uc 1 ACQT 1 0 :3:3 
 `uc 1 . 1 0 :1:6 
 `uc 1 ADFM 1 0 :1:7 
 ]
 "13491
-[s S834 . 1 `uc 1 ADCS0 1 0 :1:0 
+[s S712 . 1 `uc 1 ADCS0 1 0 :1:0 
 `uc 1 ADCS1 1 0 :1:1 
 `uc 1 ADCS2 1 0 :1:2 
 `uc 1 ACQT0 1 0 :1:3 
 `uc 1 ACQT1 1 0 :1:4 
 `uc 1 ACQT2 1 0 :1:5 
 ]
-[u S841 . 1 `S829 1 . 1 0 `S834 1 . 1 0 ]
-[v _ADCON2bits ADCON2bits `VES841  1 e 1 @4032 ]
-[s S798 . 1 `uc 1 NVCFG 1 0 :2:0 
+[u S719 . 1 `S707 1 . 1 0 `S712 1 . 1 0 ]
+[v _ADCON2bits ADCON2bits `VES719  1 e 1 @4032 ]
+[s S676 . 1 `uc 1 NVCFG 1 0 :2:0 
 `uc 1 PVCFG 1 0 :2:2 
 `uc 1 . 1 0 :3:4 
 `uc 1 TRIGSEL 1 0 :1:7 
 ]
 "13564
-[s S803 . 1 `uc 1 NVCFG0 1 0 :1:0 
+[s S681 . 1 `uc 1 NVCFG0 1 0 :1:0 
 `uc 1 NVCFG1 1 0 :1:1 
 `uc 1 PVCFG0 1 0 :1:2 
 `uc 1 PVCFG1 1 0 :1:3 
 ]
-[s S808 . 1 `uc 1 . 1 0 :3:0 
+[s S686 . 1 `uc 1 . 1 0 :3:0 
 `uc 1 CHSN3 1 0 :1:3 
 ]
-[u S811 . 1 `S798 1 . 1 0 `S803 1 . 1 0 `S808 1 . 1 0 ]
-[v _ADCON1bits ADCON1bits `VES811  1 e 1 @4033 ]
-[s S728 . 1 `uc 1 . 1 0 :1:0 
+[u S689 . 1 `S676 1 . 1 0 `S681 1 . 1 0 `S686 1 . 1 0 ]
+[v _ADCON1bits ADCON1bits `VES689  1 e 1 @4033 ]
+[s S606 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 GO_NOT_DONE 1 0 :1:1 
 ]
 "13654
-[s S731 . 1 `uc 1 ADON 1 0 :1:0 
+[s S609 . 1 `uc 1 ADON 1 0 :1:0 
 `uc 1 GO_nDONE 1 0 :1:1 
 `uc 1 CHS 1 0 :5:2 
 ]
-[s S735 . 1 `uc 1 . 1 0 :1:0 
+[s S613 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 GO 1 0 :1:1 
 `uc 1 CHS0 1 0 :1:2 
 `uc 1 CHS1 1 0 :1:3 
@@ -487,28 +442,28 @@ WAITING_SEM 3
 `uc 1 CHS3 1 0 :1:5 
 `uc 1 CHS4 1 0 :1:6 
 ]
-[s S743 . 1 `uc 1 . 1 0 :1:0 
+[s S621 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 DONE 1 0 :1:1 
 ]
-[s S746 . 1 `uc 1 . 1 0 :1:0 
+[s S624 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 NOT_DONE 1 0 :1:1 
 ]
-[s S749 . 1 `uc 1 . 1 0 :1:0 
+[s S627 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 nDONE 1 0 :1:1 
 ]
-[s S752 . 1 `uc 1 . 1 0 :1:0 
+[s S630 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 GO_DONE 1 0 :1:1 
 ]
-[s S755 . 1 `uc 1 . 1 0 :1:0 
+[s S633 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 GODONE 1 0 :1:1 
 ]
-[u S758 . 1 `S728 1 . 1 0 `S731 1 . 1 0 `S735 1 . 1 0 `S743 1 . 1 0 `S746 1 . 1 0 `S749 1 . 1 0 `S752 1 . 1 0 `S755 1 . 1 0 ]
-[v _ADCON0bits ADCON0bits `VES758  1 e 1 @4034 ]
+[u S636 . 1 `S606 1 . 1 0 `S609 1 . 1 0 `S613 1 . 1 0 `S621 1 . 1 0 `S624 1 . 1 0 `S627 1 . 1 0 `S630 1 . 1 0 `S633 1 . 1 0 ]
+[v _ADCON0bits ADCON0bits `VES636  1 e 1 @4034 ]
 "13741
 [v _ADRESL ADRESL `VEuc  1 e 1 @4035 ]
 "13761
 [v _ADRESH ADRESH `VEuc  1 e 1 @4036 ]
-[s S1727 . 1 `uc 1 T0PS 1 0 :3:0 
+[s S1463 . 1 `uc 1 T0PS 1 0 :3:0 
 `uc 1 PSA 1 0 :1:3 
 `uc 1 T0SE 1 0 :1:4 
 `uc 1 T0CS 1 0 :1:5 
@@ -516,37 +471,29 @@ WAITING_SEM 3
 `uc 1 TMR0ON 1 0 :1:7 
 ]
 "16147
-[s S1734 . 1 `uc 1 T0PS0 1 0 :1:0 
+[s S1470 . 1 `uc 1 T0PS0 1 0 :1:0 
 `uc 1 T0PS1 1 0 :1:1 
 `uc 1 T0PS2 1 0 :1:2 
 ]
-[u S1738 . 1 `S1727 1 . 1 0 `S1734 1 . 1 0 ]
-[v _T0CONbits T0CONbits `VES1738  1 e 1 @4053 ]
+[u S1474 . 1 `S1463 1 . 1 0 `S1470 1 . 1 0 ]
+[v _T0CONbits T0CONbits `VES1474  1 e 1 @4053 ]
 "16197
 [v _TMR0 TMR0 `VEus  1 e 2 @4054 ]
 "16244
 [v _STATUS STATUS `VEuc  1 e 1 @4056 ]
-"16322
-[v _FSR2L FSR2L `VEuc  1 e 1 @4057 ]
-"16342
-[v _FSR2H FSR2H `VEuc  1 e 1 @4058 ]
 "16449
 [v _BSR BSR `VEuc  1 e 1 @4064 ]
-"16463
-[v _FSR1L FSR1L `VEuc  1 e 1 @4065 ]
-"16483
-[v _FSR1H FSR1H `VEuc  1 e 1 @4066 ]
 "16590
 [v _WREG WREG `VEuc  1 e 1 @4072 ]
 "16635
 [v _FSR0L FSR0L `VEuc  1 e 1 @4073 ]
 "16655
 [v _FSR0H FSR0H `VEuc  1 e 1 @4074 ]
-[s S1218 . 1 `uc 1 . 1 0 :7:0 
+[s S1096 . 1 `uc 1 . 1 0 :7:0 
 `uc 1 NOT_RBPU 1 0 :1:7 
 ]
 "16879
-[s S1221 . 1 `uc 1 RBIP 1 0 :1:0 
+[s S1099 . 1 `uc 1 RBIP 1 0 :1:0 
 `uc 1 . 1 0 :1:1 
 `uc 1 TMR0IP 1 0 :1:2 
 `uc 1 . 1 0 :1:3 
@@ -555,12 +502,12 @@ WAITING_SEM 3
 `uc 1 INTEDG0 1 0 :1:6 
 `uc 1 nRBPU 1 0 :1:7 
 ]
-[s S1230 . 1 `uc 1 . 1 0 :7:0 
+[s S1108 . 1 `uc 1 . 1 0 :7:0 
 `uc 1 RBPU 1 0 :1:7 
 ]
-[u S1233 . 1 `S1218 1 . 1 0 `S1221 1 . 1 0 `S1230 1 . 1 0 ]
-[v _INTCON2bits INTCON2bits `VES1233  1 e 1 @4081 ]
-[s S103 . 1 `uc 1 RBIF 1 0 :1:0 
+[u S1111 . 1 `S1096 1 . 1 0 `S1099 1 . 1 0 `S1108 1 . 1 0 ]
+[v _INTCON2bits INTCON2bits `VES1111  1 e 1 @4081 ]
+[s S84 . 1 `uc 1 RBIF 1 0 :1:0 
 `uc 1 INT0IF 1 0 :1:1 
 `uc 1 TMR0IF 1 0 :1:2 
 `uc 1 RBIE 1 0 :1:3 
@@ -570,7 +517,7 @@ WAITING_SEM 3
 `uc 1 GIE_GIEH 1 0 :1:7 
 ]
 "16956
-[s S112 . 1 `uc 1 . 1 0 :1:0 
+[s S93 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 INT0F 1 0 :1:1 
 `uc 1 T0IF 1 0 :1:2 
 `uc 1 . 1 0 :1:3 
@@ -579,28 +526,12 @@ WAITING_SEM 3
 `uc 1 PEIE 1 0 :1:6 
 `uc 1 GIE 1 0 :1:7 
 ]
-[s S121 . 1 `uc 1 . 1 0 :6:0 
+[s S102 . 1 `uc 1 . 1 0 :6:0 
 `uc 1 GIEL 1 0 :1:6 
 `uc 1 GIEH 1 0 :1:7 
 ]
-[u S125 . 1 `S103 1 . 1 0 `S112 1 . 1 0 `S121 1 . 1 0 ]
-[v _INTCONbits INTCONbits `VES125  1 e 1 @4082 ]
-"17048
-[v _PRODL PRODL `VEuc  1 e 1 @4083 ]
-"17068
-[v _PRODH PRODH `VEuc  1 e 1 @4084 ]
-"17088
-[v _TABLAT TABLAT `VEuc  1 e 1 @4085 ]
-"17117
-[v _TBLPTRL TBLPTRL `VEuc  1 e 1 @4086 ]
-"17137
-[v _TBLPTRH TBLPTRH `VEuc  1 e 1 @4087 ]
-"17157
-[v _TBLPTRU TBLPTRU `VEuc  1 e 1 @4088 ]
-"17222
-[v _PCLATH PCLATH `VEuc  1 e 1 @4090 ]
-"17242
-[v _PCLATU PCLATU `VEuc  1 e 1 @4091 ]
+[u S106 . 1 `S84 1 . 1 0 `S93 1 . 1 0 `S102 1 . 1 0 ]
+[v _INTCONbits INTCONbits `VES106  1 e 1 @4082 ]
 "17249
 [v _STKPTR STKPTR `VEuc  1 e 1 @4092 ]
 "17362
@@ -611,32 +542,32 @@ WAITING_SEM 3
 [v _TOSU TOSU `VEuc  1 e 1 @4095 ]
 "8 C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\hw.c
 [v _rr_quantum rr_quantum `uc  1 e 1 0 ]
-[s S67 hw_stack 3 `uc 1 TOSL_REG 1 0 `uc 1 TOSH_REG 1 1 `uc 1 TOSU_REG 1 2 ]
+[s S62 hw_stack 3 `uc 1 TOSL_REG 1 0 `uc 1 TOSH_REG 1 1 `uc 1 TOSU_REG 1 2 ]
 "9 C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\kernel.c
-[s S71 sw_stack 37 `[12]S67 1 stack 36 0 `uc 1 stack_size 1 36 ]
-[s S74 tcb 60 `uc 1 task_id 1 0 `E37 1 task_state 1 1 `*.37(v 1 task_ptr 2 2 `uc 1 task_delay 1 4 `uc 1 task_priority 1 5 `uc 1 W_REG 1 6 `uc 1 STATUS_REG 1 7 `uc 1 BSR_REG 1 8 `uc 1 PRODL_REG 1 9 `uc 1 PRODH_REG 1 10 `uc 1 FSR0L_REG 1 11 `uc 1 FSR0H_REG 1 12 `uc 1 FSR1L_REG 1 13 `uc 1 FSR1H_REG 1 14 `uc 1 FSR2L_REG 1 15 `uc 1 FSR2H_REG 1 16 `uc 1 TABLAT_REG 1 17 `uc 1 TBLPTRL_REG 1 18 `uc 1 TBLPTRH_REG 1 19 `uc 1 TBLPTRU_REG 1 20 `uc 1 PCLATH_REG 1 21 `uc 1 PCLATU_REG 1 22 `S71 1 task_stack 37 23 ]
-[s S98 ready_queue 424 `[7]S74 1 TASKS 420 0 `uc 1 size 1 420 `*.39S74 1 task_running 2 421 `uc 1 pos_task_running 1 423 ]
-[v _r_queue r_queue `S98  1 e 424 0 ]
-[s S515 sem 9 `uc 1 contador 1 0 `[6]uc 1 fila 6 1 `uc 1 pos_input 1 7 `uc 1 pos_output 1 8 ]
+[s S66 sw_stack 25 `[8]S62 1 stack 24 0 `uc 1 stack_size 1 24 ]
+[s S69 tcb 35 `uc 1 task_id 1 0 `*.37(v 1 task_ptr 2 1 `uc 1 task_delay 1 3 `uc 1 state_prio 1 4 `uc 1 W_REG 1 5 `uc 1 STATUS_REG 1 6 `uc 1 BSR_REG 1 7 `uc 1 FSR0L_REG 1 8 `uc 1 FSR0H_REG 1 9 `S66 1 task_stack 25 10 ]
+[s S80 ready_queue 212 `[6]S69 1 TASKS 210 0 `uc 1 size 1 210 `uc 1 pos_task_running 1 211 ]
+[v _r_queue r_queue `S80  1 e 212 0 ]
+[s S420 sem 8 `c 1 contador 1 0 `[5]uc 1 fila 5 1 `uc 1 pos_input 1 6 `uc 1 pos_output 1 7 ]
 "9 C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\user.c
-[s S669 pipe 24 `[4]uc 1 fila_dados 4 0 `uc 1 pos_input 1 4 `uc 1 pos_output 1 5 `S515 1 s_input 9 6 `S515 1 s_output 9 15 ]
-[v _pipe_adc pipe_adc `S669  1 e 24 0 ]
-[s S613 mutex 11 `uc 1 locked 1 0 `uc 1 owner_id 1 1 `[6]uc 1 fila 6 2 `uc 1 pos_input 1 8 `uc 1 pos_output 1 9 `uc 1 waiting_count 1 10 ]
+[s S547 pipe 22 `[4]uc 1 fila_dados 4 0 `uc 1 pos_input 1 4 `uc 1 pos_output 1 5 `S420 1 s_input 8 6 `S420 1 s_output 8 14 ]
+[v _pipe_adc pipe_adc `S547  1 e 22 0 ]
+[s S491 mutex 10 `uc 1 locked 1 0 `uc 1 owner_id 1 1 `[5]uc 1 fila 5 2 `uc 1 pos_input 1 7 `uc 1 pos_output 1 8 `uc 1 waiting_count 1 9 ]
 "10
-[v _mutex_recurso mutex_recurso `S613  1 e 11 0 ]
+[v _mutex_recurso mutex_recurso `S491  1 e 10 0 ]
 "11
-[v _sem_processamento sem_processamento `S515  1 e 9 0 ]
+[v _sem_processamento sem_processamento `S420  1 e 8 0 ]
 "13
 [v _dado_processado dado_processado `VEuc  1 e 1 0 ]
 "8 C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\main.c
 [v _main main `(i  1 e 2 0 ]
 {
-"23
+"24
 } 0
-"89 C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\kernel.c
+"87 C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\kernel.c
 [v _os_start os_start `(v  1 e 1 0 ]
 {
-"95
+"93
 } 0
 "11 C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\hw.c
 [v _setup_hardware setup_hardware `(v  1 e 1 0 ]
@@ -648,53 +579,42 @@ WAITING_SEM 3
 {
 "18
 } 0
-"60
+"69
 [v _priority_rr_scheduler priority_rr_scheduler `(uc  1 e 1 0 ]
 {
-"61
+"70
 [v priority_rr_scheduler@max_prio max_prio `uc  1 s 1 max_prio ]
-"62
+"71
 [v priority_rr_scheduler@found found `uc  1 s 1 found ]
-"63
+"72
 [v priority_rr_scheduler@i i `uc  1 s 1 i ]
-"64
+"73
 [v priority_rr_scheduler@current current `uc  1 s 1 current ]
-"65
+"74
 [v priority_rr_scheduler@idx idx `uc  1 s 1 idx ]
-"90
+"102
 } 0
-"7 C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
-[v ___awmod __awmod `(i  1 e 2 0 ]
-{
-"10
-[v ___awmod@sign sign `uc  1 a 1 5 ]
-[v ___awmod@counter counter `uc  1 a 1 4 ]
-"7
-[v ___awmod@dividend dividend `i  1 p 2 0 ]
-[v ___awmod@divisor divisor `i  1 p 2 2 ]
-"34
-} 0
-"73 C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\kernel.c
+"71 C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\kernel.c
 [v _os_config os_config `(v  1 e 1 0 ]
 {
-"87
+"85
 } 0
 "25
 [v _os_create_task os_create_task `(v  1 e 1 0 ]
 {
 [v os_create_task@id id `uc  1 p 1 wreg ]
-[s S67 hw_stack 3 `uc 1 TOSL_REG 1 0 `uc 1 TOSH_REG 1 1 `uc 1 TOSU_REG 1 2 ]
+[s S62 hw_stack 3 `uc 1 TOSL_REG 1 0 `uc 1 TOSH_REG 1 1 `uc 1 TOSU_REG 1 2 ]
 "27
-[s S71 sw_stack 37 `[12]S67 1 stack 36 0 `uc 1 stack_size 1 36 ]
-[s S74 tcb 60 `uc 1 task_id 1 0 `E37 1 task_state 1 1 `*.37(v 1 task_ptr 2 2 `uc 1 task_delay 1 4 `uc 1 task_priority 1 5 `uc 1 W_REG 1 6 `uc 1 STATUS_REG 1 7 `uc 1 BSR_REG 1 8 `uc 1 PRODL_REG 1 9 `uc 1 PRODH_REG 1 10 `uc 1 FSR0L_REG 1 11 `uc 1 FSR0H_REG 1 12 `uc 1 FSR1L_REG 1 13 `uc 1 FSR1H_REG 1 14 `uc 1 FSR2L_REG 1 15 `uc 1 FSR2H_REG 1 16 `uc 1 TABLAT_REG 1 17 `uc 1 TBLPTRL_REG 1 18 `uc 1 TBLPTRH_REG 1 19 `uc 1 TBLPTRU_REG 1 20 `uc 1 PCLATH_REG 1 21 `uc 1 PCLATU_REG 1 22 `S71 1 task_stack 37 23 ]
-[v os_create_task@new_task new_task `S74  1 a 60 5 ]
+[s S66 sw_stack 25 `[8]S62 1 stack 24 0 `uc 1 stack_size 1 24 ]
+[s S69 tcb 35 `uc 1 task_id 1 0 `*.37(v 1 task_ptr 2 1 `uc 1 task_delay 1 3 `uc 1 state_prio 1 4 `uc 1 W_REG 1 5 `uc 1 STATUS_REG 1 6 `uc 1 BSR_REG 1 7 `uc 1 FSR0L_REG 1 8 `uc 1 FSR0H_REG 1 9 `S66 1 task_stack 25 10 ]
+[v os_create_task@new_task new_task `*.39S69  1 a 2 90 ]
 "25
 [v os_create_task@id id `uc  1 p 1 wreg ]
-[v os_create_task@func func `*.37(v  1 p 2 0 ]
-[v os_create_task@prior prior `uc  1 p 1 2 ]
+[v os_create_task@func func `*.37(v  1 p 2 85 ]
+[v os_create_task@prior prior `uc  1 p 1 87 ]
 "29
-[v os_create_task@id id `uc  1 p 1 4 ]
-"60
+[v os_create_task@id id `uc  1 p 1 89 ]
+"58
 } 1
 "15 C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\user.c
 [v _config_user config_user `(v  1 e 1 0 ]
@@ -709,65 +629,76 @@ WAITING_SEM 3
 "3 C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\com.c
 [v _pipe_init pipe_init `(v  1 e 1 0 ]
 {
-[s S515 sem 9 `uc 1 contador 1 0 `[6]uc 1 fila 6 1 `uc 1 pos_input 1 7 `uc 1 pos_output 1 8 ]
-[s S669 pipe 24 `[4]uc 1 fila_dados 4 0 `uc 1 pos_input 1 4 `uc 1 pos_output 1 5 `S515 1 s_input 9 6 `S515 1 s_output 9 15 ]
-[v pipe_init@p p `*.30S669  1 p 1 3 ]
+[s S420 sem 8 `c 1 contador 1 0 `[5]uc 1 fila 5 1 `uc 1 pos_input 1 6 `uc 1 pos_output 1 7 ]
+[s S547 pipe 22 `[4]uc 1 fila_dados 4 0 `uc 1 pos_input 1 4 `uc 1 pos_output 1 5 `S420 1 s_input 8 6 `S420 1 s_output 8 14 ]
+[v pipe_init@p p `*.30S547  1 p 1 87 ]
 "9
 } 0
 "8 C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\sync.c
 [v _sem_init sem_init `(v  1 e 1 0 ]
 {
-[s S515 sem 9 `uc 1 contador 1 0 `[6]uc 1 fila 6 1 `uc 1 pos_input 1 7 `uc 1 pos_output 1 8 ]
-[v sem_init@sem sem `*.39S515  1 p 2 0 ]
-[v sem_init@valor valor `uc  1 p 1 2 ]
+[s S420 sem 8 `c 1 contador 1 0 `[5]uc 1 fila 5 1 `uc 1 pos_input 1 6 `uc 1 pos_output 1 7 ]
+[v sem_init@sem sem `*.30S420  1 p 1 85 ]
+[v sem_init@valor valor `c  1 p 1 86 ]
 "12
 } 0
-"43
+"48
 [v _mutex_init mutex_init `(v  1 e 1 0 ]
 {
-[s S613 mutex 11 `uc 1 locked 1 0 `uc 1 owner_id 1 1 `[6]uc 1 fila 6 2 `uc 1 pos_input 1 8 `uc 1 pos_output 1 9 `uc 1 waiting_count 1 10 ]
-[v mutex_init@m m `*.39S613  1 p 2 0 ]
-"49
+[s S491 mutex 10 `uc 1 locked 1 0 `uc 1 owner_id 1 1 `[5]uc 1 fila 5 2 `uc 1 pos_input 1 7 `uc 1 pos_output 1 8 `uc 1 waiting_count 1 9 ]
+[v mutex_init@m m `*.30S491  1 p 1 85 ]
+"54
 } 0
 "4 C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\io.c
 [v _adc_config adc_config `(v  1 e 1 0 ]
 {
 "14
 } 0
-"114 C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\kernel.c
+"112 C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\kernel.c
 [v _idle idle `(v  1 e 1 0 ]
 {
-"121
+"119
 } 0
 "50 C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\user.c
 [v _tarefaLeituraADC tarefaLeituraADC `(v  1 e 1 0 ]
 {
 "52
-[v tarefaLeituraADC@valor valor `uc  1 a 1 13 ]
+[v tarefaLeituraADC@valor valor `uc  1 a 1 8 ]
 "56
 } 0
 "11 C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\com.c
 [v _pipe_write pipe_write `(v  1 e 1 0 ]
 {
-[s S515 sem 9 `uc 1 contador 1 0 `[6]uc 1 fila 6 1 `uc 1 pos_input 1 7 `uc 1 pos_output 1 8 ]
-[s S669 pipe 24 `[4]uc 1 fila_dados 4 0 `uc 1 pos_input 1 4 `uc 1 pos_output 1 5 `S515 1 s_input 9 6 `S515 1 s_output 9 15 ]
-[v pipe_write@p p `*.30S669  1 p 1 8 ]
-[v pipe_write@dado dado `uc  1 p 1 9 ]
-"17
+[s S420 sem 8 `c 1 contador 1 0 `[5]uc 1 fila 5 1 `uc 1 pos_input 1 6 `uc 1 pos_output 1 7 ]
+[s S547 pipe 22 `[4]uc 1 fila_dados 4 0 `uc 1 pos_input 1 4 `uc 1 pos_output 1 5 `S420 1 s_input 8 6 `S420 1 s_output 8 14 ]
+[v pipe_write@p p `*.30S547  1 p 1 11 ]
+[v pipe_write@dado dado `uc  1 p 1 12 ]
+"22
 } 0
 "14 C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\sync.c
 [v _sem_wait sem_wait `(v  1 e 1 0 ]
 {
-[s S515 sem 9 `uc 1 contador 1 0 `[6]uc 1 fila 6 1 `uc 1 pos_input 1 7 `uc 1 pos_output 1 8 ]
-[v sem_wait@sem sem `*.39S515  1 p 2 41 ]
-"28
+[s S420 sem 8 `c 1 contador 1 0 `[5]uc 1 fila 5 1 `uc 1 pos_input 1 6 `uc 1 pos_output 1 7 ]
+[v sem_wait@sem sem `*.30S420  1 p 1 60 ]
+"33
 } 0
-"30
+"35
 [v _sem_post sem_post `(v  1 e 1 0 ]
 {
-[s S515 sem 9 `uc 1 contador 1 0 `[6]uc 1 fila 6 1 `uc 1 pos_input 1 7 `uc 1 pos_output 1 8 ]
-[v sem_post@sem sem `*.39S515  1 p 2 31 ]
-"41
+[s S420 sem 8 `c 1 contador 1 0 `[5]uc 1 fila 5 1 `uc 1 pos_input 1 6 `uc 1 pos_output 1 7 ]
+[v sem_post@sem sem `*.30S420  1 p 1 15 ]
+"46
+} 0
+"7 C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
+[v ___awmod __awmod `(i  1 e 2 0 ]
+{
+"10
+[v ___awmod@sign sign `uc  1 a 1 14 ]
+[v ___awmod@counter counter `uc  1 a 1 13 ]
+"7
+[v ___awmod@dividend dividend `i  1 p 2 46 ]
+[v ___awmod@divisor divisor `i  1 p 2 48 ]
+"34
 } 0
 "12 C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\kernel.c
 [v _os_delay os_delay `(v  1 e 1 0 ]
@@ -775,7 +706,7 @@ WAITING_SEM 3
 [v os_delay@time time `uc  1 p 1 wreg ]
 [v os_delay@time time `uc  1 p 1 wreg ]
 "14
-[v os_delay@time time `uc  1 p 1 135 ]
+[v os_delay@time time `uc  1 p 1 82 ]
 "22
 } 1
 "9 C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\scheduler.c
@@ -783,102 +714,91 @@ WAITING_SEM 3
 {
 "18
 } 0
-"60
+"69
 [v i1_priority_rr_scheduler priority_rr_scheduler `(uc  1 e 1 0 ]
 {
-"90
-} 0
-"7 C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
-[v i1___awmod __awmod `(i  1 e 2 0 ]
-{
-"10
-[v i1___awmod@sign sign `uc  1 a 1 123 ]
-[v i1___awmod@counter counter `uc  1 a 1 122 ]
-"7
-[v i1___awmod@dividend dividend `i  1 p 2 118 ]
-[v i1___awmod@divisor divisor `i  1 p 2 120 ]
-"34
+"102
 } 0
 "16 C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\io.c
 [v _adc_read adc_read `(us  1 e 2 0 ]
 {
 [v adc_read@channel channel `uc  1 p 1 wreg ]
 [v adc_read@channel channel `uc  1 p 1 wreg ]
-[v adc_read@channel channel `uc  1 p 1 12 ]
+[v adc_read@channel channel `uc  1 p 1 7 ]
 "21
 } 1
 "59 C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\user.c
 [v _tarefaProcessamento tarefaProcessamento `(v  1 e 1 0 ]
 {
 "60
-[v tarefaProcessamento@dado dado `uc  1 a 1 40 ]
-"70
+[v tarefaProcessamento@dado dado `uc  1 a 1 58 ]
+"73
 } 0
-"19 C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\com.c
+"24 C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\com.c
 [v _pipe_read pipe_read `(v  1 e 1 0 ]
 {
-[s S515 sem 9 `uc 1 contador 1 0 `[6]uc 1 fila 6 1 `uc 1 pos_input 1 7 `uc 1 pos_output 1 8 ]
-[s S669 pipe 24 `[4]uc 1 fila_dados 4 0 `uc 1 pos_input 1 4 `uc 1 pos_output 1 5 `S515 1 s_input 9 6 `S515 1 s_output 9 15 ]
-[v pipe_read@p p `*.30S669  1 p 1 37 ]
-[v pipe_read@dado dado `*.39uc  1 p 2 38 ]
-"25
+[s S420 sem 8 `c 1 contador 1 0 `[5]uc 1 fila 5 1 `uc 1 pos_input 1 6 `uc 1 pos_output 1 7 ]
+[s S547 pipe 22 `[4]uc 1 fila_dados 4 0 `uc 1 pos_input 1 4 `uc 1 pos_output 1 5 `S420 1 s_input 8 6 `S420 1 s_output 8 14 ]
+[v pipe_read@p p `*.30S547  1 p 1 54 ]
+[v pipe_read@dado dado `*.39uc  1 p 2 55 ]
+"35
 } 0
-"73 C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\user.c
-[v _tarefaControlePWM tarefaControlePWM `(v  1 e 1 0 ]
-{
-"82
-} 0
-"32 C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\io.c
-[v _pwm_set_duty pwm_set_duty `(v  1 e 1 0 ]
-{
-[v pwm_set_duty@duty duty `us  1 p 2 41 ]
-"36
-} 0
-"69 C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\sync.c
-[v _mutex_unlock mutex_unlock `(v  1 e 1 0 ]
-{
-"74
-[v mutex_unlock@task_idx task_idx `uc  1 a 1 46 ]
-[s S613 mutex 11 `uc 1 locked 1 0 `uc 1 owner_id 1 1 `[6]uc 1 fila 6 2 `uc 1 pos_input 1 8 `uc 1 pos_output 1 9 `uc 1 waiting_count 1 10 ]
-"69
-[v mutex_unlock@m m `*.39S613  1 p 2 41 ]
-"86
-} 0
-"51
-[v _mutex_lock mutex_lock `(v  1 e 1 0 ]
-{
-[s S613 mutex 11 `uc 1 locked 1 0 `uc 1 owner_id 1 1 `[6]uc 1 fila 6 2 `uc 1 pos_input 1 8 `uc 1 pos_output 1 9 `uc 1 waiting_count 1 10 ]
-[v mutex_lock@m m `*.39S613  1 p 2 41 ]
-"67
-} 0
-"85 C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\user.c
-[v _tarefaFeedbackLED tarefaFeedbackLED `(v  1 e 1 0 ]
-{
-"90
-} 0
-"93
-[v _tarefaOneShot tarefaOneShot `(v  1 e 1 0 ]
-{
-"105
-} 0
-"97 C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\kernel.c
+"95 C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\kernel.c
 [v _os_task_change_state os_task_change_state `(v  1 e 1 0 ]
 {
 [v os_task_change_state@new_state new_state `E37  1 p 1 wreg ]
 [v os_task_change_state@new_state new_state `E37  1 p 1 wreg ]
-[s S67 hw_stack 3 `uc 1 TOSL_REG 1 0 `uc 1 TOSH_REG 1 1 `uc 1 TOSU_REG 1 2 ]
-[s S71 sw_stack 37 `[12]S67 1 stack 36 0 `uc 1 stack_size 1 36 ]
-[s S74 tcb 60 `uc 1 task_id 1 0 `E37 1 task_state 1 1 `*.37(v 1 task_ptr 2 2 `uc 1 task_delay 1 4 `uc 1 task_priority 1 5 `uc 1 W_REG 1 6 `uc 1 STATUS_REG 1 7 `uc 1 BSR_REG 1 8 `uc 1 PRODL_REG 1 9 `uc 1 PRODH_REG 1 10 `uc 1 FSR0L_REG 1 11 `uc 1 FSR0H_REG 1 12 `uc 1 FSR1L_REG 1 13 `uc 1 FSR1H_REG 1 14 `uc 1 FSR2L_REG 1 15 `uc 1 FSR2H_REG 1 16 `uc 1 TABLAT_REG 1 17 `uc 1 TBLPTRL_REG 1 18 `uc 1 TBLPTRH_REG 1 19 `uc 1 TBLPTRU_REG 1 20 `uc 1 PCLATH_REG 1 21 `uc 1 PCLATU_REG 1 22 `S71 1 task_stack 37 23 ]
-[v os_task_change_state@task_handle task_handle `*.39S74  1 p 2 128 ]
-"99
-[v os_task_change_state@new_state new_state `E37  1 p 1 137 ]
-"111
+[s S62 hw_stack 3 `uc 1 TOSL_REG 1 0 `uc 1 TOSH_REG 1 1 `uc 1 TOSU_REG 1 2 ]
+[s S66 sw_stack 25 `[8]S62 1 stack 24 0 `uc 1 stack_size 1 24 ]
+[s S69 tcb 35 `uc 1 task_id 1 0 `*.37(v 1 task_ptr 2 1 `uc 1 task_delay 1 3 `uc 1 state_prio 1 4 `uc 1 W_REG 1 5 `uc 1 STATUS_REG 1 6 `uc 1 BSR_REG 1 7 `uc 1 FSR0L_REG 1 8 `uc 1 FSR0H_REG 1 9 `S66 1 task_stack 25 10 ]
+[v os_task_change_state@task_handle task_handle `*.39S69  1 p 2 77 ]
+"97
+[v os_task_change_state@new_state new_state `E37  1 p 1 84 ]
+"109
 } 1
+"76 C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\user.c
+[v _tarefaControlePWM tarefaControlePWM `(v  1 e 1 0 ]
+{
+"86
+} 0
+"32 C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\io.c
+[v _pwm_set_duty pwm_set_duty `(v  1 e 1 0 ]
+{
+[v pwm_set_duty@duty duty `us  1 p 2 59 ]
+"36
+} 0
+"82 C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\sync.c
+[v _mutex_unlock mutex_unlock `(v  1 e 1 0 ]
+{
+"87
+[v mutex_unlock@task_idx task_idx `uc  1 a 1 62 ]
+[s S491 mutex 10 `uc 1 locked 1 0 `uc 1 owner_id 1 1 `[5]uc 1 fila 5 2 `uc 1 pos_input 1 7 `uc 1 pos_output 1 8 `uc 1 waiting_count 1 9 ]
+"82
+[v mutex_unlock@m m `*.30S491  1 p 1 59 ]
+"104
+} 0
+"56
+[v _mutex_lock mutex_lock `(v  1 e 1 0 ]
+{
+[s S491 mutex 10 `uc 1 locked 1 0 `uc 1 owner_id 1 1 `[5]uc 1 fila 5 2 `uc 1 pos_input 1 7 `uc 1 pos_output 1 8 `uc 1 waiting_count 1 9 ]
+[v mutex_lock@m m `*.30S491  1 p 1 60 ]
+"80
+} 0
+"89 C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\user.c
+[v _tarefaFeedbackLED tarefaFeedbackLED `(v  1 e 1 0 ]
+{
+"94
+} 0
+"97
+[v _tarefaOneShot tarefaOneShot `(v  1 e 1 0 ]
+{
+"109
+} 0
 "26 C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\hw.c
 [v _ISR ISR `IIH(v  1 e 1 0 ]
 {
 "32
-[v ISR@i i `i  1 a 2 78 ]
+[v ISR@i i `i  1 a 2 18 ]
 "62
 } 0
 "9 C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\scheduler.c
@@ -886,36 +806,25 @@ WAITING_SEM 3
 {
 "18
 } 0
-"60
+"69
 [v i2_priority_rr_scheduler priority_rr_scheduler `(uc  1 e 1 0 ]
 {
-"90
-} 0
-"7 C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\awmod.c
-[v i2___awmod __awmod `(i  1 e 2 0 ]
-{
-"10
-[v i2___awmod@sign sign `uc  1 a 1 5 ]
-[v i2___awmod@counter counter `uc  1 a 1 4 ]
-"7
-[v i2___awmod@dividend dividend `i  1 p 2 0 ]
-[v i2___awmod@divisor divisor `i  1 p 2 2 ]
-"34
+"102
 } 0
 "25 C:\Users\richard.stolk\MPLABXProjects\SOE\RTOS-2026\kernel.c
 [v i2_os_create_task os_create_task `(v  1 e 1 0 ]
 {
 [v i2os_create_task@id id `uc  1 p 1 wreg ]
-[s S67 hw_stack 3 `uc 1 TOSL_REG 1 0 `uc 1 TOSH_REG 1 1 `uc 1 TOSU_REG 1 2 ]
+[s S62 hw_stack 3 `uc 1 TOSL_REG 1 0 `uc 1 TOSH_REG 1 1 `uc 1 TOSU_REG 1 2 ]
 "27
-[s S71 sw_stack 37 `[12]S67 1 stack 36 0 `uc 1 stack_size 1 36 ]
-[s S74 tcb 60 `uc 1 task_id 1 0 `E37 1 task_state 1 1 `*.37(v 1 task_ptr 2 2 `uc 1 task_delay 1 4 `uc 1 task_priority 1 5 `uc 1 W_REG 1 6 `uc 1 STATUS_REG 1 7 `uc 1 BSR_REG 1 8 `uc 1 PRODL_REG 1 9 `uc 1 PRODH_REG 1 10 `uc 1 FSR0L_REG 1 11 `uc 1 FSR0H_REG 1 12 `uc 1 FSR1L_REG 1 13 `uc 1 FSR1H_REG 1 14 `uc 1 FSR2L_REG 1 15 `uc 1 FSR2H_REG 1 16 `uc 1 TABLAT_REG 1 17 `uc 1 TBLPTRL_REG 1 18 `uc 1 TBLPTRH_REG 1 19 `uc 1 TBLPTRU_REG 1 20 `uc 1 PCLATH_REG 1 21 `uc 1 PCLATU_REG 1 22 `S71 1 task_stack 37 23 ]
-[v i2os_create_task@new_task new_task `S74  1 a 60 5 ]
+[s S66 sw_stack 25 `[8]S62 1 stack 24 0 `uc 1 stack_size 1 24 ]
+[s S69 tcb 35 `uc 1 task_id 1 0 `*.37(v 1 task_ptr 2 1 `uc 1 task_delay 1 3 `uc 1 state_prio 1 4 `uc 1 W_REG 1 5 `uc 1 STATUS_REG 1 6 `uc 1 BSR_REG 1 7 `uc 1 FSR0L_REG 1 8 `uc 1 FSR0H_REG 1 9 `S66 1 task_stack 25 10 ]
+[v i2os_create_task@new_task new_task `*.39S69  1 a 2 5 ]
 "25
 [v i2os_create_task@id id `uc  1 p 1 wreg ]
 [v i2os_create_task@func func `*.37(v  1 p 2 0 ]
 [v i2os_create_task@prior prior `uc  1 p 1 2 ]
 "29
 [v i2os_create_task@id id `uc  1 p 1 4 ]
-"60
+"58
 } 1

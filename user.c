@@ -66,6 +66,9 @@ TASK tarefaProcessamento(void) {
         LATD = dado; 
         sem_post(&sem_processamento); // Avisa que dado esta pronto para o PWM
         //os_delay(1); //error: (1360) no space for auto/param os_create_task@new_task
+        
+        os_task_change_state(READY, 0); // Suspende a si mesma
+    
     }
 }
 
@@ -78,6 +81,7 @@ TASK tarefaControlePWM(void) {
         pwm_set_duty(((uint16_t)dado_processado) << 2);
         mutex_unlock(&mutex_recurso);
         //os_delay(1); error: (1359) no space for _mutex_init parameters
+        //os_task_change_state(READY, 0); // Suspende a si mesma
     }
 }
 
@@ -85,21 +89,21 @@ TASK tarefaControlePWM(void) {
 TASK tarefaFeedbackLED(void) {
     while(1) {
         LATDbits.LATD7 = ~LATDbits.LATD7; // Pisca LED de heartbeat
-        os_delay(10);
+        os_delay(5);
     }
 }
 
 // TAREFA 5: One-Shot (Disparada por Interrupcao Externa)
 TASK tarefaOneShot(void) {
-    // Executa uma acao unica e termina
-    PORTDbits.RD1 = 1;
-    os_delay(10);
-    PORTDbits.RD1 = 0;
-    
     // Como o SO do professor nao tem "exit_task", 
     // a tarefa one-shot deve se auto-suspender ou ficar em loop infinito
     // No hw.c, ela eh recriada a cada interrupcao.
-    while(1) {
+    while(1) {        
+        // Executa uma acao unica e termina
+        LATDbits.LATD1 = 1;
+        os_delay(10);
+        LATDbits.LATD1 = 0;
+        
         os_task_change_state(WAITING, 0); // Suspende a si mesma
     }
 }

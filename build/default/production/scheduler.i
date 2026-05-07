@@ -138,7 +138,7 @@ typedef enum {READY = 0,
               RUNNING,
               WAITING_SEM
              } state_t;
-
+# 42 "./types.h"
 typedef void (*f_ptr)(void);
 
 typedef struct hw_stack {
@@ -148,35 +148,22 @@ typedef struct hw_stack {
 } hw_stack_t;
 
 typedef struct sw_stack {
-    hw_stack_t stack[12];
+    hw_stack_t stack[8];
     uint8_t stack_size;
 } sw_stack_t;
 
 typedef struct tcb {
     uint8_t task_id;
-    state_t task_state;
-
     f_ptr task_ptr;
     uint8_t task_delay;
-    uint8_t task_priority;
+    uint8_t state_prio;
+
 
     uint8_t W_REG;
     uint8_t STATUS_REG;
     uint8_t BSR_REG;
-    uint8_t PRODL_REG;
-    uint8_t PRODH_REG;
     uint8_t FSR0L_REG;
     uint8_t FSR0H_REG;
-    uint8_t FSR1L_REG;
-    uint8_t FSR1H_REG;
-    uint8_t FSR2L_REG;
-    uint8_t FSR2H_REG;
-    uint8_t TABLAT_REG;
-    uint8_t TBLPTRL_REG;
-    uint8_t TBLPTRH_REG;
-    uint8_t TBLPTRU_REG;
-    uint8_t PCLATH_REG;
-    uint8_t PCLATU_REG;
 
 
     sw_stack_t task_stack;
@@ -184,9 +171,9 @@ typedef struct tcb {
 
 
 typedef struct ready_queue {
-    tcb_t TASKS[6 +1];
+    tcb_t TASKS[5 +1];
     uint8_t size;
-    tcb_t *task_running;
+
     uint8_t pos_task_running;
 } ready_queue_t;
 # 3 "scheduler.c" 2
@@ -9944,7 +9931,7 @@ void scheduler() {
 
     r_queue.pos_task_running = priority_rr_scheduler();
 
-    r_queue.task_running = &r_queue.TASKS[r_queue.pos_task_running];
+
 }
 
 uint8_t RR_scheduler() {
@@ -9955,10 +9942,15 @@ uint8_t RR_scheduler() {
     tentativas = 0;
 
     do {
-        prox = (prox + 1) % r_queue.size;
+
+
+        prox++;
+        if (prox >= r_queue.size)
+            prox = 0;
+
         tentativas++;
-        if (tentativas >= (6 + 1)) return 0;
-    } while (r_queue.TASKS[prox].task_state != READY ||
+        if (tentativas >= (5 + 1)) return 0;
+    } while (((r_queue.TASKS[prox]).state_prio & 0x03) != READY ||
             r_queue.TASKS[prox].task_ptr == idle);
 
     return prox;
@@ -9971,16 +9963,20 @@ uint8_t priority_scheduler(void) {
 
     prox = r_queue.pos_task_running;
 
-    while (r_queue.TASKS[prox].task_state != READY)
-        prox = (prox + 1) % r_queue.size;
+    while (((r_queue.TASKS[prox]).state_prio & 0x03) != READY)
 
-    current_task = r_queue.TASKS[prox].task_priority;
+        prox++;
+
+        if (prox >= r_queue.size)
+            prox = 0;
+
+    current_task = (((r_queue.TASKS[prox]).state_prio >> 2) & 0x07);
 
     for (i = 1; i < r_queue.size; i++) {
-        if (r_queue.TASKS[i].task_state == READY &&
-                r_queue.TASKS[i].task_priority > current_task) {
+        if (((r_queue.TASKS[i]).state_prio & 0x03) == READY &&
+                (((r_queue.TASKS[i]).state_prio >> 2) & 0x07) > current_task) {
             prox = i;
-            current_task = r_queue.TASKS[i].task_priority;
+            current_task = (((r_queue.TASKS[i]).state_prio >> 2) & 0x07);
         }
     }
 
@@ -9999,9 +9995,9 @@ uint8_t priority_rr_scheduler(void) {
 
 
     for (i = 0; i < r_queue.size; i++) {
-        if (r_queue.TASKS[i].task_state == READY) {
-            if (!found || r_queue.TASKS[i].task_priority > max_prio) {
-                max_prio = r_queue.TASKS[i].task_priority;
+        if (((r_queue.TASKS[i]).state_prio & 0x03) == READY) {
+            if (!found || (((r_queue.TASKS[i]).state_prio >> 2) & 0x07) > max_prio) {
+                max_prio = (((r_queue.TASKS[i]).state_prio >> 2) & 0x07);
                 found = 1;
             }
         }
@@ -10010,9 +10006,12 @@ uint8_t priority_rr_scheduler(void) {
     current = r_queue.pos_task_running;
 
     for (i = 0; i < r_queue.size; i++) {
-        idx = (current + i) % r_queue.size;
-        if (r_queue.TASKS[idx].task_state == READY &&
-            r_queue.TASKS[idx].task_priority == max_prio) {
+
+        idx = current + i;
+        if (idx >= r_queue.size)
+            idx -= r_queue.size;
+        if (((r_queue.TASKS[i]).state_prio & 0x03) == READY &&
+            (((r_queue.TASKS[i]).state_prio >> 2) & 0x07) == max_prio) {
             return idx;
         }
     }

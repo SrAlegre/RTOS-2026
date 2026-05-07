@@ -12,6 +12,33 @@ typedef enum {READY = 0,
               WAITING_SEM
              } state_t;
 
+// ===== MACROS =====
+
+#define GET_STATE(t) \
+    ((t).state_prio & 0x03)
+
+#define SET_STATE(t, s) \
+    ((t).state_prio = (uint8_t)(((t).state_prio & 0xFC) | (uint8_t)(s)))
+
+#define GET_PRIO(t) \
+    (((t).state_prio >> 2) & 0x07)
+
+#define SET_PRIO(t, p) \
+    ((t).state_prio = (uint8_t)(((t).state_prio & 0x03) | ((uint8_t)(p) << 2)))
+
+#define GET_STATE_PTR(t) \
+    ((t)->state_prio & 0x03)
+
+#define SET_STATE_PTR(t, s) \
+    ((t)->state_prio = (uint8_t)(((t)->state_prio & 0xFC) | (uint8_t)(s)))
+
+#define GET_PRIO_PTR(t) \
+    (((t)->state_prio >> 2) & 0x07)
+
+#define SET_PRIO_PTR(t, p) \
+    ((t)->state_prio = (uint8_t)(((t)->state_prio & 0x03) | ((uint8_t)(p) << 2)))
+             
+             
 typedef void (*f_ptr)(void);
 
 typedef struct hw_stack {
@@ -27,29 +54,16 @@ typedef struct sw_stack {
              
 typedef struct tcb {
     uint8_t task_id;
-    state_t task_state;
-    //f_ptr   task_ptr;
-    f_ptr task_ptr;
+    f_ptr   task_ptr;
     uint8_t task_delay;
-    uint8_t task_priority;
+    uint8_t state_prio;
+
     // Registradores
     uint8_t W_REG;
     uint8_t STATUS_REG;
     uint8_t BSR_REG;
-    uint8_t PRODL_REG;
-    uint8_t PRODH_REG;
     uint8_t FSR0L_REG;
     uint8_t FSR0H_REG;
-    uint8_t FSR1L_REG;
-    uint8_t FSR1H_REG;
-    uint8_t FSR2L_REG;
-    uint8_t FSR2H_REG;
-    uint8_t TABLAT_REG;
-    uint8_t TBLPTRL_REG;
-    uint8_t TBLPTRH_REG;
-    uint8_t TBLPTRU_REG;
-    uint8_t PCLATH_REG;
-    uint8_t PCLATU_REG; 
     
     // Pilha de hardware
     sw_stack_t task_stack;
@@ -59,7 +73,7 @@ typedef struct tcb {
 typedef struct ready_queue {
     tcb_t TASKS[MAX_USER_TASKS+1];
     uint8_t size;
-    tcb_t *task_running;
+    //tcb_t *task_running;
     uint8_t pos_task_running;
 } ready_queue_t;
 

@@ -131,7 +131,7 @@ typedef enum {READY = 0,
               RUNNING,
               WAITING_SEM
              } state_t;
-
+# 42 "./types.h"
 typedef void (*f_ptr)(void);
 
 typedef struct hw_stack {
@@ -141,35 +141,22 @@ typedef struct hw_stack {
 } hw_stack_t;
 
 typedef struct sw_stack {
-    hw_stack_t stack[12];
+    hw_stack_t stack[8];
     uint8_t stack_size;
 } sw_stack_t;
 
 typedef struct tcb {
     uint8_t task_id;
-    state_t task_state;
-
     f_ptr task_ptr;
     uint8_t task_delay;
-    uint8_t task_priority;
+    uint8_t state_prio;
+
 
     uint8_t W_REG;
     uint8_t STATUS_REG;
     uint8_t BSR_REG;
-    uint8_t PRODL_REG;
-    uint8_t PRODH_REG;
     uint8_t FSR0L_REG;
     uint8_t FSR0H_REG;
-    uint8_t FSR1L_REG;
-    uint8_t FSR1H_REG;
-    uint8_t FSR2L_REG;
-    uint8_t FSR2H_REG;
-    uint8_t TABLAT_REG;
-    uint8_t TBLPTRL_REG;
-    uint8_t TBLPTRH_REG;
-    uint8_t TBLPTRU_REG;
-    uint8_t PCLATH_REG;
-    uint8_t PCLATU_REG;
 
 
     sw_stack_t task_stack;
@@ -177,9 +164,9 @@ typedef struct tcb {
 
 
 typedef struct ready_queue {
-    tcb_t TASKS[6 +1];
+    tcb_t TASKS[5 +1];
     uint8_t size;
-    tcb_t *task_running;
+
     uint8_t pos_task_running;
 } ready_queue_t;
 # 5 "./user.h" 2
@@ -9943,8 +9930,8 @@ TASK idle();
 
 
 typedef struct sem {
-    uint8_t contador;
-    uint8_t fila[6];
+    int8_t contador;
+    uint8_t fila[5];
     uint8_t pos_input;
     uint8_t pos_output;
 } sem_t;
@@ -9952,14 +9939,14 @@ typedef struct sem {
 typedef struct mutex {
     uint8_t locked;
     uint8_t owner_id;
-    uint8_t fila[6];
+    uint8_t fila[5];
     uint8_t pos_input;
     uint8_t pos_output;
     uint8_t waiting_count;
 } mutex_t;
 
 
-void sem_init(sem_t *sem, uint8_t valor);
+void sem_init(sem_t *sem, int8_t valor);
 void sem_wait(sem_t *sem);
 void sem_post(sem_t *sem);
 
@@ -10064,6 +10051,9 @@ TASK tarefaProcessamento(void) {
         LATD = dado;
         sem_post(&sem_processamento);
 
+
+        os_task_change_state(READY, 0);
+
     }
 }
 
@@ -10076,6 +10066,7 @@ TASK tarefaControlePWM(void) {
         pwm_set_duty(((uint16_t)dado_processado) << 2);
         mutex_unlock(&mutex_recurso);
 
+
     }
 }
 
@@ -10083,21 +10074,21 @@ TASK tarefaControlePWM(void) {
 TASK tarefaFeedbackLED(void) {
     while(1) {
         LATDbits.LATD7 = ~LATDbits.LATD7;
-        os_delay(10);
+        os_delay(5);
     }
 }
 
 
 TASK tarefaOneShot(void) {
 
-    PORTDbits.RD1 = 1;
-    os_delay(10);
-    PORTDbits.RD1 = 0;
-
-
 
 
     while(1) {
+
+        LATDbits.LATD1 = 1;
+        os_delay(10);
+        LATDbits.LATD1 = 0;
+
         os_task_change_state(WAITING, 0);
     }
 }

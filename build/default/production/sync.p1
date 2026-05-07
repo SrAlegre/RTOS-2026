@@ -1,7 +1,7 @@
 Version 4.0 HI-TECH Software Intermediate Code
 "9 ./sync.h
 [; ;./sync.h: 9: typedef struct sem {
-[s S1 `uc 1 `uc -> 6 `i `uc 1 `uc 1 ]
+[s S1 `c 1 `uc -> 5 `i `uc 1 `uc 1 ]
 [n S1 sem contador fila pos_input pos_output ]
 "16930 C:/Program Files/Microchip/MPLABX/v6.30/packs/Microchip/PIC18F-K_DFP/1.15.303/xc8\pic\include\proc/pic18f46k22.h
 [; ;C:/Program Files/Microchip/MPLABX/v6.30/packs/Microchip/PIC18F-K_DFP/1.15.303/xc8\pic\include\proc/pic18f46k22.h: 16930:     struct {
@@ -22,81 +22,45 @@ Version 4.0 HI-TECH Software Intermediate Code
 "16956
 [; ;C:/Program Files/Microchip/MPLABX/v6.30/packs/Microchip/PIC18F-K_DFP/1.15.303/xc8\pic\include\proc/pic18f46k22.h: 16956: extern volatile INTCONbits_t INTCONbits __attribute__((address(0xFF2)));
 [v _INTCONbits `VS831 ~T0 @X0 0 e@4082 ]
-"19 sync.c
-[; ;sync.c: 19:         sem->fila[sem->pos_input] = r_queue.pos_task_running;
-[c E64 0 1 2 3 .. ]
-[n E64 . READY WAITING RUNNING WAITING_SEM  ]
-[v F85 `(v ~T0 @X0 0 tf ]
-"17 ./types.h
-[; ;./types.h: 17: typedef struct hw_stack {
+[v F84 `(v ~T0 @X0 0 tf ]
+"44 ./types.h
+[; ;./types.h: 44: typedef struct hw_stack {
 [s S3 `uc 1 `uc 1 `uc 1 ]
 [n S3 hw_stack TOSL_REG TOSH_REG TOSU_REG ]
-"23
-[; ;./types.h: 23: typedef struct sw_stack {
-[s S4 `S3 -> 12 `i `uc 1 ]
+"50
+[; ;./types.h: 50: typedef struct sw_stack {
+[s S4 `S3 -> 8 `i `uc 1 ]
 [n S4 sw_stack stack stack_size ]
-"28
-[; ;./types.h: 28: typedef struct tcb {
-[s S5 `uc 1 `E64 1 `*F85 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `S4 1 ]
-[n S5 tcb task_id task_state task_ptr task_delay task_priority W_REG STATUS_REG BSR_REG PRODL_REG PRODH_REG FSR0L_REG FSR0H_REG FSR1L_REG FSR1H_REG FSR2L_REG FSR2H_REG TABLAT_REG TBLPTRL_REG TBLPTRH_REG TBLPTRU_REG PCLATH_REG PCLATU_REG task_stack ]
-"59
-[; ;./types.h: 59: typedef struct ready_queue {
-[s S6 `S5 -> 7 `i `uc 1 `*S5 1 `uc 1 ]
-[n S6 ready_queue TASKS size task_running pos_task_running ]
+"55
+[; ;./types.h: 55: typedef struct tcb {
+[s S5 `uc 1 `*F84 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `S4 1 ]
+[n S5 tcb task_id task_ptr task_delay state_prio W_REG STATUS_REG BSR_REG FSR0L_REG FSR0H_REG task_stack ]
+"73
+[; ;./types.h: 73: typedef struct ready_queue {
+[s S6 `S5 -> 6 `i `uc 1 `uc 1 ]
+[n S6 ready_queue TASKS size pos_task_running ]
 "6 sync.c
 [; ;sync.c: 6: extern ready_queue_t r_queue;
 [v _r_queue `S6 ~T0 @X0 0 e ]
+"27
+[; ;sync.c: 27:         { if (((r_queue.TASKS[r_queue.pos_task_running]).state_prio & 0x03) == RUNNING) { ((r_queue.TASKS[r_queue.pos_task_running]).state_prio = (uint8_t)(((r_queue.TASKS[r_queue.pos_task_running]).state_prio & 0xFC) | (uint8_t)(WAITING_SEM))); r_queue.TASKS[r_queue.pos_task_running].BSR_REG = BSR; r_queue.TASKS[r_queue.pos_task_running].W_REG = WREG; r_queue.TASKS[r_queue.pos_task_running].STATUS_REG = STATUS; r_queue.TASKS[r_queue.pos_task_running].FSR0H_REG = FSR0H; r_queue.TASKS[r_queue.pos_task_running].FSR0L_REG = FSR0L; r_queue.TASKS[r_queue.pos_task_running].task_stack.stack_size = 0; while (STKPTR > 0) { r_queue.TASKS[r_queue.pos_task_running].task_stack.stack[r_queue.TASKS[r_queue.pos_task_running].task_stack.stack_size].TOSL_REG = TOSL; r_queue.TASKS[r_queue.pos_task_running].task_stack.stack[r_queue.TASKS[r_queue.pos_task_running].task_stack.stack_size].TOSH_REG = TOSH; r_queue.TASKS[r_queue.pos_task_running].task_stack.stack[r_queue.TASKS[r_queue.pos_task_running].task_stack.stack_size].TOSU_REG = TOSU; r_queue.TASKS[r_queue.pos_task_running].task_stack.stack_size++; __asm("POP"); } } };
+[c E64 0 1 2 3 .. ]
+[n E64 . READY WAITING RUNNING WAITING_SEM  ]
 "16449 C:/Program Files/Microchip/MPLABX/v6.30/packs/Microchip/PIC18F-K_DFP/1.15.303/xc8\pic\include\proc/pic18f46k22.h
 [; ;C:/Program Files/Microchip/MPLABX/v6.30/packs/Microchip/PIC18F-K_DFP/1.15.303/xc8\pic\include\proc/pic18f46k22.h: 16449: extern volatile unsigned char BSR __attribute__((address(0xFE0)));
 [v _BSR `Vuc ~T0 @X0 0 e@4064 ]
-"16655
-[; ;C:/Program Files/Microchip/MPLABX/v6.30/packs/Microchip/PIC18F-K_DFP/1.15.303/xc8\pic\include\proc/pic18f46k22.h: 16655: extern volatile unsigned char FSR0H __attribute__((address(0xFEA)));
-[v _FSR0H `Vuc ~T0 @X0 0 e@4074 ]
-"16635
-[; ;C:/Program Files/Microchip/MPLABX/v6.30/packs/Microchip/PIC18F-K_DFP/1.15.303/xc8\pic\include\proc/pic18f46k22.h: 16635: extern volatile unsigned char FSR0L __attribute__((address(0xFE9)));
-[v _FSR0L `Vuc ~T0 @X0 0 e@4073 ]
-"16483
-[; ;C:/Program Files/Microchip/MPLABX/v6.30/packs/Microchip/PIC18F-K_DFP/1.15.303/xc8\pic\include\proc/pic18f46k22.h: 16483: extern volatile unsigned char FSR1H __attribute__((address(0xFE2)));
-[v _FSR1H `Vuc ~T0 @X0 0 e@4066 ]
-"16463
-[; ;C:/Program Files/Microchip/MPLABX/v6.30/packs/Microchip/PIC18F-K_DFP/1.15.303/xc8\pic\include\proc/pic18f46k22.h: 16463: extern volatile unsigned char FSR1L __attribute__((address(0xFE1)));
-[v _FSR1L `Vuc ~T0 @X0 0 e@4065 ]
-"16342
-[; ;C:/Program Files/Microchip/MPLABX/v6.30/packs/Microchip/PIC18F-K_DFP/1.15.303/xc8\pic\include\proc/pic18f46k22.h: 16342: extern volatile unsigned char FSR2H __attribute__((address(0xFDA)));
-[v _FSR2H `Vuc ~T0 @X0 0 e@4058 ]
-"16322
-[; ;C:/Program Files/Microchip/MPLABX/v6.30/packs/Microchip/PIC18F-K_DFP/1.15.303/xc8\pic\include\proc/pic18f46k22.h: 16322: extern volatile unsigned char FSR2L __attribute__((address(0xFD9)));
-[v _FSR2L `Vuc ~T0 @X0 0 e@4057 ]
-"17222
-[; ;C:/Program Files/Microchip/MPLABX/v6.30/packs/Microchip/PIC18F-K_DFP/1.15.303/xc8\pic\include\proc/pic18f46k22.h: 17222: extern volatile unsigned char PCLATH __attribute__((address(0xFFA)));
-[v _PCLATH `Vuc ~T0 @X0 0 e@4090 ]
-"17242
-[; ;C:/Program Files/Microchip/MPLABX/v6.30/packs/Microchip/PIC18F-K_DFP/1.15.303/xc8\pic\include\proc/pic18f46k22.h: 17242: extern volatile unsigned char PCLATU __attribute__((address(0xFFB)));
-[v _PCLATU `Vuc ~T0 @X0 0 e@4091 ]
-"17068
-[; ;C:/Program Files/Microchip/MPLABX/v6.30/packs/Microchip/PIC18F-K_DFP/1.15.303/xc8\pic\include\proc/pic18f46k22.h: 17068: extern volatile unsigned char PRODH __attribute__((address(0xFF4)));
-[v _PRODH `Vuc ~T0 @X0 0 e@4084 ]
-"17048
-[; ;C:/Program Files/Microchip/MPLABX/v6.30/packs/Microchip/PIC18F-K_DFP/1.15.303/xc8\pic\include\proc/pic18f46k22.h: 17048: extern volatile unsigned char PRODL __attribute__((address(0xFF3)));
-[v _PRODL `Vuc ~T0 @X0 0 e@4083 ]
-"17088
-[; ;C:/Program Files/Microchip/MPLABX/v6.30/packs/Microchip/PIC18F-K_DFP/1.15.303/xc8\pic\include\proc/pic18f46k22.h: 17088: extern volatile unsigned char TABLAT __attribute__((address(0xFF5)));
-[v _TABLAT `Vuc ~T0 @X0 0 e@4085 ]
-"17137
-[; ;C:/Program Files/Microchip/MPLABX/v6.30/packs/Microchip/PIC18F-K_DFP/1.15.303/xc8\pic\include\proc/pic18f46k22.h: 17137: extern volatile unsigned char TBLPTRH __attribute__((address(0xFF7)));
-[v _TBLPTRH `Vuc ~T0 @X0 0 e@4087 ]
-"17117
-[; ;C:/Program Files/Microchip/MPLABX/v6.30/packs/Microchip/PIC18F-K_DFP/1.15.303/xc8\pic\include\proc/pic18f46k22.h: 17117: extern volatile unsigned char TBLPTRL __attribute__((address(0xFF6)));
-[v _TBLPTRL `Vuc ~T0 @X0 0 e@4086 ]
-"17157
-[; ;C:/Program Files/Microchip/MPLABX/v6.30/packs/Microchip/PIC18F-K_DFP/1.15.303/xc8\pic\include\proc/pic18f46k22.h: 17157: extern volatile unsigned char TBLPTRU __attribute__((address(0xFF8)));
-[v _TBLPTRU `Vuc ~T0 @X0 0 e@4088 ]
 "16590
 [; ;C:/Program Files/Microchip/MPLABX/v6.30/packs/Microchip/PIC18F-K_DFP/1.15.303/xc8\pic\include\proc/pic18f46k22.h: 16590: extern volatile unsigned char WREG __attribute__((address(0xFE8)));
 [v _WREG `Vuc ~T0 @X0 0 e@4072 ]
 "16244
 [; ;C:/Program Files/Microchip/MPLABX/v6.30/packs/Microchip/PIC18F-K_DFP/1.15.303/xc8\pic\include\proc/pic18f46k22.h: 16244: extern volatile unsigned char STATUS __attribute__((address(0xFD8)));
 [v _STATUS `Vuc ~T0 @X0 0 e@4056 ]
+"16655
+[; ;C:/Program Files/Microchip/MPLABX/v6.30/packs/Microchip/PIC18F-K_DFP/1.15.303/xc8\pic\include\proc/pic18f46k22.h: 16655: extern volatile unsigned char FSR0H __attribute__((address(0xFEA)));
+[v _FSR0H `Vuc ~T0 @X0 0 e@4074 ]
+"16635
+[; ;C:/Program Files/Microchip/MPLABX/v6.30/packs/Microchip/PIC18F-K_DFP/1.15.303/xc8\pic\include\proc/pic18f46k22.h: 16635: extern volatile unsigned char FSR0L __attribute__((address(0xFE9)));
+[v _FSR0L `Vuc ~T0 @X0 0 e@4073 ]
 "17362
 [; ;C:/Program Files/Microchip/MPLABX/v6.30/packs/Microchip/PIC18F-K_DFP/1.15.303/xc8\pic\include\proc/pic18f46k22.h: 17362: extern volatile unsigned char TOSL __attribute__((address(0xFFD)));
 [v _TOSL `Vuc ~T0 @X0 0 e@4093 ]
@@ -112,12 +76,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 "6 ./scheduler.h
 [; ;./scheduler.h: 6: void scheduler(void);
 [v _scheduler `(v ~T0 @X0 0 ef ]
-"11 ./kernel.h
-[; ;./kernel.h: 11: extern uint8_t rr_quantum;
-[v _rr_quantum `uc ~T0 @X0 0 e ]
 "16 ./sync.h
 [; ;./sync.h: 16: typedef struct mutex {
-[s S2 `uc 1 `uc 1 `uc -> 6 `i `uc 1 `uc 1 `uc 1 ]
+[s S2 `uc 1 `uc 1 `uc -> 5 `i `uc 1 `uc 1 `uc 1 ]
 [n S2 mutex locked owner_id fila pos_input pos_output waiting_count ]
 "52 C:/Program Files/Microchip/MPLABX/v6.30/packs/Microchip/PIC18F-K_DFP/1.15.303/xc8\pic\include\proc/pic18f46k22.h
 [; ;C:/Program Files/Microchip/MPLABX/v6.30/packs/Microchip/PIC18F-K_DFP/1.15.303/xc8\pic\include\proc/pic18f46k22.h: 52: __asm("ANSELA equ 0F38h");
@@ -879,12 +840,12 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;C:/Program Files/Microchip/MPLABX/v6.30/packs/Microchip/PIC18F-K_DFP/1.15.303/xc8\pic\include\proc/pic18f46k22.h: 17404: __asm("TOSU equ 0FFFh");
 [; <" TOSU equ 0FFFh ;# ">
 "8 sync.c
-[; ;sync.c: 8: void sem_init(sem_t *sem, uint8_t valor) {
-[v _sem_init `(v ~T0 @X0 1 ef2`*S1`uc ]
+[; ;sync.c: 8: void sem_init(sem_t *sem, int8_t valor) {
+[v _sem_init `(v ~T0 @X0 1 ef2`*S1`c ]
 {
 [e :U _sem_init ]
 [v _sem `*S1 ~T0 @X0 1 r1 ]
-[v _valor `uc ~T0 @X0 1 r2 ]
+[v _valor `c ~T0 @X0 1 r2 ]
 [f ]
 "9
 [; ;sync.c: 9:     sem->contador = valor;
@@ -911,388 +872,331 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = . . _INTCONbits 1 7 -> -> 0 `i `uc ]
 "17
 [; ;sync.c: 17:     sem->contador--;
-[e -- . *U _sem 0 -> -> 1 `i `uc ]
+[e -- . *U _sem 0 -> -> 1 `i `c ]
 "18
 [; ;sync.c: 18:     if (sem->contador < 0) {
 [e $ ! < -> . *U _sem 0 `i -> 0 `i 884  ]
 {
 "19
 [; ;sync.c: 19:         sem->fila[sem->pos_input] = r_queue.pos_task_running;
-[e = *U + &U . *U _sem 1 * -> . *U _sem 2 `ux -> -> # *U &U . *U _sem 1 `ui `ux . _r_queue 3 ]
-"20
-[; ;sync.c: 20:         sem->pos_input = (sem->pos_input + 1) % 6;
-[e = . *U _sem 2 -> % + -> . *U _sem 2 `i -> 1 `i -> 6 `i `uc ]
+[e = *U + &U . *U _sem 1 * -> . *U _sem 2 `ux -> -> # *U &U . *U _sem 1 `ui `ux . _r_queue 2 ]
 "22
-[; ;sync.c: 22:         do { if (r_queue.task_running->task_state == RUNNING) { r_queue.task_running->task_state = WAITING_SEM; r_queue.task_running->BSR_REG = BSR; r_queue.task_running->FSR0H_REG = FSR0H; r_queue.task_running->FSR0L_REG = FSR0L; r_queue.task_running->FSR1H_REG = FSR1H; r_queue.task_running->FSR1L_REG = FSR1L; r_queue.task_running->FSR2H_REG = FSR2H; r_queue.task_running->FSR2L_REG = FSR2L; r_queue.task_running->PCLATH_REG = PCLATH; r_queue.task_running->PCLATU_REG = PCLATU; r_queue.task_running->PRODH_REG = PRODH; r_queue.task_running->PRODL_REG = PRODL; r_queue.task_running->TABLAT_REG = TABLAT; r_queue.task_running->TBLPTRH_REG = TBLPTRH; r_queue.task_running->TBLPTRL_REG = TBLPTRL; r_queue.task_running->TBLPTRU_REG = TBLPTRU; r_queue.task_running->W_REG = WREG; r_queue.task_running->STATUS_REG = STATUS; r_queue.task_running->task_stack.stack_size = 0; while (STKPTR) { r_queue.task_running->task_stack.stack[r_queue.task_running->task_stack.stack_size].TOSL_REG = TOSL; r_queue.task_running->task_stack.stack[r_queue.task_running->task_stack.stack_size].TOSH_REG = TOSH; r_queue.task_running->task_stack.stack[r_queue.task_running->task_stack.stack_size].TOSU_REG = TOSU; r_queue.task_running->task_stack.stack_size += 1; __asm("POP"); } } } while (0);;
-[e :U 887 ]
+[; ;sync.c: 22:         sem->pos_input++;
+[e ++ . *U _sem 2 -> -> 1 `i `uc ]
+"23
+[; ;sync.c: 23:     if (sem->pos_input >= 5)
+[e $ ! >= -> . *U _sem 2 `i -> 5 `i 885  ]
+"24
+[; ;sync.c: 24:         sem->pos_input = 0;
+[e = . *U _sem 2 -> -> 0 `i `uc ]
+[e :U 885 ]
+"27
+[; ;sync.c: 27:         { if (((r_queue.TASKS[r_queue.pos_task_running]).state_prio & 0x03) == RUNNING) { ((r_queue.TASKS[r_queue.pos_task_running]).state_prio = (uint8_t)(((r_queue.TASKS[r_queue.pos_task_running]).state_prio & 0xFC) | (uint8_t)(WAITING_SEM))); r_queue.TASKS[r_queue.pos_task_running].BSR_REG = BSR; r_queue.TASKS[r_queue.pos_task_running].W_REG = WREG; r_queue.TASKS[r_queue.pos_task_running].STATUS_REG = STATUS; r_queue.TASKS[r_queue.pos_task_running].FSR0H_REG = FSR0H; r_queue.TASKS[r_queue.pos_task_running].FSR0L_REG = FSR0L; r_queue.TASKS[r_queue.pos_task_running].task_stack.stack_size = 0; while (STKPTR > 0) { r_queue.TASKS[r_queue.pos_task_running].task_stack.stack[r_queue.TASKS[r_queue.pos_task_running].task_stack.stack_size].TOSL_REG = TOSL; r_queue.TASKS[r_queue.pos_task_running].task_stack.stack[r_queue.TASKS[r_queue.pos_task_running].task_stack.stack_size].TOSH_REG = TOSH; r_queue.TASKS[r_queue.pos_task_running].task_stack.stack[r_queue.TASKS[r_queue.pos_task_running].task_stack.stack_size].TOSU_REG = TOSU; r_queue.TASKS[r_queue.pos_task_running].task_stack.stack_size++; __asm("POP"); } } };
 {
-[e $ ! == -> . *U . _r_queue 2 1 `ui -> . `E64 2 `ui 888  ]
+[e $ ! == & -> . *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 3 `i -> 3 `i -> . `E64 2 `i 886  ]
 {
-[e = . *U . _r_queue 2 1 . `E64 3 ]
-[e = . *U . _r_queue 2 7 _BSR ]
-[e = . *U . _r_queue 2 11 _FSR0H ]
-[e = . *U . _r_queue 2 10 _FSR0L ]
-[e = . *U . _r_queue 2 13 _FSR1H ]
-[e = . *U . _r_queue 2 12 _FSR1L ]
-[e = . *U . _r_queue 2 15 _FSR2H ]
-[e = . *U . _r_queue 2 14 _FSR2L ]
-[e = . *U . _r_queue 2 20 _PCLATH ]
-[e = . *U . _r_queue 2 21 _PCLATU ]
-[e = . *U . _r_queue 2 9 _PRODH ]
-[e = . *U . _r_queue 2 8 _PRODL ]
-[e = . *U . _r_queue 2 16 _TABLAT ]
-[e = . *U . _r_queue 2 18 _TBLPTRH ]
-[e = . *U . _r_queue 2 17 _TBLPTRL ]
-[e = . *U . _r_queue 2 19 _TBLPTRU ]
-[e = . *U . _r_queue 2 5 _WREG ]
-[e = . *U . _r_queue 2 6 _STATUS ]
-[e = . . *U . _r_queue 2 22 1 -> -> 0 `i `uc ]
-[e $U 889  ]
-[e :U 890 ]
+[e = . *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 3 -> | & -> . *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 3 `i -> 252 `i -> -> . `E64 3 `uc `i `uc ]
+[e = . *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 6 _BSR ]
+[e = . *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 4 _WREG ]
+[e = . *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 5 _STATUS ]
+[e = . *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 8 _FSR0H ]
+[e = . *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 7 _FSR0L ]
+[e = . . *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 9 1 -> -> 0 `i `uc ]
+[e $U 887  ]
+[e :U 888 ]
 {
-[e = . *U + &U . . *U . _r_queue 2 22 0 * -> . . *U . _r_queue 2 22 1 `ux -> -> # *U &U . . *U . _r_queue 2 22 0 `ui `ux 0 _TOSL ]
-[e = . *U + &U . . *U . _r_queue 2 22 0 * -> . . *U . _r_queue 2 22 1 `ux -> -> # *U &U . . *U . _r_queue 2 22 0 `ui `ux 1 _TOSH ]
-[e = . *U + &U . . *U . _r_queue 2 22 0 * -> . . *U . _r_queue 2 22 1 `ux -> -> # *U &U . . *U . _r_queue 2 22 0 `ui `ux 2 _TOSU ]
-[e =+ . . *U . _r_queue 2 22 1 -> -> 1 `i `uc ]
+[e = . *U + &U . . *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 9 0 * -> . . *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 9 1 `ux -> -> # *U &U . . *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 9 0 `ui `ux 0 _TOSL ]
+[e = . *U + &U . . *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 9 0 * -> . . *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 9 1 `ux -> -> # *U &U . . *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 9 0 `ui `ux 1 _TOSH ]
+[e = . *U + &U . . *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 9 0 * -> . . *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 9 1 `ux -> -> # *U &U . . *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 9 0 `ui `ux 2 _TOSU ]
+[e ++ . . *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 9 1 -> -> 1 `i `uc ]
 [; <" POP ;# ">
 }
+[e :U 887 ]
+[e $ > -> _STKPTR `i -> 0 `i 888  ]
 [e :U 889 ]
-[e $ != -> _STKPTR `i -> 0 `i 890  ]
-[e :U 891 ]
-}
-[e :U 888 ]
 }
 [e :U 886 ]
-"23
-[; ;sync.c: 23:         scheduler();
-[e ( _scheduler ..  ]
-"24
-[; ;sync.c: 24:         do { if (r_queue.task_running->task_state == READY) { r_queue.task_running->task_state = RUNNING; BSR = r_queue.task_running->BSR_REG; FSR0H = r_queue.task_running->FSR0H_REG; FSR0L = r_queue.task_running->FSR0L_REG; FSR1H = r_queue.task_running->FSR1H_REG; FSR1L = r_queue.task_running->FSR1L_REG; FSR2H = r_queue.task_running->FSR2H_REG; FSR2L = r_queue.task_running->FSR2L_REG; PCLATH = r_queue.task_running->PCLATH_REG; PCLATU = r_queue.task_running->PCLATU_REG; PRODH = r_queue.task_running->PRODH_REG; PRODL = r_queue.task_running->PRODL_REG; TABLAT = r_queue.task_running->TABLAT_REG; TBLPTRH = r_queue.task_running->TBLPTRH_REG; TBLPTRL = r_queue.task_running->TBLPTRL_REG; TBLPTRU = r_queue.task_running->TBLPTRU_REG; STATUS = r_queue.task_running->STATUS_REG; WREG = r_queue.task_running->W_REG; STKPTR = 0; if (r_queue.task_running->task_stack.stack_size > 0) { do { __asm("PUSH"); r_queue.task_running->task_stack.stack_size -= 1; TOSL = r_queue.task_running->task_stack.stack[r_queue.task_running->task_stack.stack_size].TOSL_REG; TOSH = r_queue.task_running->task_stack.stack[r_queue.task_running->task_stack.stack_size].TOSH_REG; TOSU = r_queue.task_running->task_stack.stack[r_queue.task_running->task_stack.stack_size].TOSU_REG; } while (r_queue.task_running->task_stack.stack_size); } else { __asm("PUSH"); TOSL = (uint8_t)((uint24_t)r_queue.task_running->task_ptr & 0xFF); TOSH = (uint8_t)(((uint24_t)r_queue.task_running->task_ptr >> 8) & 0xFF); TOSU = (uint8_t)(((uint24_t)r_queue.task_running->task_ptr >> 16) & 0xFF); } rr_quantum = 20; } } while (0);;
-[e :U 894 ]
-{
-[e $ ! == -> . *U . _r_queue 2 1 `ui -> . `E64 0 `ui 895  ]
-{
-[e = . *U . _r_queue 2 1 . `E64 2 ]
-[e = _BSR . *U . _r_queue 2 7 ]
-[e = _FSR0H . *U . _r_queue 2 11 ]
-[e = _FSR0L . *U . _r_queue 2 10 ]
-[e = _FSR1H . *U . _r_queue 2 13 ]
-[e = _FSR1L . *U . _r_queue 2 12 ]
-[e = _FSR2H . *U . _r_queue 2 15 ]
-[e = _FSR2L . *U . _r_queue 2 14 ]
-[e = _PCLATH . *U . _r_queue 2 20 ]
-[e = _PCLATU . *U . _r_queue 2 21 ]
-[e = _PRODH . *U . _r_queue 2 9 ]
-[e = _PRODL . *U . _r_queue 2 8 ]
-[e = _TABLAT . *U . _r_queue 2 16 ]
-[e = _TBLPTRH . *U . _r_queue 2 18 ]
-[e = _TBLPTRL . *U . _r_queue 2 17 ]
-[e = _TBLPTRU . *U . _r_queue 2 19 ]
-[e = _STATUS . *U . _r_queue 2 6 ]
-[e = _WREG . *U . _r_queue 2 5 ]
-[e = _STKPTR -> -> 0 `i `uc ]
-[e $ ! > -> . . *U . _r_queue 2 22 1 `i -> 0 `i 896  ]
-{
-[e :U 899 ]
-{
-[; <" PUSH ;# ">
-[e =- . . *U . _r_queue 2 22 1 -> -> 1 `i `uc ]
-[e = _TOSL . *U + &U . . *U . _r_queue 2 22 0 * -> . . *U . _r_queue 2 22 1 `ux -> -> # *U &U . . *U . _r_queue 2 22 0 `ui `ux 0 ]
-[e = _TOSH . *U + &U . . *U . _r_queue 2 22 0 * -> . . *U . _r_queue 2 22 1 `ux -> -> # *U &U . . *U . _r_queue 2 22 0 `ui `ux 1 ]
-[e = _TOSU . *U + &U . . *U . _r_queue 2 22 0 * -> . . *U . _r_queue 2 22 1 `ux -> -> # *U &U . . *U . _r_queue 2 22 0 `ui `ux 2 ]
 }
-[e $ != -> . . *U . _r_queue 2 22 1 `i -> 0 `i 899  ]
-[e :U 898 ]
-}
-[e $U 900  ]
-[e :U 896 ]
-{
-[; <" PUSH ;# ">
-[e = _TOSL -> & -> . *U . _r_queue 2 2 `um -> -> -> 255 `i `m `um `uc ]
-[e = _TOSH -> & >> -> . *U . _r_queue 2 2 `um -> 8 `i -> -> -> 255 `i `m `um `uc ]
-[e = _TOSU -> & >> -> . *U . _r_queue 2 2 `um -> 16 `i -> -> -> 255 `i `m `um `uc ]
-}
-[e :U 900 ]
-[e = _rr_quantum -> -> 20 `i `uc ]
-}
-[e :U 895 ]
-}
-[e :U 893 ]
-"25
-[; ;sync.c: 25:     }
-}
-[e :U 884 ]
-"27
-[; ;sync.c: 27:     INTCONbits.GIE = 1;;
-[e = . . _INTCONbits 1 7 -> -> 1 `i `uc ]
 "28
-[; ;sync.c: 28: }
-[e :UE 883 ]
+[; ;sync.c: 28:         scheduler();
+[e ( _scheduler ..  ]
+"29
+[; ;sync.c: 29:         { if (((r_queue.TASKS[r_queue.pos_task_running]).state_prio & 0x03) == READY) { ((r_queue.TASKS[r_queue.pos_task_running]).state_prio = (uint8_t)(((r_queue.TASKS[r_queue.pos_task_running]).state_prio & 0xFC) | (uint8_t)(RUNNING))); BSR = r_queue.TASKS[r_queue.pos_task_running].BSR_REG; WREG = r_queue.TASKS[r_queue.pos_task_running].W_REG; STATUS = r_queue.TASKS[r_queue.pos_task_running].STATUS_REG; FSR0H = r_queue.TASKS[r_queue.pos_task_running].FSR0H_REG; FSR0L = r_queue.TASKS[r_queue.pos_task_running].FSR0L_REG; while (r_queue.TASKS[r_queue.pos_task_running].task_stack.stack_size > 0) { r_queue.TASKS[r_queue.pos_task_running].task_stack.stack_size--; TOSL = r_queue.TASKS[r_queue.pos_task_running].task_stack.stack[r_queue.TASKS[r_queue.pos_task_running].task_stack.stack_size].TOSL_REG; TOSH = r_queue.TASKS[r_queue.pos_task_running].task_stack.stack[r_queue.TASKS[r_queue.pos_task_running].task_stack.stack_size].TOSH_REG; TOSU = r_queue.TASKS[r_queue.pos_task_running].task_stack.stack[r_queue.TASKS[r_queue.pos_task_running].task_stack.stack_size].TOSU_REG; __asm("PUSH"); } __asm("RETURN"); } };
+{
+[e $ ! == & -> . *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 3 `i -> 3 `i -> . `E64 0 `i 890  ]
+{
+[e = . *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 3 -> | & -> . *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 3 `i -> 252 `i -> -> . `E64 2 `uc `i `uc ]
+[e = _BSR . *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 6 ]
+[e = _WREG . *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 4 ]
+[e = _STATUS . *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 5 ]
+[e = _FSR0H . *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 8 ]
+[e = _FSR0L . *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 7 ]
+[e $U 891  ]
+[e :U 892 ]
+{
+[e -- . . *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 9 1 -> -> 1 `i `uc ]
+[e = _TOSL . *U + &U . . *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 9 0 * -> . . *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 9 1 `ux -> -> # *U &U . . *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 9 0 `ui `ux 0 ]
+[e = _TOSH . *U + &U . . *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 9 0 * -> . . *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 9 1 `ux -> -> # *U &U . . *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 9 0 `ui `ux 1 ]
+[e = _TOSU . *U + &U . . *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 9 0 * -> . . *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 9 1 `ux -> -> # *U &U . . *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 9 0 `ui `ux 2 ]
+[; <" PUSH ;# ">
+}
+[e :U 891 ]
+[e $ > -> . . *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 9 1 `i -> 0 `i 892  ]
+[e :U 893 ]
+[; <" RETURN ;# ">
+}
+[e :U 890 ]
 }
 "30
-[; ;sync.c: 30: void sem_post(sem_t *sem) {
+[; ;sync.c: 30:     }
+}
+[e :U 884 ]
+"32
+[; ;sync.c: 32:     INTCONbits.GIE = 1;;
+[e = . . _INTCONbits 1 7 -> -> 1 `i `uc ]
+"33
+[; ;sync.c: 33: }
+[e :UE 883 ]
+}
+"35
+[; ;sync.c: 35: void sem_post(sem_t *sem) {
 [v _sem_post `(v ~T0 @X0 1 ef1`*S1 ]
 {
 [e :U _sem_post ]
 [v _sem `*S1 ~T0 @X0 1 r1 ]
 [f ]
-"31
-[; ;sync.c: 31:     INTCONbits.GIE = 0;;
-[e = . . _INTCONbits 1 7 -> -> 0 `i `uc ]
-"33
-[; ;sync.c: 33:     sem->contador++;
-[e ++ . *U _sem 0 -> -> 1 `i `uc ]
-"34
-[; ;sync.c: 34:     if (sem->contador <= 0) {
-[e $ ! <= -> . *U _sem 0 `i -> 0 `i 902  ]
-{
 "36
-[; ;sync.c: 36:         r_queue.TASKS[sem->fila[sem->pos_output]].task_state = READY;
-[e = . *U + &U . _r_queue 0 * -> *U + &U . *U _sem 1 * -> . *U _sem 3 `ux -> -> # *U &U . *U _sem 1 `ui `ux `ux -> -> # *U &U . _r_queue 0 `ui `ux 1 . `E64 0 ]
-"37
-[; ;sync.c: 37:         sem->pos_output = (sem->pos_output + 1) % 6;
-[e = . *U _sem 3 -> % + -> . *U _sem 3 `i -> 1 `i -> 6 `i `uc ]
+[; ;sync.c: 36:     INTCONbits.GIE = 0;;
+[e = . . _INTCONbits 1 7 -> -> 0 `i `uc ]
 "38
-[; ;sync.c: 38:     }
-}
-[e :U 902 ]
-"40
-[; ;sync.c: 40:     INTCONbits.GIE = 1;;
-[e = . . _INTCONbits 1 7 -> -> 1 `i `uc ]
+[; ;sync.c: 38:     sem->contador++;
+[e ++ . *U _sem 0 -> -> 1 `i `c ]
+"39
+[; ;sync.c: 39:     if (sem->contador <= 0) {
+[e $ ! <= -> . *U _sem 0 `i -> 0 `i 895  ]
+{
 "41
-[; ;sync.c: 41: }
-[e :UE 901 ]
-}
+[; ;sync.c: 41:         ((r_queue.TASKS[sem->fila[sem->pos_output]]).state_prio = (uint8_t)(((r_queue.TASKS[sem->fila[sem->pos_output]]).state_prio & 0xFC) | (uint8_t)(READY)));
+[e = . *U + &U . _r_queue 0 * -> *U + &U . *U _sem 1 * -> . *U _sem 3 `ux -> -> # *U &U . *U _sem 1 `ui `ux `ux -> -> # *U &U . _r_queue 0 `ui `ux 3 -> | & -> . *U + &U . _r_queue 0 * -> *U + &U . *U _sem 1 * -> . *U _sem 3 `ux -> -> # *U &U . *U _sem 1 `ui `ux `ux -> -> # *U &U . _r_queue 0 `ui `ux 3 `i -> 252 `i -> -> . `E64 0 `uc `i `uc ]
+"42
+[; ;sync.c: 42:         sem->pos_output = (sem->pos_output + 1) % 5;
+[e = . *U _sem 3 -> % + -> . *U _sem 3 `i -> 1 `i -> 5 `i `uc ]
 "43
-[; ;sync.c: 43: void mutex_init(mutex_t *m) {
+[; ;sync.c: 43:     }
+}
+[e :U 895 ]
+"45
+[; ;sync.c: 45:     INTCONbits.GIE = 1;;
+[e = . . _INTCONbits 1 7 -> -> 1 `i `uc ]
+"46
+[; ;sync.c: 46: }
+[e :UE 894 ]
+}
+"48
+[; ;sync.c: 48: void mutex_init(mutex_t *m) {
 [v _mutex_init `(v ~T0 @X0 1 ef1`*S2 ]
 {
 [e :U _mutex_init ]
 [v _m `*S2 ~T0 @X0 1 r1 ]
 [f ]
-"44
-[; ;sync.c: 44:     m->locked = 0;
-[e = . *U _m 0 -> -> 0 `i `uc ]
-"45
-[; ;sync.c: 45:     m->owner_id = 0;
-[e = . *U _m 1 -> -> 0 `i `uc ]
-"46
-[; ;sync.c: 46:     m->pos_input = 0;
-[e = . *U _m 3 -> -> 0 `i `uc ]
-"47
-[; ;sync.c: 47:     m->pos_output = 0;
-[e = . *U _m 4 -> -> 0 `i `uc ]
-"48
-[; ;sync.c: 48:     m->waiting_count = 0;
-[e = . *U _m 5 -> -> 0 `i `uc ]
 "49
-[; ;sync.c: 49: }
-[e :UE 903 ]
-}
+[; ;sync.c: 49:     m->locked = 0;
+[e = . *U _m 0 -> -> 0 `i `uc ]
+"50
+[; ;sync.c: 50:     m->owner_id = 0;
+[e = . *U _m 1 -> -> 0 `i `uc ]
 "51
-[; ;sync.c: 51: void mutex_lock(mutex_t *m) {
+[; ;sync.c: 51:     m->pos_input = 0;
+[e = . *U _m 3 -> -> 0 `i `uc ]
+"52
+[; ;sync.c: 52:     m->pos_output = 0;
+[e = . *U _m 4 -> -> 0 `i `uc ]
+"53
+[; ;sync.c: 53:     m->waiting_count = 0;
+[e = . *U _m 5 -> -> 0 `i `uc ]
+"54
+[; ;sync.c: 54: }
+[e :UE 896 ]
+}
+"56
+[; ;sync.c: 56: void mutex_lock(mutex_t *m) {
 [v _mutex_lock `(v ~T0 @X0 1 ef1`*S2 ]
 {
 [e :U _mutex_lock ]
 [v _m `*S2 ~T0 @X0 1 r1 ]
 [f ]
-"52
-[; ;sync.c: 52:     INTCONbits.GIE = 0;;
-[e = . . _INTCONbits 1 7 -> -> 0 `i `uc ]
-"54
-[; ;sync.c: 54:     if (m->locked) {
-[e $ ! != -> . *U _m 0 `i -> 0 `i 905  ]
-{
-"55
-[; ;sync.c: 55:         m->fila[m->pos_input] = r_queue.pos_task_running;
-[e = *U + &U . *U _m 2 * -> . *U _m 3 `ux -> -> # *U &U . *U _m 2 `ui `ux . _r_queue 3 ]
-"56
-[; ;sync.c: 56:         m->pos_input = (m->pos_input + 1) % 6;
-[e = . *U _m 3 -> % + -> . *U _m 3 `i -> 1 `i -> 6 `i `uc ]
 "57
-[; ;sync.c: 57:         m->waiting_count++;
-[e ++ . *U _m 5 -> -> 1 `i `uc ]
+[; ;sync.c: 57:     INTCONbits.GIE = 0;;
+[e = . . _INTCONbits 1 7 -> -> 0 `i `uc ]
 "59
-[; ;sync.c: 59:         do { if (r_queue.task_running->task_state == RUNNING) { r_queue.task_running->task_state = WAITING; r_queue.task_running->BSR_REG = BSR; r_queue.task_running->FSR0H_REG = FSR0H; r_queue.task_running->FSR0L_REG = FSR0L; r_queue.task_running->FSR1H_REG = FSR1H; r_queue.task_running->FSR1L_REG = FSR1L; r_queue.task_running->FSR2H_REG = FSR2H; r_queue.task_running->FSR2L_REG = FSR2L; r_queue.task_running->PCLATH_REG = PCLATH; r_queue.task_running->PCLATU_REG = PCLATU; r_queue.task_running->PRODH_REG = PRODH; r_queue.task_running->PRODL_REG = PRODL; r_queue.task_running->TABLAT_REG = TABLAT; r_queue.task_running->TBLPTRH_REG = TBLPTRH; r_queue.task_running->TBLPTRL_REG = TBLPTRL; r_queue.task_running->TBLPTRU_REG = TBLPTRU; r_queue.task_running->W_REG = WREG; r_queue.task_running->STATUS_REG = STATUS; r_queue.task_running->task_stack.stack_size = 0; while (STKPTR) { r_queue.task_running->task_stack.stack[r_queue.task_running->task_stack.stack_size].TOSL_REG = TOSL; r_queue.task_running->task_stack.stack[r_queue.task_running->task_stack.stack_size].TOSH_REG = TOSH; r_queue.task_running->task_stack.stack[r_queue.task_running->task_stack.stack_size].TOSU_REG = TOSU; r_queue.task_running->task_stack.stack_size += 1; __asm("POP"); } } } while (0);;
-[e :U 908 ]
+[; ;sync.c: 59:     if (m->locked) {
+[e $ ! != -> . *U _m 0 `i -> 0 `i 898  ]
 {
-[e $ ! == -> . *U . _r_queue 2 1 `ui -> . `E64 2 `ui 909  ]
+"60
+[; ;sync.c: 60:         m->fila[m->pos_input] = r_queue.pos_task_running;
+[e = *U + &U . *U _m 2 * -> . *U _m 3 `ux -> -> # *U &U . *U _m 2 `ui `ux . _r_queue 2 ]
+"63
+[; ;sync.c: 63:         m->pos_input++;
+[e ++ . *U _m 3 -> -> 1 `i `uc ]
+"64
+[; ;sync.c: 64:         if (m->pos_input >= 5)
+[e $ ! >= -> . *U _m 3 `i -> 5 `i 899  ]
+"65
+[; ;sync.c: 65:             m->pos_input = 0;
+[e = . *U _m 3 -> -> 0 `i `uc ]
+[e :U 899 ]
+"67
+[; ;sync.c: 67:         m->waiting_count++;
+[e ++ . *U _m 5 -> -> 1 `i `uc ]
+"69
+[; ;sync.c: 69:         { if (((r_queue.TASKS[r_queue.pos_task_running]).state_prio & 0x03) == RUNNING) { ((r_queue.TASKS[r_queue.pos_task_running]).state_prio = (uint8_t)(((r_queue.TASKS[r_queue.pos_task_running]).state_prio & 0xFC) | (uint8_t)(WAITING))); r_queue.TASKS[r_queue.pos_task_running].BSR_REG = BSR; r_queue.TASKS[r_queue.pos_task_running].W_REG = WREG; r_queue.TASKS[r_queue.pos_task_running].STATUS_REG = STATUS; r_queue.TASKS[r_queue.pos_task_running].FSR0H_REG = FSR0H; r_queue.TASKS[r_queue.pos_task_running].FSR0L_REG = FSR0L; r_queue.TASKS[r_queue.pos_task_running].task_stack.stack_size = 0; while (STKPTR > 0) { r_queue.TASKS[r_queue.pos_task_running].task_stack.stack[r_queue.TASKS[r_queue.pos_task_running].task_stack.stack_size].TOSL_REG = TOSL; r_queue.TASKS[r_queue.pos_task_running].task_stack.stack[r_queue.TASKS[r_queue.pos_task_running].task_stack.stack_size].TOSH_REG = TOSH; r_queue.TASKS[r_queue.pos_task_running].task_stack.stack[r_queue.TASKS[r_queue.pos_task_running].task_stack.stack_size].TOSU_REG = TOSU; r_queue.TASKS[r_queue.pos_task_running].task_stack.stack_size++; __asm("POP"); } } };
 {
-[e = . *U . _r_queue 2 1 . `E64 1 ]
-[e = . *U . _r_queue 2 7 _BSR ]
-[e = . *U . _r_queue 2 11 _FSR0H ]
-[e = . *U . _r_queue 2 10 _FSR0L ]
-[e = . *U . _r_queue 2 13 _FSR1H ]
-[e = . *U . _r_queue 2 12 _FSR1L ]
-[e = . *U . _r_queue 2 15 _FSR2H ]
-[e = . *U . _r_queue 2 14 _FSR2L ]
-[e = . *U . _r_queue 2 20 _PCLATH ]
-[e = . *U . _r_queue 2 21 _PCLATU ]
-[e = . *U . _r_queue 2 9 _PRODH ]
-[e = . *U . _r_queue 2 8 _PRODL ]
-[e = . *U . _r_queue 2 16 _TABLAT ]
-[e = . *U . _r_queue 2 18 _TBLPTRH ]
-[e = . *U . _r_queue 2 17 _TBLPTRL ]
-[e = . *U . _r_queue 2 19 _TBLPTRU ]
-[e = . *U . _r_queue 2 5 _WREG ]
-[e = . *U . _r_queue 2 6 _STATUS ]
-[e = . . *U . _r_queue 2 22 1 -> -> 0 `i `uc ]
-[e $U 910  ]
-[e :U 911 ]
+[e $ ! == & -> . *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 3 `i -> 3 `i -> . `E64 2 `i 900  ]
 {
-[e = . *U + &U . . *U . _r_queue 2 22 0 * -> . . *U . _r_queue 2 22 1 `ux -> -> # *U &U . . *U . _r_queue 2 22 0 `ui `ux 0 _TOSL ]
-[e = . *U + &U . . *U . _r_queue 2 22 0 * -> . . *U . _r_queue 2 22 1 `ux -> -> # *U &U . . *U . _r_queue 2 22 0 `ui `ux 1 _TOSH ]
-[e = . *U + &U . . *U . _r_queue 2 22 0 * -> . . *U . _r_queue 2 22 1 `ux -> -> # *U &U . . *U . _r_queue 2 22 0 `ui `ux 2 _TOSU ]
-[e =+ . . *U . _r_queue 2 22 1 -> -> 1 `i `uc ]
+[e = . *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 3 -> | & -> . *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 3 `i -> 252 `i -> -> . `E64 1 `uc `i `uc ]
+[e = . *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 6 _BSR ]
+[e = . *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 4 _WREG ]
+[e = . *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 5 _STATUS ]
+[e = . *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 8 _FSR0H ]
+[e = . *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 7 _FSR0L ]
+[e = . . *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 9 1 -> -> 0 `i `uc ]
+[e $U 901  ]
+[e :U 902 ]
+{
+[e = . *U + &U . . *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 9 0 * -> . . *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 9 1 `ux -> -> # *U &U . . *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 9 0 `ui `ux 0 _TOSL ]
+[e = . *U + &U . . *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 9 0 * -> . . *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 9 1 `ux -> -> # *U &U . . *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 9 0 `ui `ux 1 _TOSH ]
+[e = . *U + &U . . *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 9 0 * -> . . *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 9 1 `ux -> -> # *U &U . . *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 9 0 `ui `ux 2 _TOSU ]
+[e ++ . . *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 9 1 -> -> 1 `i `uc ]
 [; <" POP ;# ">
 }
-[e :U 910 ]
-[e $ != -> _STKPTR `i -> 0 `i 911  ]
-[e :U 912 ]
+[e :U 901 ]
+[e $ > -> _STKPTR `i -> 0 `i 902  ]
+[e :U 903 ]
 }
-[e :U 909 ]
+[e :U 900 ]
 }
-[e :U 907 ]
-"60
-[; ;sync.c: 60:         scheduler();
+"70
+[; ;sync.c: 70:         scheduler();
 [e ( _scheduler ..  ]
-"61
-[; ;sync.c: 61:         do { if (r_queue.task_running->task_state == READY) { r_queue.task_running->task_state = RUNNING; BSR = r_queue.task_running->BSR_REG; FSR0H = r_queue.task_running->FSR0H_REG; FSR0L = r_queue.task_running->FSR0L_REG; FSR1H = r_queue.task_running->FSR1H_REG; FSR1L = r_queue.task_running->FSR1L_REG; FSR2H = r_queue.task_running->FSR2H_REG; FSR2L = r_queue.task_running->FSR2L_REG; PCLATH = r_queue.task_running->PCLATH_REG; PCLATU = r_queue.task_running->PCLATU_REG; PRODH = r_queue.task_running->PRODH_REG; PRODL = r_queue.task_running->PRODL_REG; TABLAT = r_queue.task_running->TABLAT_REG; TBLPTRH = r_queue.task_running->TBLPTRH_REG; TBLPTRL = r_queue.task_running->TBLPTRL_REG; TBLPTRU = r_queue.task_running->TBLPTRU_REG; STATUS = r_queue.task_running->STATUS_REG; WREG = r_queue.task_running->W_REG; STKPTR = 0; if (r_queue.task_running->task_stack.stack_size > 0) { do { __asm("PUSH"); r_queue.task_running->task_stack.stack_size -= 1; TOSL = r_queue.task_running->task_stack.stack[r_queue.task_running->task_stack.stack_size].TOSL_REG; TOSH = r_queue.task_running->task_stack.stack[r_queue.task_running->task_stack.stack_size].TOSH_REG; TOSU = r_queue.task_running->task_stack.stack[r_queue.task_running->task_stack.stack_size].TOSU_REG; } while (r_queue.task_running->task_stack.stack_size); } else { __asm("PUSH"); TOSL = (uint8_t)((uint24_t)r_queue.task_running->task_ptr & 0xFF); TOSH = (uint8_t)(((uint24_t)r_queue.task_running->task_ptr >> 8) & 0xFF); TOSU = (uint8_t)(((uint24_t)r_queue.task_running->task_ptr >> 16) & 0xFF); } rr_quantum = 20; } } while (0);;
-[e :U 915 ]
+"71
+[; ;sync.c: 71:         { if (((r_queue.TASKS[r_queue.pos_task_running]).state_prio & 0x03) == READY) { ((r_queue.TASKS[r_queue.pos_task_running]).state_prio = (uint8_t)(((r_queue.TASKS[r_queue.pos_task_running]).state_prio & 0xFC) | (uint8_t)(RUNNING))); BSR = r_queue.TASKS[r_queue.pos_task_running].BSR_REG; WREG = r_queue.TASKS[r_queue.pos_task_running].W_REG; STATUS = r_queue.TASKS[r_queue.pos_task_running].STATUS_REG; FSR0H = r_queue.TASKS[r_queue.pos_task_running].FSR0H_REG; FSR0L = r_queue.TASKS[r_queue.pos_task_running].FSR0L_REG; while (r_queue.TASKS[r_queue.pos_task_running].task_stack.stack_size > 0) { r_queue.TASKS[r_queue.pos_task_running].task_stack.stack_size--; TOSL = r_queue.TASKS[r_queue.pos_task_running].task_stack.stack[r_queue.TASKS[r_queue.pos_task_running].task_stack.stack_size].TOSL_REG; TOSH = r_queue.TASKS[r_queue.pos_task_running].task_stack.stack[r_queue.TASKS[r_queue.pos_task_running].task_stack.stack_size].TOSH_REG; TOSU = r_queue.TASKS[r_queue.pos_task_running].task_stack.stack[r_queue.TASKS[r_queue.pos_task_running].task_stack.stack_size].TOSU_REG; __asm("PUSH"); } __asm("RETURN"); } };
 {
-[e $ ! == -> . *U . _r_queue 2 1 `ui -> . `E64 0 `ui 916  ]
+[e $ ! == & -> . *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 3 `i -> 3 `i -> . `E64 0 `i 904  ]
 {
-[e = . *U . _r_queue 2 1 . `E64 2 ]
-[e = _BSR . *U . _r_queue 2 7 ]
-[e = _FSR0H . *U . _r_queue 2 11 ]
-[e = _FSR0L . *U . _r_queue 2 10 ]
-[e = _FSR1H . *U . _r_queue 2 13 ]
-[e = _FSR1L . *U . _r_queue 2 12 ]
-[e = _FSR2H . *U . _r_queue 2 15 ]
-[e = _FSR2L . *U . _r_queue 2 14 ]
-[e = _PCLATH . *U . _r_queue 2 20 ]
-[e = _PCLATU . *U . _r_queue 2 21 ]
-[e = _PRODH . *U . _r_queue 2 9 ]
-[e = _PRODL . *U . _r_queue 2 8 ]
-[e = _TABLAT . *U . _r_queue 2 16 ]
-[e = _TBLPTRH . *U . _r_queue 2 18 ]
-[e = _TBLPTRL . *U . _r_queue 2 17 ]
-[e = _TBLPTRU . *U . _r_queue 2 19 ]
-[e = _STATUS . *U . _r_queue 2 6 ]
-[e = _WREG . *U . _r_queue 2 5 ]
-[e = _STKPTR -> -> 0 `i `uc ]
-[e $ ! > -> . . *U . _r_queue 2 22 1 `i -> 0 `i 917  ]
+[e = . *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 3 -> | & -> . *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 3 `i -> 252 `i -> -> . `E64 2 `uc `i `uc ]
+[e = _BSR . *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 6 ]
+[e = _WREG . *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 4 ]
+[e = _STATUS . *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 5 ]
+[e = _FSR0H . *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 8 ]
+[e = _FSR0L . *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 7 ]
+[e $U 905  ]
+[e :U 906 ]
 {
-[e :U 920 ]
-{
+[e -- . . *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 9 1 -> -> 1 `i `uc ]
+[e = _TOSL . *U + &U . . *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 9 0 * -> . . *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 9 1 `ux -> -> # *U &U . . *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 9 0 `ui `ux 0 ]
+[e = _TOSH . *U + &U . . *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 9 0 * -> . . *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 9 1 `ux -> -> # *U &U . . *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 9 0 `ui `ux 1 ]
+[e = _TOSU . *U + &U . . *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 9 0 * -> . . *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 9 1 `ux -> -> # *U &U . . *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 9 0 `ui `ux 2 ]
 [; <" PUSH ;# ">
-[e =- . . *U . _r_queue 2 22 1 -> -> 1 `i `uc ]
-[e = _TOSL . *U + &U . . *U . _r_queue 2 22 0 * -> . . *U . _r_queue 2 22 1 `ux -> -> # *U &U . . *U . _r_queue 2 22 0 `ui `ux 0 ]
-[e = _TOSH . *U + &U . . *U . _r_queue 2 22 0 * -> . . *U . _r_queue 2 22 1 `ux -> -> # *U &U . . *U . _r_queue 2 22 0 `ui `ux 1 ]
-[e = _TOSU . *U + &U . . *U . _r_queue 2 22 0 * -> . . *U . _r_queue 2 22 1 `ux -> -> # *U &U . . *U . _r_queue 2 22 0 `ui `ux 2 ]
 }
-[e $ != -> . . *U . _r_queue 2 22 1 `i -> 0 `i 920  ]
-[e :U 919 ]
-}
-[e $U 921  ]
-[e :U 917 ]
-{
-[; <" PUSH ;# ">
-[e = _TOSL -> & -> . *U . _r_queue 2 2 `um -> -> -> 255 `i `m `um `uc ]
-[e = _TOSH -> & >> -> . *U . _r_queue 2 2 `um -> 8 `i -> -> -> 255 `i `m `um `uc ]
-[e = _TOSU -> & >> -> . *U . _r_queue 2 2 `um -> 16 `i -> -> -> 255 `i `m `um `uc ]
-}
-[e :U 921 ]
-[e = _rr_quantum -> -> 20 `i `uc ]
-}
-[e :U 916 ]
-}
-[e :U 914 ]
-"62
-[; ;sync.c: 62:     } else {
-}
-[e $U 922  ]
 [e :U 905 ]
+[e $ > -> . . *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 9 1 `i -> 0 `i 906  ]
+[e :U 907 ]
+[; <" RETURN ;# ">
+}
+[e :U 904 ]
+}
+"74
+[; ;sync.c: 74:         m->owner_id = r_queue.TASKS[r_queue.pos_task_running].task_id;
+[e = . *U _m 1 . *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 0 ]
+"75
+[; ;sync.c: 75:     } else {
+}
+[e $U 908  ]
+[e :U 898 ]
 {
-"63
-[; ;sync.c: 63:         m->locked = 1;
+"76
+[; ;sync.c: 76:         m->locked = 1;
 [e = . *U _m 0 -> -> 1 `i `uc ]
-"64
-[; ;sync.c: 64:         m->owner_id = r_queue.task_running->task_id;
-[e = . *U _m 1 . *U . _r_queue 2 0 ]
-"65
-[; ;sync.c: 65:     }
+"77
+[; ;sync.c: 77:         m->owner_id = r_queue.TASKS[r_queue.pos_task_running].task_id;
+[e = . *U _m 1 . *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 0 ]
+"78
+[; ;sync.c: 78:     }
 }
-[e :U 922 ]
-"66
-[; ;sync.c: 66:     INTCONbits.GIE = 1;;
+[e :U 908 ]
+"79
+[; ;sync.c: 79:     INTCONbits.GIE = 1;;
 [e = . . _INTCONbits 1 7 -> -> 1 `i `uc ]
-"67
-[; ;sync.c: 67: }
-[e :UE 904 ]
+"80
+[; ;sync.c: 80: }
+[e :UE 897 ]
 }
-"69
-[; ;sync.c: 69: void mutex_unlock(mutex_t *m) {
+"82
+[; ;sync.c: 82: void mutex_unlock(mutex_t *m) {
 [v _mutex_unlock `(v ~T0 @X0 1 ef1`*S2 ]
 {
 [e :U _mutex_unlock ]
 [v _m `*S2 ~T0 @X0 1 r1 ]
 [f ]
-"70
-[; ;sync.c: 70:     INTCONbits.GIE = 0;;
+"83
+[; ;sync.c: 83:     INTCONbits.GIE = 0;;
 [e = . . _INTCONbits 1 7 -> -> 0 `i `uc ]
-"71
-[; ;sync.c: 71:     if(m->locked && m->owner_id == r_queue.task_running->task_id)
-[e $ ! && != -> . *U _m 0 `i -> 0 `i == -> . *U _m 1 `i -> . *U . _r_queue 2 0 `i 924  ]
-"72
-[; ;sync.c: 72:     {
+"84
+[; ;sync.c: 84:     if(m->locked && m->owner_id == r_queue.TASKS[r_queue.pos_task_running].task_id)
+[e $ ! && != -> . *U _m 0 `i -> 0 `i == -> . *U _m 1 `i -> . *U + &U . _r_queue 0 * -> . _r_queue 2 `ux -> -> # *U &U . _r_queue 0 `ui `ux 0 `i 910  ]
+"85
+[; ;sync.c: 85:     {
 {
-"73
-[; ;sync.c: 73:         if(m->waiting_count>0){
-[e $ ! > -> . *U _m 5 `i -> 0 `i 925  ]
+"86
+[; ;sync.c: 86:         if(m->waiting_count>0){
+[e $ ! > -> . *U _m 5 `i -> 0 `i 911  ]
 {
-"74
-[; ;sync.c: 74:             uint8_t task_idx =m->fila[m->pos_output];
+"87
+[; ;sync.c: 87:             uint8_t task_idx =m->fila[m->pos_output];
 [v _task_idx `uc ~T0 @X0 1 a ]
 [e = _task_idx *U + &U . *U _m 2 * -> . *U _m 4 `ux -> -> # *U &U . *U _m 2 `ui `ux ]
-"75
-[; ;sync.c: 75:             r_queue.TASKS[task_idx].task_state = READY;
-[e = . *U + &U . _r_queue 0 * -> _task_idx `ux -> -> # *U &U . _r_queue 0 `ui `ux 1 . `E64 0 ]
-"76
-[; ;sync.c: 76:             m->pos_output = (m->pos_output+1)%6;
-[e = . *U _m 4 -> % + -> . *U _m 4 `i -> 1 `i -> 6 `i `uc ]
-"77
-[; ;sync.c: 77:             m->waiting_count--;
+"88
+[; ;sync.c: 88:             ((r_queue.TASKS[task_idx]).state_prio = (uint8_t)(((r_queue.TASKS[task_idx]).state_prio & 0xFC) | (uint8_t)(READY)));
+[e = . *U + &U . _r_queue 0 * -> _task_idx `ux -> -> # *U &U . _r_queue 0 `ui `ux 3 -> | & -> . *U + &U . _r_queue 0 * -> _task_idx `ux -> -> # *U &U . _r_queue 0 `ui `ux 3 `i -> 252 `i -> -> . `E64 0 `uc `i `uc ]
+"91
+[; ;sync.c: 91:             m->pos_input++;
+[e ++ . *U _m 3 -> -> 1 `i `uc ]
+"92
+[; ;sync.c: 92:             if (m->pos_input >= 5)
+[e $ ! >= -> . *U _m 3 `i -> 5 `i 912  ]
+"93
+[; ;sync.c: 93:                 m->pos_input = 0;
+[e = . *U _m 3 -> -> 0 `i `uc ]
+[e :U 912 ]
+"95
+[; ;sync.c: 95:             m->waiting_count--;
 [e -- . *U _m 5 -> -> 1 `i `uc ]
-"78
-[; ;sync.c: 78:             m->owner_id = r_queue.TASKS[task_idx].task_id;
+"96
+[; ;sync.c: 96:             m->owner_id = r_queue.TASKS[task_idx].task_id;
 [e = . *U _m 1 . *U + &U . _r_queue 0 * -> _task_idx `ux -> -> # *U &U . _r_queue 0 `ui `ux 0 ]
-"79
-[; ;sync.c: 79:         }
+"97
+[; ;sync.c: 97:         }
 }
-[e $U 926  ]
-"80
-[; ;sync.c: 80:         else{
-[e :U 925 ]
+[e $U 913  ]
+"98
+[; ;sync.c: 98:         else{
+[e :U 911 ]
 {
-"81
-[; ;sync.c: 81:             m->locked=0;
+"99
+[; ;sync.c: 99:             m->locked=0;
 [e = . *U _m 0 -> -> 0 `i `uc ]
-"82
-[; ;sync.c: 82:             m->waiting_count=0;
-[e = . *U _m 5 -> -> 0 `i `uc ]
-"83
-[; ;sync.c: 83:         }
+"101
+[; ;sync.c: 101:         }
 }
-[e :U 926 ]
-"84
-[; ;sync.c: 84:     }
+[e :U 913 ]
+"102
+[; ;sync.c: 102:     }
 }
-[e :U 924 ]
-"85
-[; ;sync.c: 85:     INTCONbits.GIE = 1;;
+[e :U 910 ]
+"103
+[; ;sync.c: 103:     INTCONbits.GIE = 1;;
 [e = . . _INTCONbits 1 7 -> -> 1 `i `uc ]
-"86
-[; ;sync.c: 86: }
-[e :UE 923 ]
+"104
+[; ;sync.c: 104: }
+[e :UE 909 ]
 }

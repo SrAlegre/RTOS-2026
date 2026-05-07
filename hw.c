@@ -33,7 +33,7 @@ void __interrupt() ISR(void)
             if (r_queue.TASKS[i].task_delay > 0) {
                 r_queue.TASKS[i].task_delay--;
                 if (r_queue.TASKS[i].task_delay == 0) {
-                    r_queue.TASKS[i].task_state = READY;
+                    SET_STATE(r_queue.TASKS[i], READY);
                 }                
             }
         }
@@ -54,9 +54,9 @@ void __interrupt() ISR(void)
         INTCONbits.INT0IF = 0;
         // Cria a tarefa de execução única com prioridade alta
         // ID 6
-        os_create_task(6, tarefaOneShot, 5);
+        os_create_task(6, tarefaOneShot, 6);
         // Ativa tarefa one-shot
-        //os_task_set_ready(tarefaOneShot);
-
+        //r_queue.TASKS[6].task_state = READY;
+        //SET_STATE(r_queue.TASKS[6], READY);
     }
 }

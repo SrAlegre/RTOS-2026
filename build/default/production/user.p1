@@ -1,7 +1,7 @@
 Version 4.0 HI-TECH Software Intermediate Code
 "9 ./sync.h
 [; ;./sync.h: 9: typedef struct sem {
-[s S880 `uc 1 `uc -> 6 `i `uc 1 `uc 1 ]
+[s S880 `c 1 `uc -> 5 `i `uc 1 `uc 1 ]
 [n S880 sem contador fila pos_input pos_output ]
 "9 ./com.h
 [; ;./com.h: 9: typedef struct pipe {
@@ -9,7 +9,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [n S882 pipe fila_dados pos_input pos_output s_input s_output ]
 "16 ./sync.h
 [; ;./sync.h: 16: typedef struct mutex {
-[s S881 `uc 1 `uc 1 `uc -> 6 `i `uc 1 `uc 1 `uc 1 ]
+[s S881 `uc 1 `uc 1 `uc -> 5 `i `uc 1 `uc 1 `uc 1 ]
 [n S881 mutex locked owner_id fila pos_input pos_output waiting_count ]
 "8724 C:/Program Files/Microchip/MPLABX/v6.30/packs/Microchip/PIC18F-K_DFP/1.15.303/xc8\pic\include\proc/pic18f46k22.h
 [; ;C:/Program Files/Microchip/MPLABX/v6.30/packs/Microchip/PIC18F-K_DFP/1.15.303/xc8\pic\include\proc/pic18f46k22.h: 8724: extern volatile unsigned char TRISD __attribute__((address(0xF95)));
@@ -143,8 +143,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;./sync.h: 30: void mutex_init(mutex_t *m);
 [v _mutex_init `(v ~T0 @X0 0 ef1`*S881 ]
 "26
-[; ;./sync.h: 26: void sem_init(sem_t *sem, uint8_t valor);
-[v _sem_init `(v ~T0 @X0 0 ef2`*S880`uc ]
+[; ;./sync.h: 26: void sem_init(sem_t *sem, int8_t valor);
+[v _sem_init `(v ~T0 @X0 0 ef2`*S880`c ]
 "8 ./io.h
 [; ;./io.h: 8: uint16_t adc_read(uint8_t channel);
 [v _adc_read `(us ~T0 @X0 0 ef1`uc ]
@@ -163,7 +163,27 @@ Version 4.0 HI-TECH Software Intermediate Code
 "28 ./sync.h
 [; ;./sync.h: 28: void sem_post(sem_t *sem);
 [v _sem_post `(v ~T0 @X0 0 ef1`*S880 ]
-"27
+"70 user.c
+[; ;user.c: 70:         os_task_change_state(READY, 0);
+[c E37 0 1 2 3 .. ]
+[n E37 . READY WAITING RUNNING WAITING_SEM  ]
+[v F57 `(v ~T0 @X0 0 tf ]
+"44 ./types.h
+[; ;./types.h: 44: typedef struct hw_stack {
+[s S1 `uc 1 `uc 1 `uc 1 ]
+[n S1 hw_stack TOSL_REG TOSH_REG TOSU_REG ]
+"50
+[; ;./types.h: 50: typedef struct sw_stack {
+[s S2 `S1 -> 8 `i `uc 1 ]
+[n S2 sw_stack stack stack_size ]
+"55
+[; ;./types.h: 55: typedef struct tcb {
+[s S3 `uc 1 `*F57 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `S2 1 ]
+[n S3 tcb task_id task_ptr task_delay state_prio W_REG STATUS_REG BSR_REG FSR0L_REG FSR0H_REG task_stack ]
+"21 ./kernel.h
+[; ;./kernel.h: 21: void os_task_change_state(state_t new_state, tcb_t *task_handle);
+[v _os_task_change_state `(v ~T0 @X0 0 ef2`E37`*S3 ]
+"27 ./sync.h
 [; ;./sync.h: 27: void sem_wait(sem_t *sem);
 [v _sem_wait `(v ~T0 @X0 0 ef1`*S880 ]
 "31
@@ -190,61 +210,6 @@ Version 4.0 HI-TECH Software Intermediate Code
 "7921
 [; ;C:/Program Files/Microchip/MPLABX/v6.30/packs/Microchip/PIC18F-K_DFP/1.15.303/xc8\pic\include\proc/pic18f46k22.h: 7921: extern volatile LATDbits_t LATDbits __attribute__((address(0xF8C)));
 [v _LATDbits `VS392 ~T0 @X0 0 e@3980 ]
-"7146
-[; ;C:/Program Files/Microchip/MPLABX/v6.30/packs/Microchip/PIC18F-K_DFP/1.15.303/xc8\pic\include\proc/pic18f46k22.h: 7146:     struct {
-[s S367 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S367 . RD0 RD1 RD2 RD3 RD4 RD5 RD6 RD7 ]
-"7156
-[; ;C:/Program Files/Microchip/MPLABX/v6.30/packs/Microchip/PIC18F-K_DFP/1.15.303/xc8\pic\include\proc/pic18f46k22.h: 7156:     struct {
-[s S368 :2 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S368 . . P2B P2C P2D P1B P1C P1D ]
-"7165
-[; ;C:/Program Files/Microchip/MPLABX/v6.30/packs/Microchip/PIC18F-K_DFP/1.15.303/xc8\pic\include\proc/pic18f46k22.h: 7165:     struct {
-[s S369 :1 `uc 1 :1 `uc 1 :4 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S369 . . CCP4 . TX2 RX2 ]
-"7172
-[; ;C:/Program Files/Microchip/MPLABX/v6.30/packs/Microchip/PIC18F-K_DFP/1.15.303/xc8\pic\include\proc/pic18f46k22.h: 7172:     struct {
-[s S370 :3 `uc 1 :1 `uc 1 ]
-[n S370 . . NOT_SS2 ]
-"7176
-[; ;C:/Program Files/Microchip/MPLABX/v6.30/packs/Microchip/PIC18F-K_DFP/1.15.303/xc8\pic\include\proc/pic18f46k22.h: 7176:     struct {
-[s S371 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S371 . SCK2 SDI2 . nSS2 SDO2 . CK2 DT2 ]
-"7186
-[; ;C:/Program Files/Microchip/MPLABX/v6.30/packs/Microchip/PIC18F-K_DFP/1.15.303/xc8\pic\include\proc/pic18f46k22.h: 7186:     struct {
-[s S372 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S372 . SCL2 SDA2 . SS2 ]
-"7192
-[; ;C:/Program Files/Microchip/MPLABX/v6.30/packs/Microchip/PIC18F-K_DFP/1.15.303/xc8\pic\include\proc/pic18f46k22.h: 7192:     struct {
-[s S373 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S373 . AN20 AN21 AN22 AN23 AN24 AN25 AN26 AN27 ]
-"7145
-[; ;C:/Program Files/Microchip/MPLABX/v6.30/packs/Microchip/PIC18F-K_DFP/1.15.303/xc8\pic\include\proc/pic18f46k22.h: 7145: typedef union {
-[u S366 `S367 1 `S368 1 `S369 1 `S370 1 `S371 1 `S372 1 `S373 1 ]
-[n S366 . . . . . . . . ]
-"7203
-[; ;C:/Program Files/Microchip/MPLABX/v6.30/packs/Microchip/PIC18F-K_DFP/1.15.303/xc8\pic\include\proc/pic18f46k22.h: 7203: extern volatile PORTDbits_t PORTDbits __attribute__((address(0xF83)));
-[v _PORTDbits `VS366 ~T0 @X0 0 e@3971 ]
-"103 user.c
-[; ;user.c: 103:         os_task_change_state(WAITING, 0);
-[c E37 0 1 2 3 .. ]
-[n E37 . READY WAITING RUNNING WAITING_SEM  ]
-[v F58 `(v ~T0 @X0 0 tf ]
-"17 ./types.h
-[; ;./types.h: 17: typedef struct hw_stack {
-[s S1 `uc 1 `uc 1 `uc 1 ]
-[n S1 hw_stack TOSL_REG TOSH_REG TOSU_REG ]
-"23
-[; ;./types.h: 23: typedef struct sw_stack {
-[s S2 `S1 -> 12 `i `uc 1 ]
-[n S2 sw_stack stack stack_size ]
-"28
-[; ;./types.h: 28: typedef struct tcb {
-[s S3 `uc 1 `E37 1 `*F58 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `S2 1 ]
-[n S3 tcb task_id task_state task_ptr task_delay task_priority W_REG STATUS_REG BSR_REG PRODL_REG PRODH_REG FSR0L_REG FSR0H_REG FSR1L_REG FSR1H_REG FSR2L_REG FSR2H_REG TABLAT_REG TBLPTRL_REG TBLPTRH_REG TBLPTRU_REG PCLATH_REG PCLATU_REG task_stack ]
-"21 ./kernel.h
-[; ;./kernel.h: 21: void os_task_change_state(state_t new_state, tcb_t *task_handle);
-[v _os_task_change_state `(v ~T0 @X0 0 ef2`E37`*S3 ]
 "52 C:/Program Files/Microchip/MPLABX/v6.30/packs/Microchip/PIC18F-K_DFP/1.15.303/xc8\pic\include\proc/pic18f46k22.h
 [; ;C:/Program Files/Microchip/MPLABX/v6.30/packs/Microchip/PIC18F-K_DFP/1.15.303/xc8\pic\include\proc/pic18f46k22.h: 52: __asm("ANSELA equ 0F38h");
 [; <" ANSELA equ 0F38h ;# ">
@@ -1077,7 +1042,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e ( _mutex_init (1 &U _mutex_recurso ]
 "39
 [; ;user.c: 39:     sem_init(&sem_processamento, 0);
-[e ( _sem_init (2 , &U _sem_processamento -> -> 0 `i `uc ]
+[e ( _sem_init (2 , &U _sem_processamento -> -> 0 `i `c ]
 "42
 [; ;user.c: 42:     __asm("global _tarefaLeituraADC");
 [; <" global _tarefaLeituraADC ;# ">
@@ -1152,103 +1117,106 @@ Version 4.0 HI-TECH Software Intermediate Code
 "67
 [; ;user.c: 67:         sem_post(&sem_processamento);
 [e ( _sem_post (1 &U _sem_processamento ]
-"69
-[; ;user.c: 69:     }
+"70
+[; ;user.c: 70:         os_task_change_state(READY, 0);
+[e ( _os_task_change_state (2 , . `E37 0 -> -> 0 `i `*S3 ]
+"72
+[; ;user.c: 72:     }
 }
 [e :U 889 ]
 [e $U 890  ]
 [e :U 891 ]
-"70
-[; ;user.c: 70: }
+"73
+[; ;user.c: 73: }
 [e :UE 888 ]
 }
-"73
-[; ;user.c: 73: TASK tarefaControlePWM(void) {
+"76
+[; ;user.c: 76: TASK tarefaControlePWM(void) {
 [v _tarefaControlePWM `(v ~T0 @X0 1 ef ]
 {
 [e :U _tarefaControlePWM ]
 [f ]
-"74
-[; ;user.c: 74:     while(1) {
+"77
+[; ;user.c: 77:     while(1) {
 [e :U 894 ]
 {
-"75
-[; ;user.c: 75:         sem_wait(&sem_processamento);
-[e ( _sem_wait (1 &U _sem_processamento ]
-"77
-[; ;user.c: 77:         mutex_lock(&mutex_recurso);
-[e ( _mutex_lock (1 &U _mutex_recurso ]
 "78
-[; ;user.c: 78:         pwm_set_duty(((uint16_t)dado_processado) << 2);
-[e ( _pwm_set_duty (1 -> << -> -> _dado_processado `us `ui -> 2 `i `us ]
-"79
-[; ;user.c: 79:         mutex_unlock(&mutex_recurso);
-[e ( _mutex_unlock (1 &U _mutex_recurso ]
+[; ;user.c: 78:         sem_wait(&sem_processamento);
+[e ( _sem_wait (1 &U _sem_processamento ]
+"80
+[; ;user.c: 80:         mutex_lock(&mutex_recurso);
+[e ( _mutex_lock (1 &U _mutex_recurso ]
 "81
-[; ;user.c: 81:     }
+[; ;user.c: 81:         pwm_set_duty(((uint16_t)dado_processado) << 2);
+[e ( _pwm_set_duty (1 -> << -> -> _dado_processado `us `ui -> 2 `i `us ]
+"82
+[; ;user.c: 82:         mutex_unlock(&mutex_recurso);
+[e ( _mutex_unlock (1 &U _mutex_recurso ]
+"85
+[; ;user.c: 85:     }
 }
 [e :U 893 ]
 [e $U 894  ]
 [e :U 895 ]
-"82
-[; ;user.c: 82: }
+"86
+[; ;user.c: 86: }
 [e :UE 892 ]
 }
-"85
-[; ;user.c: 85: TASK tarefaFeedbackLED(void) {
+"89
+[; ;user.c: 89: TASK tarefaFeedbackLED(void) {
 [v _tarefaFeedbackLED `(v ~T0 @X0 1 ef ]
 {
 [e :U _tarefaFeedbackLED ]
 [f ]
-"86
-[; ;user.c: 86:     while(1) {
+"90
+[; ;user.c: 90:     while(1) {
 [e :U 898 ]
 {
-"87
-[; ;user.c: 87:         LATDbits.LATD7 = ~LATDbits.LATD7;
+"91
+[; ;user.c: 91:         LATDbits.LATD7 = ~LATDbits.LATD7;
 [e = . . _LATDbits 0 7 -> ~ -> . . _LATDbits 0 7 `i `uc ]
-"88
-[; ;user.c: 88:         os_delay(10);
-[e ( _os_delay (1 -> -> 10 `i `uc ]
-"89
-[; ;user.c: 89:     }
+"92
+[; ;user.c: 92:         os_delay(5);
+[e ( _os_delay (1 -> -> 5 `i `uc ]
+"93
+[; ;user.c: 93:     }
 }
 [e :U 897 ]
 [e $U 898  ]
 [e :U 899 ]
-"90
-[; ;user.c: 90: }
+"94
+[; ;user.c: 94: }
 [e :UE 896 ]
 }
-"93
-[; ;user.c: 93: TASK tarefaOneShot(void) {
+"97
+[; ;user.c: 97: TASK tarefaOneShot(void) {
 [v _tarefaOneShot `(v ~T0 @X0 1 ef ]
 {
 [e :U _tarefaOneShot ]
 [f ]
-"95
-[; ;user.c: 95:     PORTDbits.RD1 = 1;
-[e = . . _PORTDbits 0 1 -> -> 1 `i `uc ]
-"96
-[; ;user.c: 96:     os_delay(10);
-[e ( _os_delay (1 -> -> 10 `i `uc ]
-"97
-[; ;user.c: 97:     PORTDbits.RD1 = 0;
-[e = . . _PORTDbits 0 1 -> -> 0 `i `uc ]
-"102
-[; ;user.c: 102:     while(1) {
+"101
+[; ;user.c: 101:     while(1) {
 [e :U 902 ]
 {
 "103
-[; ;user.c: 103:         os_task_change_state(WAITING, 0);
-[e ( _os_task_change_state (2 , . `E37 1 -> -> 0 `i `*S3 ]
+[; ;user.c: 103:         LATDbits.LATD1 = 1;
+[e = . . _LATDbits 0 1 -> -> 1 `i `uc ]
 "104
-[; ;user.c: 104:     }
+[; ;user.c: 104:         os_delay(10);
+[e ( _os_delay (1 -> -> 10 `i `uc ]
+"105
+[; ;user.c: 105:         LATDbits.LATD1 = 0;
+[e = . . _LATDbits 0 1 -> -> 0 `i `uc ]
+"107
+[; ;user.c: 107:         os_task_change_state(WAITING, 0);
+[e ( _os_task_change_state (2 , . `E37 1 -> -> 0 `i `*S3 ]
+"108
+[; ;user.c: 108:     }
 }
 [e :U 901 ]
 [e $U 902  ]
 [e :U 903 ]
-"105
-[; ;user.c: 105: }
+"109
+[; ;user.c: 109: }
 [e :UE 900 ]
 }
