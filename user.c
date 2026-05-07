@@ -3,12 +3,18 @@
 #include "kernel.h"
 #include "sync.h"
 #include "com.h"
+#include"io.h"
+
 
 sem_t s;
 pipe_t p;
 mutex_t m_led;
+char dado;
 
 void config_user() {
+    //asm("global _tarefaPWN");
+    TRISBbits.RB0 = 1;
+
     TRISCbits.RC6 = 0;
     TRISCbits.RC7 = 0;
     TRISDbits.RD0 = 0;
@@ -16,100 +22,67 @@ void config_user() {
     ANSELCbits.ANSC6 = 0;
     ANSELCbits.ANSC7 = 0;
 
-//    asm("global _LED_1, _LED_2, _LED_3,_LED_1_mutex, _LED_2_mutex,_LED_1_prio,_LED_2_prio,_LED_3_prio");
-    
-//    asm("global _LED_1, _LED_2, _LED_3");
-    asm("global _LED_1_mutex, _LED_2_mutex");
-//    asm("global _LED_1_prio,_LED_2_prio,_LED_3_prio");
+    INTCONbits.INT0IE = 1; // Habilita INT0
+    INTCON2bits.INTEDG0 = 0; // Interrupt on falling edge 
+    INTCONbits.INT0IF = 0; // Flag interrupt
+
+
+    asm("global _LED_1, _LED_2,_READ_ADC,_tarefaPWN");
+    // asm("global _LED_1_prio,_LED_2_prio,_LED_3_prio");
 
 
 
+    adc_config();
+    pwm_init();
     sem_init(&s, 0);
     pipe_init(&p);
     mutex_init(&m_led);
 }
 
-TASK acionaMotor() {
-    while (1) {
-
-    }
-}
-
-TASK ligaLed() {
-    while (1) {
-
-    }
-}
-
-TASK apagaLed() {
-    while (1) {
-
-    }
-}
-
-TASK LED_1() {
-    //char *acionamento = SRAMAlloc(6);
-    char acionamento[] = {'L', 'L', 'D', 'L', 'D', 'D'};
+TASK LED_1(void) {
+    char seq[] = {'L', 'L', 'D', 'L', 'D', 'D'};
     uint8_t pos = 0;
     while (1) {
-        PORTCbits.RC6 = ~PORTCbits.RC6;
-        pipe_write(&p, acionamento[pos]);
+        PORTCbits.RC6 = ~PORTCbits.RC6; 
+        pipe_write(&p, seq[pos]); 
         pos = (pos + 1) % 6;
-        //os_delay(5);
+        sem_post(&s); 
+        mutex_lock(&m_led);
+        os_delay(5);
+        mutex_unlock(&m_led);
     }
 }
 
-TASK LED_2() {
+TASK LED_2(void) {
     while (1) {
-
-        //sem_post(&controle_leitura);
-        PORTCbits.RC7 = ~PORTCbits.RC7;
-        //sem_post(&s);
-        //os_delay(5);
-    }
-}
-
-TASK LED_3() {
-    char dado;
-    while (1) {
+        sem_wait(&s); // aguarda sinal da tarefa 1
         pipe_read(&p, &dado);
         if (dado == 'L')
-            PORTDbits.RD0 = 1;
+            PORTDbits.RD0 = 1; // liga LED RD0
         else if (dado == 'D')
-            PORTDbits.RD0 = 0;
-        //os_delay(1);
-        //os_task_change_state(WAITING, NULL);
+            PORTDbits.RD0 = 0; // desliga LED RD0
     }
 }
 
-
-//teste mutex
-
-TASK LED_1_mutex() {
+TASK READ_ADC(void) {
     while (1) {
-        mutex_lock(&m_led);
-
-        PORTCbits.RC6 = 1;
-        os_delay(5);
-        PORTCbits.RC6 = 0;
-
-        mutex_unlock(&m_led);
+        if (adc_read() >= 123) {
+            PORTCbits.RC7 = 1; // LED RC7 ligado se temp ? 60°C
+        } else {
+            PORTCbits.RC7 = 0; // LED RC7 desligado
+        }
+        os_delay(10);
     }
 }
 
-TASK LED_2_mutex() {
+TASK tarefaPWN(void) {
     while (1) {
-        mutex_lock(&m_led);
-
-        PORTCbits.RC7 = 1;
+        pwm_set_duty(128);
         os_delay(5);
-        PORTCbits.RC7 = 0;
-
-        mutex_unlock(&m_led);
     }
 }
 
-//RR com prioridade
+//teste
 
 TASK LED_1_prio() {
     while (1) {
@@ -135,3 +108,16 @@ TASK LED_3_prio() {
     }
 }
 
+TASK tarefaOneShot(void) {
+    while (1) {
+
+        LATDbits.LATD1 = 1;
+        os_delay(10);
+        LATDbits.LATD1 = 0;
+        os_task_change_state(WAITING, 0);
+        mutex_unlock(&m_led);
+
+
+    }
+
+}

@@ -141,7 +141,7 @@ typedef struct hw_stack {
 } hw_stack_t;
 
 typedef struct sw_stack {
-    hw_stack_t stack[31];
+    hw_stack_t stack[8];
     uint8_t stack_size;
 } sw_stack_t;
 
@@ -177,7 +177,7 @@ typedef struct tcb {
 
 
 typedef struct ready_queue {
-    tcb_t TASKS[3 +1];
+    tcb_t TASKS[4 +1];
     uint8_t size;
     tcb_t *task_running;
     uint8_t pos_task_running;
@@ -186,21 +186,14 @@ typedef struct ready_queue {
 
 void config_user(void);
 
-TASK acionaMotor(void);
-TASK ligaLed(void);
-TASK apagaLed(void);
-
-
 TASK LED_1(void);
 TASK LED_2(void);
-TASK LED_3(void);
-
-TASK LED_1_mutex(void);
-TASK LED_2_mutex(void);
-
-TASK LED_1_prio();
-TASK LED_2_prio();
-TASK LED_3_prio();
+TASK READ_ADC(void);
+TASK tarefaPWN(void);
+TASK LED_1_prio(void);
+TASK LED_2_prio(void);
+TASK LED_3_prio(void);
+TASK tarefaOneShot(void);
 # 2 "user.c" 2
 # 1 "C:\\Program Files\\Microchip\\xc8\\v3.10\\pic\\include/xc.h" 1 3
 # 18 "C:\\Program Files\\Microchip\\xc8\\v3.10\\pic\\include/xc.h" 3
@@ -9954,7 +9947,7 @@ TASK idle();
 
 typedef struct sem {
     int contador;
-    uint8_t fila[3];
+    uint8_t fila[4];
     uint8_t pos_input;
     uint8_t pos_output;
 } sem_t;
@@ -9962,7 +9955,7 @@ typedef struct sem {
 typedef struct mutex {
     uint8_t locked;
     uint8_t owner_id;
-    uint8_t fila[3];
+    uint8_t fila[4];
     uint8_t pos_input;
     uint8_t pos_output;
     uint8_t waiting_count;
@@ -9998,12 +9991,29 @@ void pipe_init(pipe_t *p);
 void pipe_read(pipe_t *p, char *dado);
 void pipe_write(pipe_t *p, char dado);
 # 6 "user.c" 2
+# 1 "./io.h" 1
+
+
+
+
+
+
+void adc_config(void);
+uint16_t adc_read(void);
+void pwm_init(void);
+void pwm_set_duty(uint16_t duty);
+# 7 "user.c" 2
+
 
 sem_t s;
 pipe_t p;
 mutex_t m_led;
+char dado;
 
 void config_user() {
+
+    TRISBbits.RB0 = 1;
+
     TRISCbits.RC6 = 0;
     TRISCbits.RC7 = 0;
     TRISDbits.RD0 = 0;
@@ -10011,96 +10021,63 @@ void config_user() {
     ANSELCbits.ANSC6 = 0;
     ANSELCbits.ANSC7 = 0;
 
+    INTCONbits.INT0IE = 1;
+    INTCON2bits.INTEDG0 = 0;
+    INTCONbits.INT0IF = 0;
+
+
+    __asm("global _LED_1, _LED_2,_READ_ADC,_tarefaPWN");
 
 
 
-    __asm("global _LED_1_mutex, _LED_2_mutex");
 
-
-
-
+    adc_config();
+    pwm_init();
     sem_init(&s, 0);
     pipe_init(&p);
     mutex_init(&m_led);
 }
 
-TASK acionaMotor() {
-    while (1) {
-
-    }
-}
-
-TASK ligaLed() {
-    while (1) {
-
-    }
-}
-
-TASK apagaLed() {
-    while (1) {
-
-    }
-}
-
-TASK LED_1() {
-
-    char acionamento[] = {'L', 'L', 'D', 'L', 'D', 'D'};
+TASK LED_1(void) {
+    char seq[] = {'L', 'L', 'D', 'L', 'D', 'D'};
     uint8_t pos = 0;
     while (1) {
         PORTCbits.RC6 = ~PORTCbits.RC6;
-        pipe_write(&p, acionamento[pos]);
+        pipe_write(&p, seq[pos]);
         pos = (pos + 1) % 6;
-
+        sem_post(&s);
+        mutex_lock(&m_led);
+        os_delay(5);
+        mutex_unlock(&m_led);
     }
 }
 
-TASK LED_2() {
+TASK LED_2(void) {
     while (1) {
-
-
-        PORTCbits.RC7 = ~PORTCbits.RC7;
-
-
-    }
-}
-
-TASK LED_3() {
-    char dado;
-    while (1) {
+        sem_wait(&s);
         pipe_read(&p, &dado);
         if (dado == 'L')
             PORTDbits.RD0 = 1;
         else if (dado == 'D')
             PORTDbits.RD0 = 0;
-
-
     }
 }
 
-
-
-
-TASK LED_1_mutex() {
+TASK READ_ADC(void) {
     while (1) {
-        mutex_lock(&m_led);
-
-        PORTCbits.RC6 = 1;
-        os_delay(5);
-        PORTCbits.RC6 = 0;
-
-        mutex_unlock(&m_led);
+        if (adc_read() >= 123) {
+            PORTCbits.RC7 = 1;
+        } else {
+            PORTCbits.RC7 = 0;
+        }
+        os_delay(10);
     }
 }
 
-TASK LED_2_mutex() {
+TASK tarefaPWN(void) {
     while (1) {
-        mutex_lock(&m_led);
-
-        PORTCbits.RC7 = 1;
+        pwm_set_duty(128);
         os_delay(5);
-        PORTCbits.RC7 = 0;
-
-        mutex_unlock(&m_led);
     }
 }
 
@@ -10128,4 +10105,18 @@ TASK LED_3_prio() {
         os_delay(5);
         PORTDbits.RD0 = 0;
     }
+}
+
+TASK tarefaOneShot(void) {
+    while (1) {
+
+        LATDbits.LATD1 = 1;
+        os_delay(10);
+        LATDbits.LATD1 = 0;
+        os_task_change_state(WAITING, 0);
+        mutex_unlock(&m_led);
+
+
+    }
+
 }

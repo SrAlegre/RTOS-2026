@@ -9829,12 +9829,12 @@ unsigned char __t3rd16on(void);
 
 
 void adc_config(void);
-void adc_on(void);
 uint16_t adc_read(void);
+void pwm_init(void);
+void pwm_set_duty(uint16_t duty);
 # 3 "io.c" 2
 
-void adc_config(void)
-{
+void adc_config(void) {
     ADCON0bits.CHS = 0b00000;
     ADCON1bits.PVCFG = 0b00;
     ADCON1bits.NVCFG = 0b00;
@@ -9843,22 +9843,30 @@ void adc_config(void)
     ADCON2bits.ADCS = 0b100;
     TRISAbits.RA0 = 1;
     ANSELAbits.ANSA0 = 1;
-}
-
-void adc_on(void)
-{
     ADCON0bits.ADON = 1;
+
 }
 
-uint16_t adc_read(void)
-{
-    uint16_t dados_adc;
+uint16_t adc_read(void) {
 
     ADCON0bits.GO = 1;
 
     while (ADCON0bits.GODONE);
 
-    dados_adc = ADRES;
 
-    return dados_adc;
+    return ADRES;
+}
+
+void pwm_init(void) {
+
+    PR2 = 0xFF;
+    CCP1CON = 0x0C;
+    T2CON = 0x04;
+    TRISCbits.RC2 = 0;
+}
+
+void pwm_set_duty(uint16_t duty) {
+
+    CCPR1L = (duty >> 2) & 0xFF;
+    CCP1CONbits.DC1B = duty & 0x03;
 }

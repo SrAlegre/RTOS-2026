@@ -148,7 +148,7 @@ typedef struct hw_stack {
 } hw_stack_t;
 
 typedef struct sw_stack {
-    hw_stack_t stack[31];
+    hw_stack_t stack[8];
     uint8_t stack_size;
 } sw_stack_t;
 
@@ -184,7 +184,7 @@ typedef struct tcb {
 
 
 typedef struct ready_queue {
-    tcb_t TASKS[3 +1];
+    tcb_t TASKS[4 +1];
     uint8_t size;
     tcb_t *task_running;
     uint8_t pos_task_running;
@@ -9948,14 +9948,13 @@ void scheduler() {
 
 uint8_t RR_scheduler() {
     uint8_t prox = r_queue.pos_task_running, tentativas = 0;
-
     do {
-        prox = (prox + 1) % r_queue.size;
+        prox++;
+        if (prox >= r_queue.size) prox = 0;
         tentativas++;
-        if (tentativas >= (3 + 1)) return 0;
+        if (tentativas >= (4 + 1)) return 0;
     } while (r_queue.TASKS[prox].task_state != READY ||
             r_queue.TASKS[prox].task_ptr == idle);
-
     return prox;
 }
 
@@ -9963,8 +9962,8 @@ uint8_t priority_scheduler(void) {
     uint8_t prox = r_queue.pos_task_running;
 
     while (r_queue.TASKS[prox].task_state != READY)
-        prox = (prox + 1) % r_queue.size;
-
+        prox++;
+    if (prox >= r_queue.size) prox = 0;
     uint8_t current_task = r_queue.TASKS[prox].task_priority;
 
     for (uint8_t i = 1; i < r_queue.size; i++) {
@@ -9982,7 +9981,6 @@ uint8_t priority_rr_scheduler(void) {
     uint8_t max_prio = 0;
     uint8_t found = 0;
 
-
     for (uint8_t i = 0; i < r_queue.size; i++) {
         if (r_queue.TASKS[i].task_state == READY) {
             if (!found || r_queue.TASKS[i].task_priority > max_prio) {
@@ -9995,9 +9993,10 @@ uint8_t priority_rr_scheduler(void) {
     uint8_t current = r_queue.pos_task_running;
 
     for (uint8_t i = 0; i < r_queue.size; i++) {
-        uint8_t idx = (current + i) % r_queue.size;
+        uint8_t idx = current + i;
+        if (idx >= r_queue.size) idx -= r_queue.size;
         if (r_queue.TASKS[idx].task_state == READY &&
-            r_queue.TASKS[idx].task_priority == max_prio) {
+                r_queue.TASKS[idx].task_priority == max_prio) {
             return idx;
         }
     }

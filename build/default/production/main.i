@@ -145,7 +145,7 @@ typedef struct hw_stack {
 } hw_stack_t;
 
 typedef struct sw_stack {
-    hw_stack_t stack[31];
+    hw_stack_t stack[8];
     uint8_t stack_size;
 } sw_stack_t;
 
@@ -181,7 +181,7 @@ typedef struct tcb {
 
 
 typedef struct ready_queue {
-    tcb_t TASKS[3 +1];
+    tcb_t TASKS[4 +1];
     uint8_t size;
     tcb_t *task_running;
     uint8_t pos_task_running;
@@ -9930,21 +9930,14 @@ TASK idle();
 
 void config_user(void);
 
-TASK acionaMotor(void);
-TASK ligaLed(void);
-TASK apagaLed(void);
-
-
 TASK LED_1(void);
 TASK LED_2(void);
-TASK LED_3(void);
-
-TASK LED_1_mutex(void);
-TASK LED_2_mutex(void);
-
-TASK LED_1_prio();
-TASK LED_2_prio();
-TASK LED_3_prio();
+TASK READ_ADC(void);
+TASK tarefaPWN(void);
+TASK LED_1_prio(void);
+TASK LED_2_prio(void);
+TASK LED_3_prio(void);
+TASK tarefaOneShot(void);
 # 7 "main.c" 2
 
 int main() {
@@ -9954,19 +9947,15 @@ int main() {
 
 
 
-    os_create_task(2, LED_1, 5);
-    os_create_task(3, LED_2, 5);
-    os_create_task(4, LED_3, 5);
+        os_create_task(2, LED_1, 1);
+        os_create_task(3, LED_2, 1);
+        os_create_task(4, READ_ADC, 1);
+        os_create_task(5, tarefaPWN, 1);
 
 
 
 
 
-
-
-        os_create_task(2, LED_1_prio, 3);
-        os_create_task(3, LED_2_prio, 3);
-        os_create_task(4, LED_3_prio, 3);
 
     os_start();
 
